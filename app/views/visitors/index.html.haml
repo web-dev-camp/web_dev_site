@@ -111,7 +111,7 @@
             / SEARCH
             %li.search
               %a{:href => "javascript:;"}
-                %i.fa.fa-search
+                %i.fa.fa-user
               .search-box
                 %form{:action => "page-search-result-1.html", :method => "get"}
                   .input-group
@@ -119,43 +119,6 @@
                     %span.input-group-btn
                       %button.btn.btn-primary{:type => "submit"} Search
             / /SEARCH
-            / QUICK SHOP CART
-            %li.quick-cart
-              %a{:href => "#"}
-                %span.badge.badge-aqua.btn-xs.badge-corner 2
-                %i.fa.fa-shopping-cart
-              .quick-cart-box
-                %h4 Shop Cart
-                .quick-cart-wrapper
-                  %a{:href => "#"}
-                    / cart item
-                    %img{:alt => "", :height => "45", :src => "assets/images/demo/people/300x300/4-min.jpg", :width => "45"}/
-                    %h6
-                      %span 2x
-                      RED BAG WITH HUGE POCKETS
-                    %small $37.21
-                  / /cart item
-                  %a{:href => "#"}
-                    / cart item
-                    %img{:alt => "", :height => "45", :src => "assets/images/demo/people/300x300/5-min.jpg", :width => "45"}/
-                    %h6
-                      %span 2x
-                      THIS IS A VERY LONG TEXT AND WILL BE TRUNCATED
-                    %small $17.18
-                  / /cart item
-                  / cart no items example
-                  /
-                    <a class="text-center" href="#">
-                    <h6>0 ITEMS ON YOUR CART</h6>
-                    </a>
-                / quick cart footer
-                .quick-cart-footer.clearfix
-                  %a.btn.btn-primary.btn-xs.pull-right{:href => "shop-cart.html"} VIEW CART
-                  %span.pull-left
-                    %strong TOTAL:
-                    $54.39
-                / /quick cart footer
-            / /QUICK SHOP CART
           / /BUTTONS
           / Logo
           %a.logo.pull-left{:href => "index.html"}
