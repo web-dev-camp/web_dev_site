@@ -1,0 +1,19 @@
+/ /wrapper
+/ SCROLL TO TOP
+%a#toTop{:href => "#"}
+/ PRELOADER
+#preloader
+  .inner
+    %span.loader
+/ /PRELOADER
+/ JAVASCRIPT FILES
+:javascript
+  var plugin_path = 'assets/plugins/';
+%script{:src => "assets/plugins/jquery/jquery-2.1.4.min.js", :type => "text/javascript"}
+/ LAYER SLIDER
+%script{:src => "assets/plugins/slider.layerslider/js/layerslider_pack.js", :type => "text/javascript"}
+%script{:src => "assets/js/view/demo.layerslider_slider.js", :type => "text/javascript"}
+/ SCRIPTS
+%script{:src => "assets/js/scripts.js", :type => "text/javascript"}
+/ STYLESWITCHER - REMOVE
+%script{:async => "", :src => "assets/plugins/styleswitcher/styleswitcher.js", :type => "text/javascript"}

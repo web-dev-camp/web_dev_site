@@ -1,0 +1,97 @@
+/ FOOTER
+%footer#footer
+  .container
+    .row
+      .col-md-3
+        / Footer Logo
+        %img.footer-logo{:alt => "", :src => "assets/images/logo-footer.png"}/
+        / Small Description
+        %p Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        / Contact Address
+        %address
+        %ul.list-unstyled
+          %li.footer-sprite.address
+            PO Box 21132
+            %br/
+            Here Weare St, Melbourne
+            %br/
+            Vivas 2355 Australia
+            %br/
+          %li.footer-sprite.phone
+            Phone: 1-800-565-2390
+          %li.footer-sprite.email
+            %a{:href => "mailto:support@yourname.com"} support@yourname.com
+        / /Contact Address
+      .col-md-3
+        / Latest Blog Post
+        %h4.letter-spacing-1 LATEST NEWS
+        %ul.footer-posts.list-unstyled
+          %li
+            %a{:href => "#"} Donec sed odio dui. Nulla vitae elit libero, a pharetra augue
+            %small 29 June 2015
+          %li
+            %a{:href => "#"} Nullam id dolor id nibh ultricies
+            %small 29 June 2015
+          %li
+            %a{:href => "#"} Duis mollis, est non commodo luctus
+            %small 29 June 2015
+        / /Latest Blog Post
+      .col-md-2
+        / Links
+        %h4.letter-spacing-1 EXPLORE SMARTY
+        %ul.footer-links.list-unstyled
+          %li
+            %a{:href => "#"} Home
+          %li
+            %a{:href => "#"} About Us
+          %li
+            %a{:href => "#"} Our Services
+          %li
+            %a{:href => "#"} Our Clients
+          %li
+            %a{:href => "#"} Our Pricing
+          %li
+            %a{:href => "#"} Smarty Tour
+          %li
+            %a{:href => "#"} Contact Us
+        / /Links
+      .col-md-4
+        / Newsletter Form
+        %h4.letter-spacing-1 KEEP IN TOUCH
+        %p Subscribe to Our Newsletter to get Important News &amp; Offers
+        %form.validate{:action => "php/newsletter.php", "data-success" => "Subscribed! Thank you!", "data-toastr-position" => "bottom-right", :method => "post"}
+          .input-group
+            %span.input-group-addon
+              %i.fa.fa-envelope
+            %input#email.form-control.required{:name => "email", :placeholder => "Enter your Email", :type => "email"}/
+            %span.input-group-btn
+              %button.btn.btn-success{:type => "submit"} Subscribe
+        / /Newsletter Form
+        / Social Icons
+        .margin-top-20
+          %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Facebook"}
+            %i.icon-facebook
+            %i.icon-facebook
+          %a.social-icon.social-icon-border.social-twitter.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Twitter"}
+            %i.icon-twitter
+            %i.icon-twitter
+          %a.social-icon.social-icon-border.social-gplus.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Google plus"}
+            %i.icon-gplus
+            %i.icon-gplus
+          %a.social-icon.social-icon-border.social-linkedin.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Linkedin"}
+            %i.icon-linkedin
+            %i.icon-linkedin
+          %a.social-icon.social-icon-border.social-rss.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Rss"}
+            %i.icon-rss
+            %i.icon-rss
+        / /Social Icons
+  .copyright
+    .container
+      %ul.pull-right.nomargin.list-inline.mobile-block
+        %li
+          %a{:href => "#"} Terms &amp; Conditions
+        %li •
+        %li
+          %a{:href => "#"} Privacy
+      © All Rights Reserved, Company LTD
+/ /FOOTER
