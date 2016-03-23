@@ -4,30 +4,27 @@
     .row
       .col-md-3
         / Footer Logo
-        %img.footer-logo{:alt => "", :src => "assets/images/logo-footer.png"}/
+        = image_tag "web_logo.png" , :class => "footer-logo"
         / Small Description
-        %p Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-        / Contact Address
+        %p Finding your talent.
         %address
         %ul.list-unstyled
           %li.footer-sprite.address
-            PO Box 21132
+            Fiskarsintie 513
             %br/
-            Here Weare St, Melbourne
+            10480 Antskog
             %br/
-            Vivas 2355 Australia
+            Finnland
             %br/
           %li.footer-sprite.phone
-            Phone: 1-800-565-2390
+            Phone: +358-40 7308052
           %li.footer-sprite.email
-            %a{:href => "mailto:support@yourname.com"} support@yourname.com
-        / /Contact Address
+            %a{:href => "mailto:info@web-dev.camp"} info@web-dev.camp
       .col-md-3
-        / Latest Blog Post
-        %h4.letter-spacing-1 LATEST NEWS
+        %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
           %li
-            %a{:href => "#"} Donec sed odio dui. Nulla vitae elit libero, a pharetra augue
+            %a{:href => "/web"} Updated the course program
             %small 29 June 2015
           %li
             %a{:href => "#"} Nullam id dolor id nibh ultricies
@@ -35,7 +32,6 @@
           %li
             %a{:href => "#"} Duis mollis, est non commodo luctus
             %small 29 June 2015
-        / /Latest Blog Post
       .col-md-2
         / Links
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
@@ -55,9 +51,13 @@
         / /Links
       .col-md-4
         / Newsletter Form
-        %h4.letter-spacing-1 KEEP IN TOUCH
-        %p Subscribe to Our Newsletter to get Important News &amp; Offers
+        %h4.letter-spacing-1 Appply
+        %p Start your application process now
         %form.validate{:action => "php/newsletter.php", "data-success" => "Subscribed! Thank you!", "data-toastr-position" => "bottom-right", :method => "post"}
+          .input-group
+            %span.input-group-addon
+              %i.fa.fa-user
+            %input#name.form-control.required{:name => "name", :placeholder => "Enter your Name", :type => "name"}/
           .input-group
             %span.input-group-addon
               %i.fa.fa-envelope
