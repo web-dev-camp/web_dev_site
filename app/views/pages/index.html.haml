@@ -170,11 +170,11 @@
         .row
           .col-md-4
             .heading-title.heading-border-bottom.heading-color
-              %h3=link_to "Web" , "/visitors/web"
+              %h3=link_to "Web" , page_path(:web)
             %p
               The web is still growing and with it the demand for developers.
               Change your profession and your life by learning to create web application.
-            =link_to "/visitors/web" do
+            =link_to page_path(:web) do
               More about
               %span.word-rotator{"data-delay" => "2000"}
                 %span.items
@@ -186,11 +186,11 @@
               %i.glyphicon.glyphicon-menu-right.size-12
           .col-md-4
             .heading-title.heading-border-bottom.heading-color
-              %h3=link_to "Dev" , "/visitors/dev"
+              %h3=link_to "Dev" , page_path(:dev)
             %p
               Applications, web, mobile and desktop are converging more and more on web standards.
               We give you a good foundation in programming and current techniques. You decide where to go from there.
-            =link_to "/visitors/dev" do
+            =link_to page_path(:dev) do
               More about
               %span.word-rotator{"data-delay" => "2000"}
                 %span.items
@@ -200,11 +200,11 @@
               %i.glyphicon.glyphicon-menu-right.size-12
           .col-md-4
             .heading-title.heading-border-bottom.heading-color
-              %h3=link_to "Camp" , "/visitors/camp"
+              %h3=link_to "Camp" , page_path(:camp)
             %p
               During the course you stay at a beautiful place in the middle of nature.
               Small groups, an iterative teaching approach and the fact that everything else is taken care for you, let you jumpstart your new career.
-            =link_to "/visitors/camp" do
+            =link_to page_path(:camp) do
               More about
               %span.word-rotator{"data-delay" => "2000"}
                 %span.items
