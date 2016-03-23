@@ -70,7 +70,7 @@
           / /BUTTONS
           / Logo
           %a.logo.pull-left{:href => "index.html"}
-            %img{:alt => "", :src => "assets/images/logo_dark.png"}/
+            = image_tag "web_logo.png"
           = render 'layouts/navigation'
       / /Top Nav
     / LAYER SLIDER
@@ -89,12 +89,33 @@
           \.height-700
           \.height-750
           \.height-800
-        .layerslider.height-500{:style => "width:100%;"}
+        .layerslider.height-350{:style => "width:100%;"}
           / SLIDE
-          .ls-slide{"data-ls" => "slidedelay:8000;transition2d:75,79;"}
+          .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;timeshift:-1000;"}
+            / background
+            %img.ls-bg{:alt => "Slide background", :src => image_path("slider/net.jpg")}/
+            %img.ls-l{:alt => "", "data-ls" => "offsetxin:0;durationin:1500;delayin:3000;easingin:linear;scalexin:0;scaleyin:0;offsetxout:0;durationout:1500;showuntil:1;easingout:linear;scalexout:2;scaleyout:2;", :src => "assets/images/demo/layerslider/circle.png", :style => "top:20px;left:50%;white-space: nowrap;"}/
+            %img.ls-l{:alt => "", "data-ls" => "offsetxin:0;durationin:1500;delayin:4000;easingin:linear;scalexin:0;scaleyin:0;offsetxout:0;durationout:1500;showuntil:1;easingout:linear;scalexout:2;scaleyout:2;", :src => "assets/images/demo/layerslider/circle.png", :style => "top:20px;left:50%;white-space: nowrap;"}/
+            / left
+            %p.ls-l{"data-ls" => "offsetxin:0;durationin:2500;delayin:1000;scalexin:0;scaleyin:0;offsetxout:0;scalexout:0;scaleyout:0;", :style => "top:124px;left:156px;font-weight: 300; opacity: .4;font-size:200px;color:#fff;white-space: nowrap;"}
+              \&amp;
+            %p.ls-l{"data-ls" => "offsetxin:-50;durationin:2000;delayin:1000;offsetxout:-50;durationout:1000;", :style => "top:320px;left:120px;font-weight: 300; background: white; background: rgba(255,255,255,.85); height:40px; padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#A94545;white-space: nowrap;"}
+              ALL THESE FEATURES
+            %p.ls-l{"data-ls" => "offsetxin:50;delayin:2000;skewxin:-60;offsetxout:-50;durationout:1000;skewxout:-60;", :style => "top:360px;left:273px;font-weight: 500;font-size:30px;color:#fff;white-space: nowrap;"}
+              much more!
+            / right
+            %p.ls-l{"data-ls" => "offsetxin:0;delayin:2500;rotatein:90;transformoriginin:right bottom 0;offsetxout:0;durationout:1500;transformoriginout:right bottom 0;", :style => "top:320px;left:1013px;font-weight: 500; text-align: right;font-size:30px;color:#fff;white-space: nowrap;"}
+              \...to create
+            %p.ls-l{"data-ls" => "offsetxin:0;durationin:2500;delayin:3250;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% top 0;offsetxout:0;durationout:1000;rotatexout:90;transformoriginout:50% bottom 0;", :style => "top:360px;left:890px;font-weight: 300; text-align: right;width:260px;height:40px;padding-right:10px;font-size:30px;line-height:37px;color:#ffffff;background:#f06a52;white-space: nowrap;"}
+              THE BEST SLIDER
+            %p.ls-l{"data-ls" => "offsetxin:-50;delayin:3500;skewxin:60;scalexin:1.5;offsetxout:-50;durationout:1000;skewxout:60;scalexout:1.5;", :style => "top:405px;left:883px;font-size:30px;color:#fff;white-space: nowrap;"}
+              with no compromises!
+            %img.ls-l{:alt => "", "data-ls" => "durationin:1500;scalexin:0.8;scaleyin:0.8;scalexout:0.8;scaleyout:0.8;", :src => "assets/images/demo/layerslider/ls5box.png", :style => "top:80px;left:50%;white-space: nowrap;"}/
+          / SLIDE
+          .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;"}
             / background image
-            %img.ls-bg{:alt => "Slide background", :src => "assets/images/demo/layerslider/bg.jpg"}/
-            %img.ls-l{:alt => "", "data-ls" => "\r\n\t\t\t\t\t\t\t\tdurationin:1500;\r\n\t\t\t\t\t\t\t\tscalexin:0.8;\r\n\t\t\t\t\t\t\t\tscaleyin:0.8;\r\n\t\t\t\t\t\t\t\tscalexout:0.8;\r\n\t\t\t\t\t\t\t\tscaleyout:0.8;", :src => "assets/images/demo/desktop.png", :style => "top:40px;left:65%;white-space: nowrap;"}/
+            %img.ls-bg{:alt => "Slide background", :src => image_path("slider/bg.jpg")}/
+            %img.ls-l{:alt => "", "data-ls" => "durationin:1500;scalexin:0.8;scaleyin:0.8;scalexout:0.8;scaleyout:0.8;", :src => image_path("slider/desktop.png"), :style => "top:40px;left:65%;white-space: nowrap;"}/
             %p.ls-l{"data-ls" => "durationin:1500;delayin:300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;", :style => "top:50px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#fa6b4b;border-radius:4px;white-space: nowrap;"}
               FULLY RESPONSIVE
             %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:700;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;", :style => "top:90px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"}
@@ -112,28 +133,7 @@
             %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:2800;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;", :style => "top:390px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"}
               working with the plugin is more easy
           / SLIDE
-          .ls-slide{"data-ls" => "slidedelay:8000;transition2d:21,105;timeshift:-1000;"}
-            / background
-            %img.ls-bg{:alt => "Slide background", :src => "assets/images/demo/blue.jpg"}/
-            %img.ls-l{:alt => "", "data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:0;\r\n\t\t\t\t\t\t\t\tdurationin:1500;\r\n\t\t\t\t\t\t\t\tdelayin:3000;\r\n\t\t\t\t\t\t\t\teasingin:linear;\r\n\t\t\t\t\t\t\t\tscalexin:0;\r\n\t\t\t\t\t\t\t\tscaleyin:0;\r\n\t\t\t\t\t\t\t\toffsetxout:0;\r\n\t\t\t\t\t\t\t\tdurationout:1500;\r\n\t\t\t\t\t\t\t\tshowuntil:1;\r\n\t\t\t\t\t\t\t\teasingout:linear;\r\n\t\t\t\t\t\t\t\tscalexout:2;\r\n\t\t\t\t\t\t\t\tscaleyout:2;", :src => "assets/images/demo/layerslider/circle.png", :style => "top:20px;left:50%;white-space: nowrap;"}/
-            %img.ls-l{:alt => "", "data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:0;\r\n\t\t\t\t\t\t\t\tdurationin:1500;\r\n\t\t\t\t\t\t\t\tdelayin:4000;\r\n\t\t\t\t\t\t\t\teasingin:linear;\r\n\t\t\t\t\t\t\t\tscalexin:0;\r\n\t\t\t\t\t\t\t\tscaleyin:0;\r\n\t\t\t\t\t\t\t\toffsetxout:0;\r\n\t\t\t\t\t\t\t\tdurationout:1500;\r\n\t\t\t\t\t\t\t\tshowuntil:1;\r\n\t\t\t\t\t\t\t\teasingout:linear;\r\n\t\t\t\t\t\t\t\tscalexout:2;\r\n\t\t\t\t\t\t\t\tscaleyout:2;", :src => "assets/images/demo/layerslider/circle.png", :style => "top:20px;left:50%;white-space: nowrap;"}/
-            / left
-            %p.ls-l{"data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:0;\r\n\t\t\t\t\t\t\t\tdurationin:2500;\r\n\t\t\t\t\t\t\t\tdelayin:1000;\r\n\t\t\t\t\t\t\t\tscalexin:0;\r\n\t\t\t\t\t\t\t\tscaleyin:0;\r\n\t\t\t\t\t\t\t\toffsetxout:0;\r\n\t\t\t\t\t\t\t\tscalexout:0;\r\n\t\t\t\t\t\t\t\tscaleyout:0;", :style => "top:124px;left:156px;font-weight: 300; opacity: .4;font-size:200px;color:#fff;white-space: nowrap;"}
-              \&amp;
-            %p.ls-l{"data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:-50;\r\n\t\t\t\t\t\t\t\tdurationin:2000;\r\n\t\t\t\t\t\t\t\tdelayin:1000;\r\n\t\t\t\t\t\t\t\toffsetxout:-50;\r\n\t\t\t\t\t\t\t\tdurationout:1000;", :style => "top:320px;left:120px;font-weight: 300; background: white; background: rgba(255,255,255,.85); height:40px; padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#A94545;white-space: nowrap;"}
-              ALL THESE FEATURES
-            %p.ls-l{"data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:50;\r\n\t\t\t\t\t\t\t\tdelayin:2000;\r\n\t\t\t\t\t\t\t\tskewxin:-60;\r\n\t\t\t\t\t\t\t\toffsetxout:-50;\r\n\t\t\t\t\t\t\t\tdurationout:1000;\r\n\t\t\t\t\t\t\t\tskewxout:-60;", :style => "top:360px;left:273px;font-weight: 500;font-size:30px;color:#fff;white-space: nowrap;"}
-              much more!
-            / right
-            %p.ls-l{"data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:0;\r\n\t\t\t\t\t\t\t\tdelayin:2500;\r\n\t\t\t\t\t\t\t\trotatein:90;\r\n\t\t\t\t\t\t\t\ttransformoriginin:right bottom 0;\r\n\t\t\t\t\t\t\t\toffsetxout:0;\r\n\t\t\t\t\t\t\t\tdurationout:1500;\r\n\t\t\t\t\t\t\t\ttransformoriginout:right bottom 0;", :style => "top:320px;left:1013px;font-weight: 500; text-align: right;font-size:30px;color:#fff;white-space: nowrap;"}
-              \...to create
-            %p.ls-l{"data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:0;\r\n\t\t\t\t\t\t\t\tdurationin:2500;\r\n\t\t\t\t\t\t\t\tdelayin:3250;\r\n\t\t\t\t\t\t\t\teasingin:easeOutElastic;rotatexin:90;\r\n\t\t\t\t\t\t\t\ttransformoriginin:50% top 0;\r\n\t\t\t\t\t\t\t\toffsetxout:0;\r\n\t\t\t\t\t\t\t\tdurationout:1000;\r\n\t\t\t\t\t\t\t\trotatexout:90;\r\n\t\t\t\t\t\t\t\ttransformoriginout:50% bottom 0;", :style => "top:360px;left:890px;font-weight: 300; text-align: right;width:260px;height:40px;padding-right:10px;font-size:30px;line-height:37px;color:#ffffff;background:#f06a52;white-space: nowrap;"}
-              THE BEST SLIDER
-            %p.ls-l{"data-ls" => "\r\n\t\t\t\t\t\t\t\toffsetxin:-50;\r\n\t\t\t\t\t\t\t\tdelayin:3500;\r\n\t\t\t\t\t\t\t\tskewxin:60;\r\n\t\t\t\t\t\t\t\tscalexin:1.5;\r\n\t\t\t\t\t\t\t\toffsetxout:-50;\r\n\t\t\t\t\t\t\t\tdurationout:1000;\r\n\t\t\t\t\t\t\t\tskewxout:60;\r\n\t\t\t\t\t\t\t\tscalexout:1.5;", :style => "top:405px;left:883px;font-size:30px;color:#fff;white-space: nowrap;"}
-              with no compromises!
-            %img.ls-l{:alt => "", "data-ls" => "\r\n\t\t\t\t\t\t\t\tdurationin:1500;\r\n\t\t\t\t\t\t\t\tscalexin:0.8;\r\n\t\t\t\t\t\t\t\tscaleyin:0.8;\r\n\t\t\t\t\t\t\t\tscalexout:0.8;\r\n\t\t\t\t\t\t\t\tscaleyout:0.8;", :src => "assets/images/demo/layerslider/ls5box.png", :style => "top:80px;left:50%;white-space: nowrap;"}/
-          / SLIDE
-          .ls-slide{"data-ls" => "slidedelay:8000;transition2d:21,105;"}
+          .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;"}
             / background image
             %img.ls-bg{:alt => "Slide background", :src => "assets/images/demo/layerslider/slide-b-bg.jpg"}/
             %p.ls-l{"data-ls" => "offsetxin:50;durationin:750;easingin:easeOutBack;skewxin:-50;offsetxout:-50;durationout:600;showuntil:500;easingout:easeInBack;skewxout:50;", :style => "top:44%;left:50%;font-weight: 300;font-size:30px;color:#ffffff;white-space: nowrap;"}
@@ -156,6 +156,7 @@
               responsive template
         :javascript
           var layer_options = {
+            showBarTimer:   true ,
           	responsive: 		false,
           	responsiveUnder: 	1280,
           	layersContainer: 	1280,
@@ -163,67 +164,52 @@
           	skinsPath: 			'assets/plugins/slider.layerslider/skins/'
           }
     / /LAYER SLIDER
-    / CALLOUT
-    .alert.alert-transparent.bordered-bottom
-      .container
-        .row
-          .col-md-9.col-sm-12
-            / left text
-            %h3
-              Call now at
-              %span
-                %strong +800-565-2390
-              and get 15% discount!
-            %p.font-lato.weight-300.size-20.nomargin-bottom
-              We truly care about our users and our product.
-          / /left text
-          .col-md-3.col-sm-12.text-right
-            / right btn
-            %a.btn.btn-primary.btn-lg{:href => "#purchase", :rel => "nofollow", :target => "_blank"} PURCHASE NOW
-          / /right btn
-    / /CALLOUT
     /
     %section#readMore
       .container
         .row
           .col-md-4
             .heading-title.heading-border-bottom.heading-color
-              %h3 Passion
-            %p Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.
-            %a{:href => "#"}
-              Read
-              / /word rotator
+              %h3=link_to "Web" , "/visitors/web"
+            %p
+              The web is still growing and with it the demand for developers.
+              Change your profession and your life by learning to create web application.
+            =link_to "/visitors/web" do
+              More about
               %span.word-rotator{"data-delay" => "2000"}
                 %span.items
-                  %span more
-                  %span now
-              / /word rotator
+                  %span programming
+                  %span html
+                  %span css
+                  %span javascript
+                  %span databases
               %i.glyphicon.glyphicon-menu-right.size-12
           .col-md-4
             .heading-title.heading-border-bottom.heading-color
-              %h3 Precision
-            %p Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.
-            %a{:href => "#"}
-              Read
-              / /word rotator
+              %h3=link_to "Dev" , "/visitors/dev"
+            %p
+              Applications, web, mobile and desktop are converging more and more on web standards.
+              We give you a good foundation in programming and current techniques. You decide where to go from there.
+            =link_to "/visitors/dev" do
+              More about
               %span.word-rotator{"data-delay" => "2000"}
                 %span.items
-                  %span more
-                  %span now
-              / /word rotator
+                  %span course modules
+                  %span course structure
+                  %span css
               %i.glyphicon.glyphicon-menu-right.size-12
           .col-md-4
             .heading-title.heading-border-bottom.heading-color
-              %h3 Simplicity
-            %p Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.
-            %a{:href => "#"}
-              Read
-              / /word rotator
+              %h3=link_to "Camp" , "/visitors/camp"
+            %p
+              During the course you stay at a beautiful place in the middle of nature.
+              Small groups, an iterative teaching approach and the fact that everything else is taken care for you, let you jumpstart your new career.
+            =link_to "/visitors/camp" do
+              More about
               %span.word-rotator{"data-delay" => "2000"}
                 %span.items
-                  %span more
-                  %span now
-              / /word rotator
+                  %span where you stay
+                  %span food
               %i.glyphicon.glyphicon-menu-right.size-12
         .divider.double-line.margin-top-80.margin-bottom-80
           / divider
