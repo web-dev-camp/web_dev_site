@@ -29,4 +29,84 @@
     / PAGE LEVEL SCRIPTS
     %link{:href => "assets/css/header-1.css", :rel => "stylesheet", :type => "text/css"}/
     %link#color_scheme{:href => "assets/css/color_scheme/green.css", :rel => "stylesheet", :type => "text/css"}/
-  = yield
+  /
+    AVAILABLE BODY CLASSES:
+
+    smoothscroll 			= create a browser smooth scroll
+    enable-animation		= enable WOW animations
+
+    bg-grey					= grey background
+    grain-grey				= grey grain background
+    grain-blue				= blue grain background
+    grain-green				= green grain background
+    grain-blue				= blue grain background
+    grain-orange			= orange grain background
+    grain-yellow			= yellow grain background
+
+    boxed 					= boxed layout
+    pattern1 ... patern11	= pattern background
+    menu-vertical-hide		= hidden, open on click
+
+    BACKGROUND IMAGE [together with .boxed class]
+    data-background="assets/images/boxed_background/1.jpg"
+  %body.smoothscroll.enable-animation
+    = render 'layouts/slidetop'
+    / wrapper
+    #wrapper
+      /
+        AVAILABLE HEADER CLASSES
+
+        Default nav height: 96px
+        \.header-md 		= 70px nav height
+        \.header-sm 		= 60px nav height
+
+        \.noborder 		= remove bottom border (only with transparent use)
+        \.transparent	= transparent header
+        \.translucent	= translucent header
+        \.sticky			= sticky header
+        \.static			= static header
+        \.dark			= dark header
+        \.bottom			= header on bottom
+
+        shadow-before-1 = shadow 1 header top
+        shadow-after-1 	= shadow 1 header bottom
+        shadow-before-2 = shadow 2 header top
+        shadow-after-2 	= shadow 2 header bottom
+        shadow-before-3 = shadow 3 header top
+        shadow-after-3 	= shadow 3 header bottom
+
+        \.clearfix		= required for mobile menu, do not remove!
+
+        Example Usage:  class="clearfix sticky header-sm transparent noborder"
+      #header.sticky.clearfix
+        / TOP NAV
+        %header#topNav
+          .container
+            / Mobile Menu Button
+            %button.btn.btn-mobile{"data-target" => ".nav-main-collapse", "data-toggle" => "collapse"}
+              %i.fa.fa-bars
+            / BUTTONS
+            %ul.pull-right.nav.nav-pills.nav-second-main
+              / SEARCH
+              %li.search
+                %a{:href => "javascript:;"}
+                  %i.fa.fa-user
+                .search-box
+                  %form{:action => "page-search-result-1.html", :method => "get"}
+                    .input-group
+                      %input.form-control{:name => "src", :placeholder => "Search", :type => "text"}/
+                      %span.input-group-btn
+                        %button.btn.btn-primary{:type => "submit"} Search
+              / /SEARCH
+            / /BUTTONS
+            / Logo
+            %a.logo.pull-left{:href => "index.html"}
+              = image_tag "web_logo.png"
+            = render 'layouts/navigation'
+        / /Top Nav
+      / LAYER SLIDER
+
+      = yield
+    = render 'layouts/footer'
+  / /wrapper
+  = render 'layouts/wrapper'
