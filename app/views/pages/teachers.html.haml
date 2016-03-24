@@ -1,0 +1,100 @@
+%section.padding-xxs
+  .container
+    %p.lead
+      Web Dev Camp is built and run by a team of very experienced professionals
+    %p
+      Active professionals also participate in the teaching on a part time basis
+    .row
+      .col-md-4.col-sm-6
+        .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
+          .front
+            .box1.box-default
+              .box-icon-title
+                = image_tag "torsten.png" , :class => "img-responsive"
+                %h2 Torsten Ruger
+                %small Director / Teacher
+          .back
+            .box2.box-default
+              %h4.nomargin Torsten Ruger
+              %small Director / Teacher
+              %hr/
+              %p
+                Torsten has worked for 25 years as a professional web programmer before starting
+                Web Dev Camp in an endeavour to share his experience.
+                %br
+                Torsten has programmed in many different languages, used many different standards,
+                led teams, architected systems but always found that learning and working with
+                people was what he enjoyed most about his profession.
+              %hr/
+              %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/dancinglightning"}
+                %i.fa.fa-github
+                %i.fa.fa-github
+              %a.social-icon.social-icon-sm.social-linkedin{:href => "#"}
+                %i.fa.fa-linkedin
+                %i.fa.fa-linkedin
+      .col-md-4.col-sm-6
+        .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
+          .front
+            .box1.box-default
+              .box-icon-title
+                =image_tag "sherif.png" , :class => "img-responsive"
+                %h2 Sherif Abushadi
+                %small Art Director
+          .back
+            .box2.box-default
+              %h4.nomargin Sherif Abushadi
+              %small Director / Teacher
+              %hr/
+              %p
+                Sherif has been teaching developers since 2001, the last 4 of which at dev bootcamp
+                in San Francisco.
+                %br
+                He brought his experience to bear in builing the school, it's course and curriculum.
+                %br
+                He also teaches part time at Web Dev Camp
+              %hr/
+              %a.social-icon.social-icon-sm.social-twitter{:href => "https://twitter.com/amgando"}
+                %i.fa.fa-twitter
+                %i.fa.fa-twitter
+              %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/amgando"}
+                %i.fa.fa-github
+                %i.fa.fa-github
+              %a.social-icon.social-icon-sm.social-linkedin{:href => "https://www.linkedin.com/in/sherifabushadi"}
+                %i.fa.fa-linkedin
+                %i.fa.fa-linkedin
+      .col-md-4.col-sm-6
+        .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
+          .front
+            .box1.box-default
+              .box-icon-title
+                =image_tag "raisa.jpg" , :class => "img-responsive"
+                %h2 Raisa Kaipainen
+                %small Camp director
+          .back
+            .box2.box-default
+              %h4.nomargin Raisa Kaipainen
+              %small Camp Director
+              %hr/
+              %p
+                Raisa has been running workshops and courses for 25 years and organises the running
+                of the camp.
+                %br
+                Raisa has excellent people skills and is always a good person to talk or ask advice.
+
+              %hr/
+              %a.social-icon.social-icon-sm.social-facebook{:href => "https://www.facebook.com/RaisaAndTorsten"}
+                %i.fa.fa-facebook
+                %i.fa.fa-facebook
+              %a.social-icon.social-icon-sm.social-soundcloud{:href => "https://soundcloud.com/raisa-andtorsten-kaipainen"}
+                %i.fa.fa-soundcloud
+                %i.fa.fa-soundcloud
+
+%section.padding-xxs
+  .container
+    %h4 Partner companies
+    Professionals from the following companies come to teach at Web Dev Camp for 1 to 4 weeks.
+    .text-center
+      .owl-carousel.nomargin{"data-plugin-options" => "{\"singleItem\": false, \"autoPlay\": true}"}
+        - ["1","2","3","4","5","6","7","8"].each do |brand|
+          %div
+            = image_tag "brands/#{brand}.jpg" , :class => "img-responsive"
