@@ -1,0 +1,57 @@
+%section.padding-xxs
+  .container
+    .row
+      .col-lg-4.col-md-4.col-sm-4
+        / OWL SLIDER
+        .owl-carousel.buttons-autohide.controlls-over.nomargin.box-shadow-1{"data-plugin-options" => "{\"items\": 1, \"autoHeight\": true, \"navigation\": true, \"pagination\": true, \"transitionStyle\":\"fade\", \"progressBar\":\"true\"}"}
+          %div
+            = image_tag "villa_taika.jpg" , :class => "img-responsive"
+          %div
+            = image_tag "orange.jpg" , :class => "img-responsive"
+          %div
+            = image_tag "garden.jpg" , :class => "img-responsive"
+        / /OWL SLIDER
+      .col-lg-8.col-md-8.col-sm-8
+        .heading-title.heading-border-bottom
+          %h3 Remove the distraction, live in.
+        %blockquote
+          %p
+            Research show that you learn better with less distraction.
+          /%cite Albert Einstein
+        %p
+          Removing the noise of you're everyday life lets you concentrate on learning and
+          you will find that you can make progress in ways you had not imagined.
+        %p
+          Also this frees the time and cost incurred with living on your on.
+          We do not just provide a bed, but three meals a day and organise recreational activities.
+
+%section.padding-xxs
+  .container
+    .row
+      .blog-post-item.col-md-4.col-sm-4
+        %h2
+          %a{:href => "blog-single-default.html"} Restoring nature
+        %figure.margin-bottom-20
+          = image_tag "garden.jpg" , :class => "img-responsive"
+        %p
+          Whenever you need a break, and believe us you will, let the surrounding nature restore your strengths.
+          %br
+          Light physical activity will also help to restore your mental powers.
+      .blog-post-item.col-md-4.col-sm-4
+        %h2
+          %a{:href => "blog-single-default.html"} Beautiful rooms
+        %figure.margin-bottom-20
+          = image_tag "orange.jpg" , :class => "img-responsive"
+        %p
+          Stay on site in our beautifully decorated rooms.
+          %br
+          Enjoy the little time you'll have to relax.
+      .blog-post-item.col-md-4.col-sm-4
+        %h2
+          %a{:href => "blog-single-default.html"} Good food
+        %figure.margin-bottom-20
+          = image_tag "food.jpg" , :class => "img-responsive"
+        %p
+          Healthy, local food gives you strength to carry on.
+          %br
+          ​Breakfast and lunch are provided and you are free to time and shape your evening intake yourself.
