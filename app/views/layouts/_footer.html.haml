@@ -24,43 +24,24 @@
         %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
           %li
+            %a{:href => "/answers"} More answers to questions
+            %small 25 March 2016
+          %li
             %a{:href => "/apply"} Updated apply page
             %small 24 March 2016
           %li
             %a{:href => "/dev"} Updated dev and camp
             %small 24 March 2016
-          %li
-            %a{:href => "/web"} Updated the course program
-            %small 20 March 2016
       .col-md-2
-        / Links
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
         %ul.footer-links.list-unstyled
-          %li
-            %a{:href => "/teachers"} Teachers
-          %li
-            %a{:href => "/payment"} Payment Policy
-          %li
-            %a{:href => "#"} Web Dev Tour
-          %li
-            %a{:href => "#"} Teaching oppertunities
-        / /Links
+          %li= link_to "Course overview" , page_path(:web)
+          %li= link_to "Camp" , page_path(:camp)
+          %li= link_to "Teachers" , page_path(:teachers)
+          %li= link_to "Payment Policy" , page_path(:payment)
+          %li= link_to "Teaching oppertunities" , page_path(:teaching)
       .col-md-4
-        / Newsletter Form
-        %h4.letter-spacing-1 Appply
-        %p Start your application process now
-        %form.validate{:action => "php/newsletter.php", "data-success" => "Subscribed! Thank you!", "data-toastr-position" => "bottom-right", :method => "post"}
-          .input-group
-            %span.input-group-addon
-              %i.fa.fa-user
-            %input#name.form-control.required{:name => "name", :placeholder => "Enter your Name", :type => "name"}/
-          .input-group
-            %span.input-group-addon
-              %i.fa.fa-envelope
-            %input#email.form-control.required{:name => "email", :placeholder => "Enter your Email", :type => "email"}/
-            %span.input-group-btn
-              %button.btn.btn-success{:type => "submit"} Subscribe
-        / /Newsletter Form
+        =render "pages/apply_form"
         / Social Icons
         .margin-top-20
           %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Facebook"}
@@ -83,9 +64,9 @@
     .container
       %ul.pull-right.nomargin.list-inline.mobile-block
         %li
-          %a{:href => "#"} Terms &amp; Conditions
+          =link_to "Terms & Conditions" , page_path(:terms)
         %li •
         %li
-          %a{:href => "#"} Privacy
-      © All Rights Reserved, Company LTD
+          =link_to "Privacy" , page_path(:privacy)
+      © All Rights Reserved, Web Dev Camp, a subsidary of Lightning Raisa & Torsten Oy
 / /FOOTER
