@@ -1,0 +1,25 @@
+/
+  PAGE MENU
+
+  AVAILABLE CLASSES:
+  \.page-menu-light
+  \.page-menu-dark
+  \.page-menu-transparent
+  \.page-menu-color
+#page-menu.page-menu-light
+  .container
+    %nav.pull-right
+      %button#page-menu-mobile.fa.fa-bars
+      /
+        \.menu-scrollTo - for scrollto page menu / no external links
+      %ul.list-inline
+        %li.active
+          %a{:href => "/web"} Web
+        %li
+          %a{:href => "/dev"} Dev
+        %li
+          %a{:href => "/course"} Course
+        %li
+          %a{:href => "/teachers"} Teachers
+        %li
+          %a{:href => "/answers"} Q & A
