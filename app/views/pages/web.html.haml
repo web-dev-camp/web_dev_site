@@ -1,38 +1,12 @@
 = render 'layouts/submenu'
 
-%section#about.padding-xxs
-  .container
-    %header.text-center.margin-bottom-20
-      %h2 The basics
-      %p.lead.font-lato We will teach you the basics, and let you decide where to go with them
-      %hr/
-    .row
-      .col-sm-2
-        =image_tag "pie.jpg" , :class => "img-responsive"
-      .col-sm-10
-        %p.dropcap
-          The curriculum teaches full stack developer skills. Software development is a team effort where many different talents must come together to make a whole.
-        %p.dropcap
-          We teach each of the 6 basic topics in each of the 2 week cycles. Each week you will go deeper into each topic, but in the second week of each cycle you can decide which topic you want to spend even more time with.
 %section.padding-xxs
   .container
     %p.lead
       The topics are listed below, each bullet-point corresponding to a two week cycle or one iteration through the topic.
     .divider.divider-center.divider-color
-      / divider
       %i.fa.fa-chevron-down
-    / FEATURED BOXES 3
     .row
-      .col-md-4.col-xs-6
-        .text-center
-          %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-code
-          %h4 Programming
-          %p.font-lato.size-20
-            %ul
-              %li Objects as models
-              %li associations / structures
-              %li closures / concurrency
-              %li other languages
       .col-md-4.col-xs-6
         .text-center
           %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-html5
@@ -63,51 +37,3 @@
               %li git basics
               %li advanced git
               %li communication, open source
-      .col-md-4.col-xs-6
-        .text-center
-          %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-database
-          %h4 Database
-          %p.font-lato.size-20
-            %ul
-              %li object table model
-              %li associations
-              %li searching
-              %li performance /alternatives
-      .col-md-4.col-xs-6
-        .text-center
-          %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-check
-          %h4 Testing
-          %p.font-lato.size-20
-            %ul
-              %li testing as assurance
-              %li continous testing
-              %li rspec
-              %li client side testing
-  .row
-    .col-lg-6
-      .callout.alert.alert-default
-        .row
-          .col-md-7.col-sm-7
-            / left text
-            %h4
-              Learn
-              %strong more
-            %p
-              The course structure is 4 modules of 2 weeks.
-          / /left text
-          .col-md-4.col-sm-4.text-right
-            / right btn
-            %a.btn.btn-primary.btn-lg{:href => "/dev"} Read about the course
-    .col-lg-6
-      .callout.alert.alert-info
-        .row
-          .col-md-7.col-sm-7
-            %h4
-              Apply
-              %strong now
-            %p
-              Start your application prcocess here.
-          / /left text
-          .col-md-4.col-sm-4.text-right
-            / right btn
-            %a.btn.btn-primary.btn-lg{:href => "apply"} Apply here
