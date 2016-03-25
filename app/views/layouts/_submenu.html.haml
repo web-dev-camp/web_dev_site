@@ -6,7 +6,7 @@
   \.page-menu-dark
   \.page-menu-transparent
   \.page-menu-color
-#page-menu.page-menu-light
+#page-menu.page-menu-color
   .container
     %nav.pull-right
       %button#page-menu-mobile.fa.fa-bars
@@ -15,5 +15,5 @@
       %ul.list-inline
         - {"web" => "Web" , "dev" => "Dev" , "course" => "Course" , "teachers" => "Teachers" ,
           "answers" => "Q & A"}.each do |slug , menu|
-          %li{:class => ("active" if (params[:id] == slug) )}
+          %li{class: (params[:id] == slug) && "active" }
             =link_to menu , page_path(slug)
