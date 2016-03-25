@@ -13,13 +13,7 @@
       /
         \.menu-scrollTo - for scrollto page menu / no external links
       %ul.list-inline
-        %li.active
-          %a{:href => "/web"} Web
-        %li
-          %a{:href => "/dev"} Dev
-        %li
-          %a{:href => "/course"} Course
-        %li
-          %a{:href => "/teachers"} Teachers
-        %li
-          %a{:href => "/answers"} Q & A
+        - {"web" => "Web" , "dev" => "Dev" , "course" => "Course" , "teachers" => "Teachers" ,
+          "answers" => "Q & A"}.each do |slug , menu|
+          %li{:class => ("active" if (params[:id] == slug) )}
+            =link_to menu , page_path(slug)
