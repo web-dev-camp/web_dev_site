@@ -1,0 +1,27 @@
+= render 'layouts/submenu'
+%section
+  .container
+    / FILTER
+    %ul.nav.nav-pills.mix-filter.margin-bottom-30
+      %li.filter.active{"data-filter" => "all"}
+        %a{:href => "#"} All
+      %li.filter{"data-filter" => "course"}
+        %a{:href => "#"} Course content
+      %li.filter{"data-filter" => "application"}
+        %a{:href => "#"} Application
+      %li.filter{"data-filter" => "payment"}
+        %a{:href => "#"} Payment
+      %li.filter{"data-filter" => "stay"}
+        %a{:href => "#"} Stay
+      %li.filter{"data-filter" => "career"}
+        %a{:href => "#"} Career
+    / /FILTER
+    .row.mix-grid
+      .col-md-12
+        / TOGGLES
+        .toggle.toggle-transparent.toggle-bordered-simple.toggle-accordion
+          = render "faq/course"
+          = render "faq/application"
+          = render "faq/payment"
+          = render "faq/stay"
+          = render "faq/career"
