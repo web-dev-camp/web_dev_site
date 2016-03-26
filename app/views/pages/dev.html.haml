@@ -2,38 +2,147 @@
 
 %section.padding-xxs
   .container
-    %p.lead
-      The topics are listed below, each bullet-point corresponding to a two week cycle or one iteration through the topic.
+    %p.lead.text-center
+      Each topic will be handled in all four modules, see details below.
     .divider.divider-center.divider-color
       %i.fa.fa-chevron-down
     .row
       .col-md-4.col-xs-6
         .text-center
-          %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-code
-          %h4 Programming
-          %p.font-lato.size-20
-            %ul
-              %li Objects as models
-              %li associations / structures
-              %li closures / concurrency
-              %li other languages
+          %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-github
+          %h4 Teamwork
+        .toggle.toggle-transparent.toggle-accordion
+          .toggle
+            %label 1. Roles
+            .toggle-content
+              %p
+                Software development is all about teamwork. Even tools have got much better, so have timetables
+                shrunk. In any meaningful project we rely on other people's strenghts to achieve a goal.
+                We will talk about the different roles and skills people have, not just to see
+                what a software developer is, but also to open the scope of possibilities for your
+                future carrer. People are best at what they enjoy and a large part of the course is
+                finding out what you are good at.
+                %br
+                Also projects are heaviliy dependant on often open source libraries, tools and
+                frameworks. The first of which are your os, editor, commandline and browser.
+          .toggle
+            %label 2. Git basics
+            .toggle-content
+              %p
+              The sharing of code has always been very important but never as easy and efficient as
+              today, with git. Even more, online sharing sites like
+              =link_to "github.com", "https://github.com" , target: :blank
+              fuel open source community by sharing publicly and accross projects.
+              %br
+              You'll learn the basic workflow and will practise this in your own projects.
+          .toggle
+            %label 3. Advanced git
+            .toggle-content
+              %p
+              After having gained some hands on experience, you will understand the problems better
+              and so we will go into more advanced usage of git.
+              %br
+              This will give you a glimpse into how large project are run, both in the open source
+              world and in companies. After the theory you may choose to deepen this part or not,
+              since in larger projects this is usually a seperate role.
+          .toggle
+            %label 4. Communication skills, open source
+            .toggle-content
+              %p
+              Off course code is by far not the only way developers communicate and so we will
+              go into the importance of both communicating precisely both in documentation
+              and presentation.
+              %br
+              We will practise both areas and learn some modelling visualisation on the way.
+              %br
+              Also we debunk the common misconception that open source means that ownership is
+              not important. This is especcially important when wanting to collaborate in open
+              source projects, wich you have a chance to.
       .col-md-4.col-xs-6
         .text-center
           %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-database
           %h4 Database
-          %p.font-lato.size-20
-            %ul
-              %li object table model
-              %li associations
-              %li searching
-              %li performance /alternatives
+        .toggle.toggle-transparent.toggle-accordion
+          .toggle
+            %label 1. Object table model
+            .toggle-content
+              %p
+              SQL databases are a ubiquous, well understood and efficient way to store data. The
+              standard way of storing objects, maps classes to a tables and rows to objects.
+              %br
+              You will learn how this object table model is implemented in rails, or rather active
+              record and try out the tools that come with it. We also talk a littel bit about
+              alternatives.
+          .toggle
+            %label 2. Associations
+            .toggle-content
+              %p
+              In the same way we need structures for programming, we need associations in databases.
+              You'll learn how associations are implemented and how they relate to the structures
+              we have learned in the programming sessions.
+              %br
+              We see how associations are implemented as in rails by using metaprogramming
+              techiques to create a very intuitive api.
+          .toggle
+            %label 3. Searching
+            .toggle-content
+              %p
+              Going deeper into how to find objects in the database we learn about scopes, some
+              simple sql clauses and how to actually use sql in queries.
+              %br
+              You will learn the tools to build complex search interfaces and use pagination
+              on the results.
+          .toggle
+            %label 4. Performance , alternatives
+            .toggle-content
+              %p
+              We briefly look at database and application performance. The ways to scale, optimise
+              and benchmark. This is an advanced topic, but you will learn to understand the issues.
+              %br
+              Finally we will explore the alternatives a litlle, so called nosql, the concept of
+              graph , object or document databases and possible uses.
       .col-md-4.col-xs-6
         .text-center
           %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-check
           %h4 Testing
-          %p.font-lato.size-20
-            %ul
-              %li testing as assurance
-              %li continous testing
-              %li rspec
-              %li client side testing
+        .toggle.toggle-transparent.toggle-accordion
+          .toggle
+            %label 1. Testing as assurance
+            .toggle-content
+              %p
+              Testing has been more of a nice idea in software engineering for a long time, before
+              finally, and especially in the ruby community, becoming a reality.
+              %br
+              There really is no other way to know that the software we write does what we intend
+              it to do, as you will be able to experience yourself very quickly.
+              %br
+              You will learn different types of testing and we will touch on frameworks and test
+              integration.
+          .toggle
+            %label 2. Rspec
+            .toggle-content
+              %p
+              In the second module we will concentrate on exploring and using rspec, a commonly
+              used testing framework. We will be writing different test and use supporting tools
+              for creating mock object, managing database "cleanliness" and interacting as if our
+              test were a user.
+          .toggle
+            %label 3. Continous testing
+            .toggle-content
+              %p
+              The next step will be to integrate our test fully into our workflow. This simply means
+              that no work should be accepted before adequate test are written and fixing bugs
+              should always start by writing test.
+              %br
+              To make the should a reality we make testing automatic both for the developer, and
+              for the current state of the commited source (in git). We will see the tools needed
+              to alert us directly of any shortcomings.
+          .toggle
+            %label 4. Client side testing
+            .toggle-content
+              %p
+              Client side testing, like client side applications, is still quite young. But progress
+              has been made and especially with the ruby tools we will see how.
+              %br
+              At the same time we will go into more depth on testing javascript enhanced web sites
+              like the ones we will be building in this last module of the course.

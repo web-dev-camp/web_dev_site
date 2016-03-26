@@ -2,8 +2,8 @@
 
 %section.padding-xxs
   .container
-    %p.lead
-      The topics are listed below, each bullet-point corresponding to a two week cycle or one iteration through the topic.
+    %p.lead.text-center
+      Each topic will be handled in all four modules, see details below.
     .divider.divider-center.divider-color
       %i.fa.fa-chevron-down
     .row
@@ -11,29 +11,153 @@
         .text-center
           %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-html5
           %h4 Html
-          %p.font-lato.size-20
-            %ul
-              %li boxes in boxes / haml
-              %li dom, html's api
-              %li dynamic generation
-              %li client applications
+        .toggle.toggle-transparent.toggle-accordion
+          .toggle
+            %label 1. Boxes in Boxes, and Haml
+            .toggle-content
+              %p
+                Boxes in boxes is a simple way to think about html. You'll learn a little about it's
+                initial shortcomings and current standards.
+                %br
+                We introduce
+                = link_to "Haml" , "http://haml.info/" , target: :blank
+                as a shorter, more concise and error free way of writing correct html.
+                Also you'll learn about the type of boxes and how they can be arranged, in other
+                words the connection to css.
+          .toggle
+            %label 2. DOM, the api for html
+            .toggle-content
+              %p
+                The Document Object Model (
+                =link_to "DOM", "http://www.w3schools.com/js/js_htmldom.asp" , target: :blank
+                ) gives us a programmatic interface to the rendered
+                content. While html describes the static structure and a transport mechanism, the dom
+                gives us a way to programatically create, update and delete arbitrary nodes.
+                %br
+                This is the foundation for the modern web and client side applications.
+          .toggle
+            %label 3. Dynamic html generation
+            .toggle-content
+              %p
+                Here you learn a little more about the DOM and and how it can be used to create
+                simple dynamic pages, eg endless scolling.
+                %br
+                We use existing tools and server side responses to generate html on the client.
+          .toggle
+            %label 4. Client side applications
+            .toggle-content
+              %p
+                Going further into client side api's and cross compilation we examine languages
+                that can be used instead of using javascript directly, specifically
+                =link_to "cofee script" , "http://coffeescript.org/" , target: :blank
+                and
+                =link_to "opal" , "http://opalrb.org/" , target: :blank
+                %br
+                We will look at evolving tools to write client side applications, like
+                =link_to "volt" , "http://voltframework.com" , target: :blank
+                ,
+                =link_to "webix" , "http://webix.com/" , target: :blank
+                and
+                =link_to "webix" , "http://opalphaser.com/" , target: :blank
+                You will also have an opertunity to look at pure javascript frameworks like
+                Angular, Ember, and Backbone.
       .col-md-4.col-xs-6
         .text-center
           %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-css3
           %h4 Css
-          %p.font-lato.size-20
-            %ul
-              %li stickers on the box / sass
-              %li bootstrap / frameworks
-              %li semantic css / susy
-              %li breakpoints / mobile first
+        .toggle.toggle-transparent.toggle-accordion
+          .toggle
+            %label 1. Stickers on the box and sass
+            .toggle-content
+              %p
+              If we think of html elements as boxes, then we can think of css as stickers on these
+              boxes. The sticker descibes the box and importantly there is a finite number of
+              stickers.
+              %br
+              This is the basic disctinction between content and style. Over the course you will
+              learn more and more about the myriad of ways css can be used. Similar to Haml,
+              =link_to "Sass" , "http://sass-lang.com/" , target: :blank
+              is a shorthand and more semantic (but equivalent) way of writing css.
+          .toggle
+            %label 2. Bootstrap and other frameworks
+            .toggle-content
+              %p
+              As in other language, css has libraries and frameworks that we can reuse. A modern
+              framework like Bootstrap or Foundation will not only make the basic html "look good".
+              %br
+              You will also learn about standard elements, eg modern navigation, menus, dropdowns,
+              callouts, buttons and amny more. you'll see how a grid system works and how eg
+              bootstrap solves the multi-device issue.
+          .toggle
+            %label 3. Semantic css and susy
+            .toggle-content
+              %p
+              Reviewing bootstrap html code we will see that it does not adhere to the content/style
+              seperation we learned. To do it right, we indroduce the concept of semantic css. This
+              gives meaningful names to our styles and lets them build ourselves.
+              %br
+              You'll earn
+              =link_to  "Susy" , "http://susy.oddbird.net/" , target: :blank
+              and how to build your own grid system.
+          .toggle
+            %label 4. Mobile first and breakpoints
+            .toggle-content
+              %p
+                While learning about Bootstrap, we touched on the multi-device concept and now go
+                deeper into mobile first development. You'll learn what
+                =link_to  "Breakpoints" , "http://breakpoint-sass.com/" , target: :blank
+                are and how to implement one design that can be viewed on multiple devices.
       .col-md-4.col-xs-6
         .text-center
           %i.ico-color.ico-lg.ico-rounded.ico-hover.fa.fa-github
-          %h4 Teamwork
-          %p.font-lato.size-20
-            %ul
-              %li roles
-              %li git basics
-              %li advanced git
-              %li communication, open source
+          %h4 Programming
+        .toggle.toggle-transparent.toggle-accordion
+          .toggle
+            %label 1. Objects as models
+            .toggle-content
+              %p
+                We are physical beeings, and are well trained to think in terms of inate "things"
+                having given properties. In one of the easiest to understand ways of programming
+                we call the things object and their properties attributes.
+                %br
+                You will learn basic concepts of object oriented programming in Ruby, which is very
+                thourough in it's aproach to treating everything as an object, and the concept of
+                class. We will see how procedural code (think cooking recepies) slot nicely into
+                this model as methods.
+          .toggle
+            %label 2. Associations and structures
+            .toggle-content
+              %p
+              Objects are great at modelling single entities, but in programs we need to model large
+              system, invariably contining many objects.
+              %br
+              You will learn about different data structures and their different properties. Like
+              how they are accessed, how they store data and which are good for what purpose.
+              %br
+              We will theoretically brush on O(n) and practically experiment with access and
+              iteration.
+          .toggle
+            %label 3. Concurrency and Closures
+            .toggle-content
+              %p
+              Concurrency, several or even many things happening at the same time, has been a
+              difficult topic up to quite recently. You will learn better concurrency models like
+              the actor model and channels. Especially actors are easy to understand and reason
+              about since they just extend the object model to "active" objects.
+              %br
+              When a piece of code is passed of to another part of the program to be executed later,
+              one talk of closures, and we will see the somewhat different light this shed on
+              variable lifetime.
+          .toggle
+            %label 4. Other languages
+            .toggle-content
+              %p
+              Ruby is off course just one of many languages and since by the seventh week you will
+              have learned enough about it, we can start comaring it to other languages. Some of
+              which are similar, some strange, some very different.
+              %br
+              Off course we will also cover javascript basics and ways to avoid some of javascripts
+              strangeness by using languages that compile to javascript.
+              %br
+              You may also choose to learn a completely different language at this point, eg
+              = link_to  "Go" , "https://golang.org/" , target: :blank
