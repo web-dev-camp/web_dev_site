@@ -1,41 +1,15 @@
 = render 'layouts/submenu'
 
-%section#about.padding-xxs
-  .container
-    %header.text-center.margin-bottom-20
-      %h2 We help you find your talent
-      %p.lead.font-lato You decide where go you from there
-      %p
-        Our teaching method is based on small groups, a maximum of 10 pupils per cohort.
-      %p
-        Cohorts start every two weeks on their 8 week journey through our curriculum.
-
-%section#about.padding-xxs
-  .container
-    %header.text-center.margin-bottom-20
-      %h2 The basics
-      %p.lead.font-lato We will teach you the basics, and let you decide where to go with them
-      %hr/
-    .row
-      .col-sm-2
-        =image_tag "pie.jpg" , :class => "img-responsive"
-      .col-sm-10
-        %p.dropcap
-          The curriculum teaches full stack developer skills. Software development is a team effort where many different talents must come together to make a whole.
-        %p.dropcap
-          We teach each of the 6 basic topics in each of the 2 week cycles. Each week you will go deeper into each topic, but in the second week of each cycle you can decide which topic you want to spend even more time with.
-    %hr/
-    %header.text-center.margin-bottom-20
-      %h2 Modules
-      %p.lead.font-lato
-      Every two weeks we go around the basic topics, while going deeper with every iterations.
-      While the curriculum teaches full stack skills, you can choose to specialise to client
-      or server side, according to your talent.
-      Below we detail the iterations, read here about the topics.
-
 %section.padding-xxs
   .container
     .row
+      %header.text-center.margin-bottom-20
+        %h2 Modules
+        %p.lead.font-lato
+        Every two weeks we go around the basic topics, while going deeper with every iterations.
+        While the curriculum teaches full stack skills, you can choose to specialise to client
+        or server side, according to your talent.
+        Below we detail the iterations, read here about the topics.
       .col-md-6
         %h3.size-20 Introduction - first 2 weeks
         %p
@@ -67,5 +41,30 @@
           You can choose your final assignment from from the list of topics.
         %p
           ​You will work in a group on a final project to show mastery of the topic.  ​
+
+%section#about.padding-xxs
+  .container
+    %header.text-center.margin-bottom-20
+      %h2 We help you find your talent
+      %p.lead.font-lato You decide where go you from there
+      %p
+        Our teaching method is based on small groups, a maximum of 10 pupils per cohort.
+      %p
+        Cohorts start every two weeks on their 8 week journey through our curriculum.
+
+%section#about.padding-xxs
+  .container
+    %header.text-center.margin-bottom-20
+      %h2 The basics
+      %p.lead.font-lato We will teach you the basics, and let you decide where to go with them
+      %hr/
+    .row
+      .col-sm-2
+        =image_tag "pie.jpg" , :class => "img-responsive"
+      .col-sm-10
+        %p.dropcap
+          The curriculum teaches full stack developer skills. Software development is a team effort where many different talents must come together to make a whole.
+        %p.dropcap
+          We teach each of the 6 basic topics in each of the 2 week cycles. Each week you will go deeper into each topic, but in the second week of each cycle you can decide which topic you want to spend even more time with.
 
 = render 'layouts/submenu'

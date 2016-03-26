@@ -38,7 +38,7 @@
       / SLIDE
       .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;"}
         / background image
-        %img.ls-bg{:alt => "Slide background", :src => image_path("slider/bg.jpg")}/
+        %img.ls-bg{:alt => "Slide background", :src => image_path("development.jpg")}/
         %img.ls-l{:alt => "", "data-ls" => "durationin:1500;scalexin:0.8;scaleyin:0.8;scalexout:0.8;scaleyout:0.8;", :src => image_path("slider/desktop.png"), :style => "top:40px;left:65%;white-space: nowrap;"}/
         %p.ls-l{"data-ls" => "durationin:1500;delayin:300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;", :style => "top:50px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#fa6b4b;border-radius:4px;white-space: nowrap;"}
           FULLY RESPONSIVE
@@ -59,16 +59,11 @@
       / SLIDE
       .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;"}
         / background image
-        %img.ls-bg{:alt => "Slide background", :src => "assets/images/demo/layerslider/slide-b-bg.jpg"}/
+        %img.ls-bg{:alt => "Slide background", :src => image_path("villa_taika1.png")}/
         %p.ls-l{"data-ls" => "offsetxin:50;durationin:750;easingin:easeOutBack;skewxin:-50;offsetxout:-50;durationout:600;showuntil:500;easingout:easeInBack;skewxout:50;", :style => "top:44%;left:50%;font-weight: 300;font-size:30px;color:#ffffff;white-space: nowrap;"}
           welcome
         %p.ls-l{"data-ls" => "offsetxin:-100;durationin:750;delayin:250;easingin:easeOutBack;skewxin:-50;offsetxout:100;durationout:600;showuntil:500;easingout:easeInBack;skewxout:50;", :style => "top:52%;left:50%;font-weight: 300;font-size:50px;color:#ffffff;white-space: nowrap;"}
           SMARTY TEMPLATE
-        %img.ls-l{:alt => "", "data-ls" => "offsetxin:-100;durationin:2000;delayin:1500;offsetxout:-100;durationout:1000;parallaxlevel:-2;", :src => "assets/images/demo/layerslider/slide-b-1.png", :style => "top:30%;left:50%;width:120%;height:auto;white-space: nowrap;"}/
-        %img.ls-l{:alt => "", "data-ls" => "offsetxin:50;durationin:2000;delayin:1500;offsetxout:50;durationout:1000;parallaxlevel:1;", :src => "assets/images/demo/layerslider/slide-b-2.png", :style => "top:3px;left:137px;white-space: nowrap;"}/
-        %img.ls-l{:alt => "", "data-ls" => "offsetxin:100;durationin:2000;delayin:1500;offsetxout:100;durationout:1000;parallaxlevel:3;", :src => "assets/images/demo/layerslider/slide-b-3.png", :style => "top:203px;left:383px;white-space: nowrap;"}/
-        %img.ls-l{:alt => "", "data-ls" => "offsetxin:150;durationin:2000;delayin:1500;offsetxout:150;durationout:1000;parallaxlevel:5;", :src => "assets/images/demo/layerslider/slide-b-4.png", :style => "top:206px;left:486px;white-space: nowrap;"}/
-        %img.ls-l{:alt => "", "data-ls" => "offsetxin:200;durationin:2000;delayin:1500;offsetxout:200;durationout:1000;parallaxlevel:7;", :src => "assets/images/demo/layerslider/slide-b-5.png", :style => "top:171px;left:559px;white-space: nowrap;"}/
         %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:1500;rotateyin:90;transformoriginin:left 50% 0;offsetxout:0;durationout:1500;showuntil:1000;rotateyout:-90;transformoriginout:left 50% 0;", :style => "top:47%;left:690px;font-weight: 500;font-size:35px;color:#ffffff;white-space: nowrap;"}
           Move your mouse
           %br/
@@ -92,7 +87,7 @@
 %section#readMore
   .container
     .row
-      .col-md-4
+      .col-md-3
         .heading-title.heading-border-bottom.heading-color
           %h3=link_to "Web" , page_path(:web)
         %p
@@ -102,13 +97,11 @@
           More about
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
-              %span programming
               %span html
               %span css
-              %span javascript
-              %span databases
+              %span programming
           %i.glyphicon.glyphicon-menu-right.size-12
-      .col-md-4
+      .col-md-3
         .heading-title.heading-border-bottom.heading-color
           %h3=link_to "Dev" , page_path(:dev)
         %p
@@ -118,11 +111,25 @@
           More about
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
+              %span teamwork
+              %span testing
+              %span databases
+          %i.glyphicon.glyphicon-menu-right.size-12
+      .col-md-3
+        .heading-title.heading-border-bottom.heading-color
+          %h3=link_to "Modules" , page_path(:modules)
+        %p
+          An intensive 8 week program is structured as 4 modules of 2 weeks. Each module will take
+          you deeper into the topics of Web Developement, while you choose how to emphasize
+          among them.
+        =link_to page_path(:modules) do
+          More about
+          %span.word-rotator{"data-delay" => "2000"}
+            %span.items
               %span course modules
               %span course structure
-              %span css
           %i.glyphicon.glyphicon-menu-right.size-12
-      .col-md-4
+      .col-md-3
         .heading-title.heading-border-bottom.heading-color
           %h3=link_to "Camp" , page_path(:camp)
         %p
