@@ -13,34 +13,12 @@
       \.height-700
       \.height-750
       \.height-800
-    .layerslider.height-350{:style => "width:100%;"}
-      / SLIDE
+    .layerslider.height-400{:style => "width:100%;"}
+      = raw slide2
       = raw slide1
-      / SLIDE
       .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;"}
         / background image
-        %img.ls-bg{:alt => "Slide background", :src => image_path("slider/development.jpg")}/
-        %img.ls-l{:alt => "", "data-ls" => "durationin:1500;scalexin:0.8;scaleyin:0.8;scalexout:0.8;scaleyout:0.8;", :src => image_path("slider/desktop.png"), :style => "top:40px;left:65%;white-space: nowrap;"}/
-        %p.ls-l{"data-ls" => "durationin:1500;delayin:300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;", :style => "top:50px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#fa6b4b;border-radius:4px;white-space: nowrap;"}
-          FULLY RESPONSIVE
-        %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:700;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;", :style => "top:90px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"}
-          with the latest technologies
-        %p.ls-l{"data-ls" => "durationin:1500;delayin:1000;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;", :style => "top:150px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#fa6b4b;border-radius:4px;white-space: nowrap;"}
-          SMOOTH RENDERING
-        %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:1400;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;", :style => "top:190px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"}
-          with hardware-acceleration
-        %p.ls-l{"data-ls" => "durationin:1500;delayin:1700;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;", :style => "top:250px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#fa6b4b;border-radius:4px;white-space: nowrap;"}
-          NEW TRANSITIONS
-        %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:2100;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;", :style => "top:290px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"}
-          slide, fade, scale, skew and rotate layers even in 3D
-        %p.ls-l{"data-ls" => "durationin:1500;delayin:2400;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;", :style => "top:350px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#fa6b4b;border-radius:4px;white-space: nowrap;"}
-          CLEANER MARKUP
-        %p.ls-l{"data-ls" => "offsetxin:0;durationin:1500;delayin:2800;rotateyin:90;skewxin:60;transformoriginin:25% 50% 0;offsetxout:100;durationout:750;skewxout:60;", :style => "top:390px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"}
-          working with the plugin is more easy
-      / SLIDE
-      .ls-slide{"data-ls" => "slidedelay:8000;transition2d:1;"}
-        / background image
-        %img.ls-bg{:alt => "Slide background", :src => image_path("villa_taika1.png")}/
+        %img.ls-bg{:alt => "Slide background", :src => image_path("slider/villa_taika1.png")}/
         %p.ls-l{"data-ls" => "offsetxin:50;durationin:750;easingin:easeOutBack;skewxin:-50;offsetxout:-50;durationout:600;showuntil:500;easingout:easeInBack;skewxout:50;", :style => "top:44%;left:50%;font-weight: 300;font-size:30px;color:#ffffff;white-space: nowrap;"}
           welcome
         %p.ls-l{"data-ls" => "offsetxin:-100;durationin:750;delayin:250;easingin:easeOutBack;skewxin:-50;offsetxout:100;durationout:600;showuntil:500;easingout:easeInBack;skewxout:50;", :style => "top:52%;left:50%;font-weight: 300;font-size:50px;color:#ffffff;white-space: nowrap;"}
