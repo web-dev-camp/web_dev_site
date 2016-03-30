@@ -5,9 +5,8 @@
 / JAVASCRIPT FILES
 :javascript
   var plugin_path = 'assets/plugins/';
-%script{:src => "assets/plugins/jquery/jquery-2.1.4.min.js", :type => "text/javascript"}
 / LAYER SLIDER
-%script{:src => "assets/plugins/slider.layerslider/js/layerslider_pack.js", :type => "text/javascript"}
-%script{:src => "assets/js/view/demo.layerslider_slider.js", :type => "text/javascript"}
+= javascript_include_tag 'layerslider_pack'
+= javascript_include_tag 'demo.layerslider_slider'
 / SCRIPTS
 = javascript_include_tag 'scripts'
