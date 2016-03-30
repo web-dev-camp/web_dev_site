@@ -606,11 +606,11 @@ body.boxed #wrapper {
 }
 
 #slidetop a.slidetop-toggle {
-	height:35px;
-	position: absolute;
-	right: 0; bottom:-35px;
-	border-top: 35px solid #363839;
-	border-left: 35px solid transparent;
+	height:50px;
+	position:fixed;
+	right: 0; top:0;
+	border-top: 50px solid #363839;
+	border-left: 50px solid transparent;
 
 	display:inline-block;
 	text-decoration:none;
@@ -620,11 +620,11 @@ body.boxed #wrapper {
 #slidetop a.slidetop-toggle:after {
 	font-family:FontAwesome;
 	content: "\f067";
-	height:18px;
+	height:25px;
 	color:#fff;
 	position:absolute;
-	top: -34px;
-	left: -16px;
+	top: -49px;
+	left: -20px;
 }
 	#slidetop.active a.slidetop-toggle:after {
 		content: "\f068";
