@@ -1,3 +1,9 @@
+class Transformer
+  def compress(string)
+    string
+  end
+end
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -25,8 +31,8 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  #config.assets.js_compressor = :uglifier
+  config.assets.css_compressor = Transformer.new
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
