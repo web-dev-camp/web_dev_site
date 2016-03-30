@@ -3171,12 +3171,12 @@ section.dark h2.owl-featured {
 *************************************************** **/
 @font-face{
 	font-family:'FontAwesome';
-	src:font-url( 'fontawesome-webfont.eot?v=4.4.0' );
-	src:font-url('fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),
-		font-url( 'fontawesome-webfont.woff2?v=4.4.0') format('woff2'),
-		font-url( 'fontawesome-webfont.woff?v=4.4.0') format('woff'),
-		font-url( 'fontawesome-webfont.ttf?v=4.4.0') format('truetype'),
-		font-url( 'fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+	src:url(<%= font_path 'fontawesome-webfont.eot?v=4.4.0' %>);
+	src:url(<%= font_path 'fontawesome-webfont.eot?#iefix&v=4.4.0'%>) format('embedded-opentype'),
+		url(<%= font_path 'fontawesome-webfont.woff2?v=4.4.0'%>) format('woff2'),
+		url(<%= font_path 'fontawesome-webfont.woff?v=4.4.0'%>) format('woff'),
+		url(<%= font_path 'fontawesome-webfont.ttf?v=4.4.0'%>) format('truetype'),
+		url(<%= font_path 'fontawesome-webfont.svg?v=4.4.0#fontawesomeregular'%>) format('svg');
 	font-weight:normal;
 	font-style:normal;
 }
@@ -3190,11 +3190,11 @@ section.dark h2.owl-featured {
 /* Et-Line */
 @font-face {
 	font-family: 'et-line';
-	src:font-url('et-line.eot');
-	src:font-url('et-line.eot?#iefix') format('embedded-opentype'),
-		font-url('et-line.woff') format('woff'),
-		font-url('et-line.ttf') format('truetype'),
-		font-url('et-line.svg#et-line') format('svg');
+	src:url(<%= font_path 'et-line.eot'%>);
+	src:url(<%= font_path 'et-line.eot?#iefix'%>) format('embedded-opentype'),
+		url(<%= font_path 'et-line.woff'%>) format('woff'),
+		url(<%= font_path 'et-line.ttf'%>) format('truetype'),
+		url(<%= font_path 'et-line.svg#et-line'%>) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -3203,11 +3203,11 @@ section.dark h2.owl-featured {
 /* Font Icons */
 @font-face {
 	font-family: 'font-icons';
-	src:font-url('font-icons.eot');
-	src:font-url('font-icons.eot') format('embedded-opentype'),
-		font-url('font-icons.woff') format('woff'),
-		font-url('font-icons.ttf') format('truetype'),
-		font-url('font-icons.svg') format('svg');
+	src:url(<%= font_path 'font-icons.eot'%>);
+	src:url(<%= font_path 'font-icons.eot'%>) format('embedded-opentype'),
+		url(<%= font_path 'font-icons.woff'%>) format('woff'),
+		url(<%= font_path 'font-icons.ttf'%>) format('truetype'),
+		url(<%= font_path 'font-icons.svg'%>) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
