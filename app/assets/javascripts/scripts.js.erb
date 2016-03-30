@@ -44,7 +44,7 @@
 
 		/* --- */
 		if(jQuery("html").hasClass("chrome") && jQuery("body").hasClass("smoothscroll")) {
-			loadScript( <%= asset_path('smoothscroll.js')%> , function() {
+			loadScript( "<%=asset_path('smoothscroll.js')%>" , function() {
 				jQuery.smoothScroll();
 			});
 		}
@@ -804,7 +804,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'owl-carousel/owl.carousel.min.js', function() {
+			loadScript("<%=asset_path('owl.carousel.min.js')%>", function() {
 
 				_container.each(function() {
 
@@ -1329,7 +1329,7 @@
 		var _container = jQuery('.mix-grid');
 
 		if(_container.length > 0) {
-			loadScript(plugin_path + 'mixitup/jquery.mixitup.min.js', function() {
+			loadScript("<%=asset_path('jquery.mixitup.min.js')%>", function() {
 
 				if(jQuery().mixitup) {
 
