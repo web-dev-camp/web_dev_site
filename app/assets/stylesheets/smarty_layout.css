@@ -55,10 +55,10 @@ html, body {
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'ProximaNova',Arial,Helvetica,sans-serif;
 	-webkit-font-smoothing: antialiased;
 
-	font-size:14px; line-height:1.5;
+	font-size:16px; line-height:1.5;
 	margin:0; padding:0;
 }
 /* example usage: index-onepage-youtube.html */
@@ -329,7 +329,7 @@ section.dark h6.page-header {
 
 /* fonts */
 .font-open-sans {
-	font-family:'Open Sans',Arial,Helvetica,sans-serif !important;
+	font-family:'ProximaNova',Arial,Helvetica,sans-serif !important;
 }
 .font-lato {
 	font-weight:300;
@@ -5439,7 +5439,7 @@ section#slider .btn-default {
 	.ei-title h3 {
 		font-size: 60px;
 		line-height: 60px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'ProximaNova', sans-serif;
 		text-transform: uppercase;
 		font-weight:300;
 		color: #fff;
@@ -6274,7 +6274,7 @@ section.dark #portfolio h3 {
 h1.blog-post-title,
 .blog-post-item h2 {
 	letter-spacing:0;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'ProximaNova',Arial,Helvetica,sans-serif;
 	font-size:22px;
 	margin-bottom:10px;
 }
@@ -6476,7 +6476,7 @@ h1.blog-post-title {
 	}
 .comments small {
 	font-size:12px;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'ProximaNova',Arial,Helvetica,sans-serif;
 	color:#aaa;
 }
 .comments h4 {
@@ -6697,7 +6697,7 @@ li.comment a.comment-author span {
 	line-height:1;
 	color:#ccc;
 	font-weight:bold;
-	font-family:'Lato','Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'Lato','ProximaNova',Arial,Helvetica,sans-serif;
 }
 .timeline .timeline-entry>.timeline-vline {
 	position: absolute;
@@ -6722,7 +6722,7 @@ li.comment a.comment-author span {
 	font-size:13px;
 	text-transform:uppercase;
 	font-weight:300;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'ProximaNova',Arial,Helvetica,sans-serif;
 }
 section.alternate .timeline .timeline-entry {
 	background-color:#F9F9F9;
@@ -6932,7 +6932,7 @@ section.dark .error-404 {
 	padding: 20px;
 	margin-top: 10%;
 	background-color: rgba(0,0,0,0.05);
-	font-family:'Open Sans';
+	font-family:'ProximaNova';
 	font-size:14px;
 	line-height:23px;
 	text-align: center;
@@ -7222,7 +7222,7 @@ ul.search-history {
 	}
 	#footer ul.footer-list li small {
 		display:block;
-		font-family:'Open Sans',Arial,Helvetica,sans-serif;
+		font-family:'ProximaNova',Arial,Helvetica,sans-serif;
 		color:#ddd;
 	}
 
