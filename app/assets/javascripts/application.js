@@ -14,3 +14,6 @@
 //= smoothscroll
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require scripts
+//= require layerslider_pack
+//= require demo.layerslider_slider
