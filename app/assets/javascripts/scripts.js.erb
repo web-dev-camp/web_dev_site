@@ -42,13 +42,6 @@
 
 		Init(false);
 
-		/* --- */
-		if(jQuery("html").hasClass("chrome") && jQuery("body").hasClass("smoothscroll")) {
-			loadScript( "<%=asset_path('smoothscroll.js')%>" , function() {
-				jQuery.smoothScroll();
-			});
-		}
-		/* --- */
 	});
 
 

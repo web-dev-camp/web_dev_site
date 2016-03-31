@@ -563,3 +563,4 @@
 
 	});
 })(jQuery);
+jQuery.smoothScroll();

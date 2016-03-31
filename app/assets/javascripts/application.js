@@ -11,5 +11,6 @@
 // about supported directives.
 //
 //= require jquery2.min
+//= smoothscroll
 //= require jquery_ujs
 //= require bootstrap-sprockets
