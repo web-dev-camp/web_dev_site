@@ -1,18 +1,5 @@
 %section#slider
   .slider
-    /
-      AVAILABLE CLASSES
-      \.height-300
-      \.height-350
-      \.height-400
-      \.height-450
-      \.height-500
-      \.height-550
-      \.height-600
-      \.height-650
-      \.height-700
-      \.height-750
-      \.height-800
     .layerslider.height-400{:style => "width:100%;"}
       = raw slide1
       = raw slide2
@@ -38,13 +25,12 @@
           The web is still growing and with it the demand for developers.
           Change your profession and your life by learning to create web application.
         =link_to page_path(:web) do
-          More about
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
-              %span html
-              %span css
-              %span programming
-          %i.glyphicon.glyphicon-menu-right.size-12
+              %span More about html
+              %span More about css
+              %span More about programming
+          %i.glyphicon.glyphicon-menu-right
       .col-md-3
         .heading-title.heading-border-bottom.heading-color
           %h3=link_to "Dev" , page_path(:dev)
@@ -52,13 +38,12 @@
           Applications, web, mobile and desktop are converging more and more on web standards.
           We give you a good foundation in programming and current techniques. You decide where to go from there.
         =link_to page_path(:dev) do
-          More about
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
-              %span teamwork
-              %span testing
-              %span databases
-          %i.glyphicon.glyphicon-menu-right.size-12
+              %span More about teamwork
+              %span More about testing
+              %span More about databases
+          %i.glyphicon.glyphicon-menu-right
       .col-md-3
         .heading-title.heading-border-bottom.heading-color
           %h3=link_to "Modules" , page_path(:modules)
@@ -67,12 +52,11 @@
           you deeper into the topics of Web Developement, while you choose how to emphasize
           among them.
         =link_to page_path(:modules) do
-          More about
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
-              %span course modules
-              %span course structure
-          %i.glyphicon.glyphicon-menu-right.size-12
+              %span More about course modules
+              %span More about course structure
+          %i.glyphicon.glyphicon-menu-right
       .col-md-3
         .heading-title.heading-border-bottom.heading-color
           %h3=link_to "Camp" , page_path(:camp)
@@ -80,12 +64,11 @@
           During the course you stay at a beautiful place in the middle of nature.
           Small groups, an iterative teaching approach and the fact that everything else is taken care for you, let you jumpstart your new career.
         =link_to page_path(:camp) do
-          More about
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
-              %span where you stay
-              %span food
-          %i.glyphicon.glyphicon-menu-right.size-12
+              %span More about where you stay
+              %span More about food
+          %i.glyphicon.glyphicon-menu-right
     .divider.double-line.margin-top-80.margin-bottom-80
       / divider
     /
