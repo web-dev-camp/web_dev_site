@@ -10,10 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery2.min
-//= smoothscroll
+//= require jquery2
+//= require smoothscroll
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require scripts
 //= require layerslider_pack
 //= require demo.layerslider_slider
+//= require banner_slider
+//= require web_js
