@@ -16,5 +16,4 @@
 //= require bootstrap-sprockets
 //= require scripts
 //= require layerslider_pack
-//= require demo.layerslider_slider
 //= require web_js

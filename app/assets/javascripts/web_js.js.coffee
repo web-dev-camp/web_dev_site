@@ -1,3 +1,11 @@
-jQuery(window).ready ->
-  horizontalSlider = new slider('.banner_slider', transition: effect: 'slideInHorizontal')
+_layersliderInit = ->
+  if jQuery().layerSlider and jQuery('div.layerslider').length > 0
+    jQuery('div.layerslider').each ->
+      jQuery(this).layerSlider layer_options
+      return
+  return
+
+jQuery(document).ready ->
+  if jQuery('.layerslider').length > 0
+    _layersliderInit()
   return

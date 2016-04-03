@@ -56,7 +56,6 @@
 		if(is_ajax != true) {
 
 			_afterResize();
-			_slider_full();
 			_topNav();
 			_sideNav();
 			_stickyFooter();
@@ -65,26 +64,20 @@
 		}
 
 		// Reinit on Ajax
-		_flexslider();
 		_popover();
 		_lightbox();
 		_mixitup();
 		_animate();
-		_onepageNav();
 		_scrollTo(false, 0);
 		_parallax();
 		_video();
-		_youtubeBG();
 		_toggle();
 		_placeholder();
 		_wrotate();
 		_lazyload();
 		_misc();
-		_countDown();
-		_masonryGallery();
 		_toastr(false,false,false,false);
 		_charts();
-		_select2();
 		_form();
 		_pickers();
 		_editors();
@@ -93,7 +86,6 @@
 		_autosuggest();
 		_stepper();
 		_slimScroll();
-		_modalAutoLoad();
 		_bgimage();
 		_widget_flickr();
 		_widget_twitter();
@@ -150,13 +142,7 @@
 						.................
 					**/
 
-					_slider_full();
 					window.width = jQuery(window).width();
-
-					// Resize Flex Slider if exists!
-					if(jQuery('.flexslider').length > 0) {
-						jQuery('.flexslider').resize();
-					}
 
 				}, 300);
 
@@ -209,28 +195,6 @@
 		}
 
 	};
-
-
-
-/** 00. Slider Full Height
- **************************************************************** **/
-	function _slider_full() {
-		_headerHeight = 0;
-
-		if(jQuery("#header").hasClass('transparent') || jQuery("#header").hasClass('translucent')) {
-			_headerHeight = 0;
-		} else {
-			_headerHeight = jQuery("#header").outerHeight();
-
-			if(jQuery("#topBar").length > 0) {
-				_headerHeight = _headerHeight + jQuery("#topBar").outerHeight();
-			}
-		}
-
-		_screenHeight = jQuery(window).height() - _headerHeight;
-
-		jQuery("#slider.fullheight").height(_screenHeight);
-	}
 
 
 
@@ -764,98 +728,6 @@
 	}
 
 
-
-/** Onepage Nav
- **************************************************************** **/
-	function _onepageNav() {
-		var _container = jQuery("#topMain.nav-onepage");
-
-		if(_container.length > 0) {
-
-			loadScript(plugin_path + 'jquery.nav.min.js', function() {
-
-				jQuery(_container).onePageNav({
-					currentClass: 		'active',
-					changeHash: 		false,
-					scrollSpeed: 		750,
-					scrollThreshold: 	0.5,
-					filter: 			':not(.external)',
-					easing: 			'easeInOutExpo'
-				});
-
-			});
-
-		}
-
-	}
-
-
-
-
-
-/** 04. Flexslider
- **************************************************************** **/
-	function _flexslider() {
-		var _container = jQuery(".flexslider");
-
-		if(_container.length > 0) {
-
-			loadScript(plugin_path + 'slider.flexslider/jquery.flexslider-min.js', function() {
-
-				if(jQuery().flexslider) {
-					var	_controlNav 	= _container.attr('data-controlNav'),
-						_slideshowSpeed = _container.attr('data-slideshowSpeed') || 7000,
-						_pauseOnHover	= _container.attr('data-pauseOnHover') || false;
-
-					if(_pauseOnHover == "true") {
-						_pauseOnHover = true;
-					} else{
-						_pauseOnHover = false;
-					}
-
-					if(_controlNav == 'thumbnails') {
-						_controlNav = 'thumbnails';
-					} else
-					if(_controlNav == 'true') {
-						_controlNav = true;
-					} else
-					if(_controlNav == 'false') {
-						_controlNav = false;
-					} else {
-						_controlNav = true;
-					}
-
-					if(_controlNav == 'thumbnails' || _controlNav == false) {
-						_directionNav = false;
-					} else {
-						_directionNav = true;
-					}
-
-					jQuery(_container).flexslider({
-						animation		: "slide",
-						controlNav		: _controlNav,
-						slideshowSpeed	: parseInt(_slideshowSpeed) || 7000,
-						directionNav 	: _directionNav,
-						pauseOnHover	: _pauseOnHover,
-						start: function(slider){
-							jQuery('.flex-prev').html('<i class="fa fa-angle-left"></i>');
-							jQuery('.flex-next').html('<i class="fa fa-angle-right"></i>');
-						}
-					});
-
-					// Resize Flex Slider if exists!
-					_container.resize();
-
-				}
-
-			});
-		}
-	}
-
-
-
-
-
 /** 04. Popover
  **************************************************************** **/
 	function _popover() {
@@ -1109,56 +981,6 @@
 
 
 
-/** 07. Youtube Backround
- **************************************************************** **/
-	function _youtubeBG() {
-		var _container = jQuery('#YTPlayer');
-
-		if(_container.length > 0) {
-			loadScript(plugin_path + 'jquery.mb.YTPlayer.min.js', function() {
-
-
-				if(jQuery().mb_YTPlayer) {
-					var disableMobile = false;
-					if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-						// disableMobile = true;
-					}
-
-					if(disableMobile === false) {
-
-						jQuery(".player").mb_YTPlayer();
-
-						jQuery("#video-volume").bind("click", function(e) {
-							e.preventDefault();
-
-							jQuery('#YTPlayer').toggleVolume();
-						});
-
-						// audio control
-						jQuery("#video-volume").bind("click", function() {
-							if(jQuery('i.fa', this).hasClass('fa-volume-down')) {
-								jQuery('i.fa', this).removeClass('fa-volume-down');
-								jQuery('i.fa', this).removeClass('fa-volume-up');
-								jQuery('i.fa', this).addClass('fa-volume-up');
-							} else {
-								jQuery('i.fa', this).removeClass('fa-volume-up');
-								jQuery('i.fa', this).removeClass('fa-volume-v');
-								jQuery('i.fa', this).addClass('fa-volume-down');
-							}
-						});
-
-					} else {
-
-						jQuery(".player , #video-volume").hide();
-
-					}
-
-				}
-
-			});
-		}
-	}
-
 
 /** 08. Mixitup Filter
  **************************************************************** **/
@@ -1365,307 +1187,6 @@
  **************************************************************** **/
 	function _misc() {
 
-		/** Masonry
-		 *********************** **/
-		if(jQuery().masonry) {
-			jQuery(".masonry").masonry();
-		}
-
-
-
-		/** Isotope Portfolio
-		 *********************** **/
-		var portfolio_isotope_container = jQuery("#portfolio.portfolio-isotope");
-
-		if(portfolio_isotope_container.length > 0) {
-			loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
-
-				// Isotope Portfolio
-				if(jQuery().isotope) {
-
-					var _container = jQuery('#portfolio');
-
-					// Calculate Item Width on Fullwidth portfolio
-					if(_container.hasClass('portfolio-isotope-2')) {
-						_cols = 2;
-					} else
-					if(_container.hasClass('portfolio-isotope-3')) {
-						_cols = 3;
-					} else
-					if(_container.hasClass('portfolio-isotope-4')) {
-						_cols = 4;
-					} else
-					if(_container.hasClass('portfolio-isotope-5')) {
-						_cols = 5;
-					} else
-					if(_container.hasClass('portfolio-isotope-6')) {
-						_cols = 6;
-					} else { _cols = 4; }
-
-
-
-					function _recalcW() {
-						_dw		= jQuery(document).width();
-
-						if(_container.hasClass('fullwidth')) { // Fullwidth
-
-							// _w 		= jQuery(document).width(); // NOT USED - problems on aside header
-							_w 		= _container.width();
-							_wItem	= (_w/_cols);
-
-							if(_dw < 760) {
-								_wItem = (_w/2);
-							}
-							if(_dw < 480) {
-								_wItem = jQuery("#portfolio").width();
-							}
-
-							// Apply item width
-							jQuery("#portfolio>.portfolio-item").css({"width":_wItem});
-
-						} else { // Non Fullwidth
-
-							_mR		= parseInt(jQuery("#portfolio>.portfolio-item").css('margin-right'));
-							_w 		= jQuery("#portfolio").closest('.container').width();
-							_wItem 	= _w / _cols - _mR;
-
-							if(_dw < 760) {
-								_wItem = (_w/2 - _mR);
-							}
-							if(_dw < 480) {
-								_wItem = _w;
-							}
-
-							// Apply item & container width
-							jQuery("#portfolio.portfolio-isotope").css({"width":_w});
-							jQuery("#portfolio>.portfolio-item").css({"width":_wItem});
-
-						}
-
-						// Resize Flex Slider if exists!
-						if(jQuery('.flexslider').length > 0) {
-							jQuery('.flexslider').resize();
-						}
-
-					}	_recalcW();
-
-
-
-					jQuery(window).load(function(){
-
-						var _t = setTimeout(function(){
-
-							_container.isotope({
-								masonry: {},
-
-								filter: '*',
-								animationOptions: {
-									duration: 750,
-									easing: 'linear',
-									queue: false
-								}
-							});
-
-							jQuery('#portfolio_filter>li>a').bind("click", function(e){
-								e.preventDefault();
-
-								jQuery('#portfolio_filter>li.active').removeClass('active');
-								jQuery(this).parent('li').addClass('active');
-
-								var selector = jQuery(this).attr('data-filter');
-								_container.isotope({
-									filter: selector,
-									animationOptions: {
-										duration: 750,
-										easing: 'linear',
-										queue: false
-									}
-								 });
-
-							});
-
-
-						}, 50 );
-
-						setTimeout(function() {
-							_container.isotope('layout');
-						}, 300);
-
-					});
-
-
-
-					// On Resize
-					jQuery(window).resize(function() {
-
-						if(window.afterResizeApp2) {
-							clearTimeout(window.afterResizeApp2);
-						}
-
-						window.afterResizeApp2 = setTimeout(function() {
-
-							_recalcW();
-
-							setTimeout(function() {
-								_container.isotope('layout');
-							}, 300);
-
-						}, 300);
-
-					});
-
-
-				}
-
-
-			});
-		}	/** end isotope **/
-
-
-
-
-		/** Isotope Blog
-		 *********************** **/
-		var blog_isotope_container = jQuery("#blog.blog-isotope");
-
-		if(blog_isotope_container.length > 0) {
-			loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
-
-				// Isotope blog
-				if(jQuery().isotope) {
-
-					var _container = jQuery('#blog');
-
-					// Calculate Item Width on Fullwidth Blog
-					if(_container.hasClass('blog-isotope-2')) {
-						_cols = 2;
-					} else
-					if(_container.hasClass('blog-isotope-3')) {
-						_cols = 3;
-					} else
-					if(_container.hasClass('blog-isotope-4')) {
-						_cols = 4;
-					} else { _cols = 4; }
-
-
-					function _recalcW() {
-						_dw		= jQuery(document).width();
-
-						if(_container.hasClass('fullwidth')) { // Fullwidth
-
-							_w 		= jQuery(document).width();
-							_wItem	= (_w/_cols);
-
-							if(_dw < 760) {
-								_wItem = (_w/2);
-							}
-							if(_dw < 480) {
-								_wItem = jQuery("#blog").width();
-							}
-
-							// Apply item width
-							jQuery("#blog>.blog-post-item").css({"width":_wItem});
-
-						} else { // Non Fullwidth
-
-							_mR		= parseInt(jQuery("#blog>.blog-post-item").css('margin-right'));
-							_w 		= jQuery("#blog").closest('.container').width();
-							_wItem 	= _w / _cols - _mR;
-
-							if(_dw < 760) {
-								_wItem = (_w/2 - _mR);
-							}
-							if(_dw < 480) {
-								_wItem = _w;
-							}
-
-							// Apply item & container width
-							jQuery("#blog.blog-isotope").css({"width":_w});
-							jQuery("#blog>.blog-post-item").css({"width":_wItem});
-
-						}
-
-						// Resize Flex Slider if exists!
-						if(jQuery('.flexslider').length > 0) {
-							jQuery('.flexslider').resize();
-						}
-
-					}	_recalcW();
-
-
-
-					jQuery(window).load(function(){
-
-						var _t = setTimeout(function(){
-
-							_container.isotope({
-								masonry: {},
-
-								filter: '*',
-								animationOptions: {
-									duration: 750,
-									easing: 'linear',
-									queue: false
-								}
-							});
-
-							jQuery('#blog_filter>li>a').bind("click", function(e){
-								e.preventDefault();
-
-								jQuery('#blog_filter>li.active').removeClass('active');
-								jQuery(this).parent('li').addClass('active');
-
-								var selector = jQuery(this).attr('data-filter');
-								_container.isotope({
-									filter: selector,
-									animationOptions: {
-										duration: 750,
-										easing: 'linear',
-										queue: false
-									}
-								 });
-
-							});
-
-
-						}, 50 );
-
-						setTimeout(function() {
-							_container.isotope('layout');
-						}, 300);
-
-					});
-
-
-
-					// On Resize
-					jQuery(window).resize(function() {
-
-						if(window.afterResizeApp2) {
-							clearTimeout(window.afterResizeApp2);
-						}
-
-						window.afterResizeApp2 = setTimeout(function() {
-
-							_recalcW();
-
-							setTimeout(function() {
-								_container.isotope('layout');
-							}, 300);
-
-						}, 300);
-
-					});
-
-
-				}
-
-
-			});
-		}	/** end isotope **/
-
-
-
 
 		/** Flip Boxes
 		 *********************** **/
@@ -1843,145 +1364,6 @@
 
 
 
-
-
-/** Countdown
- **************************************************************** **/
-	function _countDown() {
-		var _container 	= jQuery(".countdown"),
-			_container2 = jQuery(".countdown-download");
-
-		if(_container.length > 0 || _container2.length > 0) {
-
-			loadScript(plugin_path + 'countdown/jquery.countdown.pack.min.js', function() {
-
-				/** On Page Load **/
-				_container.each(function() {
-					var _t 		= jQuery(this),
-						_date 	= _t.attr('data-from'),
-						_labels	= _t.attr('data-labels');
-
-						if(_labels) {
-							_labels = _labels.split(",");
-						}
-
-						if(_date) {
-							var _d = new Date(_date);
-							jQuery(this).countdown({
-								until: new Date(_d),
-								labels: _labels || ["Years","Months","Weeks","Days","Hours","Minutes","Seconds"]
-							});
-						}
-				});
-
-
-				/** Download **/
-				_container2.bind("click", function(e){
-					e.preventDefault();
-
-					var _t = jQuery(this),
-						cd_container 	= _t.attr('data-for'),
-						_countdown		= jQuery("#"+cd_container+' span.download-wait>.countdown'),
-						_seconds 		= parseInt(_t.attr('data-seconds')),
-						_dataURL		= _t.attr('href');
-
-					_t.fadeOut(250, function(){
-						jQuery("#"+cd_container).fadeIn(250, function() {
-
-							var currentDate = new Date();
-							currentDate.setSeconds(currentDate.getSeconds() + _seconds);
-
-							_countdown.countdown({
-								until: currentDate,
-								format: 'S',
-								expiryUrl: _dataURL,
-								onExpiry: function(){
-									jQuery("#"+cd_container+' span.download-message').removeClass('hide');
-									jQuery("#"+cd_container+' span.download-wait').addClass('hide');
-								}
-							});
-
-						});
-					});
-
-					return false;
-
-				});
-
-
-			});
-
-		}
-
-	}
-
-
-
-/** Masonry Gallery
- **************************************************************** **/
-	function _masonryGallery() {
-
-		if(jQuery(".masonry-gallery").length > 0) {
-
-			jQuery(".masonry-gallery").each(function() {
-				var _container = jQuery(this),
-					columns		= 4;
-
-					 if(_container.hasClass('columns-2')) 	columns = 2;
-				else if(_container.hasClass('columns-3')) 	columns = 3;
-				else if(_container.hasClass('columns-4')) 	columns = 4;
-				else if(_container.hasClass('columns-5')) 	columns = 5;
-				else if(_container.hasClass('columns-6')) 	columns = 6;
-
-				var _firstElemWidth 	= _container.find('a:eq(0)').outerWidth(),
-					_bigImageNo 		= _container.attr('data-img-big'),
-					_containerWidth		= _container.width();
-
-
-				// Fix margins & Width
-                var postWidth = (_containerWidth/columns);
-					postWidth = Math.floor(postWidth);
-                if((postWidth * columns) >= _containerWidth) {
-					_container.css({ 'margin-right': '-1px' });
-				}
-				if(columns < 6) {
-					_container.children('a').css({"width":postWidth+"px"});
-				}
-
-
-				// Set Big Image
-                if(parseInt(_bigImageNo) > 0) {
-
-					_bigImageNo 	= Number(_bigImageNo) - 1;
-					_container.find('a:eq('+_bigImageNo+')').css({ width: _firstElemWidth*2 + 'px'});
-
-					loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
-
-						setTimeout( function() {
-							_container.isotope({
-								masonry: {
-									columnWidth: _firstElemWidth
-								}
-							});
-
-							_container.isotope('layout');
-
-						}, 1000);
-
-					});
-
-                }
-
-			});
-
-
-		}
-
-	}
-
-
-
-
 /** Toastr
 
 	TYPE:
@@ -2139,26 +1521,6 @@
 
 		}
 
-
-	}
-
-
-
-/** Select2
- **************************************************************** **/
-	function _select2() {
-		var _container = jQuery('select.select2');
-
-		if(_container.length > 0) {
-
-			loadScript(plugin_path + 'select2/js/select2.full.min.js', function() {
-
-				if(jQuery().select2) {
-					jQuery('select.select2').select2();
-				}
-
-			});
-		}
 
 	}
 
@@ -2936,72 +2298,6 @@
 
 		}
 
-	}
-
-
-
-
-/** Modal Autoload
-
-	USAGE:
-
-	<div id="MODAL-ID-REQUIRED" class="modal fade" data-autoload="true" data-autoload-delay="2000">
-		...
-	</div>
- **************************************************************** **/
-	function _modalAutoLoad() {
-		if(jQuery("div.modal").length > 0) {
-
-			jQuery("div.modal").each(function() {
-				var _t 			= jQuery(this),
-					_id			= _t.attr('id'),
-					_autostart 	= _t.attr('data-autoload') || false;
-
-
-				// reset allow
-				// localStorage.removeItem(_id);
-
-
-				if(_id != '') { // rewrite if set to hidden by the user
-					if(localStorage.getItem(_id) == 'hidden') {
-						_autostart = 'false';
-					}
-				}
-
-
-				if(_autostart == 'true') {
-
-					jQuery(window).load(function() { // required on load!
-						var _delay = _t.attr('data-autoload-delay') || 1000; // delay when modal apprear
-
-						setTimeout(
-							function()  {
-
-								_t.modal('toggle');
-
-						}, parseInt(_delay));
-
-					});
-
-				}
-
-				// LOCAL STORAGE - DO NOT HIDE ON NEXT PAGE LOAD!
-				jQuery("input.loadModalHide", this).bind("click", function() {
-					var _tt = jQuery(this);
-
-					if(_tt.is(":checked")) {
-						localStorage.setItem(_id, 'hidden');
-						console.log('[Modal Autoload #'+_id+'] Added to localStorage');
-					} else {
-						localStorage.removeItem(_id);
-						console.log('[Modal Autoload #'+_id+'] Removed from localStorage');
-					}
-
-				});
-
-			});
-
-		}
 	}
 
 
