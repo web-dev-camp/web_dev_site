@@ -68,18 +68,3 @@
               %span More about food
           %i.glyphicon.glyphicon-menu-right
     .divider.double-line.margin-top-80.margin-bottom-80
-      / divider
-    /
-      controlls-over		= navigation buttons over the image
-      buttons-autohide 	= navigation buttons visible on mouse hover only
-
-      data-plugin-options:
-      "singleItem": true
-      "autoPlay": true (or ms. eg: 4000)
-      "navigation": true
-      "pagination": true
-    .text-center
-      .owl-carousel.nomargin{"data-plugin-options" => "{\"singleItem\": false, \"autoPlay\": true}"}
-        - ["1","2","3","4","5","6","7","8"].each do |brand|
-          %div
-            = image_tag "brands/#{brand}.jpg" , :class => "img-responsive"
