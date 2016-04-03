@@ -17,5 +17,4 @@
 //= require scripts
 //= require layerslider_pack
 //= require demo.layerslider_slider
-//= require banner_slider
 //= require web_js

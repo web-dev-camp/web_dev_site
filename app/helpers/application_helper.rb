@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def camp_slide(pic)
+    slide = "<div class='ls-slide'"
+    slide = data_ls( slide , slidedelay:  6000 , transition2d:  1)
+    slide + ">" + bg(pic) + "</div>"
+  end
   def slide3
     slide = "<div class='ls-slide'"
     slide = data_ls( slide , slidedelay:  8000 , transition2d:  1)

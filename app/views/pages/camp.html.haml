@@ -2,15 +2,17 @@
   .container
     .row
       .col-lg-4.col-md-4.col-sm-4
-        / OWL SLIDER
-        .owl-carousel.buttons-autohide.controlls-over.nomargin.box-shadow-1{"data-plugin-options" => "{\"items\": 1, \"autoHeight\": true, \"navigation\": true, \"pagination\": true, \"transitionStyle\":\"fade\", \"progressBar\":\"true\"}"}
-          %div
-            = image_tag "villa_taika.jpg" , :class => "img-responsive"
-          %div
-            = image_tag "orange.jpg" , :class => "img-responsive"
-          %div
-            = image_tag "garden.jpg" , :class => "img-responsive"
-        / /OWL SLIDER
+        .layerslider.height-300{:style => "width:100%;"}
+          = raw camp_slide("villa_taika.jpg")
+          = raw camp_slide("orange.jpg")
+          = raw camp_slide("garden.jpg")
+        :javascript
+          var layer_options = {
+            showBarTimer:   true ,
+          	responsive: 		true,
+          	hoverPrevNext: 		true,
+          	skinsPath: 			'/slider/css/'
+          }
       .col-lg-8.col-md-8.col-sm-8
         .heading-title.heading-border-bottom
           %h3 Remove the distraction, live in.
