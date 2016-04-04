@@ -8,18 +8,28 @@
         / Small Description
         %p Finding your talent.
         %address
-          %ul.list-unstyled
-            %li.footer-sprite.address
-              Fiskarsintie 513
-              %br/
-              10480 Antskog
-              %br/
-              Finnland
-              %br/
-            %li.footer-sprite.phone
-              Phone: +358-40 7308052
-            %li.footer-sprite.email
-              %a{:href => "mailto:info@web-dev.camp"} info@web-dev.camp
+          %table
+            %tr
+              %td
+                %i.fa.icon-location
+                %br
+                %br
+                %br
+              %td
+                Fiskarsintie 513
+                %br/
+                10480 Antskog
+                %br/
+                Finnland
+            %tr
+              %td
+                %i.fa.icon-phone
+              %td Phone: +358-40 7308052
+            %tr
+              %td
+                %i.fa.icon-mail
+              %td
+                %a{:href => "mailto:info@web-dev.camp"} info@web-dev.camp
       .col-md-3
         %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
@@ -42,24 +52,10 @@
           %li= link_to "Teaching oppertunities" , page_path(:teaching)
       .col-md-4
         =render "pages/apply_form"
-        / Social Icons
         .margin-top-20
-          %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Facebook"}
+          %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "#", :title => "Facebook"}
             %i.icon-facebook
             %i.icon-facebook
-          %a.social-icon.social-icon-border.social-twitter.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Twitter"}
-            %i.icon-twitter
-            %i.icon-twitter
-          %a.social-icon.social-icon-border.social-gplus.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Google plus"}
-            %i.icon-gplus
-            %i.icon-gplus
-          %a.social-icon.social-icon-border.social-linkedin.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Linkedin"}
-            %i.icon-linkedin
-            %i.icon-linkedin
-          %a.social-icon.social-icon-border.social-rss.pull-left{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Rss"}
-            %i.icon-rss
-            %i.icon-rss
-        / /Social Icons
   .copyright
     .container
       %ul.pull-right.nomargin.list-inline.mobile-block

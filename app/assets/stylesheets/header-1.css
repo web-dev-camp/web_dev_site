@@ -25,12 +25,12 @@
 }
 #topMain.nav-pills>li>a.dropdown-toggle:after {
 	display: block;
-	content: "\f107";
+	content: '\e811';
 	position: absolute;
 	top: 50%;
 	right: 10px;
 	margin: -5px 0 0;
-	font-family: FontAwesome;
+	font-family: fontello;
 	font-size: 12px;
 	opacity: .3;
 	line-height: 1em;

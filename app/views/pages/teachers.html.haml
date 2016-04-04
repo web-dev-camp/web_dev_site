@@ -29,11 +29,8 @@
                 people was what he enjoyed most about his profession.
               %hr/
               %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/dancinglightning"}
-                %i.fa.fa-github
-                %i.fa.fa-github
-              %a.social-icon.social-icon-sm.social-linkedin{:href => "#"}
-                %i.fa.fa-linkedin
-                %i.fa.fa-linkedin
+                %i.fa.icon-github
+                %i.fa.icon-github
       .col-md-4.col-sm-6
         .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
           .front
@@ -56,14 +53,14 @@
                 He also teaches part time at Web Dev Camp
               %hr/
               %a.social-icon.social-icon-sm.social-twitter{:href => "https://twitter.com/amgando"}
-                %i.fa.fa-twitter
-                %i.fa.fa-twitter
+                %i.fa.icon-twitter
+                %i.fa.icon-twitter
               %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/amgando"}
-                %i.fa.fa-github
-                %i.fa.fa-github
+                %i.fa.icon-github
+                %i.fa.icon-github
               %a.social-icon.social-icon-sm.social-linkedin{:href => "https://www.linkedin.com/in/sherifabushadi"}
-                %i.fa.fa-linkedin
-                %i.fa.fa-linkedin
+                %i.fa.icon-linkedin
+                %i.fa.icon-linkedin
       .col-md-4.col-sm-6
         .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
           .front
@@ -85,18 +82,18 @@
 
               %hr/
               %a.social-icon.social-icon-sm.social-facebook{:href => "https://www.facebook.com/RaisaAndTorsten"}
-                %i.fa.fa-facebook
-                %i.fa.fa-facebook
+                %i.fa.icon-facebook
+                %i.fa.icon-facebook
               %a.social-icon.social-icon-sm.social-soundcloud{:href => "https://soundcloud.com/raisa-andtorsten-kaipainen"}
-                %i.fa.fa-soundcloud
-                %i.fa.fa-soundcloud
+                %i.fa.icon-soundcloud
+                %i.fa.icon-soundcloud
 
 %section.padding-xxs
   .container
     %h4 Partner companies
     Professionals from the following companies come to teach at Web Dev Camp for 1 to 4 weeks.
     .text-center
-      .owl-carousel.nomargin{"data-plugin-options" => "{\"singleItem\": false, \"autoPlay\": true}"}
+      .carousel.nomargin{"data-plugin-options" => "{\"singleItem\": false, \"autoPlay\": true}"}
         - ["1","2","3","4","5","6","7","8"].each do |brand|
           %div
-            = image_tag "brands/#{brand}.jpg" 
+            = image_tag "brands/#{brand}.jpg"

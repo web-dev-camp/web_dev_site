@@ -3,11 +3,11 @@
 %form{:action => "php/newsletter.php", "data-success" => "Subscribed! Thank you!", "data-toastr-position" => "bottom-right", :method => "post"}
   .input-group
     %span.input-group-addon
-      %i.fa.fa-user
+      %i.fa.icon-user
     %input#name.form-control.required{:name => "name", :placeholder => "Enter your Name", :type => "name"}/
   .input-group
     %span.input-group-addon
-      %i.fa.fa-envelope
+      %i.fa.icon-mail
     %input#email.form-control.required{:name => "email", :placeholder => "Enter your Email", :type => "email"}/
     %span.input-group-btn
       %button.btn.btn-success{:type => "submit"} Sign up
