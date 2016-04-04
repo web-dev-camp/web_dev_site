@@ -4,11 +4,55 @@ module ApplicationHelper
     slide = data_ls( slide , slidedelay:  6000 , transition2d:  1)
     slide + ">" + bg(pic) + "</div>"
   end
-  def slide3
+  def index_slide pic
     slide = "<div class='ls-slide'"
     slide = data_ls( slide , slidedelay:  8000 , transition2d:  1)
     slide += ">"
-    slide += bg "slider/villa_taika1.jpg"
+    slide + bg("slider/#{pic}.jpg")
+  end
+
+  def slide4
+    slide = index_slide "student"
+    slide += text delayin:300 , durationin: 1500 , rotatein:20 , rotatexin: 30 , scalexin:1.5 ,
+                  scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout: 750 , rotateout:20 ,
+                  rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0" ,
+                  style: "top:50px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;" ,
+                  text: "Check the course program"
+    #  slide += text  delayin:700, offsetxin:0 , durationin:1500, rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750, skewxout:60,
+    #                 text: "intensive course",
+    #                 style: "top:90px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"
+    slide += text  delayin:1500, durationin:1500, rotatein:20 , rotatexin:30 , scalexin:1.5 ,
+                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
+                   rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0" ,
+                   style: "top:250px;left:200px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;" ,
+                   text: "Apply"
+    #  slide += text  delayin:1400 , offsetxin:0 , durationin:1500 ,  rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60 ,
+    #                 style: "top:190px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
+    #                 text: "in 2 week modules"
+    slide += text  delayin:4000 , durationin:1500 , rotatein:20 , rotatexin:30 , scalexin:1.5 ,
+                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
+                   rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0",
+                   style: "top:120px;left:700px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
+                   text: "BECOME a DEVELOPER"
+    #  slide += text  delayin:2100, offsetxin:0 , durationin:1500 ,rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60,
+    #                 style: "top:290px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
+    #                 text: ""
+    slide += text  delayin:5000, durationin:1500 ,rotatein:20 , rotatexin:30 , scalexin:1.5 ,
+                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20,
+                   rotatexout:-30 , scalexout:0 , scaleyout:0, transformoriginout:"left 50% 0",
+                   style: "top:320px;left:600px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
+                   text: "START A NEW CAREER"
+    #  slide += text  delayin:2800 , offsetxin:0 , durationin:1500 , rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60 ,
+    #                 style: "top:390px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
+    #                 text: ""
+    slide + "</div>"
+  end
+  def slide3
+    slide = index_slide "lunch"
     slide += text offsetxin:50, durationin:750 , easingin:"easeOutBack" ,skewxin:-50,
                   offsetxout:-50,durationout:600, easingout:"easeInBack",
                   showuntil:1000, skewxout:50 ,
@@ -42,58 +86,50 @@ module ApplicationHelper
                   style: "top:300px;left:550px;font-weight: 500;font-size:30px;color:#ffffff;white-space: nowrap;",
                   text: "remove the distraction"
 
-  slide += "</div>"
-  slide
+    slide + "</div>"
   end
   def slide2
-    slide = "<div class='ls-slide'"
-    slide = data_ls( slide , slidedelay:  8000 , transition2d:  1)
-    slide += ">"
-    slide += bg "slider/development.jpg"
+    slide = index_slide "group_study"
     slide += text delayin:300 , durationin: 1500 , rotatein:20 , rotatexin: 30 , scalexin:1.5 ,
                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout: 750 , rotateout:20 ,
                   rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0" ,
                   style: "top:50px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;" ,
                   text: "8 Weeks, intensive course"
-  #  slide += text  delayin:700, offsetxin:0 , durationin:1500, rotateyin:90 , skewxin:60 ,
-  #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750, skewxout:60,
-  #                 text: "intensive course",
-  #                 style: "top:90px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"
-   slide += text  delayin:1500, durationin:1500, rotatein:20 , rotatexin:30 , scalexin:1.5 ,
-                  scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
-                  rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0" ,
-                  style: "top:250px;left:200px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;" ,
-                  text: "HTML / CSS / Programming"
-  #  slide += text  delayin:1400 , offsetxin:0 , durationin:1500 ,  rotateyin:90 , skewxin:60 ,
-  #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60 ,
-  #                 style: "top:190px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
-  #                 text: "in 2 week modules"
-   slide += text  delayin:4000 , durationin:1500 , rotatein:20 , rotatexin:30 , scalexin:1.5 ,
-                  scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
-                  rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0",
-                  style: "top:120px;left:700px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
-                  text: "BECOME a DEVELOPER"
-  #  slide += text  delayin:2100, offsetxin:0 , durationin:1500 ,rotateyin:90 , skewxin:60 ,
-  #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60,
-  #                 style: "top:290px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
-  #                 text: ""
-   slide += text  delayin:5000, durationin:1500 ,rotatein:20 , rotatexin:30 , scalexin:1.5 ,
-                  scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20,
-                  rotatexout:-30 , scalexout:0 , scaleyout:0, transformoriginout:"left 50% 0",
-                  style: "top:320px;left:600px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
-                  text: "START A NEW CAREER"
-  #  slide += text  delayin:2800 , offsetxin:0 , durationin:1500 , rotateyin:90 , skewxin:60 ,
-  #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60 ,
-  #                 style: "top:390px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
-  #                 text: ""
-  slide += "</div>"
-  slide
+    #  slide += text  delayin:700, offsetxin:0 , durationin:1500, rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750, skewxout:60,
+    #                 text: "intensive course",
+    #                 style: "top:90px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;"
+    slide += text  delayin:1500, durationin:1500, rotatein:20 , rotatexin:30 , scalexin:1.5 ,
+                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
+                   rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0" ,
+                   style: "top:250px;left:200px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;" ,
+                   text: "HTML / CSS / Programming"
+    #  slide += text  delayin:1400 , offsetxin:0 , durationin:1500 ,  rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60 ,
+    #                 style: "top:190px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
+    #                 text: "in 2 week modules"
+    slide += text  delayin:4000 , durationin:1500 , rotatein:20 , rotatexin:30 , scalexin:1.5 ,
+                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
+                   rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0",
+                   style: "top:120px;left:700px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
+                   text: "BECOME a DEVELOPER"
+    #  slide += text  delayin:2100, offsetxin:0 , durationin:1500 ,rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60,
+    #                 style: "top:290px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
+    #                 text: ""
+    slide += text  delayin:5000, durationin:1500 ,rotatein:20 , rotatexin:30 , scalexin:1.5 ,
+                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20,
+                   rotatexout:-30 , scalexout:0 , scaleyout:0, transformoriginout:"left 50% 0",
+                   style: "top:320px;left:600px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
+                   text: "START A NEW CAREER"
+    #  slide += text  delayin:2800 , offsetxin:0 , durationin:1500 , rotateyin:90 , skewxin:60 ,
+    #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60 ,
+    #                 style: "top:390px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",
+    #                 text: ""
+    slide + "</div>"
   end
   def slide1
-    slide = "<div class='ls-slide'"
-    slide = data_ls( slide , slidedelay:  10000 , transition2d:  1 , timeshift:  -1000)
-    slide += ">"
-    slide += bg "slider/net.jpg"
+    slide = index_slide "net"
     slide += text delayin: 500 , offsetxin: -50 , durationin: 2000 ,  offsetxout: -50 , durationout: 1000 ,
                   style: "top: 80px ; left: 180px ; font-weight:  500 ; font-size: 40px ; line-height: 37px ;  white-space:  nowrap ;" ,
                   text: "You know the web"
@@ -122,9 +158,10 @@ module ApplicationHelper
                   scalexin: 0 , scaleyin: 0 , offsetxout: 0 , durationout: 1500 , showuntil: 1 ,
                   easingout: :linear , scalexout: 2 , scaleyout: 2 , src: "slider/circle.png",
                   style:  "top: 20px ; left: 50% ; white-space:  nowrap ;"
-    slide += "</div>"
-    slide
+    slide + "</div>"
   end
+
+  private
 
   def bg pic
     "<img class='ls-bg' alt='Slide background' src='#{image_path(pic)}'/>"
