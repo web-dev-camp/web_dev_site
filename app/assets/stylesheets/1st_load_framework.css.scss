@@ -1,6 +1,6 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import "web_bootstrap";
 
 // make all images responsive by default
 img {
@@ -11,7 +11,6 @@ img {
 .navbar-brand {
   font-size: inherit;
   }
-
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -45,6 +44,7 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
 
 // Styles for form views
 // using Bootstrap

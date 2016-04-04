@@ -94,7 +94,7 @@ module ApplicationHelper
                   scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout: 750 , rotateout:20 ,
                   rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0" ,
                   style: "top:50px;left:100px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;" ,
-                  text: "8 Weeks, intensive course"
+                  text: "Small groups"
     #  slide += text  delayin:700, offsetxin:0 , durationin:1500, rotateyin:90 , skewxin:60 ,
     #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750, skewxout:60,
     #                 text: "intensive course",
@@ -112,7 +112,7 @@ module ApplicationHelper
                    scaleyin:1.5 , transformoriginin:"left 50% 0" , durationout:750 , rotateout:20 ,
                    rotatexout:-30 , scalexout:0 , scaleyout:0 , transformoriginout:"left 50% 0",
                    style: "top:120px;left:700px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#8ab933;border-radius:4px;white-space: nowrap;",
-                   text: "BECOME a DEVELOPER"
+                   text: "intesive learning"
     #  slide += text  delayin:2100, offsetxin:0 , durationin:1500 ,rotateyin:90 , skewxin:60 ,
     #                 transformoriginin:"25% 50% 0" , offsetxout:100 , durationout:750 , skewxout:60,
     #                 style: "top:290px;left:100px;font-weight: 300;font-size:24px;color:#333;white-space: nowrap;",

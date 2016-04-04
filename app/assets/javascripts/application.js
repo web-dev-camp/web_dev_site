@@ -13,7 +13,13 @@
 //= require jquery2
 //= require smoothscroll
 //= require jquery_ujs
-//= require bootstrap-sprockets
+//= require bootstrap/alert
+//= require bootstrap/collapse
+//= require bootstrap/dropdown
+//= require bootstrap/tab
+//= require bootstrap/transition
+//= require bootstrap/tooltip
+//= require bootstrap/popover
 //= require scripts
 //= require layerslider_pack
 //= require web_js
