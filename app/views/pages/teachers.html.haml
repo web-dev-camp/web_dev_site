@@ -6,31 +6,53 @@
       Web Dev Camp is built and run by a team of experienced professionals
     %p
       Active professionals also participate in the teaching on a part time basis
-    .row
-      .col-md-4.col-sm-6
-        .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
-          .front
-            .box1.box-default
-              .box-icon-title
-                = image_tag "torsten.png"
-                %h2 Torsten Ruger
-                %small Director / Teacher
-          .back
-            .box2.box-default
-              %h4.nomargin Torsten Ruger
+    .row.box-icon-large.text-center
+      .col-md-4.col-sm-6.flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+        .flipper
+          .frontt.box-default
+            .box-icon-title
+              = image_tag "torsten.png"
+              %h2 Torsten Ruger
               %small Director / Teacher
-              %hr/
-              %p
-                Torsten has worked for 25 years as a professional web programmer before starting
-                Web Dev Camp in an endeavour to share his experience.
-                %br
-                Torsten has programmed in many different languages, used many different standards,
-                led teams, architected systems but always found that learning and working with
-                people was what he enjoyed most about his profession.
-              %hr/
-              %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/dancinglightning"}
-                %i.fa.icon-github
-                %i.fa.icon-github
+          .backk.box-default
+            %h4.nomargin Torsten Ruger
+            %small Director / Teacher
+            %hr/
+            %p
+              Torsten has worked for 25 years as a professional web programmer before starting
+              Web Dev Camp in an endeavour to share his experience.
+              %br
+              Torsten has programmed in many different languages, used many different standards,
+              led teams, architected systems but always found that learning and working with
+              people was what he enjoyed most about his profession.
+            %hr/
+            %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/dancinglightning"}
+              %i.fa.icon-github
+              %i.fa.icon-github
+
+      .col-md-4.col-sm-6.flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+        .flipper
+          .backk.box-default
+            .box-icon-title
+              = image_tag "torsten.png"
+              %h2 Torsten Ruger
+              %small Director / Teacher
+          .frontt.box-default
+            %h4.nomargin Torsten Ruger
+            %small Director / Teacher
+            %hr/
+            %p
+              Torsten has worked for 25 years as a professional web programmer before starting
+              Web Dev Camp in an endeavour to share his experience.
+              %br
+              Torsten has programmed in many different languages, used many different standards,
+              led teams, architected systems but always found that learning and working with
+              people was what he enjoyed most about his profession.
+            %hr/
+            %a.social-icon.social-icon-sm.social-github{:href => "https://github.com/dancinglightning"}
+              %i.fa.icon-github
+              %i.fa.icon-github
+
       .col-md-4.col-sm-6
         .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
           .front
@@ -65,12 +87,6 @@
         .box-flip.box-color.box-icon.box-icon-center.box-icon-round.box-icon-large.text-center
           .front
             .box1.box-default
-              .box-icon-title
-                =image_tag "raisa.jpg"
-                %h2 Raisa Kaipainen
-                %small Camp director
-          .back
-            .box2.box-default
               %h4.nomargin Raisa Kaipainen
               %small Camp Director
               %hr/
@@ -87,6 +103,12 @@
               %a.social-icon.social-icon-sm.social-soundcloud{:href => "https://soundcloud.com/raisa-andtorsten-kaipainen"}
                 %i.fa.icon-soundcloud
                 %i.fa.icon-soundcloud
+          .back
+            .box2.box-default
+              .box-icon-title
+                =image_tag "raisa.jpg"
+                %h2 Raisa Kaipainen
+                %small Camp director
 
 %section.padding-xxs
   .container
