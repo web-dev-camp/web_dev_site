@@ -5256,110 +5256,6 @@ p
     &.box-icon-content .box-icon-title > i
       top: -33px
 
-/** FLIP BOXES
- ****************
-
-.box-flip
-  margin: 0 auto
-  position: relative
-  -webkit-perspective: 600px
-  -moz-perspective: 600px
-  perspective: 600
-  width: 100%
-  .front, .back
-    text-align: center
-  .front
-    width: 100%
-    position: absolute
-    top: 0
-    z-index: 1
-    text-align: center
-    -webkit-transform-style: preserve-3d
-    -moz-transform-style: preserve-3d
-    -webkit-transform: rotateX(0deg) rotateY(0deg)
-    -moz-transform: rotateX(0deg) rotateY(0deg)
-    transform: rotateX(0deg) rotateY(0deg)
-    -webkit-backface-visibility: hidden
-    -moz-backface-visibility: hidden
-    -ms-backface-visibility: hidden
-    -o-backface-visibility: hidden
-    backface-visibility: hidden
-    -webkit-transition: all .4s ease-in-out
-    -moz-transition: all .4s ease-in-out
-    -ms-transition: all .4s ease-in-out
-    -o-transition: all .4s ease-in-out
-    transition: all .4s ease-in-out
-  .back
-    width: 100%
-    position: absolute
-    top: 0
-    z-index: 2
-    -webkit-transform-style: preserve-3d
-    -moz-transform-style: preserve-3d
-    -webkit-transform: rotateY(-180deg)
-    -moz-transform: rotateY(-180deg)
-    -ms-transform: rotateY(-180deg)
-    transform: rotateY(-180deg)
-    -webkit-backface-visibility: hidden
-    -moz-backface-visibility: hidden
-    -ms-backface-visibility: hidden
-    -o-backface-visibility: hidden
-    backface-visibility: hidden
-    -webkit-transition: all .4s ease-in-out
-    -moz-transition: all .4s ease-in-out
-    -ms-transition: all .4s ease-in-out
-    -o-transition: all .4s ease-in-out
-    transition: all .4s ease-in-out
-  &.flip
-    .front
-      width: 100%
-      z-index: 1
-      -webkit-transform: rotateY(-180deg)
-      -moz-transform: rotateY(-180deg)
-      -ms-transform: rotateY(-180deg)
-      -o-transform: rotateY(-180deg)
-      transform: rotateY(-180deg)
-    .back
-      width: 100%
-      z-index: 2
-      -webkit-transform: rotateY(0deg)
-      -moz-transform: rotateY(0deg)
-      -ms-transform: rotateY(0deg)
-      -o-transform: rotateY(0deg)
-      transform: rotateY(0deg)
-  .box1
-    width: 100%
-    background-color: rgba(0, 0, 0, 0.05)
-    min-height: 50px
-    margin: 0 auto
-    padding: 20px
-    border-radius: 3px
-    -moz-border-radius: 3px
-    -webkit-border-radius: 3px
-  .box2
-    width: 100%
-    background-color: #333
-    min-height: 50px
-    margin: 0 auto
-    padding: 20px
-    border-radius: 3px
-    -moz-border-radius: 3px
-    -webkit-border-radius: 3px
-  hr
-    border-color: rgba(0, 0, 0, 0.1)
-  .box-icon-title > i
-    color: #111
-    background-color: rgba(0, 0, 0, 0.07)
-  &.box-color
-    h1, h2, h3, h4, h5, h6, p, .box-icon-title > i
-      color: #fff
-  .btn-lg.btn-translucid
-    font-size: 14px
-  .box-default
-    color: #000 !important
-    p, h1, h2, h3, h4, h5
-      color: #000 !important
-
 /* box static
 
 .box-static
@@ -5389,10 +5285,6 @@ p
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid
   &.box-color .box-title, &.box-dark .box-title
     border-bottom: rgba(255, 255, 255, 0.1) 1px solid
-
-@media all and (max-width: 992px)
-  .box-flip
-    margin-bottom: 30px
 
 /** Box Colors
 

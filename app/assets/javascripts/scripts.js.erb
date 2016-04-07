@@ -1190,11 +1190,11 @@
 
 		/** Flip Boxes
 		 *********************** **/
-		if(jQuery('.box-flip').length > 0) {
+		if(jQuery('.flip-container').length > 0) {
 
-			jQuery('.box-flip').each(function() {
-				_height1 = jQuery('.box1',this).outerHeight();
-				_height2 = jQuery('.box2',this).outerHeight();
+			jQuery('.flip-container').each(function() {
+				_height1 = jQuery('.frontt',this).outerHeight();
+				_height2 = jQuery('.backk',this).outerHeight();
 
 				if(_height1 >= _height2) {
 					_height = _height1;
@@ -1207,7 +1207,7 @@
 				jQuery('.box2',this).css({"min-height":_height+"px"});
 			});
 
-			jQuery('.box-flip').hover(function() {
+			jQuery('.flip-container').hover(function() {
 				jQuery(this).addClass('flip');
 			},function(){
 				jQuery(this).removeClass('flip');

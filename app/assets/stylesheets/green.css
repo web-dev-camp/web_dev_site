@@ -328,19 +328,6 @@ section.dark .box-icon a.box-icon-more:hover {
 	color:#8ab933;
 }
 
-.box-flip .box2 {
-	color:#fff;
-	background-color:#8ab933;
-}
-
-.box-flip .box2 h1,
-.box-flip .box2 h2,
-.box-flip .box2 h3,
-.box-flip .box2 h4,
-.box-flip .box2 h5,
-.box-flip .box2 h6 {
-	color:#fff;
-}
 
 .box-static.box-border-top {
 	border-color:#8ab933;
