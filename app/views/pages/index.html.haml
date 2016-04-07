@@ -44,12 +44,15 @@
           %i.glyphicon.glyphicon-menu-right
       .col-md-3
         .heading-title.heading-border-bottom.heading-color
-          %h3=link_to "Modules" , page_path(:modules)
+          %h3=link_to "Method" , page_path(:method)
         %p
           An intensive 8 week program is structured as 4 modules of 2 weeks. Each module will take
           you deeper into the topics of Web Developement, while you choose how to emphasize
           among them.
-        =link_to page_path(:modules) do
+        %p
+          You will learn a lot by doing and hands on help. We use real world applications and your
+          exercises will contribute to used coded right from the start.
+        =link_to page_path(:method) do
           %span.word-rotator{"data-delay" => "2000"}
             %span.items
               %span More about course modules
