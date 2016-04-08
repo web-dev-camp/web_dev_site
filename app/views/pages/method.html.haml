@@ -2,69 +2,145 @@
 
 %section.padding-xxs
   .container
+    %header.text-center.margin-bottom-20
+      %h2 We help you find your talent
+      %p.lead.font-lato You decide where go you from there
+    %p.text-center
+      Our teaching method is based on small groups, a maximum of 10 pupils per cohort, and
+      lots of practical work, on real world or open source projects.
+    %p.text-center
+      The curriculum teaches full stack developer skills. Software development is a team effort
+      where many different talents must come together to make a whole.
+      %br
+      It's up to you to find
+      what suits you best.
+    %p.text-center
+      Cohorts start every two weeks on their 8 week journey through our curriculum.
+      %br
+      About half the
+      time is taken up by a fixed curriculum, which leaves you plenty of room to explore your talent.
     .row
       %header.text-center.margin-bottom-20
-        %h3 Modules
+        %h2 Modules
         %p.lead.font-lato
-        Every two weeks we go around the basic topics, while going deeper with every iterations.
-        While the curriculum teaches full stack skills, you can choose to specialise to client
-        or server side, according to your talent.
-        Below we detail the iterations, read here about the topics.
+        Every two weeks we go around the fundamental topics, while going deeper with every iterations.
+        %br
+        Below we detail the iterations, read
+        = link_to "here" , page_path(:web)
+        and
+        = link_to "here" , page_path(:dev)
+        about the actual topics.
       .col-md-6
-        %h4 Introduction - first 2 weeks
+        %h3 Introduction - first 2 weeks
         %p
-          The first step in learning is getting acquainted with the material.
+          The first step in learning is getting acquainted with the material (see below).
         %p
           Initial teaching happens in small groups where you will be able to ask questions immediately.
           You will be building your first app on the first day and continue building useful
           apps for real people throughout the course.
+        %p
+          %h4 Topcics
+          %b
+            Html:
+          Basic box model
+          %b
+            Css:
+          Style basics
+          %b
+            Programming:
+          Object model
+          %b
+            Teamwork:
+          Roles
+          %b
+            Database:
+          Object table model
+          %b
+            Testing:
+          Testing as assurance
       .col-md-6
-        %h4 Communication - second 2 weeks
+        %h3 Communication - third 2 weeks
         %p
           The second step in learning comes from being able to communicate about the material.
         %p
           You will be assigned a younger student to explain the topic to.
           You will notice that  to achieve the clarity needed to express yourself,
           you will need to study yourself.
+        %p
+          %h4 Topcics
+          %b
+            Html:
+          Dynamic html generation
+          %b
+            Css:
+          Semantic css / susy
+          %b
+            Programming:
+          Concurrency and closures
+          %b
+            Teamwork:
+          Advanced git
+          %b
+            Database:
+          Searching
+          %b
+            Testing:
+          Continuous testing
     .row
       .col-md-6
-        %h4 Presentation - second 2 weeks
+        %h3 Presentation - second 2 weeks
         %p
           You will give 2 presentations on your chosen topics.
           One group presentation to peers and a solo one for younger students.
         %p
           Presentations are practical demonstrations of work you will have done,
           and to do that work you will need to study the topics even more.
+        %p
+          %h4 Topcics
+          %b
+            Html:
+          Dom, the api for Html
+          %b
+            Css:
+          Bootstrap / frameworks
+          %b
+            Programming:
+          Associations and structures
+          %b
+            Teamwork:
+          Git basics
+          %b
+            Database:
+          Associations
+          %b
+            Testing:
+          Rspec framework
       .col-md-6
-        %h4 Mastery - final weeks and project
+        %h3 Mastery - final weeks and project
         %p
           You can choose your final assignment from from the list of topics.
         %p
-          ​You will work in a group on a final project to show mastery of the topic.  ​
+          ​You will work in a group on a final project to show mastery of the topic.
+        %p
+          %h4 Topcics
+          %b
+            Html:
+          client side applications
+          %b
+            Css:
+          Mobile first design
+          %b
+            Programming:
+          Other languages
+          %b
+            Teamwork:
+          Comunication skills also in open source
+          %b
+            Database:
+          Performance, NoSql
+          %b
+            Testing:
+          Client side testing
 
-%section#about.padding-xxs
-  .container
-    %header.text-center.margin-bottom-20
-      %h2 We help you find your talent
-      %p.lead.font-lato You decide where go you from there
-      %p
-        Our teaching method is based on small groups, a maximum of 10 pupils per cohort.
-      %p
-        Cohorts start every two weeks on their 8 week journey through our curriculum.
-
-%section#about.padding-xxs
-  .container
-    %header.text-center.margin-bottom-20
-      %h2 The basics
-      %p.lead.font-lato We will teach you the basics, and let you decide where to go with them
-      %hr/
-    .row
-      .col-sm-2
-        =image_tag "pie.jpg" 
-      .col-sm-10
-        %p.dropcap
-          The curriculum teaches full stack developer skills. Software development is a team effort where many different talents must come together to make a whole.
-        %p.dropcap
-          We teach each of the 6 basic topics in each of the 2 week cycles. Each week you will go deeper into each topic, but in the second week of each cycle you can decide which topic you want to spend even more time with.
 
 = render 'layouts/submenu'
