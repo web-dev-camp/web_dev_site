@@ -639,22 +639,6 @@ img.image-bw
   border-radius: 50% !important
 
 /**
- *	ICON LIST
- **
-
-ul.list-icons
-  margin-left: 1.75em
-  position: relative
-  > li
-    position: relative
-    > i
-      position: absolute
-      left: -1.75em
-      width: 14px
-      text-align: center
-      top: 5px
-
-/**
  *	Ribbon
  **
 
@@ -13275,123 +13259,11 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
     &.search .search-box, &.quick-cart .quick-cart-box
       border: rgba(0, 0, 0, 0.07) 1px solid
       border-top: 0
-  &.translucent
-    li
-      &.search .search-box, &.quick-cart .quick-cart-box
-        background-color: rgba(33, 33, 33, 0.8)
-        -webkit-transition: all 0.2s
-        -moz-transition: all 0.2s
-        -o-transition: all 0.2s
-        transition: all 0.2s
-      &.search .search-box:hover, &.quick-cart .quick-cart-box:hover
-        background-color: rgba(33, 33, 33, 0.88)
-    ul.nav-second-main li i, li.search i.fa
-      color: #fff !important
-  &.translucent
-    position: absolute
-    background-color: rgba(0, 0, 0, 0.2)
-    -webkit-box-shadow: none
-    -moz-box-shadow: none
-    box-shadow: none
-    #topMain.nav-pills > li
-      > a
-        color: #fff
-        -webkit-border-radius: 0
-        -moz-border-radius: 0
-        border-radius: 0
-      &.active > a, > a:hover
-        color: #fff
-        background-color: rgba(0, 0, 0, 0.1)
-    + section.page-header
-      margin-top: -100px
-      padding: 180px 0
-      &.page-header-xlg
-        padding: 280px 0
-        padding-top: 420px
-      &.page-header-lg
-        padding-top: 350px
-  &.fixed
-    &.translucent
-      background-color: #fff
-    &.translucent
-      ul.nav-second-main li a
-        color: #151515
-        > i
-          color: #151515
-      #topMain.nav-pills > li > a
-        color: #151515
-  &.bottom
-    position: absolute
-    top: auto
-    bottom: 0
-    border-bottom: rgba(0, 0, 0, 0.05) 1px solid
-    &.fixed
-      top: 0
-      bottom: auto
-    &.sticky
-      position: absolute
-    &.fixed.sticky
-      position: fixed
-    &.dropup
-      #topMain > li > ul.dropdown-menu ul.dropdown-menu
-        bottom: auto
-        box-shadow: none
-      ul.dropdown-menu
-        bottom: 94px
-  &.bottom
-    &.dropup
-      &.slim ul.dropdown-menu
-        bottom: 53px
-      .nav-second-main
-        .quick-cart-box, .search-box
-          top: auto
-          bottom: 100%
-          margin-bottom: 39px
-          box-shadow: 5px -5px rgba(91, 91, 91, 0.2)
-          border-bottom: 0
-    &.dropup
-      ul.dropdown-menu:before
-        top: auto
-        bottom: -10px !important
-        border-bottom: 0 !important
-        border-top: rgba(255, 255, 255, 1) 10px solid
-    + #slider
-      margin-bottom: 94px
-  &.bottom
-    + #slider > .swiper-container .swiper-pagination
-      top: 0 !important
-      bottom: auto
-    &.static
-      + #slider
-        margin-bottom: 0
-      border-top: rgba(0, 0, 0, 0.15) 1px solid
 
 @media only screen and (max-width: 768px)
   section.page-header
     margin-top: 0
 
-/* BOTTOM HEADER
-
-@media only screen and (max-width: 992px)
-  #header.bottom
-    top: 0
-    bottom: auto
-    &.sticky
-      position: relative !important
-    + #slider > .swiper-container .swiper-pagination
-      top: auto !important
-      bottom: 10px
-    &.dropup .nav-second-main
-      .quick-cart-box, .search-box
-        bottom: auto
-
-/* STATIC HEADER
-
-@media only screen and (max-width: 992px)
-  #header.static
-    position: relative !important
-
-/* fullwidth container
 
 #topNav
   .full-container
@@ -13423,9 +13295,6 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
       #topMain > li > a
         height: 60px
         line-height: 40px
-  &.static
-    position: fixed
-    border-bottom: rgba(0, 0, 0, 0.08) 1px solid
 
 #topBar
   display: block
