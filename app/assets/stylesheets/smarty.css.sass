@@ -221,21 +221,6 @@ h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span
 .nomargin-bottom
   margin-bottom: 0 !important
 
-.noborder
-  border: 0 !important
-
-.noborder-left
-  border-left: 0 !important
-
-.noborder-right
-  border-right: 0 !important
-
-.noborder-top
-  border-top: 0 !important
-
-.noborder-bottom
-  border-bottom: 0 !important
-
 .nobg
   background: transparent
 
@@ -12401,36 +12386,6 @@ section
     -moz-transition: all 0s
     -o-transition: all 0s
     transition: all 0s
-    &.shadow-after-1:before
-      content: ' '
-      position: absolute
-      left: 0
-      right: 0
-      width: 100%
-      height: 60px
-      bottom: -60px
-      background-image: url('../images/misc/shadow1.png')
-      background-size: 100% 100%
-    &.shadow-after-2:before
-      content: ' '
-      position: absolute
-      left: 0
-      right: 0
-      width: 100%
-      height: 60px
-      bottom: -60px
-      background-image: url('../images/misc/shadow2.png')
-      background-size: 100% 100%
-    &.shadow-after-3:before
-      content: ' '
-      position: absolute
-      left: 0
-      right: 0
-      width: 100%
-      height: 60px
-      bottom: -60px
-      background-image: url('../images/misc/shadow3.png')
-      background-size: 100% 100%
   &.light.page-header
     color: #151515
     background-color: transparent
@@ -12490,8 +12445,6 @@ section
   ul.page-header-tabs
     > li:hover
       background-color: rgba(0, 0, 0, 0.03)
-    &.dark > li:hover
-      background-color: rgba(0, 0, 0, 0.1)
     > li.active > a
       color: #000
   ul.page-header-tabs
@@ -12650,66 +12603,6 @@ section
       display: none
     &:last-child
       display: inline-block
-  &.shadow-after-1:before
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    width: 100%
-    height: 60px
-    bottom: -60px
-    background-image: url('../images/misc/shadow1.png')
-    background-size: 100% 100%
-  &.shadow-before-1:before
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    width: 100%
-    height: 60px
-    background-image: url('../images/misc/shadow1.png')
-    background-size: 100% 100%
-  &.shadow-after-2:before
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    width: 100%
-    height: 60px
-    bottom: -60px
-    background-image: url('../images/misc/shadow2.png')
-    background-size: 100% 100%
-  &.shadow-before-2:before
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    width: 100%
-    height: 60px
-    background-image: url('../images/misc/shadow2.png')
-    background-size: 100% 100%
-  &.shadow-after-3:before
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    width: 100%
-    height: 60px
-    bottom: -60px
-    background-image: url('../images/misc/shadow3.png')
-    background-size: 100% 100%
-  &.shadow-before-3:before
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    width: 100%
-    height: 60px
-    background-image: url('../images/misc/shadow3.png')
-    background-size: 100% 100%
   li.search
     display: inline-block
     .search-box
@@ -12724,15 +12617,9 @@ section
       width: 274px
       margin-top: 36px
       z-index: 22
-  &.header-md li.search .search-box
-    margin-top: 25px
-  &.header-sm li.search .search-box
-    margin-top: 19px
   &.fixed
     li.search .search-box, &.header-sm li.search .search-box
       margin-top: 18px
-    &.header-md li.search .search-box
-      margin-top: 15px
   li.search i.fa
     color: #333
     cursor: pointer
@@ -12868,8 +12755,6 @@ form.mobile-search
       font-size: 20px
       margin-top: -10px
       z-index: 1
-  &.translucent #topMain, &.dark.transparent #topMain
-    background-color: transparent
   li.quick-cart .quick-cart-box
     display: none
     right: 0
@@ -12885,8 +12770,6 @@ form.mobile-search
   &.fixed
     li.quick-cart .quick-cart-box, &.header-sm li.quick-cart .quick-cart-box
       margin-top: 18px
-    &.header-md li.quick-cart .quick-cart-box
-      margin-top: 15px
   li.quick-cart
     .quick-cart-wrapper
       max-height: 400px
@@ -12958,10 +12841,6 @@ form.mobile-search
   #header
     li.quick-cart .quick-cart-box
       top: 21px
-    &.header-sm li.quick-cart .quick-cart-box
-      margin-top: 19px
-    &.header-md li.quick-cart .quick-cart-box
-      margin-top: 26px
     li.quick-cart .quick-cart-wrapper
       max-height: 300px
       overflow-y: auto
@@ -13408,48 +13287,6 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
         background-color: rgba(33, 33, 33, 0.88)
     ul.nav-second-main li i, li.search i.fa
       color: #fff !important
-  &.transparent
-    position: absolute
-    background-color: transparent
-    border-bottom: rgba(255, 255, 255, 0.3) 1px solid
-    -webkit-box-shadow: none
-    -moz-box-shadow: none
-    box-shadow: none
-    &.color, &.dark
-      border: 0
-    #topMain.nav-pills > li
-      > a
-        color: #fff
-        -webkit-border-radius: 0
-        -moz-border-radius: 0
-        border-radius: 0
-      &.active > a, > a:hover
-        background-color: rgba(0, 0, 0, 0.03)
-    + section.page-header
-      &.page-header-lg
-        /*margin-top:-100px;
-        padding: 180px 0
-      /*margin-top:-100px;
-      padding: 180px 0
-      &.page-header-xlg
-        padding: 280px 0
-        padding-top: 350px
-      &.page-header-lg
-        padding-top: 250px
-    a.social-icon
-      background-color: rgba(0, 0, 0, 0.2)
-      > i
-        color: #eaeaea
-  &.fixed
-    &.transparent
-      background-color: #fff
-    &.transparent
-      ul.nav-second-main li a
-        color: #151515
-        > i
-          color: #151515
-      #topMain.nav-pills > li > a
-        color: #151515
   &.translucent
     position: absolute
     background-color: rgba(0, 0, 0, 0.2)
@@ -13501,10 +13338,6 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
         box-shadow: none
       ul.dropdown-menu
         bottom: 94px
-  &.header-md.bottom.dropup ul.dropdown-menu
-    bottom: 68px
-  &.header-sm.bottom.dropup ul.dropdown-menu
-    bottom: 58px
   &.bottom
     &.dropup
       &.slim ul.dropdown-menu
@@ -13516,29 +13349,14 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
           margin-bottom: 39px
           box-shadow: 5px -5px rgba(91, 91, 91, 0.2)
           border-bottom: 0
-    &.header-md.dropup .nav-second-main
-      .quick-cart-box, .search-box
-        margin-bottom: 23px
-    &.header-sm.dropup .nav-second-main
-      .quick-cart-box, .search-box
-        margin-bottom: 20px
     &.dropup
       ul.dropdown-menu:before
         top: auto
         bottom: -10px !important
         border-bottom: 0 !important
         border-top: rgba(255, 255, 255, 1) 10px solid
-      &.dark ul.dropdown-menu:before
-        border-top: rgba(33, 33, 33, 0.95) 10px solid !important
     + #slider
       margin-bottom: 94px
-  &.header-md.bottom + #slider
-    margin-bottom: 70px
-  &.header-sm.bottom
-    + #slider
-      margin-bottom: 60px
-    &.transparent + #slider, &.translucent + #slider
-      margin-bottom: 0
   &.bottom
     + #slider > .swiper-container .swiper-pagination
       top: 0 !important
@@ -13548,29 +13366,8 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
         margin-bottom: 0
       border-top: rgba(0, 0, 0, 0.15) 1px solid
 
-@media only screen and (max-width: 992px)
-  #header.transparent
-    &.fixed #topNav button.btn-mobile
-      color: #333 !important
-    #topMain.nav-pills > li > a, &.dark #topMain.nav-pills > li > a
-      color: #fff
-
 @media only screen and (max-width: 768px)
-  #header.transparent
-    + section.page-header
-      margin-top: 0
-    #topMain
-      background-color: #333 !important
-      li.active > a
-        color: #fff !important
-  /* force dark submenu
-
-/* Transparent Header
-
-/* on scroll
-
-@media only screen and (max-width: 768px)
-  #header.transparent + section.page-header
+  section.page-header
     margin-top: 0
 
 /* BOTTOM HEADER
@@ -13581,13 +13378,6 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
     bottom: auto
     &.sticky
       position: relative !important
-    &.transparent
-      ul.nav-second-main li a
-        color: #212121
-        > i
-          color: #212121
-      #topNav button.btn-mobile
-        color: #212121
     + #slider > .swiper-container .swiper-pagination
       top: auto !important
       bottom: 10px
@@ -13621,24 +13411,6 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
 #header
   li.search .search-box form
     margin: 0
-  &.header-md #topNav
-    a.logo
-      height: 70px
-      line-height: 50px
-      > img
-        height: 70px
-    #topMain > li > a
-      height: 70px
-      line-height: 50px
-  &.header-sm #topNav
-    a.logo
-      height: 60px
-      line-height: 50px
-      > img
-        height: 60px
-    #topMain > li > a
-      height: 60px
-      line-height: 40px
   &.fixed
     position: fixed
     border-bottom: rgba(0, 0, 0, 0.08) 1px solid
@@ -13655,52 +13427,6 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
     position: fixed
     border-bottom: rgba(0, 0, 0, 0.08) 1px solid
 
-/* Medium Height : 70
-
-@media only screen and (max-width: 992px)
-  #header.header-md #topMain.nav-pills > li
-    > a
-      color: #212121
-    &.active > a, > a:hover
-      color: #212121
-      background-color: rgba(0, 0, 0, 0.02)
-
-/* Small Height : 60px
-
-@media only screen and (max-width: 992px)
-  #header.header-sm #topMain.nav-pills > li
-    > a
-      color: #212121
-    &.active > a, > a:hover
-      color: #212121
-      background-color: rgba(0, 0, 0, 0.02)
-
-/* Sticky 60px
-
-/* Static
-
-@media only screen and (max-width: 992px)
-  #header
-    &.header-sm #topMain.nav-pills > li > a, &.header-md #topMain.nav-pills > li > a
-      color: #212121
-    &.header-sm #topMain.nav-pills > li
-      &.active > a, > a:hover
-        color: #212121
-        background-color: rgba(0, 0, 0, 0.02)
-    &.header-md #topMain.nav-pills > li
-      &.active > a, > a:hover
-        color: #212121
-        background-color: rgba(0, 0, 0, 0.02)
-    &.transparent
-      &.header-sm #topMain.nav-pills > li > a, &.header-md #topMain.nav-pills > li > a
-        color: #fff
-      &.header-sm #topMain.nav-pills > li
-        &.active > a, > a:hover
-          color: #fff
-      &.header-md #topMain.nav-pills > li
-        &.active > a, > a:hover
-          color: #fff
-
 #topBar
   display: block
   background-color: #fff
@@ -13710,48 +13436,13 @@ body.menu-vertical.menu-vertical-hide #mainMenu.sidebar-vertical #sidebar_vertic
       border-bottom: rgba(0, 0, 0, 0.05) 1px solid
     .border-top
       border-top: rgba(0, 0, 0, 0.05) 1px solid
-  &.dark
-    color: #ccc
-    background-color: #363839
-    border-bottom-color: rgba(255, 255, 255, 0.1)
-    .dropdown-menu a, ul.top-links > li > a
-      color: #fff
-    .dropdown-menu a:hover
-      color: #fff !important
-      background-color: #333
-    ul.top-links > li
-      border-right: rgba(255, 255, 255, 0.1) 1px solid
-
-body.boxed #topBar.dark ul.top-links > li
-  border-right: 0
 
 #topBar
-  &.dark
-    .dropdown-menu
-      background-color: #363839
-      .divider
-        background-color: #444
-    >
-      .border-bottom
-        border-bottom-color: rgba(255, 255, 255, 0.1)
-      .border-top
-        border-top-color: rgba(255, 255, 255, 0.1)
-  .logo
-    display: inline-block
-    img
-      -webkit-transition: width .4s ease, height .4s ease
-      -o-transition: width .4s ease, height .4s ease
-      transition: width .4s ease, height .4s ease
-    &.has-banner
-      height: 100px
-      line-height: 100px
   .banner
     margin: 5px 0
     display: inline-block
     padding-left: 5px
     border-left: rgba(0, 0, 0, 0.05) 1px solid
-  &.dark .banner
-    border-left-color: rgba(255, 255, 255, 0.05) 1px solid
   .social-icon
     margin: 3px 0 0 0
   ul.top-links
@@ -13850,8 +13541,6 @@ body.boxed #topBar.dark ul.top-links > li
     transition: all .300s
   &.fixed ul.nav-second-main, &.header-sm ul.nav-second-main
     margin-top: 20px
-  &.header-md ul.nav-second-main
-    margin-top: 23px
   ul.nav-second-main li
     padding-top: 33px
     padding: 0 5px 0px 5px
@@ -13877,16 +13566,6 @@ body.boxed #topBar.dark ul.top-links > li
       filter: alpha(opacity = 100)
     .badge
       padding: 3px 6px
-  &.transparent ul.nav-second-main li a, &.color ul.nav-second-main li a, &.dark ul.nav-second-main li a
-    color: #fff
-    opacity: 1
-    filter: alpha(opacity = 100)
-    > i
-      color: #fff
-      opacity: 1
-      filter: alpha(opacity = 100)
-
-/* dark & color menu
 
 @media only screen and (max-width: 992px)
   #header
@@ -13902,8 +13581,6 @@ body.boxed #topBar.dark ul.top-links > li
       transition: all 0s
     &.fixed ul.nav-second-main li
       padding-top: 0
-    &.header-md ul.nav-second-main li > a, &.header-sm ul.nav-second-main li > a
-      margin-top: -6px
 
 /** ************************************************************* *
 /* submenu
@@ -14007,9 +13684,6 @@ body.boxed #topBar.dark ul.top-links > li
       display: block
       float: right
       margin-right: 0
-  #header
-    &.dark #topNav button.btn-mobile, &.transparent #topNav button.btn-mobile, &.theme-color #topNav button.btn-mobile
-      color: #fff
   #topNav
     nav.nav-main
       background-color: #fff
@@ -14660,189 +14334,6 @@ h1 > span.rotate, h2 > span.rotate, h3 > span.rotate, h4 > span.rotate, h5 > spa
       left: auto
       text-align: left
 
-/**  INLINE NEWS
- *
- *	Example Usage: index-thematics-music.html
- *
- *	<div class="inews-item">
- *		<a class="inews-thumbnail" href="#">
- *			<span class="inews-sticky font-lato">
- *				<i class="fa fa-bullhorn"></i>
- *				STICKY POST
- *			</span>
- *			<img class="img-responsive" src="assets/images/demo/thematics/music/i3-min.jpg" alt="image" />
- *		</a>
- *
- *		<div class="inews-item-content">
- *
- *			<div class="inews-date-wrapper">
- *				<span class="inews-date-day">29</span>
- *				<span class="inews-date-month">June</span>
- *				<span class="inews-date-year">2015</span>
- *			</div>
- *
- *			<div class="inews-content-inner">
- *
- *				<h3 class="size-20"><a href="#">Lorem Upsum Dolor</a></h3>
- *				<ul class="blog-post-info list-inline noborder margin-bottom-20 nopadding">
- *					<li>
- *						<a href="page-profile.html">
- *							<i class="fa fa-user"></i>
- *							<span class="font-lato">By John Doe</span>
- *						</a>
- *					</li>
- *					<li>
- *						<i class="fa fa-folder-open-o"></i>
- *
- *						<a class="category" href="#">
- *							<span class="font-lato">Design</span>
- *						</a>
- *						<a class="category" href="#">
- *							<span class="font-lato">Photography</span>
- *						</a>
- *					</li>
- *				</ul>
- *
- *				<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
- *			</div>
- *
- *
- *		</div>
- *	</div>
- *
- **
-
-.inews-item
-  clear: both
-  margin-bottom: 30px
-  min-height: 132px
-  position: relative
-  &:after, &:before
-    display: table
-    content: " "
-  &:after
-    clear: both
-  .inews-thumbnail
-    border: 0
-    padding: 0
-    width: 35%
-    max-width: 350px
-    margin: 0 20px 0 0
-    float: left
-    position: relative
-    .inews-sticky
-      position: absolute
-      left: 0
-      bottom: -1px
-      background-color: #74c6de
-      color: #fff
-      font-size: 11px
-      font-weight: bold
-      padding: 5px 12px
-      text-shadow: #333 0 0 1px
-      > i
-        font-size: 14px
-        margin-right: 8px
-  .inews-date-wrapper
-    text-align: center
-    position: absolute
-    left: 0
-    margin-right: 20px
-    width: 65px
-    padding-bottom: 20px
-    background-color: rgba(0, 0, 0, 0.1)
-    &:before
-      content: ' '
-      position: absolute
-      right: -10px
-      top: 6px
-      width: 0
-      height: 0
-      border-top: 10px solid transparent
-      border-bottom: 10px solid transparent
-      border-left: 10px solid rgba(0, 0, 0, 0.1)
-    .inews-date-day
-      display: block
-      font-size: 50px
-      line-height: 1
-      margin-bottom: 16px
-    .inews-date-month
-      display: block
-      font-size: 14px
-      line-height: 1
-      margin-bottom: 14px
-    .inews-date-year
-      display: block
-      font-size: 17px
-      line-height: 1
-  .inews-item-content
-    overflow: hidden
-    padding-left: 85px
-    position: relative
-
-.inews-content-inner
-  h3
-    margin-bottom: 8px
-    display: block
-    margin-top: 3px
-  .list-inline > li
-    padding: 0
-
-@media only screen and (max-width: 768px)
-  .inews-item
-    max-width: 380px
-    margin-left: auto
-    margin-right: auto
-    .inews-thumbnail
-      float: none
-      display: block
-      margin-bottom: 20px
-      width: 100%
-
-/** TEAM ITEM
- *	example usage:
- *	index-thematics-wedding.html
- *
- *
- *	<div class="team-item clearfix">
- *		<img class="team-item-image rounded" src="assets/images/demo/thematics/wedding/him-min.jpg" alt="wedding" width="150" height="150" />
- *
- *		<div class="team-item-desc">
- *			<h4 class="nomargin">MIKE BAKER</h4>
- *			<h5><span>Groom</span></h5>
- *			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, pariatur, magni! Omnis reiciendis architecto, cupiditate fuga dolores nam accusamus iste molestias quos mollitia totam eius porro culpa incidunt, sunt rerum molestiae aliquid non hic.</p>
- *			<hr />
- *
- *			<!-- Social Icons -->
- *			<div class="margin-top-20">
- *				<a href="#" class="social-icon social-icon-sm social-icon-transparent  social-facebook pull-left" data-toggle="tooltip" data-placement="top" title="Facebook">
- *
- *					<i class="icon-facebook"></i>
- *					<i class="icon-facebook"></i>
- *				</a>
- *
- *				<a href="#" class="social-icon social-icon-sm social-icon-transparent  social-twitter pull-left" data-toggle="tooltip" data-placement="top" title="Twitter">
- *					<i class="icon-twitter"></i>
- *					<i class="icon-twitter"></i>
- *				</a>
- *
- *				<a href="#" class="social-icon social-icon-sm social-icon-transparent  social-gplus pull-left" data-toggle="tooltip" data-placement="top" title="Google plus">
- *					<i class="icon-gplus"></i>
- *					<i class="icon-gplus"></i>
- *				</a>
- *
- *				<a href="#" class="social-icon social-icon-sm social-icon-transparent  social-linkedin pull-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
- *					<i class="icon-linkedin"></i>
- *					<i class="icon-linkedin"></i>
- *				</a>
- *
- *			</div>
- *			<!-- /Social Icons -->
- *
- *		</div>
- *	</div>
- *
- *  ********************* *
 
 .team-item
   position: relative
@@ -15560,8 +15051,6 @@ section#slider
   -moz-transition: all 0s
   -o-transition: all 0s
   transition: all 0s
-  &.transparent
-    background-color: transparent
   &.parallax-slider:before
     background-color: rgba(0, 0, 0, 0.3)
     position: absolute
@@ -17083,8 +16572,6 @@ ul.search-history
       &.half-paddings
         li
           padding: 6px 0
-        &.noborder li
-          border: 0
     &.footer-posts > li
       padding: 15px 0
       border-bottom: rgba(255, 255, 255, 0.07) 1px solid
@@ -17235,9 +16722,6 @@ footer.sticky
 /** Responsive
  **************************************************************** *
 @media only screen and (max-width: 992px)
-  #header.header-sm #topNav button.btn-mobile
-    margin-top: 16px
-    margin-top: 11px
   #topNav #topMain > li.mega-menu div.row div
     display: block !important
     border: 0 !important
@@ -17276,7 +16760,7 @@ footer.sticky
   #header
     &.fixed
       position: relative
-    &.transparent + #slider h1
+    #slider h1
       margin-top: 80px !important
   section
     div.row
