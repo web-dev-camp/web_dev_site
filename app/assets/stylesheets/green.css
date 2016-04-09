@@ -247,22 +247,6 @@
 	  border-bottom-color:rgba(255,255,255,0.5);
 	}
 
-
-
-
-/**	Vertical Menu
-*************************************************** **/
-body.menu-vertical #mainMenu.sidebar-vertical .sidebar-nav .navbar li:hover>a,
-body.menu-vertical #mainMenu.sidebar-vertical .dropdown-menu>.active>a,
-body.menu-vertical #mainMenu.sidebar-vertical .dropdown-menu>.active>a:focus,
-body.menu-vertical #mainMenu.sidebar-vertical .dropdown-menu>.active>a:hover,
-body.menu-vertical #mainMenu.sidebar-vertical .navbar-default .navbar-nav>.active>a,
-body.menu-vertical #mainMenu.sidebar-vertical .sidebar-nav .navbar li:hover>a {
-	color:#8ab933 !important;
-}
-
-
-
 /**	[Shortcode] Page Header
 *************************************************** **/
 	section.page-header .breadcrumb a:hover  {

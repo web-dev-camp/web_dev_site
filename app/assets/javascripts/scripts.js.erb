@@ -565,85 +565,12 @@
 
 		}
 
-		/** VERTICAL MENU SHOW|HIDE
-		 *************************** **/
-		// RTL supported!
-		if(jQuery("#sidebar_vertical_btn").length > 0) {
-			if(jQuery("body").hasClass('menu-vertical-hide')) {
-
-				// Determine the position (left or right?)
-				_paddingStatusL = jQuery("#mainMenu.sidebar-vertical").css('left');
-				_paddingStatusR = jQuery("#mainMenu.sidebar-vertical").css('right');
-
-				if(parseInt(_paddingStatusL) < 0) {
-					var _pos = "left";
-				} else
-
-				if(parseInt(_paddingStatusR) < 0) {
-					var _pos = "right";
-				}
-
-				else {
-					var _pos = "left";
-				}
-
-				// Show|Hide Vertical Menu
-				jQuery("#sidebar_vertical_btn").bind("click", function(e) {
-
-					_paddingStatus = jQuery("#mainMenu.sidebar-vertical").css(_pos);
-
-					if(parseInt(_paddingStatus) < 0) {
-						if(_pos == "right") {
-							jQuery("#mainMenu.sidebar-vertical").stop().animate({"right":"0px"}, 200);
-						} else {
-							jQuery("#mainMenu.sidebar-vertical").stop().animate({"left":"0px"}, 200);
-						}
-					} else {
-						if(_pos == "right") {
-							jQuery("#mainMenu.sidebar-vertical").stop().animate({"right":"-263px"}, 200);
-						} else {
-							jQuery("#mainMenu.sidebar-vertical").stop().animate({"left":"-263px"}, 200);
-						}
-					}
-				});
-
-				// Hide on scroll
-				jQuery(window).scroll(function() {
-
-					_paddingStatus = parseInt(jQuery("#mainMenu.sidebar-vertical").css(_pos));
-
-					if(_paddingStatus >= 0) {
-						if(_pos == "right") {
-							jQuery("#mainMenu.sidebar-vertical").stop().animate({"right":"-263px"}, 200);
-						} else {
-							jQuery("#mainMenu.sidebar-vertical").stop().animate({"left":"-263px"}, 200);
-						}
-					}
-
-				});
-
-			}
-		}
 
 		// quick cart & search for mobile - top calculate
 		// Quick Cart & top Search Fix (if #topBar exists).
 		if(jQuery("#topBar").length > 0) {
 			jQuery("#topNav ul").addClass('has-topBar');
 		}
-
-		// Hide Cart & Search on Scroll
-		jQuery(window).scroll(function() {
-			if(window.width < 769) {
-				// hide quick cart if visible
-				if (jQuery('#header li.quick-cart div.quick-cart-box').is(":visible")) {
-					jQuery('#header li.quick-cart div.quick-cart-box').fadeOut(0);
-				}
-				// hide search if visible
-				if(jQuery('#header li.search .search-box').is(":visible")) {
-					jQuery('#header .search-box').fadeOut(0);
-				}
-			}
-		});
 	}
 
 

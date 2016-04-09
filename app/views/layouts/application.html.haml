@@ -29,18 +29,6 @@
             / Mobile Menu Button
             %button.btn.btn-mobile{"data-target" => ".nav-main-collapse", "data-toggle" => "collapse"}
               %i.fa.icon-menu
-            / BUTTONS
-            %ul.pull-right.nav.nav-pills.nav-second-main
-              / SEARCH
-              %li.search
-                %a{:href => "javascript:;"}
-                  %i.fa.icon-user
-                .search-box
-                  %form{:action => "page-search-result-1.html", :method => "get"}
-                    .input-group
-                      %input.form-control{:name => "src", :placeholder => "Search", :type => "text"}/
-                      %span.input-group-btn
-                        %button.btn.btn-primary{:type => "submit"} Search
             %a.logo.pull-left{:href => page_path(:index)}
               = image_tag "web_logo.png"
             = render 'layouts/navigation'
