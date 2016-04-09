@@ -329,37 +329,6 @@
 			});
 		}
 
-
-		// Page Menu [scrollTo]
-		jQuery("#page-menu ul.menu-scrollTo>li").bind("click", function(e) {
-
-			// calculate padding-top for scroll offset
-			var _href 	= jQuery('a', this).attr('href');
-
-			if(!jQuery('a', this).hasClass('external')) {
-				e.preventDefault();
-
-				jQuery("#page-menu ul.menu-scrollTo>li").removeClass('active');
-				jQuery(this).addClass('active');
-
-				if(jQuery(_href).length > 0) {
-
-					_padding_top = 0;
-
-					if(jQuery("#header").hasClass('sticky')) {
-						_padding_top = jQuery(_href).css('padding-top');
-						_padding_top = _padding_top.replace('px', '');
-					}
-
-					jQuery('html,body').animate({scrollTop: jQuery(_href).offset().top - _padding_top}, 800, 'easeInOutExpo');
-
-				}
-
-			}
-
-		});
-
-
 		// BOTTOM NAV
 		if(_header_el.hasClass('bottom')) {
 

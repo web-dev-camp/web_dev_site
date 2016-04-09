@@ -1,18 +1,8 @@
-/
-  PAGE MENU
-
-  AVAILABLE CLASSES:
-  \.page-menu-light
-  \.page-menu-dark
-  \.page-menu-transparent
-  \.page-menu-color
 #page-menu.page-menu-color
   .container
     %nav.pull-right
       %button#page-menu-mobile.fa.icon-menu
-      /
-        \.menu-scrollTo - for scrollto page menu / no external links
       %ul.list-inline
-        - { "web" => "Web" , "dev" => "Dev" , "method" => "Method" ,"teachers" => "Teachers" }.each do |slug , menu|
+        - { "method" => "Method" , "web" => "Web" , "dev" => "Dev" , "teachers" => "Teachers" }.each do |slug , menu|
           %li{class: (params[:id] == slug) && "active" }
             =link_to menu , page_path(slug)

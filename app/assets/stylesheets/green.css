@@ -30,12 +30,6 @@
 	.menu-list ul li.active a, 		/* header-0.css */
 	#menu_overlay_close:hover, 	/* header-0.css */
 	#topMain.nav-pills>li.active>a>span.topMain-icon,
-	#page-menu.page-menu-light ul>li:hover>a>i,
-	#page-menu.page-menu-dark ul>li:hover>a>i,
-	#page-menu.page-menu-transparent ul>li:hover>a>i,
-	#page-menu.page-menu-light ul>li.active>a>i,
-	#page-menu.page-menu-dark ul>li.active>a>i,
-	#page-menu.page-menu-transparent ul>li.active>a>i,
 	.tp-caption.block_white,
 	section span.theme-color,
 	section em.theme-color,
