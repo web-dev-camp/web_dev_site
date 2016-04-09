@@ -14,7 +14,6 @@
     %meta{:content => "Developer bootcamp", :name => "description"}/
     %meta{:content => "Torsten Ruger", :name => "Author"}/
 
-
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -22,32 +21,16 @@
   %body.smoothscroll.enable-animation
     = render 'layouts/slidetop'
     #wrapper
-      /
-        AVAILABLE HEADER CLASSES
-
-        Default nav height: 96px
-
-        \.translucent	= translucent header
-        \.sticky			= sticky header
-        \.static			= static header
-        \.bottom			= header on bottom
-
-        \.clearfix		= required for mobile menu, do not remove!
-
-        Example Usage:  class="clearfix sticky header-sm transparent noborder"
       #header.sticky.clearfix
-        / TOP NAV
         %header#topNav
           .container
             / Mobile Menu Button
             %button.btn.btn-mobile{"data-target" => ".nav-main-collapse", "data-toggle" => "collapse"}
               %i.fa.icon-menu
             %a.logo.pull-left{:href => page_path(:index)}
-              = image_tag "web_logo.png"
+              = image_tag "web_logo.png" , class: :desktop
+              = image_tag "web_logo_mobile.png" , class: :mobile
             = render 'layouts/navigation'
-        / /Top Nav
-
       = yield
     = render 'layouts/footer'
-  / SCROLL TO TOP
   %a#toTop{:href => "#"}

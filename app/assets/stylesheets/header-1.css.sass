@@ -46,6 +46,25 @@
     line-height: 96px
     overflow: hidden
     display: inline-block
+    > img
+      &:last-child
+        display: none
+      &:first-child
+        display: inline-block
+      height: 80px
+      -webkit-transition: all .300s
+      -moz-transition: all .300s
+      -o-transition: all .300s
+      transition: all .300s
+
+@media only screen and (max-width: 450px)
+  #topNav
+    a.logo
+      > img
+        &:last-child
+          display: inline-block
+        &:first-child
+          display: none
 
 @media only screen and (max-width: 992px)
   #header
