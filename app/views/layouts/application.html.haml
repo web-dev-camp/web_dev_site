@@ -22,6 +22,19 @@
   %body.smoothscroll.enable-animation
     = render 'layouts/slidetop'
     #wrapper
+      /
+        AVAILABLE HEADER CLASSES
+
+        Default nav height: 96px
+
+        \.translucent	= translucent header
+        \.sticky			= sticky header
+        \.static			= static header
+        \.bottom			= header on bottom
+
+        \.clearfix		= required for mobile menu, do not remove!
+
+        Example Usage:  class="clearfix sticky header-sm transparent noborder"
       #header.sticky.clearfix
         / TOP NAV
         %header#topNav
