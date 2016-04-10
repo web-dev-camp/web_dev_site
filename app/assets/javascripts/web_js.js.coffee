@@ -14,5 +14,5 @@ jQuery(document).ready ->
 
 jQuery(document).ready ->
   # fadeIn needs to be an available animate class, ie included
-  jQuery('.js-rotating').Morphext({separator: ";" , animation: "fadeIn" , spedd: 3000})
+  jQuery('.js-rotating').Morphext({separator: ";" , animation: "fadeIn" , speed: 6000})
   return
