@@ -15,9 +15,6 @@
 		jQuery Easing v1.3
 			http://gsgd.co.uk/sandbox/jquery/easing/
 
-		WOW - v1.0.3
-			http://mynameismatthieu.com/WOW/
-
 		Modernizr 2.7.1
 			http://modernizr.com/download/#-csstransforms3d-csstransitions-video-touch-shiv-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
 *************************************************** **/
@@ -60,7 +57,6 @@
 		_video();
 		_toggle();
 		_placeholder();
-		_wrotate();
 		_lazyload();
 		_misc();
 		_toastr(false,false,false,false);
@@ -578,19 +574,6 @@
  **************************************************************** **/
 	function _animate() {
 
-		if(jQuery("body").hasClass('enable-animation')) {
-
-			var wow = new WOW({
-				boxClass: 		'wow',
-				animateClass: 	'animated',
-				offset: 		90,
-				mobile: 		false,
-				live: 			true
-			});
-
-			wow.init();
-
-		}
 
 		// Count To
         jQuery(".countTo").appear(function(){

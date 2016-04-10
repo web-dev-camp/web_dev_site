@@ -8,5 +8,11 @@ _layersliderInit = ->
 jQuery(document).ready ->
   if jQuery('.layerslider').length > 0
     _layersliderInit()
-  swiper = new Swiper('.swiper-container', swiper_options)
+  if jQuery('.swiper-container').length > 0
+    new Swiper('.swiper-container', swiper_options)
+  return
+
+jQuery(document).ready ->
+  # fadeIn needs to be an available animate class, ie included
+  jQuery('.js-rotating').Morphext({separator: ";" , animation: "fadeIn" , spedd: 3000})
   return
