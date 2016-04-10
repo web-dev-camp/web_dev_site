@@ -70,6 +70,54 @@
 .swiper-pagination-progress .swiper-pagination-progressbar
   background: #8ab933
 
+@import 'animate'
+@import 'animate/slideInLeft'
+
+.parent
+  position: absolute
+  top: 10px
+  left: 10px
+
+.swiper-slide-active .parent .slideL
+  @include animate(slideInLeft, 2s)
+
+.swiper-slide-next .parent .slideL
+  visibility: none
+
+=delay($delay)
+  -webkit-animation-duration: $delay
+  -moz-animation-duration: $delay
+  -o-animation-duration: $delay
+  animation-delay: $delay
+
+.delay-500
+  +delay(500ms)
+.delay-1000
+  +delay(1000ms)
+.delay-1500
+  +delay(1500ms)
+.delay-2000
+  +delay(2000ms)
+.delay-2500
+  +delay(2500ms)
+.delay-3000
+  +delay(3000ms)
+.delay-3500
+  +delay(3500ms)
+.delay-4000
+  +delay(4000ms)
+.delay-4500
+  +delay(4500ms)
+.delay-5000
+  +delay(5000ms)
+.delay-5500
+  +delay(5500ms)
+.delay-6000
+  +delay(6000ms)
+.delay-6500
+  +delay(6500ms)
+
+
 /* entire container, keeps perspective
  *https://davidwalsh.name/css-flip
 

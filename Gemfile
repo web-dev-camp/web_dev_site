@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'pundit'
 gem 'simple_form'
+gem 'animate-scss' , :github => "ejholmes/animate.scss"
 
 group :development do
   gem 'web-console', '~> 2.0'

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/ejholmes/animate.scss.git
+  revision: 998f1dc5897957bb93194d832566bed602265b70
+  specs:
+    animate-scss (0.0.6)
+      sass
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -337,6 +344,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  animate-scss!
   better_errors
   bootstrap-sass
   byebug
