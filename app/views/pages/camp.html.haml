@@ -1,19 +1,40 @@
 %section.padding-xxs
   .container
     .row
-      .col-lg-4.col-md-4.col-sm-4
-        .layerslider.height-300{:style => "width:100%;"}
-          = raw camp_slide("villa_taika.jpg")
-          = raw camp_slide("orange.jpg")
-          = raw camp_slide("garden.jpg")
+      .col-lg-4.col-md-5.col-sm-6.col-xs-12
+        / Swiper
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              =image_tag("villa_taika.jpg")
+            .swiper-slide
+              =raw delayed_image("orange.jpg")
+            .swiper-slide
+              =raw delayed_image("garden.jpg")
+          / Add Pagination
+          .swiper-pagination
+          / Add Arrows
+          .swiper-button-next
+          .swiper-button-prev
         :javascript
-          var layer_options = {
-            showBarTimer:   true ,
-          	responsive: 		true,
-          	hoverPrevNext: 		true,
-          	skinsPath: 			'/slider/css/'
+          var swiper_options = {
+            pagination: '.swiper-pagination' ,
+            paginationClickable: true ,
+            nextButton: '.swiper-button-next' ,
+            prevButton: '.swiper-button-prev' ,
+            centeredSlides: true,
+            autoplay: 6500,
+            autoplayDisableOnInteraction: false,
+            keyboardControl: true,
+            speed: 800,
+            preloadImages: false,
+            lazyLoading: true,
+            loop: true,
+            lazyLoadingInPrevNext: true,
+            lazyLoadingOnTransitionStart: true,
+            spaceBetween: 30
           }
-      .col-lg-8.col-md-8.col-sm-8
+      .col-lg-8.col-md-7.col-sm-6.col-xs-12
         .heading-title.heading-border-bottom
           %h3 Remove the distraction, live in.
         %blockquote
@@ -52,7 +73,7 @@
         %h2
           Good food
         %figure.margin-bottom-20
-          = image_tag "food.jpg" 
+          = image_tag "food.jpg"
         %p
           Healthy, local food gives you strength to carry on.
           %br

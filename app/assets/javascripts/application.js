@@ -22,4 +22,5 @@
 //= require bootstrap/popover
 //= require scripts
 //= require layerslider_pack
+//= require swiper.jquery
 //= require web_js

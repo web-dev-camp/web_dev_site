@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def delayed_image pic
+    "<img data-src='" + asset_path(pic) + "' class='swiper-lazy'>" +
+    "<div class='swiper-lazy-preloader swiper-lazy-preloader-white'></div>"
+  end
   def camp_slide(pic)
     slide = "<div class='ls-slide'"
     slide = data_ls( slide , slidedelay:  6000 , transition2d:  1)

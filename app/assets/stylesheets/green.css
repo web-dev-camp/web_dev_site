@@ -110,8 +110,7 @@
 	/* !important required */
 	#music-player .mejs-controls .mejs-time-rail .mejs-time-current,
 	#music-player .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
-	section .theme-background,
-	.swiper-pagination-bullet-active {
+	section .theme-background {
 		background-color:#8ab933 !important;
 	}
 	.inews-content-inner h3>a,

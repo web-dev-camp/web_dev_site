@@ -8,4 +8,5 @@ _layersliderInit = ->
 jQuery(document).ready ->
   if jQuery('.layerslider').length > 0
     _layersliderInit()
+  swiper = new Swiper('.swiper-container', swiper_options)
   return
