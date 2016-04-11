@@ -87,7 +87,31 @@
     %h4 Partner companies
     Professionals from the following companies come to teach at Web Dev Camp for 1 to 4 weeks.
     .text-center
-      .carousel.nomargin{"data-plugin-options" => "{\"singleItem\": false, \"autoPlay\": true}"}
-        - ["1","2","3","4","5","6","7","8"].each do |brand|
-          %div
-            = image_tag "brands/#{brand}.jpg"
+      .swiper-container
+        .swiper-wrapper
+          - ["1","2","3","4","5","6","7","8"].each do |brand|
+            .swiper-slide
+              = delayed_image "brands/#{brand}.jpg"
+        %br
+        .swiper-pagination
+        .swiper-button-next
+        .swiper-button-prev
+      :javascript
+        var swiper_options = {
+          pagination: '.swiper-pagination' ,
+          paginationClickable: true ,
+          nextButton: '.swiper-button-next' ,
+          prevButton: '.swiper-button-prev' ,
+          centeredSlides: true,
+          autoplay: 6500,
+          autoplayDisableOnInteraction: false,
+          keyboardControl: true,
+          speed: 800,
+          preloadImages: false,
+          lazyLoading: true,
+          loop: true,
+          lazyLoadingInPrevNext: true,
+          lazyLoadingOnTransitionStart: true,
+          slidesPerView: 5,
+          spaceBetween: 30
+        }

@@ -57,7 +57,6 @@
 		_video();
 		_toggle();
 		_placeholder();
-		_lazyload();
 		_misc();
 		_toastr(false,false,false,false);
 		_charts();
@@ -952,40 +951,6 @@
 		}
 
 	}
-
-
-
-/** 08. Lazy Load
-	<img class="lazy" data-original="img/example.jpg" width="765" height="574">
- **************************************************************** **/
-	function _lazyload() {
-		var _container = jQuery('img.lazy');
-
-		if(_container.length > 0) {
-			loadScript(plugin_path + 'lazyload/jquery.lazyload.min.js', function() {
-
-				if(jQuery().lazyload) {
-
-					_container.each(function () {
-						var _t 		= jQuery(this),
-							_effect = _t.attr('data-effect') || 'fadeIn';
-
-							_t.lazyload({
-								effect : _effect
-							});
-					});
-
-				}
-
-			});
-
-		}
-
-	}
-
-
-
-
 
 /** 13. Misc
  **************************************************************** **/
