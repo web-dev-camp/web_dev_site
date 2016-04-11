@@ -8,8 +8,28 @@ _layersliderInit = ->
 jQuery(document).ready ->
   if jQuery('.layerslider').length > 0
     _layersliderInit()
+  return
+
+jQuery(document).ready ->
   if jQuery('.swiper-container').length > 0
-    new Swiper('.swiper-container', swiper_options)
+    default_options = {
+      pagination: '.swiper-pagination' ,
+      paginationClickable: true ,
+      nextButton: '.swiper-button-next' ,
+      prevButton: '.swiper-button-prev' ,
+      centeredSlides: true,
+      autoplay: 6500,
+      autoplayDisableOnInteraction: false,
+      keyboardControl: true,
+      speed: 800,
+      preloadImages: false,
+      lazyLoading: true,
+      loop: true,
+      lazyLoadingInPrevNext: true,
+      lazyLoadingOnTransitionStart: true,
+      spaceBetween: 30
+    }
+    new Swiper('.swiper-container', $.extend({}, default_options, swiper_options) )
   return
 
 jQuery(document).ready ->
