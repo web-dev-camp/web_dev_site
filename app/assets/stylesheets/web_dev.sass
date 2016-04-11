@@ -79,11 +79,6 @@
 .swiper-pagination-progress .swiper-pagination-progressbar
   background: #8ab933
 
-@import 'animate'
-@import 'animate/slideInLeft'
-@import 'animate/slideInRight'
-@import 'animate/fadeIn'
-
 #swiper
   padding: 0px
   margin-left: 0px
@@ -106,6 +101,8 @@
   height: 100%
   .green
     background-color: #8ab933
+  .blue
+    background-color: #289ABA
   .right
     text-align: right
     margin-right: 40px
@@ -197,11 +194,19 @@
       .line
         font-size: 15px
 
+@import 'animate'
+@import 'animate/slideInLeft'
+@import 'animate/slideInRight'
+@import 'animate/rotateInUpLeft'
+@import 'animate/fadeIn'
+
 .swiper-slide-active .swiper-overlay
   .slideL
     @include animate(slideInLeft, 2s)
   .slideR
     @include animate(slideInRight, 2s)
+  .rotL
+    @include animate(rotateInUpLeft, 2s)
 
 .swiper-slide-next .swiper-overlay
   visibility: none
