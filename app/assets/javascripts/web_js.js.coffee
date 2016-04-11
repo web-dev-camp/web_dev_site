@@ -18,7 +18,7 @@ jQuery(document).ready ->
       nextButton: '.swiper-button-next' ,
       prevButton: '.swiper-button-prev' ,
       centeredSlides: true,
-      autoplay: 6500,
+      autoplay: 8500,
       autoplayDisableOnInteraction: false,
       keyboardControl: true,
       speed: 800,
