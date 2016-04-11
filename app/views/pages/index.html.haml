@@ -7,25 +7,74 @@
           .row
             .line.left.slideL.delay-1000 You know the web
           .row
-            .line.right.slideR.delay-4000 8 Weeks course
+            .line.right.slideR.delay-4000.pad_rs 8 Weeks course
           .row
             .line
               &nbsp;
           .row
-            .line.left.slideL.delay-2000 Now learn how it works
+            .line.left.slideL.delay-2000.pad_ls Now learn how it works
           .row
             .line.right.slideR.delay-5000 jumpstart your new career!
-      -# .swiper-slide
-      -#   =image_tag("slider/group_study.jpg")
-      -# .swiper-slide
-      -#   =image_tag("slider/lunch.jpg")
-      -# .swiper-slide
-      -#   =image_tag("slider/student.jpg")
+      .swiper-slide
+        =image_tag("slider/group_study.jpg")
+        .swiper-overlay
+          .row
+            .line.left.slideL.delay-1000.pad_lm
+              %span.green Small groups
+          .row
+            .line.right.slideR.delay-4000
+              %span.green intensive learning
+          .row
+            .line
+              %span
+                &nbsp;
+          .row
+            .line.left.slideL.delay-2000
+              %span.green HTML / CSS / Programming
+          .row
+            .line.right.slideR.delay-5000.pad_rm
+              %span.green START A NEW CAREER
+      .swiper-slide
+        =image_tag("slider/lunch.jpg")
+        .swiper-overlay
+          .row
+            .line.right.slideR.delay-1000
+              %span Welcome to
+          .row
+            .line.right.slideL.delay-2000.pad_rm
+              %span Villa Taika!
+          .row
+            .line.left.slideL.delay-4000
+              %span Live in
+          .row
+            .line.left.slideL.delay-4000.pad_ls
+              %span Beautiful nature
+          .row
+            .line.left.slideR.delay-6000.pad_lm
+              %span Remove the distration
+      .swiper-slide
+        =image_tag("slider/student.jpg")
+        .swiper-overlay
+          .row
+            .line.right.slideL
+              %span  &nbsp;
+          .row
+            .line.left
+              %span &nbsp;
+          .row
+            .line.left
+              %span &nbsp;
+          .row
+            .line.right.slideR.delay-2000.pad_rm
+              %span BECOME a DEVELOPER
+          .row
+            .line.left.slideL.delay-6000.pad_ls
+              %span START A NEW CAREER
     .swiper-pagination
     .swiper-button-next
     .swiper-button-prev
   :javascript
-    var swiper_options = { autoplay: false}
+    var swiper_options = { }
 %section.padding-xxs
   .container
     .row
