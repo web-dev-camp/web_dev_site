@@ -799,37 +799,6 @@
 		}
 
 
-		/** Slider Parallax
-			Do not use overlay - will be very slow!
-		 **************************** **/
-		var _slider = jQuery('#slider');
-
-		if(_slider.length > 0) {
-			if(_slider.hasClass('parallax-slider')) {
-
-				var block_intro_top = _slider.offset().top;
-
-				jQuery(window).scroll(function() {
-
-					var _currentTop = jQuery(document).scrollTop();
-
-					if(_currentTop < 768) {
-						var _sliderH 	= jQuery('#slider').height();
-
-						jQuery('#slider>div').css('top', (_currentTop*0.5));
-						jQuery('#slider>div').css('opacity', (1 - _currentTop/_sliderH*1));
-					}
-
-				});
-
-			}
-		}
-
-	}
-
-
-
-
 /** 07. Video
  **************************************************************** **/
 	function _video() {

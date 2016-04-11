@@ -21,7 +21,6 @@
 //= require bootstrap/tooltip
 //= require bootstrap/popover
 //= require scripts
-//= require layerslider_pack
 //= require swiper.jquery
 //= require morphext
 //= require web_js
