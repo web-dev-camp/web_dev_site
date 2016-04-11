@@ -53,7 +53,6 @@
 		_mixitup();
 		_animate();
 		_scrollTo(false, 0);
-		_parallax();
 		_video();
 		_toggle();
 		_placeholder();
@@ -776,29 +775,6 @@
 	}
 
 
-
-
-/** 07. Parallax
- **************************************************************** **/
-	function _parallax() {
-
-		if(jQuery().parallax) {
-
-			// jQuery(".parallax-1").css("background-attachment", "fixed");
-			jQuery(".parallax-1").parallax("50%", "0.1");
-
-			// jQuery(".parallax-2").css("background-attachment", "fixed");
-			jQuery(".parallax-2").parallax("50%", "0.2");
-
-			// jQuery(".parallax-3").css("background-attachment", "fixed");
-			jQuery(".parallax-3").parallax("50%", "0.3");
-
-			// jQuery(".parallax-4").css("background-attachment", "fixed");
-			jQuery(".parallax-4").parallax("50%", "0.4");
-
-		}
-
-
 /** 07. Video
  **************************************************************** **/
 	function _video() {
@@ -812,9 +788,6 @@
 		}
 
 	}
-
-
-
 
 /** 08. Mixitup Filter
  **************************************************************** **/
