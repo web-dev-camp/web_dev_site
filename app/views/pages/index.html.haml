@@ -1,18 +1,38 @@
 %section#slider
-  .slider
-    .layerslider.height-400{:style => "width:100%;"}
-      = raw slide1
-      = raw slide2
-      = raw slide3
-      = raw slide4
-    :javascript
-      var layer_options = {
-        autoStart: true,
-        showBarTimer:     true ,
-      	layersContainer: 	1280,
-      	hoverPrevNext: 		true,
-      	skinsPath: 			'/slider/css/'
-      }
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        =image_tag("slider/net.jpg")
+        .parent
+          .row.hidden-sm.hidden-xs
+            .col-md-9.col-md-offset-1.zero
+            %h6 &nbsp;
+          .row
+            .col-md-6.col-md-offset-1.col-xs-6.col-xs-offset-1.zero
+              %h2.slideL.delay-1000 You know the web
+          .row.right
+            .col-md-5.col-md-offset-6.zero
+              %h2.slideR.delay-4000 8 Weeks course
+          .row.hidden-xs
+            .col-md-8.col-md-offset-1.zero
+            %h4 &nbsp;
+          .row
+            .col-md-8.col-md-offset-1.zero
+              %h2.slideL.delay-2000 Now learn how it works
+          .row.right
+            .col-md-6.col-md-offset-5.zero
+              %h2.slideR.delay-5000 jumpstart your new career!
+      -# .swiper-slide
+      -#   =image_tag("slider/group_study.jpg")
+      -# .swiper-slide
+      -#   =image_tag("slider/lunch.jpg")
+      -# .swiper-slide
+      -#   =image_tag("slider/student.jpg")
+    .swiper-pagination
+    .swiper-button-next
+    .swiper-button-prev
+  :javascript
+    var swiper_options = { }
 %section.padding-xxs
   .container
     .row
