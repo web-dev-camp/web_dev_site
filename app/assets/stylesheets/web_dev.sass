@@ -22,12 +22,6 @@
   font-family: 'AdamPro'
 
 /* util classes that are actually used
-.height-400
-  height: 400px !important
-
-.height-300
-  height: 300px !important
-
 .margin-bottom-20
   margin-bottom: 20px !important
 
@@ -101,8 +95,9 @@
   height: 100%
   .green
     background-color: #8ab933
-  .blue
-    background-color: #289ABA
+  .inv
+    background-color: white
+    color: black
   .right
     text-align: right
     margin-right: 40px
@@ -122,6 +117,9 @@
     margin-bottom: 32px
     margin-left: 0px
     margin-right: 0px
+    .vt
+      font-size: 54px
+      line-height: 54px
     .line
       margin-bottom: 0px
       font-size: 36px
@@ -149,6 +147,9 @@
     .row
       margin-top: 24px
       margin-bottom: 24px
+      .vt
+        font-size: 42px
+        line-height: 42px
       .line
         font-size: 28px
         line-height: 28px
@@ -173,6 +174,9 @@
       .line
         font-size: 18px
         line-height: 18px
+      .vt
+        font-size: 27px
+        line-height: 27px
 
 @media only screen and (max-width: 480px)
   .swiper-overlay
@@ -193,11 +197,16 @@
       margin-bottom: 5px
       .line
         font-size: 15px
+        line-height: 15px
+      .vt
+        font-size: 22px
+        line-height: 22px
 
 @import 'animate'
 @import 'animate/slideInLeft'
 @import 'animate/slideInRight'
 @import 'animate/rotateInUpLeft'
+@import 'animate/rotateInDownLeft'
 @import 'animate/fadeIn'
 
 .swiper-slide-active .swiper-overlay
@@ -207,6 +216,8 @@
     @include animate(slideInRight, 2s)
   .rotL
     @include animate(rotateInUpLeft, 2s)
+  .rotR
+    @include animate(rotateInDownLeft, 2s)
 
 .swiper-slide-next .swiper-overlay
   visibility: none
