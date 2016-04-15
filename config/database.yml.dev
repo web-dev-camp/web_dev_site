@@ -19,11 +19,3 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-
-production:
-  adapter: mysql2
-  database: web-dev_all
-  username: web-dev
-  password: Salasana
-  encoding: utf8
-  host: localhost
