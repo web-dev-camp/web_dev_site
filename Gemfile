@@ -42,6 +42,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'database_cleaner'
   gem 'puma'
   gem 'rspec-rails'
   gem 'byebug'
@@ -50,7 +51,6 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
 end

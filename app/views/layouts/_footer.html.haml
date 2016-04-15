@@ -34,18 +34,18 @@
         %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
           %li
+            %a{:href => "/"} Finished slider, beta release
+            %small 15 April 2016
+          %li
             %a{:href => "/answers"} More answers to questions
             %small 25 March 2016
           %li
             %a{:href => "/apply"} Updated apply page
             %small 24 March 2016
-          %li
-            %a{:href => "/dev"} Updated dev and camp
-            %small 24 March 2016
       .col-md-2
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
         %ul.footer-links.list-unstyled
-          %li= link_to "Course overview" , page_path(:web)
+          %li= link_to "Sign in" , user_session_path
           %li= link_to "Camp" , page_path(:camp)
           %li= link_to "Teachers" , page_path(:teachers)
           %li= link_to "Payment Policy" , page_path(:payment)
@@ -73,4 +73,3 @@
 
   ga('create', 'UA-76401513-1', 'auto');
   ga('send', 'pageview');
-  
