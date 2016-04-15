@@ -31,6 +31,7 @@
               = image_tag "web_logo.png" , class: :desktop
               = image_tag "web_logo_mobile.png" , class: :mobile
             = render 'layouts/navigation'
+      = render 'layouts/messages'
       = yield
     = render 'layouts/footer'
   %a#toTop{:href => "#"}

@@ -4,6 +4,11 @@
 #   So I can visit protected areas of the site
 feature 'Sign Up', :devise do
 
+  scenario 'after good sign up redirect to camp' do
+    sign_up_with('test1@example.com', 'please123', 'please123')
+    expect(page.current_path).to eq page_path(:camp)
+  end
+
   # Scenario: Visitor can sign up with valid email address and password
   #   Given I am not signed in
   #   When I sign up with a valid email address and password
