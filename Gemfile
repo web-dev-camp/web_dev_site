@@ -51,6 +51,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'launchy'
   gem 'selenium-webdriver'
 end
