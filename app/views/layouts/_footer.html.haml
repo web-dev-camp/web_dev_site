@@ -55,7 +55,24 @@
           %li= link_to "Payment Policy" , page_path(:payment)
           %li= link_to "Teaching oppertunities" , page_path(:teaching)
       .col-md-4
-        =render "pages/apply_form"
+        %h4.letter-spacing-1 Account
+        %ul.footer-links.list-unstyled
+          -if user_signed_in?
+            %li= link_to "Sign out" , destroy_user_session_path , method: :delete
+            %li= link_to "Account" ,  user_path(current_user)
+          -else
+            %li
+              = simple_form_for(:user, :url => session_path(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
+                .input-group
+                  %span.input-group-addon
+                    %i.fa.icon-mail
+                  = f.email_field :email, class: 'form-control' , placeholder: :email
+                .input-group
+                  %span.input-group-addon
+                    %i.fa.icon-lock
+                  = f.password_field :password, class: 'form-control' , placeholder: :password
+                  %span.input-group-btn
+                    = f.submit "Sign in" , class: "btn btn-success"
         .margin-top-20
           %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "#", :title => "Facebook"}
             %i.icon-facebook

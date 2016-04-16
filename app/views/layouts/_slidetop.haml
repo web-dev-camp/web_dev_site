@@ -49,4 +49,15 @@
             10480 Antskog
             %br
             Finland
+          %li
+            &nbsp;
+            -if user_signed_in?
+              %li= link_to "Sign out" , destroy_user_session_path , method: :delete
+              %li= link_to "Account" ,  user_path(current_user)
+            -else
+              %li
+                = form_for(:user, :url => session_path(:user), :html => { :role => 'form' , class: "form-header"}) do |f|
+                  = f.email_field :email, :autofocus => true, class: 'form-element' , placeholder: :email
+                  = f.password_field :password, class: 'form-element' , placeholder: :password
+                  = f.submit "Sign in" 
   %a.slidetop-toggle{:href => "#"}
