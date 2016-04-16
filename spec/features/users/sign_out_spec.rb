@@ -16,6 +16,10 @@ feature 'Sign out', :devise do
     expect(page).to have_content I18n.t 'devise.sessions.signed_out'
   end
 
+  scenario 'user signs out successfully' do
+    sign_new
+    click_link 'Sign out'
+    expect(page.current_path).to eq page_path(:camp)
+  end
+
 end
-
-

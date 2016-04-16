@@ -33,7 +33,11 @@ feature 'User profile page', :devise do
     login_as(me, :scope => :user)
     Capybara.current_session.driver.header 'Referer', root_path
     visit user_path(other)
-    expect(page).to have_content 'Access denied.'
+    expect(page).to have_content 'You know'
   end
 
+  scenario "Fail graceful for non-existant user" do
+    visit "users/12345"
+    expect(page).to have_content 'Sign in'
+  end
 end

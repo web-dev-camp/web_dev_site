@@ -8,8 +8,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    authorize @user
+    begin
+      @user = User.find(params[:id])
+      authorize @user
+    rescue
+      return redirect_to root_path
+    end
   end
 
   def update

@@ -14,5 +14,11 @@ module Features
       fill_in 'Password', with: password
       click_button 'Sign in'
     end
+
+    def sign_new
+      user = FactoryGirl.create(:user)
+      signin(user.email, user.password)
+      user
+    end
   end
 end
