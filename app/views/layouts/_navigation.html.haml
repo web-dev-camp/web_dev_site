@@ -1,4 +1,4 @@
-.navbar-collapse.pull-right.nav-main-collapse.collapse.submenu-dark
+.navbar-collapse.pull-right.nav-main-collapse.collapse
   %nav.nav-main
 
     %ul#topMain.nav.nav-pills.nav-main
@@ -6,3 +6,9 @@
       %li= link_to "Camp" ,   page_path(:camp)
       %li= link_to "Apply" ,  page_path(:apply)
       %li= link_to "Q & A" ,  page_path(:answers)
+      -if user_signed_in?
+        %li.visible-xs= link_to "Sign out" , destroy_user_session_path , method: :delete
+        %li.visible-xs= link_to "Account" ,  user_path(current_user)
+      -else
+        %li.visible-xs= link_to "Sign in" , new_user_session_path
+        %li.visible-xs= link_to "Sign up" , new_user_registration_path
