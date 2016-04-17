@@ -2,7 +2,7 @@
 #slidetop.bg-finland
   .container
     .row
-      .col-sm-5
+      .col-sm-4
         %h4
           %i.icon-heart
           WHY Web Dev Camp?
@@ -25,20 +25,18 @@
           %li
             %a{:href => "mailto:info@webdev.camp"}
               %i.fa.icon-angle-right
-              %b
-                Email:
+              %b Email:
               info@webdev.camp
+          %li
+            %a{:href => "https://gitter.im/rubyclerks/office_clerk" , _target: :blank}
+              %i.fa.icon-angle-right
+              %b Gitter chat:
+              web_dev_camp/info
           %li
             %i.fa.icon-angle-right
               %b Phone:
               +358 (0)40 730 80 52
-          %li
-            %a{:href => "https://gitter.im/rubyclerks/office_clerk" , _target: :blank}
-              %i.fa.icon-angle-right
-              %b
-                Gitter chat:
-              web_dev_camp/info
-      .col-sm-3
+      .col-sm-4
         %h4
           %i.icon-envelope
           WERE WE ARE?
@@ -56,8 +54,15 @@
               %li= link_to "Account" ,  user_path(current_user)
             -else
               %li
-                = form_for(:user, :url => session_path(:user), :html => { :role => 'form' , class: "form-header"}) do |f|
-                  = f.email_field :email, :autofocus => true, class: 'form-element' , placeholder: :email
-                  = f.password_field :password, class: 'form-element' , placeholder: :password
-                  = f.submit "Sign in" 
+                = simple_form_for(:user, :url => session_path(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
+                  .input-group
+                    %span.input-group-addon
+                      %i.fa.icon-mail
+                    = f.email_field :email, class: 'form-control' , placeholder: :email
+                  .input-group
+                    %span.input-group-addon
+                      %i.fa.icon-lock
+                    = f.password_field :password, class: 'form-control' , placeholder: :password
+                    %span.input-group-btn
+                      = f.submit "Sign in" , class: "btn btn-success"
   %a.slidetop-toggle{:href => "#"}
