@@ -40,16 +40,17 @@ group :development do
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'database_cleaner'
   gem 'puma'
-  gem 'rspec-rails'
   gem 'byebug'
+  gem 'poltergeist'
   gem 'sqlite3'
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'launchy'
