@@ -4,9 +4,9 @@
     .row
       .col-md-3
         / Footer Logo
-        = image_tag "web_logo_white.png" , :class => "footer-logo"
+        = image_tag "web_logo_mobile.png" , :class => "footer-logo"
         / Small Description
-        %p Finding your talent.
+        %p Find your talent in programming.
         %address
           %table
             %tr
@@ -42,14 +42,14 @@
           %li
             %a{:href => "/apply"} Updated apply page
             %small 24 March 2016
-      .col-md-2
+      .col-md-3
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
         %ul.footer-links.list-unstyled
           %li= link_to "Camp" , page_path(:camp)
           %li= link_to "Teachers" , page_path(:teachers)
           %li= link_to "Payment Policy" , page_path(:payment)
           %li= link_to "Teaching oppertunities" , page_path(:teaching)
-      .col-md-4
+      .col-md-3
         %h4.letter-spacing-1 Account
         %ul.footer-links.list-unstyled
           -if user_signed_in?
