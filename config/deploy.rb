@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:web-dev-camp/web_dev_site.git'
 set :deploy_to, '/var/www/vhosts/webdev.camp'
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml' , 'config/newrelic.yml')
 
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
