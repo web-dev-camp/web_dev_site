@@ -1,0 +1,45 @@
+%h1 Listing resumes
+
+%table
+  %thead
+    %tr
+      %th School
+      %th Uni
+      %th Internship
+      %th Work
+      %th Tech skills
+      %th Soft skills
+      %th Projects
+      %th Other
+      %th Intrests
+      %th Motivation
+      %th Address1
+      %th City
+      %th Country
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @resumes.each do |resume|
+      %tr
+        %td= resume.school
+        %td= resume.uni
+        %td= resume.internship
+        %td= resume.work
+        %td= resume.tech_skills
+        %td= resume.soft_skills
+        %td= resume.projects
+        %td= resume.other
+        %td= resume.interests
+        %td= resume.motivation
+        %td= resume.street
+        %td= resume.city
+        %td= resume.country
+        %td= resume.user_id
+        %td= link_to 'Show', resume
+
+%br
+
+= link_to 'New Resume', new_resume_path

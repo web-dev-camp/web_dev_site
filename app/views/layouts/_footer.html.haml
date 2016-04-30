@@ -54,7 +54,8 @@
         %ul.footer-links.list-unstyled
           -if user_signed_in?
             %li= link_to "Sign out" , destroy_user_session_path , method: :delete
-            %li= link_to "Account" ,  user_path(current_user)
+            %li= link_to "Account" ,  edit_user_registration_path
+            %li= link_to "Resume" ,   resume_path
           -else
             %li
               = simple_form_for(:user, :url => session_path(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
@@ -68,6 +69,7 @@
                   = f.password_field :password, class: 'form-control' , placeholder: :password
                   %span.input-group-btn
                     = f.submit "Sign in" , class: "btn btn-success"
+            %li= link_to "Sign In Page" , new_user_session_path
         .margin-top-20
           %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "#", :title => "Facebook"}
             %i.icon-facebook

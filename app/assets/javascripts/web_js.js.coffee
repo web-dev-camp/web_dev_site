@@ -25,3 +25,13 @@ jQuery(document).ready ->
   # fadeIn needs to be an available animate class, ie included
   jQuery('.js-rotating').Morphext({separator: ";" , animation: "fadeIn" , speed: 6000})
   return
+
+$(document).ready ->
+  ### Activating Best In Place ###
+  jQuery('.best_in_place').best_in_place()
+  return
+
+$(document).ready ->
+  ### fading alerts ###
+  jQuery('.alert').delay(5000).fadeOut 'slow'
+  return
