@@ -13,3 +13,4 @@
       = f.label :password
       = f.password_field :password, class: 'form-control'
     = f.submit 'Sign in', :class => 'button right'
+    = link_to 'Resend confirmation', new_user_confirmation_path
