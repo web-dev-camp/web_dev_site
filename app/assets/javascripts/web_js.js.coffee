@@ -32,6 +32,11 @@ $(document).ready ->
   return
 
 $(document).ready ->
+  $('.best_in_place').bind 'ajax:success', ->
+    @innerHTML = @innerHTML.replace(/\n/g, '<br/>')
+    return
+
+$(document).ready ->
   ### fading alerts ###
   jQuery('.alert').delay(5000).fadeOut 'slow'
   return
