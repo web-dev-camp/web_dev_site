@@ -25,3 +25,4 @@
 //= require swiper.jquery
 //= require morphext
 //= require web_js
+//= require mixpanel
