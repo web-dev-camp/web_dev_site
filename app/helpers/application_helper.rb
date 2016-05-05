@@ -21,4 +21,7 @@ module ApplicationHelper
     best_in_place(@resume , field , attributes)
   end
 
+  def social_link href , kind , &block
+    link_to(href , {class: "social-icon social-icon-sm social-#{kind}" , target: :blank } , &block) 
+  end
 end
