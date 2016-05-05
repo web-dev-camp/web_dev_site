@@ -34,14 +34,15 @@
         %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
           %li
-            %a{:href => "/"} Finished slider, beta release
-            %small 15 April 2016
+            %a{:href => "https://www.facebook.com/webdev.camp" , target: :blank}
+              Web Dev on Facebook!
+            %small 03 May 2016
+          %li
+            %a{:href => "/apply"} Finished application process
+            %small 16 April 2016
           %li
             %a{:href => "/answers"} More answers to questions
             %small 25 March 2016
-          %li
-            %a{:href => "/apply"} Updated apply page
-            %small 24 March 2016
       .col-md-3
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
         %ul.footer-links.list-unstyled
@@ -71,7 +72,7 @@
                     = f.submit "Sign in" , class: "btn btn-success"
             %li= link_to "Sign In Page" , new_user_session_path
         .margin-top-20
-          %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "#", :title => "Facebook"}
+          %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "https://www.facebook.com/webdev.camp", :title => "Facebook" , target: :blank }
             %i.icon-facebook
             %i.icon-facebook
   .copyright
