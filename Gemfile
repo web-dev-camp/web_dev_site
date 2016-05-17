@@ -6,7 +6,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem "therubyracer"
-gem 'administrate'
+gem 'administrate' , "0.1.5"
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
