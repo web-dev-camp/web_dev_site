@@ -44,10 +44,10 @@ group :development, :test do
   gem 'byebug'
   gem 'poltergeist'
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'database_cleaner'
