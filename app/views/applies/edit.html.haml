@@ -1,0 +1,14 @@
+= render 'users/submenu'
+.authform
+  %h1 Create your application
+
+  = simple_form_for(@apply , url: application_path ) do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :primary_choice_id
+      = f.input :secondary_choice_id
+      = f.input :comment
+
+    .form-actions
+      = f.button :submit , "Create Application" , class: "btn btn-primary"

@@ -4,6 +4,6 @@
       %button#page-menu-mobile.fa.icon-menu
       %ul.list-inline
         - { "Profile" => edit_user_registration_path , "Resume" => resume_path  ,
-          "Application" => resume_path }.each do | menu, slug|
+          "Application" => application_path }.each do | menu, slug|
           %li{class: (request.path == slug) && "active" }
             =link_to menu , slug

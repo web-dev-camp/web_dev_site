@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users
     resources :courses
     resources :resumes
+    resources :applies
 
     root to: "users#index"
   end
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :users ,  except: [:index , :new ]
   resource  :resume , except: [:destroy , :new , :edit]
+  get :application , to: "applies#show"
+  post :application , to: "applies#create"
 
 
   root to: 'high_voltage/pages#show' , id: 'index'

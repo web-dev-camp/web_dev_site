@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
+  enum role: [:user, :teacher, :admin]
 
-  enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
 
   def resume
     Resume.find_or_create_by( :user_id => self.id)
+  end
+
+  def application
+    Apply.where(user_id: self.id ).first
   end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
