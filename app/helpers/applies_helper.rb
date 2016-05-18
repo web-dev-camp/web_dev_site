@@ -1,6 +1,6 @@
 module AppliesHelper
   def course_select
-    Course.all.order(:name).map { |c| [c.name, c.id ] }
+    Course.all.order(:name).map { |c| [c.full_name, c.id ] }
   end
 
   def plan_select

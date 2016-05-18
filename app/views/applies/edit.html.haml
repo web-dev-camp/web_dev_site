@@ -1,23 +1,26 @@
 = render 'users/submenu'
-.authform
-  %h1 Create your application
+%section.padding-xxs
+  .container
+    .authform
+      %h1 Create your application
 
-  = simple_form_for(@apply , url: application_path ) do |f|
-    = f.error_notification
+      = simple_form_for(@apply , url: application_path ) do |f|
+        = f.error_notification
 
-    .form-input
-      = f.label "Primary choice to start"
-      = f.select :primary_choice_course_id , course_select #, :prompt => "Select" #, :include_blank => true
-    .form-input
-      = f.label "Optional secondary choice to start"
-      = f.select :secondary_choice_course_id , course_select
-    .form-input
-      = f.label "Payment plan (prices for 2 week modules)"
-      = f.select :plan , plan_select.invert
-    .form-input
-      = f.input :discount_code , label: "Optional code determines prearranged discount"
-    .form-input
-      = f.input :comment
+        .form-input
+          = f.label "Primary choice to start"
+          = f.select :primary_choice_course_id , course_select
+        .form-input
+          = f.label "Optional secondary choice to start"
+          = f.select :secondary_choice_course_id , course_select , :prompt => "Optionally select second"
+        .form-input
+          = f.label "Payment plan (prices for 2 week modules, course has 4 modules)"
+          = f.select :plan , plan_select.invert
+        .form-input
+          = f.input :discount_code , label: "Optional code determines prearranged discount"
+        .form-input
+          = f.input :comment
 
-    .form-actions
-      = f.button :submit , "Create Application" , class: "btn btn-primary"
+        .form-actions
+          = f.label "By pressing submit you acknowledge the terms & conditions and payment policy."
+          = f.button :submit , "Create Application" , class: "btn btn-primary"

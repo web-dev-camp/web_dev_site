@@ -1,11 +1,44 @@
-%p#notice= notice
+= render 'users/submenu'
+%section.padding-xxs
+  .container
+    .row
+      .col-md-2
+      .col-md-8
+        %h3 Application is submitted
+        %p
+          We have received your application on the
+          =@apply.created_at.to_date.to_s
+          and are processing it. We will be in touch by email.
+        %p#notice= notice
+        %p
 
-%p
-  %b Primary choice:
-  = @apply.primary_choice_course_id
-%p
-  %b Secondary choice:
-  = @apply.secondary_choice_course_id
-%p
-  %b Comment:
-  = @apply.comment
+        %table
+          %tr
+            %td
+              %b Primary choice:
+            %td= @apply.primary_choice_course.full_name
+
+          %tr
+            %td
+              %b Secondary choice:
+            %td
+              = @apply.secondary_choice_course.full_name if @apply.secondary_choice_course
+          %tr
+            %td Discount:
+            %td= @apply.discount_code || "None"
+          %tr
+            %td Comment:
+            %td= @apply.comment || "None"
+.authform
+  %h3 Cancelling your application
+  %p
+    You may revoke your application at any point. We ask you to give a reason for doing so,
+    and depending on that reason this may affect future applications.
+
+  = simple_form_for(@apply , url: cancel_application_path , method: :post) do |f|
+    .form-input
+      = f.label "Reason for cancellation"
+      = text_area_tag :reason , nil , class: "form-control"
+
+    .form-actions
+      = f.button :submit , "Cancel Application" , class: "btn btn-danger"

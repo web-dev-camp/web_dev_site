@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resource  :resume , except: [:destroy , :new , :edit]
   get :application , to: "applies#show"
   post :application , to: "applies#create"
+  post :cancel_application , to: "applies#cancel"
 
 
   root to: 'high_voltage/pages#show' , id: 'index'
