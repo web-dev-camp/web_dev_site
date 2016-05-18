@@ -32,6 +32,6 @@ class AppliesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def apply_params
-      params.require(:apply).permit(:primary_choice_id, :secondary_choice_id, :comment, :user_id, :sent)
+      params.require(:apply).permit(:primary_choice_course_id, :secondary_choice_course_id, :comment, :user_id, :sent)
     end
 end

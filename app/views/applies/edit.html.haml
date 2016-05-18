@@ -5,9 +5,18 @@
   = simple_form_for(@apply , url: application_path ) do |f|
     = f.error_notification
 
-    .form-inputs
-      = f.input :primary_choice_id
-      = f.input :secondary_choice_id
+    .form-input
+      = f.label "Primary choice to start"
+      = f.select :primary_choice_course_id , course_select #, :prompt => "Select" #, :include_blank => true
+    .form-input
+      = f.label "Optional secondary choice to start"
+      = f.select :secondary_choice_course_id , course_select
+    .form-input
+      = f.label "Payment plan (prices for 2 week modules)"
+      = f.select :plan , plan_select.invert
+    .form-input
+      = f.input :discount_code , label: "Optional code determines prearranged discount"
+    .form-input
       = f.input :comment
 
     .form-actions

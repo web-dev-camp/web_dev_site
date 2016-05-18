@@ -14,13 +14,17 @@
 ActiveRecord::Schema.define(version: 20160517133538) do
 
   create_table "applies", force: :cascade do |t|
-    t.integer  "primary_choice_id"
-    t.integer  "secondary_choice_id"
+    t.integer  "primary_choice_course_id"
+    t.integer  "secondary_choice_course_id"
+    t.string   "plan"
+    t.string   "discount_code"
     t.text     "comment"
     t.integer  "user_id"
     t.date     "sent"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.date     "accepted"
+    t.integer  "funds_received"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "courses", force: :cascade do |t|
