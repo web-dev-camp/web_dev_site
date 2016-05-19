@@ -13,7 +13,7 @@ class AppliesController < ApplicationController
 
     if @apply.save
       redirect_to application_path, notice: 'Application was successfully submitted. Your will receive further instructions from us within a week'
-      ApplyMailer.submit( @apply ).deliver_now
+      ApplyMailer.submit( @apply ).deliver_later
     else
       render :edit
     end
@@ -21,9 +21,10 @@ class AppliesController < ApplicationController
   end
 
   def cancel
-    ApplyMailer.cancel( @apply , params[:reason]).deliver_now
+    ApplyMailer.cancel( @apply , params[:reason]).deliver_later
     @apply.delete
-    redirect_to edit_user_registration_path, alert: 'Application was canceled.'
+    path = params[:reason].blank? ? edit_user_registration_path : resume_path
+    redirect_to path , alert: 'Application was canceled.'
   end
 
   private
