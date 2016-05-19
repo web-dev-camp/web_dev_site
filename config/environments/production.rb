@@ -72,18 +72,30 @@ Rails.application.configure do
   config.active_support.deprecation = :notify
 
   # ActionMailer Config
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+        :address              => "smtp.zoho.com",
+        :port                 => 465,
+        :domain               => Rails.application.secrets.domain_name,
+        :user_name            => Rails.application.secrets.admin_email,
+        :password             => Rails.application.secrets.admin_pass,
+        :ssl                  => true,
+        :tls                  => true,
+        :authentication       => :login,
+        :enable_starttls_auto => true
+  }
+  config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'info@webdev.camp' , bcc: 'info@webdev.camp' }
-  config.action_mailer.default_url_options = { :host => 'webdev.camp' }
+  config.action_mailer.default_options = {  from: Rails.application.secrets.admin_email ,
+                                            bcc:  Rails.application.secrets.admin_email }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
+
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
   config.to_prepare { Devise::PasswordsController.force_ssl }
