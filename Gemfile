@@ -18,6 +18,10 @@ gem 'simple_form'
 gem 'animate-scss' , :github => "ejholmes/animate.scss"
 gem "best_in_place"
 
+#asynchronous sending
+gem 'sucker_punch'
+gem 'devise-async'
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
