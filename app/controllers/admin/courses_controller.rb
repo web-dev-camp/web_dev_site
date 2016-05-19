@@ -1,8 +1,6 @@
 module Admin
   class CoursesController < Admin::ApplicationController
-    def page
-      "Courses"
-    end
+
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #
