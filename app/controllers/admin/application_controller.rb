@@ -9,13 +9,9 @@ module Admin
     before_filter :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
+      ok = current_user != nil
+      ok = current_user.email == "torsten@villataika.fi" if ok
+      redirect_to "/" unless ok
     end
-
-    # Override this value to specify the number of elements to display at a time
-    # on index pages. Defaults to 20.
-    # def records_per_page
-    #   params[:per_page] || 20
-    # end
   end
 end
