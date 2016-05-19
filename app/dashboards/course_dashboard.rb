@@ -14,7 +14,7 @@ class CourseDashboard < Administrate::BaseDashboard
     start: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -26,7 +26,7 @@ class CourseDashboard < Administrate::BaseDashboard
     :name,
     :extra,
     :start,
-  ]
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -37,7 +37,7 @@ class CourseDashboard < Administrate::BaseDashboard
     :start,
     :created_at,
     :updated_at,
-  ]
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -46,7 +46,7 @@ class CourseDashboard < Administrate::BaseDashboard
     :name,
     :extra,
     :start,
-  ]
+  ].freeze
 
   # Overwrite this method to customize how courses are displayed
   # across all pages of the admin dashboard.

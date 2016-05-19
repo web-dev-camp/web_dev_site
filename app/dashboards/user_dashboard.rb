@@ -28,7 +28,7 @@ class UserDashboard < Administrate::BaseDashboard
     unconfirmed_email: Field::String,
     role: Field::String.with_options(searchable: false),
     course_id: Field::Number,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -40,7 +40,7 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :encrypted_password,
     :reset_password_token,
-  ]
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -65,7 +65,7 @@ class UserDashboard < Administrate::BaseDashboard
     :unconfirmed_email,
     :role,
     :course_id,
-  ]
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -88,7 +88,7 @@ class UserDashboard < Administrate::BaseDashboard
     :unconfirmed_email,
     :role,
     :course_id,
-  ]
+  ].freeze
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.

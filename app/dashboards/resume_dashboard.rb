@@ -26,7 +26,7 @@ class ResumeDashboard < Administrate::BaseDashboard
     other: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -38,7 +38,7 @@ class ResumeDashboard < Administrate::BaseDashboard
     :id,
     :street,
     :city,
-  ]
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -61,7 +61,7 @@ class ResumeDashboard < Administrate::BaseDashboard
     :other,
     :created_at,
     :updated_at,
-  ]
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -82,7 +82,7 @@ class ResumeDashboard < Administrate::BaseDashboard
     :motivation,
     :finance,
     :other,
-  ]
+  ].freeze
 
   # Overwrite this method to customize how resumes are displayed
   # across all pages of the admin dashboard.
