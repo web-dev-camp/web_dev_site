@@ -1,0 +1,14 @@
+Hello <%=@application.user.name%>,
+
+This is to confirm that we have received your application cancellation.
+
+<% if @reason.blank? %>
+Since you have not given a reason for the cancellation, we assume you won't apply again
+and may wish to cancel your account as well.
+<% else %>
+You may apply again if your situation changes.
+<% end %>
+
+We wish you best in your career endeavours
+
+The Web Dev Team

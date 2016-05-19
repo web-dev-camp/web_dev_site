@@ -1,0 +1,21 @@
+Hello <%= @application.user.name %>,
+
+this is to confirm that we have received your application for the web dev course: <%=@application.primary_choice_course.full_name%>
+
+We will review you application and email you within one week.
+
+If your situation changes or you have additional questions or concerns, you can get in touch by replying to this email.
+
+Best Regards
+
+The Web Dev Team
+
+Application details: http://webdev.camp/application
+---------------------------------------------------
+
+Primary course choice: <%=@application.primary_choice_course.full_name%>
+<%unless @application.secondary_choice_course_id%>Secondary course choice: <%=@application.primary_choice_course.full_name%>
+<%end%>
+Payment plan: <%=@application.plan_name%>
+Discount code: <%=@application.comment%>
+Comment: <%=@application.comment%>

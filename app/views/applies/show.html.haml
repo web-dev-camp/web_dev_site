@@ -22,7 +22,13 @@
             %td
               %b Secondary choice:
             %td
-              = @apply.secondary_choice_course.full_name if @apply.secondary_choice_course
+              - if @apply.secondary_choice_course
+                = @apply.secondary_choice_course.full_name
+              - else
+                None
+          %tr
+            %td Payment plan:
+            %td= @apply.plan_name
           %tr
             %td Discount:
             %td= @apply.discount_code || "None"

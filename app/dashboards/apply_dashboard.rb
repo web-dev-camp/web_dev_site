@@ -13,6 +13,7 @@ class ApplyDashboard < Administrate::BaseDashboard
     primary_choice_course_id: Field::Number,
     secondary_choice_course_id: Field::Number,
     comment: Field::Text,
+    plan: Field::String,
     sent: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -37,6 +38,7 @@ class ApplyDashboard < Administrate::BaseDashboard
     :id,
     :primary_choice_course_id,
     :secondary_choice_course_id,
+    :plan ,
     :comment,
     :sent,
     :created_at,
@@ -50,6 +52,7 @@ class ApplyDashboard < Administrate::BaseDashboard
     :user,
     :primary_choice_course_id,
     :secondary_choice_course_id,
+    :plan,
     :comment,
     :sent,
   ]
