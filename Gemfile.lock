@@ -44,7 +44,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    administrate (0.2.1)
+    administrate (0.2.2)
       autoprefixer-rails (~> 6.0)
       datetime_picker_rails (~> 0.0.7)
       jquery-rails (~> 4.0)
@@ -55,9 +55,6 @@ GEM
       rails (~> 4.2)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
-    administrate-field-image (0.0.2)
-      administrate (>= 0.2.0.rc1, < 0.3.0)
-      rails (~> 4.2)
     arel (6.0.3)
     autoprefixer-rails (6.3.6.1)
       execjs
@@ -133,7 +130,7 @@ GEM
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    execjs (2.6.0)
+    execjs (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.6.0)
@@ -205,9 +202,9 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (3.0)
+    mime-types (3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0221)
+    mime-types-data (3.2016.0521)
     mini_portile2 (2.0.0)
     minitest (5.9.0)
     momentjs-rails (2.11.1)
@@ -368,7 +365,6 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
-  administrate-field-image
   animate-scss!
   best_in_place
   better_errors
@@ -422,4 +418,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.1
+   1.12.4

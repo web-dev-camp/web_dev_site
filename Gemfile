@@ -7,7 +7,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem "therubyracer"
 gem 'administrate'
-gem "administrate-field-image"
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
