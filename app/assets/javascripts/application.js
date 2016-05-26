@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery2
-//= require smoothscroll
 //= require jquery_ujs
 //= require best_in_place
 //= require bootstrap/alert
