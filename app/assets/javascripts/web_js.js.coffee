@@ -38,5 +38,5 @@ $(document).ready ->
 
 $(document).ready ->
   ### fading alerts ###
-  jQuery('.alert').delay(5000).fadeOut 'slow'
+  jQuery('.flash').delay(5000).fadeOut 'slow'
   return
