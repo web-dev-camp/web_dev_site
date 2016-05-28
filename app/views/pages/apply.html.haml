@@ -19,22 +19,29 @@
         .row
           .col-md-1
           .col-md-10
+            - if current_user
+              %h3 Fill out your resume
+              %p
+                Your are signed in, head over to the
+                =link_to "resume" , resume_path
+                and fill in your details.Once that is done you can apply for a certain date.
 
-            = form_for(User.new, :as => :user, :url => registration_path(:user), :html => { :role => 'form'}) do |f|
-              %h3 Start by signing up
-              .form-group
-                = f.label :name
-                = f.text_field :name, :autofocus => true, class: 'form-control'
-              .form-group
-                = f.label :email
-                = f.email_field :email, class: 'form-control'
-              .form-group
-                = f.label :password
-                = f.password_field :password, class: 'form-control'
-              .form-group
-                = f.label :password_confirmation
-                = f.password_field :password_confirmation, class: 'form-control'
-              = f.submit 'Start', :class => 'button right'
+            - else
+              = form_for(User.new, :as => :user, :url => registration_path(:user), :html => { :role => 'form'}) do |f|
+                %h3 Start by signing up
+                .form-group
+                  = f.label :name
+                  = f.text_field :name, :autofocus => true, class: 'form-control'
+                .form-group
+                  = f.label :email
+                  = f.email_field :email, class: 'form-control'
+                .form-group
+                  = f.label :password
+                  = f.password_field :password, class: 'form-control'
+                .form-group
+                  = f.label :password_confirmation
+                  = f.password_field :password_confirmation, class: 'form-control'
+                = f.submit 'Start', :class => 'button right'
 
       .col-lg-6.col-md-6.col-sm-6
         .heading-title.heading-border-bottom
