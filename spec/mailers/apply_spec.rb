@@ -1,12 +1,12 @@
 require "rails_helper"
 
-RSpec.describe Apply, type: :mailer do
+RSpec.describe ApplyMailer, type: :mailer do
   describe "submit" do
-    let(:mail) { Apply.submit }
+    let(:mail) { ApplyMailer.submit( create :apply ) }
 
     it "renders the headers" do
-      expect(mail.subject).to eq("Submit")
-      expect(mail.to).to eq(["to@example.org"])
+      expect(mail.subject).to match("submitted")
+      expect(mail.to).to eq(["test@example.com"])
       expect(mail.from).to eq(["info@webdev.camp"])
     end
 
@@ -16,11 +16,11 @@ RSpec.describe Apply, type: :mailer do
   end
 
   describe "cancel" do
-    let(:mail) { Apply.cancel }
+    let(:mail) { ApplyMailer.cancel(create(:apply)  , "No reason") }
 
     it "renders the headers" do
-      expect(mail.subject).to eq("Cancel")
-      expect(mail.to).to eq(["to@example.org"])
+      expect(mail.subject).to match("cancelled")
+      expect(mail.to).to eq(["test@example.com"])
       expect(mail.bcc).to eq(["torsten@webdev.camp"])
       expect(mail.from).to eq(["info@webdev.camp"])
     end
