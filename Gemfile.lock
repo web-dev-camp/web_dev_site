@@ -318,6 +318,8 @@ GEM
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    skylight (0.10.3)
+      activesupport (>= 3.0.0)
     slop (3.6.0)
     spring (1.6.4)
     spring-commands-rspec (1.0.4)
@@ -409,6 +411,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_form
+  skylight
   spring
   spring-commands-rspec
   sqlite3

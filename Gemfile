@@ -21,6 +21,8 @@ gem "best_in_place"
 gem 'sucker_punch'
 gem 'devise-async'
 
+gem "skylight"
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
