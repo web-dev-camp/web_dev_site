@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def title! str
+    @title = str
+  end
+  
   def delayed_image pic
     image_tag( "brands/1.jpg" ,  "data-src" => asset_path(pic) , class: 'swiper-lazy') +
     raw("<div class='swiper-lazy-preloader swiper-lazy-preloader-white'></div>")
@@ -22,6 +26,6 @@ module ApplicationHelper
   end
 
   def social_link href , kind , &block
-    link_to(href , {class: "social-icon social-icon-sm social-#{kind}" , target: :blank } , &block) 
+    link_to(href , {class: "social-icon social-icon-sm social-#{kind}" , target: :blank } , &block)
   end
 end
