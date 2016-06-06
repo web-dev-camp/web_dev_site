@@ -2,7 +2,12 @@ module ApplicationHelper
   def title! str
     @title = str
   end
-  
+  def description! str
+    @description = str
+  end
+  def description
+    @description || @title
+  end
   def delayed_image pic
     image_tag( "brands/1.jpg" ,  "data-src" => asset_path(pic) , class: 'swiper-lazy') +
     raw("<div class='swiper-lazy-preloader swiper-lazy-preloader-white'></div>")
