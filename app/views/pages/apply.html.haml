@@ -5,7 +5,7 @@
     .row
       .col-lg-6.col-md-6.col-sm-6
         .heading-title.heading-border-bottom
-          %h3 The application process
+          %h1 The application process
         %p
           %ul
             %li Be sure
@@ -22,7 +22,7 @@
           .col-md-1
           .col-md-10
             - if current_user
-              %h3 Fill out your resume
+              %h2 Fill out your resume
               %p
                 Your are signed in, head over to the
                 =link_to "resume" , resume_path
@@ -30,7 +30,7 @@
 
             - else
               = form_for(User.new, :as => :user, :url => registration_path(:user), :html => { :role => 'form'}) do |f|
-                %h3 Start by signing up
+                %h2 Start by signing up
                 .form-group
                   = f.label :name
                   = f.text_field :name, :autofocus => true, class: 'form-control'
@@ -47,7 +47,7 @@
 
       .col-lg-6.col-md-6.col-sm-6
         .heading-title.heading-border-bottom
-          %h3 The course
+          %h2 The course
         %p
           %ul
             %li  8 weeks teaching, 6 days a week, 10 hours a day
@@ -56,7 +56,7 @@
             %li  airport transfer
             %li  job application help
         .heading-title.heading-border-bottom
-          %h3 You need
+          %h2 You need
         %p
           %ul
             %li prepayment after confirmation, 2100€
