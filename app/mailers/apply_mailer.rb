@@ -7,7 +7,8 @@ class ApplyMailer < ApplicationMailer
   #
   def submit( application )
     @application = application
-    mail(to: @application.user.email, subject: "Your application has been submitted")
+    email = @application.user.email
+    mail(to: email, reply_to: email ,  subject: "Your application has been submitted")
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
