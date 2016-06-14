@@ -17,7 +17,6 @@
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-
   %body
     = render 'layouts/slidetop'
     #wrapper
@@ -35,3 +34,4 @@
       = yield
     = render 'layouts/footer'
   %a#toTop{:href => "#"}
+  %script{:src => "http://awesome.ponch.io/public/57605c7f7fd6a5e31ed1498a/57605d257fd6a5e31ed149c1/script/ponch.js", :type => "text/javascript"}
