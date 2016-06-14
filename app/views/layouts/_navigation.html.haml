@@ -7,7 +7,7 @@
       %li= link_to "Apply" ,  page_path(:apply)
       %li= link_to "Q & A" ,  page_path(:answers)
       -if user_signed_in?
-        %li.visible-xs= link_to "Sign out" , destroy_user_session_path , method: :delete
+        %li.visible-xs= sign_out_link
         %li.visible-xs= link_to "Account" ,  user_path(current_user)
       -else
         %li.visible-xs= link_to "Sign in" , new_user_session_path
