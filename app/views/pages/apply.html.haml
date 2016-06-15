@@ -4,7 +4,7 @@
   .container
     .row
       .col-lg-6.col-md-6.col-sm-6
-        .heading-title.heading-border-bottom
+        .heading-title
           %h1 The application process
         %p
           %ul
@@ -18,6 +18,13 @@
             %li Ensure and transfer initial funds (two weeks for this)
             %li Get ready
             %li Fly over and get picked up
+        .heading-title
+          %h4 Next Courses
+          %p
+            %ul
+              -Course.all.limit(5).each do |course|
+                %li=course.full_name
+      .col-lg-6.col-md-6.col-sm-6
         .row
           .col-md-1
           .col-md-10
@@ -44,7 +51,7 @@
                   = f.label :password_confirmation
                   = f.password_field :password_confirmation, class: 'form-control'
                 = f.submit 'Start', :class => 'button right'
-
+    .row
       .col-lg-6.col-md-6.col-sm-6
         .heading-title.heading-border-bottom
           %h2 The course
@@ -55,12 +62,13 @@
             %li  shared accommodation
             %li  airport transfer
             %li  job application help
+      .col-lg-6.col-md-6.col-sm-6
         .heading-title.heading-border-bottom
           %h2 You need
         %p
           %ul
             %li prepayment after confirmation, 2100€
             %li final payment before course start, 6300€
-            %li a mac (powerbook / air)
+            %li a mac (powerbook / air) at least 10.9
             %li warm clothes
             %li a flight to Helsinki (possibly)

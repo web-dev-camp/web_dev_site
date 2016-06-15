@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def sign_out_link
-    link_to "Sign out" , destroy_user_session_url(protocol: "https") , method: :delete
+    link_to "Sign out" , destroy_user_session_url , method: :delete
   end
 
   # define a bunch of defaults for the best_in_place call
