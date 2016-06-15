@@ -17,9 +17,9 @@ module ApplicationHelper
   end
 
   def sign_out_link
-    link_to "Sign out" , destroy_user_session_path(protocol: "https") , method: :delete
+    link_to "Sign out" , destroy_user_session_url(protocol: "https") , method: :delete
   end
-  
+
   # define a bunch of defaults for the best_in_place call
   def resume_in_place field , txt  , attributes = {}
     br = proc {|txtt| raw(txtt.to_s.gsub("\n" , "<br>")) }
