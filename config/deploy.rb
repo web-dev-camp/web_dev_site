@@ -2,7 +2,7 @@
 lock '3.4.1'
 
 set :application, 'webdev'
-set :repo_url, 'git@github.com:web-dev-camp/web_dev_site.git'
+set :repo_url, 'git@github.com:webdev-camp/webdev.camp.git'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/vhosts/webdev.camp'
