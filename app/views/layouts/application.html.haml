@@ -34,12 +34,12 @@
       = yield
     = render 'layouts/footer'
   %a#toTop{:href => "#"}
-  %script{:src => "http://awesome.ponch.io/public/57605c7f7fd6a5e31ed1498a/57605d257fd6a5e31ed149c1/script/ponch.js", :type => "text/javascript"}
-  :javascript
-    window.__lo_site_id = 59342;
+  - if Rails.env.production?
+    :javascript
+      window.__lo_site_id = 59342;
 
-    	(function() {
-    		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-    		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
-    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-    	  })();
+      	(function() {
+      		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+      		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+      		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+      	  })();
