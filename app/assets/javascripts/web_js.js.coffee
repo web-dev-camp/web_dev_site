@@ -40,3 +40,9 @@ $(document).ready ->
   ### fading alerts ###
   jQuery('.flash').delay(5000).fadeOut 'slow'
   return
+
+$(document).ready ->
+  $('.tooltip').each ->
+    content = $(this).find('.content').detach().show()
+    $(this).tooltipster content: content , maxWidth: 300 ,  theme: 'tooltipster-shadow'
+  return
