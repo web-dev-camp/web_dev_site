@@ -8,16 +8,34 @@
         =image_tag("slider/net.jpg")
         .swiper-overlay
           .row
-            .line.left.slideL You know the web
+            .line.left learn the code!
           .row
-            .line.right.slideR.delay-3000.pad_rs 8 Weeks course
+            .line.right Live-in bootcamp
           .row
-            .line.left.slideL.delay-1000.pad_ls Now learn how it works
+            .line.left.pad_ls 8 weeks
           .row
             .line
               &nbsp;
           .row
-            .line.right.slideR.delay-4000 start your new career!
+            .line.right.pad_rm be creative - enjoy coding
+      .swiper-slide
+        =image_tag("slider/lunch.jpg")
+        .swiper-overlay
+          .row
+            .line.left
+              %span.inv Food &
+          .row
+            .line.left
+              %span.inv Accommodation
+          .row
+            .line.left
+              %span.inv  included
+          .row
+            .line.left.pad_ls
+              %span
+          .row
+            .line.right.delay-1000.pad_lm
+              %span.inv Relax in beautiful nature
       .swiper-slide
         =image_tag("slider/group_study.jpg")
         .swiper-overlay
@@ -25,7 +43,7 @@
             .line.left.slideL.pad_lm
               %span.green Small groups
           .row
-            .line.right.slideR.delay-3000
+            .line.right.slideR.delay-2000
               %span.green HTML / CSS / Programming
           .row
             .line
@@ -35,26 +53,8 @@
             .line.left.slideL.delay-1000
               %span.green intensive learning
           .row
-            .line.right.slideR.delay-4000.pad_rm
+            .line.right.slideR.delay-3000.pad_rm
               %span.green Learn to code
-      .swiper-slide
-        =image_tag("slider/lunch.jpg")
-        .swiper-overlay
-          .row
-            .line.right.slideR
-              %span.inv Welcome to
-          .row
-            .line.vt.right.rotL.delay-1000.pad_rm
-              %span.inv Villa Taika!
-          .row
-            .line.left.slideL.delay-2000
-              %span.inv Live in
-          .row
-            .line.left.slideL.delay-2500.pad_ls
-              %span.inv Beautiful nature
-          .row
-            .line.left.slideR.delay-4000.pad_lm
-              %span.inv Accommodation & food included
       .swiper-slide
         =image_tag("slider/student.jpg")
         .swiper-overlay
@@ -62,17 +62,17 @@
             .line
               %span  &nbsp;
           .row
-            .line.left.slideR
+            .line.left.pad_lm.slideR
               %span Book a flight
           .row
-            .line.left.slideR.delay-1000.pad_rm
+            .line.left.slideR.delay-1000.pad_ls
               %span Bring a laptop, and
           .row
             .line
               %span &nbsp;
           .row
-            .line.right.rotR.delay-3000.pad_rm
-              %span BECOME a DEVELOPER
+            .line.right.rotR.delay-2000.pad_rm
+              %span.bold BECOME a DEVELOPER
     .swiper-pagination
     .swiper-button-next
     .swiper-button-prev
