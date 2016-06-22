@@ -1,0 +1,558 @@
+- title! "Web Development teaching method"
+- description! "Web Dev Camp has 4 modules of 2 weeks. introduction, communication, presentation to mastery"
+
+
+%section.padding-xxs
+  .container
+    .divider.divider-center.divider-color
+      %i.fa.icon-angle-down
+    .row
+      .col-md-4
+        %table.stack
+          %tr
+            %td
+              %i.ico-color.ico-xs.ico-rounded.ico-hover.fa.icon-css3
+            %td.text-right
+              %h3 Css3
+            %td
+              .brace_part1
+            %td
+          %tr
+            %td
+              %i.ico-color.ico-xs.ico-rounded.ico-hover.fa.icon-html5
+            %td.text-right
+              %h3 Html5
+            %td
+              .brace_part2
+            %td
+              %h4 Front
+            %td
+          %tr
+            %td
+              %i.ico-color.ico-xs.ico-rounded.ico-hover.fa.icon-github
+            %td.text-right
+              %h3 Teamwork
+            %td
+              .brace_part3
+            %td
+              %h4 End
+            %td
+              .brace_part1
+            %td
+              %h4 Back
+          %tr
+            %td
+              %i.ico-color.ico-xs.ico-rounded.ico-hover.fa.icon-file-code
+            %td.text-right
+              %h3 Programming
+            %td
+              .brace_part4
+            %td
+            %td
+              .brace_part2
+            %td
+              %h4 End
+          %tr
+            %td
+              %i.ico-color.ico-xs.ico-rounded.ico-hover.fa.icon-database
+            %td.text-right
+              %h3 Database
+            %td
+            %td
+            %td
+              .brace_part3
+          %tr
+            %td
+              %i.ico-color.ico-xs.ico-rounded.ico-hover.fa.icon-ok
+            %td.text-right
+              %h3 Testing
+            %td
+            %td
+            %td
+              .brace_part4
+    .row
+      .col-md-2
+      .col-md-10
+    .row
+      .col-md-2
+        full-stack
+      .col-md-2
+        full-time
+      .col-md-2
+        small groups
+      .col-md-2
+        good teachers
+      .col-md-2
+        full board
+      .col-md-2
+        real projects
+    .row
+      %header.text-center.margin-bottom-20
+        %h2
+          Modules
+        %p.lead.tooltip
+          Every two weeks we cover the fundamental topics, while going deeper with every iterations.
+          = image_tag "pie/green-info.jpg" , width: "15px"
+          %span.content
+            Use hover or click on the topics to get more info
+    .row
+      .col-md-3
+        .row
+          .col-md-4
+          .col-md-4
+            = image_tag "pie/1_4.png"
+        .row
+          .col-md-12
+            %h2.text-center Introduction
+        .row.block-md
+          .col-md-12
+            %p
+              Initial teaching happens in small groups where you will be able to ask questions immediately.
+              You will be building useful apps for real people throughout the course.
+            %p
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+                Basic box model
+                %span.content
+                  Boxes in boxes is a simple way to think about html. You'll learn a little about it's
+                  initial shortcomings and current standards.
+                  %br
+                  We introduce
+                  = link_to "Haml" , "http://haml.info/" , target: :blank
+                  as a shorter, more concise and error free way of writing correct html.
+                  %br
+                  Also you'll learn about the type of boxes and how they can be arranged, in other
+                  words the connection to css.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+                Style basics
+                %span.content
+                  If we think of html elements as boxes, then we can think of css as labels on these
+                  boxes. The label describes the box and importantly there is a finite number of
+                  labels.
+                  %br
+                  This is the basic distinction between content and style. Over the course you will
+                  learn more and more about the myriad of ways css can be used. Similar to Haml,
+                  =link_to "Sass" , "http://sass-lang.com/" , target: :blank
+                  is a shorthand and more semantic (but equivalent) way of writing css.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+                Object model
+                %span.content
+                  We are physical beings, and are well trained to think in terms of innate "things"
+                  having given properties. In one of the easiest to understand ways of programming
+                  we call the things object and their properties attributes.
+                  %br
+                  You will learn basic concepts of object oriented programming in Ruby, which is very
+                  thorough in it's approach to treating everything as an object, and the concept of
+                  class. We will see how procedural code (think cooking recipes) slot nicely into
+                  this model as methods.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+                Roles
+                %span.content
+                  Software development is all about teamwork. Even tools have got much better, so have timetables
+                  shrunk. In any meaningful project we rely on other people's strengths to achieve a goal.
+                  We will talk about the different roles and skills people have, not just to see
+                  what a software developer is, but also to open the scope of possibilities for your
+                  future career. People are best at what they enjoy and a large part of the course is
+                  finding out what you are good at.
+                  %br
+                  Also projects are heavily dependent on often open source libraries, tools and
+                  frameworks. The first of which are your os, editor, command-line and browser.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+                Object table model
+                %span.content
+                  SQL databases are a ubiquitous, well understood and efficient way to store data. The
+                  standard way of storing objects, maps classes to a tables and rows to objects.
+                  %br
+                  You will learn how this object table model is implemented in rails, or rather active
+                  record and try out the tools that come with it. We also talk a little bit about
+                  alternatives.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+                Testing as assurance
+                %span.content
+                  Testing has been more of a nice idea in software engineering for a long time, before
+                  finally, and especially in the ruby community, becoming a reality.
+                  %br
+                  There really is no other way to know that the software we write does what we intend
+                  it to do, as you will be able to experience yourself very quickly.
+                  %br
+                  You will learn different types of testing and we will touch on frameworks and test
+                  integration.
+
+      .col-md-3
+        .row
+          .col-md-4
+          .col-md-4
+            = image_tag "pie/2_4.png"
+        .row
+          .col-md-12
+            %h2.text-center Communication
+        .row.block-md
+          .col-md-12
+            %p
+              You will be assigned a younger student to explain the topic to.
+              You will notice that  to achieve the clarity needed to express yourself,
+              you will need to study yourself.
+            %p
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+                Dynamic html generation
+                %span.content
+                  Here you learn a little more about the DOM and and how it can be used to create
+                  simple dynamic pages, eg endless scrolling.
+                  %br
+                  We use existing tools and server side responses to generate html on the client.
+
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+                Semantic css / susy
+                %span.content
+                  Reviewing bootstrap html code we will see that it does not adhere to the content/style
+                  separation we learned. To do it right, we introduce the concept of semantic css. This
+                  gives meaningful names to our styles and lets them build ourselves.
+                  %br
+                  You'll earn
+                  =link_to  "Susy" , "http://susy.oddbird.net/" , target: :blank
+                  and how to build your own grid system.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+                Concurrency and closures
+                %span.content
+                  Concurrency, several or even many things happening at the same time, has been a
+                  difficult topic up to quite recently. You will learn better concurrency models like
+                  the actor model and channels. Especially actors are easy to understand and reason
+                  about since they just extend the object model to "active" objects.
+                  %br
+                  When a piece of code is passed of to another part of the program to be executed later,
+                  one talk of closures, and we will see the somewhat different light this shed on
+                  variable lifetime.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+                Advanced git
+                %span.content
+                  After having gained some hands on experience, you will understand the problems better
+                  and so we will go into more advanced usage of git.
+                  %br
+                  This will give you a glimpse into how large project are run, both in the open source
+                  world and in companies. After the theory you may choose to deepen this part or not,
+                  since in larger projects this is usually a separate role.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+                Searching
+                %span.content
+                  Going deeper into how to find objects in the database we learn about scopes, some
+                  simple sql clauses and how to actually use sql in queries.
+                  %br
+                  You will learn the tools to build complex search interfaces and use pagination
+                  on the results.
+              %br
+              %span.tooltip
+                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+                Continuous testing
+                %span.content
+                  The next step will be to integrate our test fully into our workflow. This simply means
+                  that no work should be accepted before adequate test are written and fixing bugs
+                  should always start by writing test.
+                  %br
+                  To make the should a reality we make testing automatic both for the developer, and
+                  for the current state of the committed source (in git). We will see the tools needed
+                  to alert us directly of any shortcomings.
+      .col-md-3
+        .row
+          .col-md-4
+          .col-md-4
+            = image_tag "pie/3_4.png"
+        .row
+          .col-md-12
+            %h2.text-center Presentation
+        .row.block-md
+          %p
+            You will give 2 presentations on your chosen topics(group and solo).
+          %p
+            Presentations are practical demonstrations of work you will have done,
+            and to do that work you will need to study the topics even more.
+          %p
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+              Dom, the api for Html
+              %span.content
+                The Document Object Model (
+                =link_to "DOM", "http://www.w3schools.com/js/js_htmldom.asp" , target: :blank
+                ) gives us a programmatic interface to the rendered
+                content. While html describes the static structure and a transport mechanism, the dom
+                gives us a way to programmatically create, update and delete arbitrary nodes.
+                %br
+                This is the foundation for the modern web and client side applications.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+              Bootstrap / Frameworks
+              %span.content
+                As in other language, css has libraries and frameworks that we can reuse. A modern
+                framework like Bootstrap or Foundation will not only make the basic html "look good".
+                %br
+                You will also learn about standard elements, eg modern navigation, menus, dropdowns,
+                callouts, buttons and many more. you'll see how a grid system works and how eg
+                bootstrap solves the multi-device issue.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+              Associations and structures
+              %span.content
+                Objects are great at modeling single entities, but in programs we need to model large
+                system, invariably containing many objects.
+                %br
+                You will learn about different data structures and their different properties. Like
+                how they are accessed, how they store data and which are good for what purpose.
+                %br
+                We will theoretically brush on O(n) and practically experiment with access and
+                iteration.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+              Git basics
+              %span.content
+                The sharing of code has always been very important but never as easy and efficient as
+                today, with git. Even more, online sharing sites like
+                =link_to "github.com", "https://github.com" , target: :blank
+                fuel open source community by sharing publicly and across projects.
+                %br
+                You'll learn the basic workflow and will practice this in your own projects.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+              Associations
+              %span.content
+                In the same way we need structures for programming, we need associations in databases.
+                You'll learn how associations are implemented and how they relate to the structures
+                we have learned in the programming sessions.
+                %br
+                We see how associations are implemented as in rails by using metaprogramming
+                techniques to create a very intuitive api.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+              Rspec framework
+              %span.content
+                In the second module we will concentrate on exploring and using RSpec, a commonly
+                used testing framework. We will be writing different test and use supporting tools
+                for creating mock object, managing database "cleanliness" and interacting as if our
+                test were a user.
+      .col-md-3
+        .row
+          .col-md-4
+          .col-md-4
+            = image_tag "pie/4_4.png"
+        .row
+          .col-md-12
+            %h2.text-center Mastery
+        .row.block-md
+          %p
+            You can choose your final assignment according to your interests and previous work.
+          %p
+            ​You will work in a group on a final project to show mastery of the topic.
+          %p
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+              Client side applications
+              %span.content
+                Going further into client side api's and cross compilation we examine languages
+                that can be used instead of using JavaScript directly, specifically
+                =link_to "coffee script" , "http://coffeescript.org/" , target: :blank
+                and
+                =link_to "opal" , "http://opalrb.org/" , target: :blank
+                %br
+                We will look at evolving tools to write client side applications, like
+                =link_to "volt" , "http://voltframework.com" , target: :blank
+                ,
+                =link_to "clearwater" , "https://github.com/clearwater-rb/clearwater" , target: :blank
+                and
+                =link_to "webix" , "http://opalphaser.com/" , target: :blank
+                You will also have an opportunity to look at pure JavaScript frameworks like
+                Angular, Ember, and Backbone.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+              Mobile first, breakpoints
+              %span.content
+                While learning about Bootstrap, we touched on the multi-device concept and now go
+                deeper into mobile first development. You'll learn what
+                =link_to  "Breakpoints" , "http://breakpoint-sass.com/" , target: :blank
+                are and how to implement one design that can be viewed on multiple devices.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+              Other languages
+              %span.content
+                Ruby is off course just one of many languages and since by the seventh week you will
+                have learned enough about it, we can start comparing it to other languages. Some of
+                which are similar, some strange, some very different.
+                %br
+                Off course we will also cover JavaScript basics and ways to avoid some of JavaScripts
+                strangeness by using languages that compile to JavaScript.
+                %br
+                You may also choose to learn a completely different language at this point, eg
+                = link_to  "Go" , "https://golang.org/" , target: :blank
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+              Communication skills
+              %span.content
+                Off course code is by far not the only way developers communicate and so we will
+                go into the importance of both communicating precisely both in documentation
+                and presentation.
+                %br
+                We will practice both areas and learn some modeling visualization on the way.
+                %br
+                Also we debunk the common misconception that open source means that ownership is
+                not important. This is especially important when wanting to collaborate in open
+                source projects, which you have a chance to.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+              Performance, NoSql
+              %span.content
+                We briefly look at database and application performance. The ways to scale, optimize
+                and benchmark. This is an advanced topic, but you will learn to understand the issues.
+                %br
+                Finally we will explore the alternatives a little, so called NoSql, the concept of
+                graph, object or document databases and possible uses.
+            %br
+            %span.tooltip
+              %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+              Client side testing
+              %span.content
+                Client side testing, like client side applications, is still quite young. But progress
+                has been made and especially with the ruby tools we will see how.
+                %br
+                At the same time we will go into more depth on testing JavaScript enhanced web sites
+                like the ones we will be building in this last module of the course.
+
+
+%section.padding-xxs.margin-20
+  .container
+    %header.text-center.margin-bottom-20
+      %h1 The web is still growing - grow with it
+      %p.lead.font-lato
+        We teach you all the basics so you can start a new career up to speed.
+      %p
+        Learning how the web works can start you off in many new directions.
+        Modern web technologies are most likely
+        to become the cornerstone of all future application: mobile, the web and desktop apps
+        are converging. There has never been a better time to jump on the train.
+    .divider.divider-center.divider-color
+      %i.fa.icon-angle-down
+    .row
+
+%section.padding-xxs
+  .container
+    %header.text-center.margin-bottom-20
+      %h1 Development is creative learning
+      %p.lead.font-lato
+        We help you to find your own talent
+      %p
+        Developing software is a very creative process that demands constant learning.
+        The field of web based application is expanding and already encompasses a wide variety
+        of tasks. We teach you the basic development skills and help you find which part of the
+        so called full stack is what you enjoy most. By the end of the 8 weeks you will be able
+        start as a junior developer or specialize deeper in an area that interests you.
+
+
+%section.padding-xxs
+  .container
+    %p.lead
+      Web Dev Camp is built and run by a team of experienced professionals
+    %p
+      Active professionals also participate in the teaching on a part time basis
+    .row.box-icon-large.text-center
+      .col-md-4.col-sm-6.flip-container.margin-bottom-20{:ontouchstart => "this.classList.toggle('hover');"}
+        .flipper
+          .frontt.box-default
+            .box-icon-title
+              = image_tag "torsten.png"
+              %h2 Torsten Ruger
+              %small Director / Teacher
+          .backk.box-default
+            %h4.nomargin Torsten Ruger
+            %small Director / Teacher
+            %hr/
+            %p
+              Torsten has worked for 25 years as a professional web programmer before starting
+              Web Dev Camp in an endeavor to share his experience.
+              %br
+              Torsten has programmed in many different languages, used many different standards,
+              led teams, architected systems but always found that learning and working with
+              people was what he enjoyed most about his profession.
+            %hr/
+            = social_link( "https://github.com/dancinglightning" , "github" ) do
+              %i.fa.icon-github
+              %i.fa.icon-github
+            = social_link( "https://github.com/rubyclerks" , "github" ) do
+              %img{ src: "https://avatars0.githubusercontent.com/u/6094466?v=3&s=200"}
+            = social_link( "https://github.com/salama" , "github" ) do
+              %img{ src: "https://avatars1.githubusercontent.com/u/7279238?v=3&s=200"}
+      .col-md-4.col-sm-6.flip-container.margin-bottom-20{:ontouchstart => "this.classList.toggle('hover');"}
+        .flipper
+          .frontt.box-default
+            .box-icon-title
+              =image_tag "sherif.png"
+              %h2 Sherif Abushadi
+              %small Director / Teacher
+          .backk.box-default
+            %h4.nomargin Sherif Abushadi
+            %small Director / Teacher
+            %hr/
+            %p
+              Sherif has been teaching developers since 2001, the last 4 of which at dev bootcamp
+              in San Francisco.
+              %br
+              He brought his experience to bear in building the school, it's course and curriculum.
+              %br
+              He also teaches part time at Web Dev Camp
+            %hr/
+            = social_link( "https://twitter.com/amgando" , "twitter" ) do
+              %i.fa.icon-twitter
+              %i.fa.icon-twitter
+            = social_link( "https://github.com/amgando" , "github" ) do
+              %i.fa.icon-github
+              %i.fa.icon-github
+            = social_link( "https://www.linkedin.com/in/sherifabushadi" , "linkedin" ) do
+              %i.fa.icon-linkedin
+              %i.fa.icon-linkedin
+      .col-md-4.col-sm-6.flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+        .flipper
+          .frontt.box-default
+            .box-icon-title
+              =image_tag "raisa.jpg"
+              %h2 Raisa Kaipainen
+              %small Camp director
+          .backk.box-default
+            %h4.nomargin Raisa Kaipainen
+            %small Camp Director
+            %hr/
+            %p
+              Raisa has been running workshops and courses for 25 years and organizes the running
+              of the camp.
+              %br
+              Raisa has excellent people skills and is always a good person to talk or ask advice.
+
+            %hr/
+            = social_link( "https://www.facebook.com/RaisaAndTorsten" , "facebook" ) do
+              %i.fa.icon-facebook
+              %i.fa.icon-facebook
+            = social_link( "https://soundcloud.com/raisa-andtorsten-kaipainen" , "soundcloud" ) do
+              %i.fa.icon-soundcloud
+              %i.fa.icon-soundcloud
