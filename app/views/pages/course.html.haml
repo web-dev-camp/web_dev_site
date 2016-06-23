@@ -5,39 +5,33 @@
 %section.padding-xxs.dark
   .container
     .row.text-white
-      %h1.text-center Web Development Bootcamp
+      %h1.text-center#course Web Development Course
     .row
-      .col-md-4.text-center
-        %h2 Live in
-        %p
-          In person
-          %br
-          in nature
-          %br
-          full board
       .col-md-4.text-center
         %h2 8 week
-        %p
-          6 days/week
-          %br
-          10 hours / day
-          %br
-          always tutored
+        .muub 6 days/week
+        .muub 10 hours / day
+        .muub always tutored
+
       .col-md-4.text-center
-        %h2 course
-        %p
-          Front end
-          %br
-          Back end
-          %br
-          Full Stack
-%section.padding-xxs
+        %h2 live in
+        .muub In person
+        .muub in nature
+        .muub full board
+
+      .col-md-4.text-center
+        %h2 bootcamp
+        .muub Full Stack
+        .muub real projects
+        .muub small groups
+
+%section.padding-xxs.no-bborder
   .container
     .row
-      %header.text-center.margin-bottom-20
-        %h2
+      %header.text-center.margin-bottom-30
+        %h1#modules
           Modules
-        %p.lead.tooltip
+        %p.tooltip.text-center.margin-bottom-30
           Every two weeks we cover the fundamental topics, while going deeper with every iterations.
           = image_tag "pie/green-info.jpg" , width: "15px"
           %span.content
@@ -387,13 +381,23 @@
                 %br
                 At the same time we will go into more depth on testing JavaScript enhanced web sites
                 like the ones we will be building in this last module of the course.
+    .divider.divider-center.divider-color
+      %i.fa.icon-angle-down
 
 %section.padding-xxs
   .container
-    %p.lead
-      Web Dev Camp is built and run by a team of experienced professionals
-    %p
-      Active professionals also participate in the teaching on a part time basis
+    .row
+      %header.text-center.margin-bottom-30
+        %h1#teachers
+          Teachers
+        %p.text-center.margin-bottom-30
+          Web Dev Camp's teacher's have
+          %b decades of experience
+          and started the camp
+          in an endeavor to increase
+          %b diversity in tech
+          and
+          %b change the way we learn.
     .row.box-icon-large.text-center
       .col-md-4.col-sm-6.flip-container.margin-bottom-20{:ontouchstart => "this.classList.toggle('hover');"}
         .flipper
@@ -473,31 +477,7 @@
             = social_link( "https://soundcloud.com/raisa-andtorsten-kaipainen" , "soundcloud" ) do
               %i.fa.icon-soundcloud
               %i.fa.icon-soundcloud
-
-%section.padding-xxs.margin-20
-  .container
-    %header.text-center.margin-bottom-20
-      %h1 The web is still growing - grow with it
-      %p.lead.font-lato
-        We teach you all the basics so you can start a new career up to speed.
-      %p
-        Learning how the web works can start you off in many new directions.
-        Modern web technologies are most likely
-        to become the cornerstone of all future application: mobile, the web and desktop apps
-        are converging. There has never been a better time to jump on the train.
-    .divider.divider-center.divider-color
-      %i.fa.icon-angle-down
     .row
-
-%section.padding-xxs
-  .container
-    %header.text-center.margin-bottom-20
-      %h1 Development is creative learning
-      %p.lead.font-lato
-        We help you to find your own talent
-      %p
-        Developing software is a very creative process that demands constant learning.
-        The field of web based application is expanding and already encompasses a wide variety
-        of tasks. We teach you the basic development skills and help you find which part of the
-        so called full stack is what you enjoy most. By the end of the 8 weeks you will be able
-        start as a junior developer or specialize deeper in an area that interests you.
+      .col-md-12.text-center
+        %p
+          Active professionals also participate in the teaching on a part time basis
