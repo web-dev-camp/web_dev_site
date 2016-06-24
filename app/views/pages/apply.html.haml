@@ -38,19 +38,7 @@
             - else
               = form_for(User.new, :as => :user, :url => registration_path(:user), :html => { :role => 'form'}) do |f|
                 %h2 Start by signing up
-                .form-group
-                  = f.label :name
-                  = f.text_field :name, :autofocus => true, class: 'form-control'
-                .form-group
-                  = f.label :email
-                  = f.email_field :email, class: 'form-control'
-                .form-group
-                  = f.label :password
-                  = f.password_field :password, class: 'form-control'
-                .form-group
-                  = f.label :password_confirmation
-                  = f.password_field :password_confirmation, class: 'form-control'
-                = f.submit 'Start', :class => 'button right'
+                = render :partial => "devise/registrations/form_body" , :locals => { :f => f }
     .row
       .col-lg-6.col-md-6.col-sm-6
         .heading-title.heading-border-bottom

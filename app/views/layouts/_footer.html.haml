@@ -34,15 +34,14 @@
         %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
           %li
-            %a{:href => "/apply"} Application process ready, first course in October
+            =link_to "Updated Privacy Policy" , page_path(:privacy)
+            %small 24 June 2016
+          %li
+            =link_to "Application process ready, first course in October" , page_path(:apply)
             %small 20 May 2016
           %li
-            %a{:href => "https://www.facebook.com/webdev.camp" , target: :blank}
-              Web Dev on Facebook!
+            =link_to "Web Dev on Facebook!" , "https://www.facebook.com/webdev.camp" , target: :blank
             %small 03 May 2016
-          %li
-            %a{:href => "/answers"} More answers to questions
-            %small 25 March 2016
       .col-md-3
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
         %ul.footer-links.list-unstyled
