@@ -18,7 +18,7 @@ module ApplicationHelper
 
   def sign_out_link
     ssl = Rails.env.production? ? {protocol: :https } : {}
-    link_to "Sign out" , destroy_user_session_url , method: :delete
+    link_to "Sign out" , destroy_user_session_url(ssl) , method: :delete
   end
 
   # define a bunch of defaults for the best_in_place call
