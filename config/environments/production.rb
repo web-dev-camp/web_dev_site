@@ -74,7 +74,7 @@ Rails.application.configure do
   # ActionMailer Config
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-        :address              => "smtp.zoho.com",
+        :address              => "smtp.yandex.com",
         :port                 => 465,
         :domain               => Rails.application.secrets.domain_name,
         :user_name            => Rails.application.secrets.admin_email,
