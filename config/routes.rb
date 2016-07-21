@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" }
 
-  resources :users ,  except: [:index , :new ]
+  resources :profile ,  except: [:index , :new ]
   resource  :resume , except: [:destroy , :new , :edit]
   get :application , to: "applies#show"
   post :application , to: "applies#create"
