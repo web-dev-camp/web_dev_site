@@ -22,6 +22,7 @@ gem 'sucker_punch'
 gem 'devise-async'
 
 gem "skylight"
+gem 'rollbar'
 
 group :development do
   gem 'web-console', '~> 2.0'

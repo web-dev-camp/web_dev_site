@@ -277,6 +277,8 @@ GEM
     ref (2.0.0)
     responders (2.1.2)
       railties (>= 4.2.0, < 5.1)
+    rollbar (2.11.2)
+      multi_json
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -407,6 +409,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  rollbar
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
