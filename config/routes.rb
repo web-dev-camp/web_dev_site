@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  #legacy
+  get '/dev',   to: redirect("/course")
+  get '/web',   to: redirect("/course")
+  get '/method',  to: redirect("/course")
+  get '/teachers',to: redirect("/course#teachers")
 
   namespace :admin do
     resources :users
