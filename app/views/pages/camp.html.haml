@@ -1,59 +1,38 @@
 - title! "The Camp"
 - description! "The camp is an old school in Finland. Accommodation and board is included in the course. Beautiful nature"
-%section.padding-xxs
-  .container
-    .row
-      .col-lg-4.col-md-5.col-sm-6.col-xs-12
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              =image_tag("villa_taika.jpg")
-            .swiper-slide
-              =raw delayed_image("orange.jpg")
-            .swiper-slide
-              =raw delayed_image("garden.jpg")
-          .swiper-pagination
-          .swiper-button-next
-          .swiper-button-prev
-        :javascript
-          var swiper_options = { }
-      .col-lg-8.col-md-7.col-sm-6.col-xs-12
-        .heading-title.heading-border-bottom
-          %h1 Live-in and learn
-        %blockquote
-          %p
-            Research show that you learn better with less distraction.
-          /%cite Albert Einstein
-        %p
-          Removing the noise of you're everyday life lets you concentrate on learning and
-          you will find that you can make progress in ways you had not imagined.
-        %p
-          Also this frees the time and cost incurred with living on your own.
-          We do not just provide a bed, but three meals a day and organize recreational activities.
 
+%section.fullheight.parallax{:style => "background-image: url('#{image_url("camp_vt.jpg")}'); background-position: 50% 0px;"}
+  .display-table
+    .display-table-cell.vertical-align-middle
+      .container
+        .slider-featured-text.text-center
+          %h1.text-white
+            Welcome to Villa Taika
+          %h2.weight-300.text-white.fadeInUp Live and Learn
+          %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
 %section.padding-xxs
   .container
     .row
-      .blog-post-item.col-md-4.col-sm-6.col-xs-12
-        %h2
-          Restoring nature
-        %figure.margin-bottom-20
-          = image_tag "garden.jpg"
-        %p
-          Whenever you need a break, and believe us you will, let the surrounding nature restore
-          your strengths.
-          %br
-          Light physical activity will also help to restore your mental powers.
-      .blog-post-item.col-md-4.col-sm-6.col-xs-12
+      .blog-post-item.col-md-6.col-sm-6.col-xs-12
         %h2
           Beautiful rooms
         %figure.margin-bottom-20
-          = image_tag "orange.jpg"
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide
+                =raw delayed_image("orange.jpg")
+              .swiper-slide
+                =raw delayed_image("garden.jpg")
+            .swiper-pagination
+            .swiper-button-next
+            .swiper-button-prev
+          :javascript
+            var swiper_options = { }
         %p
           Stay on site in our beautifully decorated rooms.
           %br
-          Enjoy the little time you'll have to relax.
-      .blog-post-item.col-md-4.col-sm-6.col-xs-12
+          Enjoy the time you'll have to relax.
+      .blog-post-item.col-md-6.col-sm-6.col-xs-12
         %h2
           Good food
         %figure.margin-bottom-20
@@ -63,6 +42,17 @@
           %br
           ​Breakfast and lunch are provided and you are free to time and shape your evening intake
           yourself.
+
+%section.fullheight.parallax{:style => "background-image: url('#{image_url("camp_garden.jpg")}'); background-position: 50% 0px;"}
+  .display-table
+    .display-table-cell.vertical-align-middle
+      .container
+        .slider-featured-text.text-center
+          %h1.text-white
+            Relax
+          %h2.weight-300.text-white.wow.fadeInUp Recharge your batteries in between work
+          %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+
 %section.padding-xxs
   .container
     .row

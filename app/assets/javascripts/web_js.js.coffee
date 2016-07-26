@@ -46,3 +46,9 @@ $(document).ready ->
     content = $(this).find('.content').detach().show()
     $(this).tooltipster content: content , maxWidth: 300 ,  theme: 'tooltipster-shadow'
   return
+
+$(document).ready ->
+  _headerHeight = jQuery("#header").outerHeight()
+  _screenHeight = jQuery(window).height() - _headerHeight
+  jQuery('.fullheight').height _screenHeight
+  return
