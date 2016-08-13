@@ -16,6 +16,7 @@ gem 'pundit'
 gem 'simple_form'
 gem 'animate-scss' , :github => "ejholmes/animate.scss"
 gem "best_in_place"
+gem 'rack-attack'
 
 #asynchronous sending
 gem 'sucker_punch'
