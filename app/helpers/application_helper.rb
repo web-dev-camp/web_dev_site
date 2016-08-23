@@ -18,11 +18,12 @@ module ApplicationHelper
 
   def sign_out_link
     ssl = Rails.env.production? ? {protocol: :https } : {}
-    link_to "Sign out" , destroy_user_session_url(ssl) 
+    link_to "Sign out" , destroy_user_session_url(ssl)
   end
 
   # define a bunch of defaults for the best_in_place call
-  def resume_in_place field , txt  , attributes = {}
+  def resume_in_place field , attributes = {}
+    txt = I18n.t("resumes.#{field}")
     br = proc {|txtt| raw(txtt.to_s.gsub("\n" , "<br>")) }
     defaults = { :url => resume_path , place_holder: txt , display_with: br}
     unless [:street , :city , :country].include? field
