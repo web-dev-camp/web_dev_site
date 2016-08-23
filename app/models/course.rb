@@ -5,6 +5,7 @@ class Course < ActiveRecord::Base
   def full_name
     name = self.name
     name += "(#{self.extra})" unless self.extra.blank?
-    name + " starts " + self.start.to_date.to_s
+    name += " starts "
+    name + I18n.l(self.start.to_date , format: :long)
   end
 end
