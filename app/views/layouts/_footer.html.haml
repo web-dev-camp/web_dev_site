@@ -59,7 +59,7 @@
             %li= link_to "Resume" ,   resume_path
           -else
             %li
-              = simple_form_for(:user, :url => session_path(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
+              = simple_form_for(:user, :url => session_url(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
                 .input-group
                   %span.input-group-addon
                     %i.fa.icon-mail

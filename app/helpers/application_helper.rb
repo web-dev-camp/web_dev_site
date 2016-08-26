@@ -13,9 +13,15 @@ module ApplicationHelper
     raw("<div class='swiper-lazy-preloader swiper-lazy-preloader-white'></div>")
   end
 
+  def ssl_hash
+    Rails.env.production? ? {protocol: :https } : {}
+  end
   def sign_out_link
-    ssl = Rails.env.production? ? {protocol: :https } : {}
-    link_to "Sign out" , destroy_user_session_url(ssl)
+    link_to "Sign out" , destroy_user_session_url(ssl_hash)
+  end
+
+  def secure_registration
+    registration_url(:user , ssl_hash )
   end
 
   # define a bunch of defaults for the best_in_place call

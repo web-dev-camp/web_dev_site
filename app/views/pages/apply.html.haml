@@ -36,7 +36,7 @@
                 and fill in your details.Once that is done you can apply for a certain date.
 
             - else
-              = form_for(User.new, :as => :user, :url => registration_url(:user ) , :html => { :role => 'form'}) do |f|
+              = form_for(User.new, :as => :user, :url => secure_registration , :html => { :role => 'form'}) do |f|
                 %h2 Start by signing up
                 = render :partial => "devise/registrations/form_body" , :locals => { :f => f }
     .row
