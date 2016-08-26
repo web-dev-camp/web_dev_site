@@ -14,6 +14,7 @@ describe "Site integrity"  do
     page.all("a").each do |p|
       ref = p[:href]
       next if @pages.has_key? ref
+      next unless ref
       @pages[ref] = false
       walks ref
     end

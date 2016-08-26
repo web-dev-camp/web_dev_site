@@ -18,26 +18,9 @@ feature 'User profile page', :devise do
   scenario 'user sees own profile' do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    visit profile_path(user)
-    expect(page).to have_content 'User'
-    expect(page).to have_content user.email
+    visit edit_user_registration_path
+    expect(page).to have_content 'Password confirmation'
+    expect(find_field('user_email').value).to eq user.email
   end
 
-  # Scenario: User cannot see another user's profile
-  #   Given I am signed in
-  #   When I visit another user's profile
-  #   Then I see an 'access denied' message
-  scenario "user cannot see another user's profile" do
-    me = FactoryGirl.create(:user)
-    other = FactoryGirl.create(:user, email: 'other@example.com')
-    login_as(me, :scope => :user)
-    Capybara.current_session.driver.header 'Referer', root_path
-    visit profile_path(other)
-    expect(page).to have_content 'web technologies almost'
-  end
-
-  scenario "Fail graceful for non-existant user" do
-    visit "profile/12345"
-    expect(page).to have_content 'Sign in'
-  end
 end
