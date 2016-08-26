@@ -12,9 +12,6 @@ module ApplicationHelper
     image_tag( "brands/1.jpg" ,  "data-src" => asset_path(pic) , class: 'swiper-lazy') +
     raw("<div class='swiper-lazy-preloader swiper-lazy-preloader-white'></div>")
   end
-  def brr txt
-    txt
-  end
 
   def sign_out_link
     ssl = Rails.env.production? ? {protocol: :https } : {}
