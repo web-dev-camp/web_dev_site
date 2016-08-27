@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/web',   to: redirect("/course")
   get '/method',  to: redirect("/course")
   get '/teachers',to: redirect("/course#teachers")
+  get '/apply',   to: redirect( "users/sign_up" )
 
   namespace :admin do
     resources :users
