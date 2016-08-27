@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  force_ssl 
 
   protected
 
