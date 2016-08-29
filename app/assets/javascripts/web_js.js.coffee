@@ -21,19 +21,20 @@ jQuery(document).ready ->
     new Swiper('.swiper-container', $.extend({}, default_options, swiper_options) )
   return
 
-jQuery(document).ready ->
-  # fadeIn needs to be an available animate class, ie included
-  jQuery('.js-rotating').Morphext({separator: ";" , animation: "fadeIn" , speed: 6000})
-  return
-
 $(document).ready ->
   ### Activating Best In Place ###
   jQuery('.best_in_place').best_in_place()
   return
 
 $(document).ready ->
+  $.ajax(url: "/resume/progress").done (html) ->
+    $("#progress").html html
+
+$(document).ready ->
   $('.best_in_place').bind 'ajax:success', ->
     @innerHTML = @innerHTML.replace(/\n/g, '<br/>')
+    $.ajax(url: "/resume/progress").done (html) ->
+      $("#progress").html html
     return
 
 $(document).ready ->

@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" }
 
-  resource  :resume , except: [:destroy , :new , :edit]
+  resource  :resume , except: [:destroy , :new , :edit] do
+    get :progress, on: :member
+  end
   get :application , to: "applies#show"
   post :application , to: "applies#create"
   post :cancel_application , to: "applies#cancel"

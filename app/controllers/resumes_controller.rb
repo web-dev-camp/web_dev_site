@@ -1,8 +1,12 @@
 class ResumesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_resume, only: [:show, :edit, :update ]
+  before_action :set_resume, only: [:show, :edit, :update , :progress ]
 
   def show
+  end
+
+  def progress
+    render layout: false
   end
 
   # PATCH/PUT /resumes/1.json

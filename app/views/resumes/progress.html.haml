@@ -1,0 +1,28 @@
+- if percent == "100%"
+  - if current_user.application
+    .row
+      .col-md-8.col-sm-8
+        %br
+        %p
+          Your Application has been submitted, see it
+          = link_to "here" , application_path
+  - else
+    .callout.alert.alert-default.margin-top-60.margin-bottom-60
+      .row
+        .col-md-8.col-sm-8
+          %h4
+            You can now apply for specific dates.
+        .col-md-4.col-sm-4.text-right
+          = link_to "APPLY" , application_path , class: "btn btn-primary"
+- else
+  .row
+    .col-md-8.col-sm-8
+      %br
+      Tell us about yourself and why you want to become a developer.
+      %br
+      Click on the fields to edit.
+      While editing, clicking outside the box cancels.
+      %br
+      .progress
+        .progress-bar.progress-bar-primary{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: #{percent}; min-width: 2em;"}
+          =percent

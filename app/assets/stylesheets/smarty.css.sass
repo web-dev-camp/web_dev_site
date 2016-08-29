@@ -739,6 +739,55 @@ ul.list-icons
     float: none
     display: block
 
+
+/** 05. Progress Bars & Pie Charts
+ **************************************************************** *
+
+.progress
+  overflow: visible
+  background: rgba(0, 0, 0, 0.1)
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  -o-box-shadow: none
+  box-shadow: none
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+
+section.dark .progress
+  background-color: #333
+
+.progress
+  &.progress-xxs
+    height: 3px
+  &.progress-xs
+    height: 6px
+  &.progress-lg
+    height: 36px
+    overflow: hidden
+    span
+      line-height: 36px
+      text-overflow: ellipsis
+      white-space: nowrap
+      &.inline-text
+        text-align: left
+        padding: 8px
+        display: block
+        font-size: 14px
+        position: absolute
+        min-width: 50%
+
+.progress-bar-default
+  background-color: rgba(11, 11, 11, 0.9)
+
+/* align
+
+.progress-bar
+  &.text-left > span
+    padding-left: 10px
+  &.text-right > span
+    padding-right: 10px
+    
 /** 06. Dropcap
  **************************************************************** *
 
