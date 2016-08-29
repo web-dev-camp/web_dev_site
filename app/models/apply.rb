@@ -1,5 +1,5 @@
 class Apply < ActiveRecord::Base
-  PLANS =     { free: "Free - Only applies on the free course" ,
+  PLANS =     { free: "Free places - Only for women for 26.9" ,
                 standard: "2100¢ - 8 week prepayment, no cancellation" ,
                 flex: "2400¢ - 8 week prepayment, 2 week cancellation" ,
                 super_flex: "2900¢ - 2 week prepayment, stop anytime" }
