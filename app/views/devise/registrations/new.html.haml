@@ -10,9 +10,9 @@
           %ul
             %li Be sure
             %li Sign up
-            %li Take as much time as you need to fill out your resume info
+            %li Fill out the information on your resume
             %li Apply for a certain date (2 options) 1-3 month in the future
-            %li Supply more information if asked to
+            %li Supply supplemental information
             %li Skype interview
             %li Confirmation
             %li Ensure and transfer initial funds (two weeks for this)
@@ -33,7 +33,7 @@
               %p
                 Your are signed in, head over to the
                 =link_to "resume" , resume_path
-                and fill in your details.Once that is done you can apply for a certain date.
+                and fill in your details. Once that is done you can apply for a certain date.
 
             - else
               = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f|
