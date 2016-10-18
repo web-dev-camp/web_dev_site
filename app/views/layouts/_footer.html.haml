@@ -34,15 +34,15 @@
         %h4.letter-spacing-1 LATEST UPDATES
         %ul.footer-posts.list-unstyled
           %li
+            =link_to "First course well on it's way" , "https://www.facebook.com/webdev.camp/posts/351318965207738" , target: :blank
+            %small 06 Oct 2016
+          %li
             =link_to "Updated Privacy Policy" , page_path(:privacy)
             %small 24 June 2016
           %li
             =link_to "Application process ready, first course 26.9" ,  new_user_registration_path
 
             %small 20 May 2016
-          %li
-            =link_to "Web Dev on Facebook!" , "https://www.facebook.com/webdev.camp" , target: :blank
-            %small 03 May 2016
       .col-md-3
         %h4.letter-spacing-1 EXPLORE Web Dev Camp
         %ul.footer-links.list-unstyled
@@ -77,6 +77,14 @@
           %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "https://www.facebook.com/webdev.camp", :title => "Facebook" , target: :blank }
             %i.icon-facebook
             %i.icon-facebook
+        .margin-top-20
+          %a.social-icon.social-icon-border.social-twitter.pull-left{"data-placement" => "top",  :href => "https://twitter.com/webdev_camp", :title => "Twitter" , target: :blank }
+            %i.icon-twitter
+            %i.icon-twitter
+        .margin-top-20
+          %a.social-icon.social-icon-border.social-instagram.pull-left{"data-placement" => "top",  :href => "https://www.instagram.com/webdev.camp/", :title => "Instagram" , target: :blank }
+            %i.icon-instagram
+            %i.icon-instagram
   .copyright
     .container
       %ul.pull-right.nomargin.list-inline.mobile-block
