@@ -27,8 +27,10 @@ $(document).ready ->
   return
 
 $(document).ready ->
-  $.ajax(url: "/resume/progress").done (html) ->
-    $("#progress").html html
+  bar = jQuery("#progress")
+  if(bar.length > 0)
+    $.ajax(url: "/resume/progress").done (html) ->
+      bar.html html
 
 $(document).ready ->
   $('.best_in_place').bind 'ajax:success', ->

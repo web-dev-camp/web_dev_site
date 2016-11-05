@@ -1,7 +1,11 @@
 FactoryGirl.define do
   factory :course do
-    name "First Course"
+    sequence :name do |n|
+      "Course #{n}"
+    end
     extra "With Extras"
-    start "2016-06-17"
+    sequence :start do |n|
+      Time.now - 2.weeks + (n*2).weeks
+    end 
   end
 end

@@ -1,5 +1,3 @@
-include Warden::Test::Helpers
-Warden.test_mode!
 
 # Feature: User edit
 #   As a user
