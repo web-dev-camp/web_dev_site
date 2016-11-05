@@ -12,7 +12,7 @@ feature 'Applies' do
   scenario 'Send Application' do
     within "#apply_primary_choice_course_id" do
       courses = page.find_all("option")
-      expect(courses.length).to be 3
+      expect(courses.length).to be 2
     end
   end
 
