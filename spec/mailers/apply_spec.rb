@@ -7,7 +7,7 @@ RSpec.describe ApplyMailer, type: :mailer do
     it "renders the headers" do
       expect(mail.subject).to match("submitted")
       expect(mail.to).to eq(["test@example.com"])
-      expect(mail.from).to eq(["info@webdev.camp"])
+      expect(mail.from).to eq(["admission@webdev.camp"])
     end
 
     it "renders the body" do
@@ -21,8 +21,8 @@ RSpec.describe ApplyMailer, type: :mailer do
     it "renders the headers" do
       expect(mail.subject).to match("cancelled")
       expect(mail.to).to eq(["test@example.com"])
-      expect(mail.bcc).to eq(["info@webdev.camp"])
-      expect(mail.from).to eq(["info@webdev.camp"])
+      expect(mail.bcc).to eq(["admission@webdev.camp"])
+      expect(mail.from).to eq(["admission@webdev.camp"])
     end
 
     it "renders the body" do

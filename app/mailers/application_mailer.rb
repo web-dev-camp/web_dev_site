@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "info@webdev.camp" , bcc: "info@webdev.camp"
+  default from: "admission@webdev.camp" , bcc: "admission@webdev.camp"
   layout 'mailer'
 end
