@@ -16,8 +16,8 @@ module ApplicationHelper
   def ssl_hash
     Rails.env.production? ? {protocol: :https } : {}
   end
-  def sign_out_link
-    link_to "Sign out" , destroy_user_session_url(ssl_hash)
+  def sign_out_link opt = {}
+    link_to "Sign out" , destroy_user_session_url(ssl_hash) , opt
   end
 
   def secure_registration

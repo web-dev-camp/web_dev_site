@@ -19,18 +19,8 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = render 'layouts/slidetop'
     #wrapper
-      #header.sticky.clearfix
-        %header#topNav
-          .container
-            / Mobile Menu Button
-            %button.btn.btn-mobile{"data-target" => ".nav-main-collapse", "data-toggle" => "collapse"}
-              %i.fa.icon-menu
-            %a.logo.pull-left{:href => page_path(:index)}
-              = image_tag "web_logo.png" , class: :desktop
-              = image_tag "web_logo_mobile.png" , class: :mobile
-            = render 'layouts/navigation'
+      = render 'layouts/navigation'
       = render 'layouts/messages'
       = yield
     = render 'layouts/footer'

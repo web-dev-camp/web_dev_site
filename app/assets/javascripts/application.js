@@ -13,15 +13,11 @@
 //= require jquery2
 //= require jquery_ujs
 //= require best_in_place
-//= require bootstrap/alert
-//= require bootstrap/collapse
-//= require bootstrap/dropdown
-//= require bootstrap/tab
-//= require bootstrap/transition
-//= require bootstrap/tooltip
-//= require bootstrap/popover
-//= require scripts
+//= require tether
+//= require bootstrap
 //= require swiper.jquery
 //= require morphext
 //= require web_js
-//= require  tooltipster.bundle
+//= require tooltipster.bundle
+
+//   mixitup

@@ -1,14 +1,18 @@
-.navbar-collapse.pull-right.nav-main-collapse.collapse
-  %nav.nav-main
 
-    %ul#topMain.nav.nav-pills.nav-main
-      %li= link_to "Course" , page_path(:course)
-      %li= link_to "Camp" ,   page_path(:camp)
-      %li= link_to "Apply" ,  new_user_registration_path
-      %li= link_to "Q & A" ,  page_path(:answers)
+%nav.navbar.navbar-light.bg-faded.navbar-fixed-top
+  %button.navbar-toggler.hidden-lg-up{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
+  #navbarResponsive.collapse.navbar-toggleable-md
+    %a.navbar-brand{:href => page_path(:index) }
+      = image_tag "web_logo.png" , width: "250px"
+      = #image_tag "web_logo_mobile.png" , class: :mobile
+    %ul.nav.navbar-nav
+      %li.nav-item= link_to "Course" , page_path(:course) , class: "nav-link"
+      %li.nav-item= link_to "Camp" ,   page_path(:camp) , class: "nav-link"
+      %li.nav-item= link_to "Apply" ,  new_user_registration_path , class: "nav-link"
+      %li.nav-item= link_to "Q & A" ,  page_path(:answers) , class: "nav-link"
       -if user_signed_in?
-        %li.visible-xs= sign_out_link
-        %li.visible-xs= link_to "Account" ,  edit_user_registration_path
+        %li.visible-xs.nav-item= sign_out_link  class: "nav-link"
+        %li.visible-xs.nav-item= link_to "Account" ,  edit_user_registration_path , class: "nav-link"
       -else
-        %li.visible-xs= link_to "Sign in" , new_user_session_path
-        %li.visible-xs= link_to "Sign up" , new_user_registration_path
+        %li.visible-xs.nav-item= link_to "Sign in" , new_user_session_path, class: "nav-link"
+        %li.visible-xs.nav-item= link_to "Sign up" , new_user_registration_path, class: "nav-link"
