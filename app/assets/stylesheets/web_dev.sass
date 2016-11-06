@@ -1,3 +1,30 @@
+@import "bootstrap/mixins"
+
+
+$marign: 60px
+
+.nav
+  a
+    font-size: 1.3em !important
+  li
+    padding-top: 11px
+
+.main
+  margin-top: 80px
+
+.centered
+  text-align: center
+
+.section
+  .container
+    margin-top: $marign
+    margin-bottom: $marign
+    h1
+      margin-bottom: $marign
+
+img
+  @include img-fluid
+
 /**	Proxima nova
  **************************************************** *
 @font-face

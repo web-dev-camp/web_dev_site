@@ -2,40 +2,39 @@
 - description! "Web Dev Camp has 4 modules of 2 weeks. introduction, communication, presentation to mastery"
 
 
-%section.padding-xxs.dark
+.section.dark
   .container
     .row.text-white
-      %h1.text-center#course Web Development Course
+      %h1.centered Web Development Course
     .row
-      .col-md-4.text-center
+      .col-md-4.centered
         %h2 8 week
         .muub 6 days/week
         .muub 10 hours / day
         .muub always tutored
 
-      .col-md-4.text-center
+      .col-md-4.centered
         %h2 live in
         .muub In person
         .muub in nature
         .muub full board
 
-      .col-md-4.text-center
+      .col-md-4.centered
         %h2 bootcamp
         .muub Full Stack
         .muub real projects
         .muub small groups
 
-%section.padding-xxs.no-bborder
+.section
   .container
     .row
-      %header.text-center.margin-bottom-30
-        %h1#modules
-          Modules
-        %p.tooltip.text-center.margin-bottom-30
-          Every two weeks we cover the fundamental topics, while going deeper with each iteration.
-          = image_tag "pie/green-info.jpg" , width: "15px"
-          %span.content
-            Use hover or click on the topics to get more info
+      %h1#modules.centered
+        Modules
+      %p.tooltip.centered.margin-bottom-30
+        Every two weeks we cover the fundamental topics, while going deeper with each iteration.
+        = image_tag "pie/green-info.jpg" , width: "15px"
+        %span.content
+          Use hover or click on the topics to get more info
     .row
       .col-md-3
         .row
@@ -44,7 +43,7 @@
             = image_tag "pie/1_4.png"
         .row
           .col-md-12
-            %h2.text-center Introduction
+            %h2.centered Introduction
         .row.block-md
           .col-md-12
             %p
@@ -136,7 +135,7 @@
             = image_tag "pie/2_4.png"
         .row
           .col-md-12
-            %h2.text-center Communication
+            %h2.centered Communication
         .row.block-md
           .col-md-12
             %p
@@ -218,7 +217,7 @@
             = image_tag "pie/3_4.png"
         .row
           .col-md-12
-            %h2.text-center Presentation
+            %h2.centered Presentation
         .row.block-md
           %p
             You will give 2 presentations on your chosen topics (group and solo).
@@ -299,7 +298,7 @@
             = image_tag "pie/4_4.png"
         .row
           .col-md-12
-            %h2.text-center Mastery
+            %h2.centered Mastery
         .row.block-md
           %p
             You can choose your final assignment according to your interests and previous work.
@@ -384,13 +383,13 @@
     .divider.divider-center.divider-color
       %i.fa.icon-angle-down
 
-%section.padding-xxs
+.section
   .container
     .row
-      %header.text-center.margin-bottom-30
+      %header.centered.margin-bottom-30
         %h1#teachers
           Teachers
-        %p.text-center.margin-bottom-30
+        %p.centered.margin-bottom-30
           Web Dev Camp's teachers have
           %b decades of experience
           and started the camp
@@ -398,7 +397,7 @@
           %b diversity in tech
           and
           %b change the way we learn.
-    .row.box-icon-large.text-center
+    .row.box-icon-large.centered
       .col-md-4.col-sm-6.flip-container.margin-bottom-20{:ontouchstart => "this.classList.toggle('hover');"}
         .flipper
           .frontt.box-default
@@ -479,6 +478,6 @@
               %i.fa.icon-soundcloud
               %i.fa.icon-soundcloud
     .row
-      .col-md-12.text-center
+      .col-md-12.centered
         %p
           Active professionals also participate in the teaching on a part time basis

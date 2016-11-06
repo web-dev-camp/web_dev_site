@@ -54,14 +54,14 @@ img {
 // to make views framework-neutral
 .column {
   @extend .col-md-6;
-  @extend .text-center;
+  @extend .centered;
   }
 .form {
   @extend .col-md-6;
   }
 .form-centered {
   @extend .col-md-6;
-  @extend .text-center;
+  @extend .centered;
   }
 .submit {
   @extend .btn;

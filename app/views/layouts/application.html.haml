@@ -19,18 +19,19 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    #wrapper
+    .header
       = render 'layouts/navigation'
       = render 'layouts/messages'
+    .main
       = yield
     = render 'layouts/footer'
-  %a#toTop{:href => "#"}
-  - if Rails.env.production?
-    :javascript
-      window.__lo_site_id = 59342;
+    %a#toTop{:href => "#"}
+    - if Rails.env.production?
+      :javascript
+        window.__lo_site_id = 59342;
 
-      	(function() {
-      		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-      		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
-      		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-      	  })();
+        	(function() {
+        		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+        		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+        		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+        	  })();

@@ -5,7 +5,7 @@
     %a.navbar-brand{:href => page_path(:index) }
       = image_tag "web_logo.png" , width: "250px"
       = #image_tag "web_logo_mobile.png" , class: :mobile
-    %ul.nav.navbar-nav
+    %ul.nav.navbar-nav.float-md-right
       %li.nav-item= link_to "Course" , page_path(:course) , class: "nav-link"
       %li.nav-item= link_to "Camp" ,   page_path(:camp) , class: "nav-link"
       %li.nav-item= link_to "Apply" ,  new_user_registration_path , class: "nav-link"
