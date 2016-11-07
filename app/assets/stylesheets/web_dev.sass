@@ -25,12 +25,30 @@ $marign: 60px
     h1
       margin-bottom: $marign
 
-.spacer-big
-  clear: both
-  margin-top: 80px
+  .spacer-big
+    clear: both
+    margin-top: 80px
+    &::before
+      content: "\00a0"
+
+  .space-30
+    margin-bottom: 30px
+  .space-20
+    margin-bottom: 20px
+
+  .space-30 .space-20 .spacer-big
+    &::after
+      content: "\00a0"
 
 img
   @include img-fluid
+
+h1 , h2 , h3
+  font-family: "Raleway", "ProximaNova", Arial, Helvetica, sans-serif
+  font-weight: 600
+h4 , h5 , h6
+  font-family: "Raleway", "ProximaNova", Arial, Helvetica, sans-serif
+  font-weight: 300
 
 .parallax
   height: 500px
