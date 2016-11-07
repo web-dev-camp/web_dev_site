@@ -30,7 +30,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'better_errors'
-  gem 'capistrano'
+  gem 'capistrano', "3.4.1"
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rails-console'
