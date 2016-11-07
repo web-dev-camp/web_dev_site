@@ -8,12 +8,15 @@ $marign: 60px
     font-size: 1.3em !important
   li
     padding-top: 11px
+    padding-right: 11px
 
 .main
   margin-top: 80px
 
 .centered
   text-align: center
+.white
+  color: white
 
 .section
   .container
@@ -22,10 +25,36 @@ $marign: 60px
     h1
       margin-bottom: $marign
 
+.spacer-big
+  clear: both
+  margin-top: 80px
+
 img
   @include img-fluid
 
-footer
+.parallax
+  height: 500px
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+section.parallax
+  margin-top: 0px
+
+.big_heading
+  text-align: center
+  margin-top: $marign
+  margin-bottom: $marign
+  font-size: 4em
+  font-weight: 500
+
+.medium_heading
+  text-align: center
+  margin-top: $marign / 2
+  margin-bottom: $marign / 2
+  font-size: 3em
+  font-weight: 300
 
 /**	Proxima nova
  **************************************************** *
@@ -489,9 +518,6 @@ footer
     width: 100%
     height: 100%
 
-
-section.parallax
-  margin-top: 0px
 
 .display-table
   display: table

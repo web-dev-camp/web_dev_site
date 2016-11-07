@@ -2,14 +2,16 @@
 - description! "The camp is an old school in Finland. Accommodation and board is included in the course. Beautiful nature"
 
 .section.fullheight.parallax{:style => "background-image: url('#{image_url("camp/camp_vt.jpg")}'); background-position: 50% 0px;"}
-  .display-table
-    .display-table-cell.vertical-align-middle
-      .container
-        .slider-featured-text.centered
-          %h1.text-white
-            Welcome to Villa Taika
-          %h2.weight-300.text-white.fadeInUp Live and Learn
-          %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+  .container
+    .spacer-big
+      &nbsp;
+    .big_heading.white
+      Welcome to Villa Taika
+    .medium_heading
+      Live and Learn
+    .medium_heading
+      %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+
 .section
   .container
     .row
@@ -17,25 +19,34 @@
         %h2
           Beautiful rooms
         %figure.margin-bottom-20
-          .swiper-container
-            .swiper-wrapper
-              .swiper-slide
-                =raw delayed_image("camp/orange.jpg")
-              .swiper-slide
-                =raw delayed_image("camp/green.jpg")
-              .swiper-slide
-                =raw delayed_image("camp/rose.jpg")
-              .swiper-slide
-                =raw delayed_image("camp/sky.jpg")
-              .swiper-slide
-                =raw delayed_image("camp/lootus.jpg")
-              .swiper-slide
-                =raw delayed_image("camp/saffron.jpg")
-            .swiper-pagination
-            .swiper-button-next
-            .swiper-button-prev
-          :javascript
-            var swiper_options = { }
+          #camp-carousel.carousel.slide{"data-ride" => "carousel"}
+            %ol.carousel-indicators
+              %li.active{"data-slide-to" => "0", "data-target" => "#camp-carousel"}
+              %li{"data-slide-to" => "1", "data-target" => "#camp-carousel"}
+              %li{"data-slide-to" => "2", "data-target" => "#camp-carousel"}
+              %li{"data-slide-to" => "3", "data-target" => "#camp-carousel"}
+              %li{"data-slide-to" => "4", "data-target" => "#camp-carousel"}
+              %li{"data-slide-to" => "5", "data-target" => "#camp-carousel"}
+            .carousel-inner{:role => "listbox"}
+              .carousel-item.active
+                =image_tag("camp/orange.jpg")
+              .carousel-item
+                =image_tag("camp/green.jpg")
+              .carousel-item
+                =image_tag("camp/rose.jpg")
+              .carousel-item
+                =image_tag("camp/sky.jpg")
+              .carousel-item
+                =image_tag("camp/lootus.jpg")
+              .carousel-item
+                =image_tag("camp/saffron.jpg")
+            %a.left.carousel-control{"data-slide" => "prev", :href => "#camp-carousel", :role => "button"}
+              %span.icon-prev{"aria-hidden" => "true"}
+              %span.sr-only Previous
+            %a.right.carousel-control{"data-slide" => "next", :href => "#camp-carousel", :role => "button"}
+              %span.icon-next{"aria-hidden" => "true"}
+              %span.sr-only Next
+
         %p
           Stay on site in our beautifully decorated rooms.
           %br
@@ -52,14 +63,13 @@
           yourself.
 
 .section.fullheight.parallax{:style => "background-image: url('#{image_url("camp/camp_garden.jpg")}'); background-position: 50% 0px;"}
-  .display-table
-    .display-table-cell.vertical-align-middle
-      .container
-        .slider-featured-text.centered
-          %h1.text-white
-            Relax
-          %h2.weight-300.text-white.wow.fadeInUp Recharge your batteries in between work
-          %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+  .container
+    .big_heading
+      Relax
+    .medium_heading
+      Recharge your batteries in between work
+    .medium_heading
+      %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
 
 .section
   .container
