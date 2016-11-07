@@ -4,15 +4,10 @@
 #   So I can visit protected areas of the site
 feature 'Sign in', :devise do
 
-  scenario 'user can sign in on the header' do
-    user = FactoryGirl.create(:user)
-    signin(user.email, user.password , "#slidetop")
-    expect(page).to have_content I18n.t 'devise.sessions.signed_in'
-  end
 
   scenario 'user can sign in on the footer' do
     user = FactoryGirl.create(:user)
-    signin(user.email, user.password , "#footer")
+    signin(user.email, user.password , ".footer-sign")
     expect(page).to have_content I18n.t 'devise.sessions.signed_in'
   end
 

@@ -11,7 +11,7 @@ module Features
       click_button 'Start'
     end
 
-    def signin(email, password , scope = "#slidetop")
+    def signin(email, password , scope = ".footer-sign")
       visit new_user_session_path
       within scope do
         fill_in 'Email', with: email

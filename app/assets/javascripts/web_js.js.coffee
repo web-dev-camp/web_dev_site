@@ -45,7 +45,7 @@ $(document).ready ->
   return
 
 $(document).ready ->
-  $('.tooltip').each ->
+  $('.tipster').each ->
     content = $(this).find('.content').detach().show()
     $(this).tooltipster content: content , maxWidth: 300 ,  theme: 'tooltipster-shadow'
   return

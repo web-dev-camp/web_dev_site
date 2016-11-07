@@ -14,18 +14,21 @@
           %li.list-inline-item
             =link_to "Privacy" , page_path(:privacy)
 
-      .col-md-3
+      .col-md-1
+      .col-md-2
         %h5.letter-spacing-1 Resources
         %ul.footer-links.list-unstyled
           %li= link_to "Teachers" , page_path(:course , anchor: :teachers)
           %li= link_to "Payment Plans" , page_path(:payment)
 
-      .col-md-3
+      .col-md-1
+      .col-md-2
         %h5.letter-spacing-1 Oppertunities
         %ul.footer-links.list-unstyled
           %li= link_to "Sponsoring" , page_path(:sponsoring)
           %li= link_to "Teaching" , page_path(:teaching)
-      .col-md-3
+      .col-md-1
+      .col-md-2.footer-sign
         %h5.letter-spacing-1 Account
         %ul.footer-links.list-unstyled
           -if user_signed_in?
