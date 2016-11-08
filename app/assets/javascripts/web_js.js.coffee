@@ -55,3 +55,13 @@ $(document).ready ->
   _screenHeight = jQuery(window).height() - _headerHeight
   jQuery('.fullheight').height _screenHeight
   return
+
+$(document).ready ->
+  allPanels = $('#faq_toggle > .toggle-content').hide()
+  $('#faq_toggle > label').click ->
+    n = $(this).next()
+    return if n.is(':visible')
+    allPanels.slideUp()
+    n.slideDown()
+    false
+  return

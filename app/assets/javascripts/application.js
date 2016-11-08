@@ -19,5 +19,3 @@
 //= require morphext
 //= require web_js
 //= require tooltipster.bundle
-
-//   mixitup

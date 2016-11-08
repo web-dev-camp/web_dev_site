@@ -1,28 +1,21 @@
 - title! "Questions and answers"
 - description! "Questions and answers, FAQ"
-.section
+.section.faq
   .container
-    / FILTER
-    %ul.nav.nav-pills.mix-filter.margin-bottom-30
-      %li.filter.active{"data-filter" => "all"}
-        %a{:href => "#"} All
-      %li.filter{"data-filter" => "course"}
-        %a{:href => "#course"} Course content
-      %li.filter{"data-filter" => "application"}
-        %a{:href => "#application"} Application
-      %li.filter{"data-filter" => "payment"}
-        %a{:href => "#payment"} Payment
-      %li.filter{"data-filter" => "stay"}
-        %a{:href => "#stay"} Stay
-      %li.filter{"data-filter" => "career"}
-        %a{:href => "#career"} Career
-    / /FILTER
-    .row.mix-grid
-      .col-md-12
-        / TOGGLES
-        .toggle.toggle-transparent.toggle-bordered-simple.toggle-accordion
-          = render "faq/course"
-          = render "faq/application"
-          = render "faq/payment"
-          = render "faq/stay"
-          = render "faq/career"
+
+    .spacer-big
+    
+    %ul.nav.nav-tabs{:role => "tablist"}
+      -faq_sections.each do |section|
+        %li.nav-item
+          %a.nav-link{"data-toggle" => "tab", :href => "#t#{section}", :role => "tab", :class => ("active" if "course" == section)}=section.capitalize
+
+    .tab-content
+      -faq_sections.each do |section|
+        .tab-pane{:role => "tabpanel" , id: "t#{section}" , :class => ("active" if "course" == section)}
+          -t(section).keys.each do |qa|
+            #faq_toggle.toggle
+              %label
+                = t("#{section}.#{qa}.q")
+              .toggle-content
+                %p.clearfix= raw t("#{section}.#{qa}.a")

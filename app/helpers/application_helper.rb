@@ -27,4 +27,8 @@ module ApplicationHelper
   def social_link href , kind , &block
     link_to(href , {class: "social-icon social-icon-sm social-#{kind}" , target: :blank } , &block)
   end
+
+  def faq_sections
+    ["course","application","payment","stay","career"]
+  end
 end

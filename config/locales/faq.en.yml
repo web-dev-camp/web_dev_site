@@ -1,0 +1,342 @@
+en:
+  application:
+    one:
+      q:  Do I need to be able to program before applying?
+      a:  >
+        In short: at least a little.
+        <br/>
+        Since you will spend 8 solid weeks programming, with the intent of making it your carreer,
+        you should know what you're getting into.
+        <br/>
+        Not being able to program and wanting to start a bootcamp may be comparable to not having run
+        5 kilometers, but wanting to train for marathon. The step is too big, and we don't want
+        you to break down half way anymore than you do.
+        <br/>
+        Basic online tutorials, and lots of meetups are a good way to learn some programming and
+        get a feel of whether it is right for you. (also see the next question)
+    two:
+      q:  How can I best prepare for the course?
+      a:  >
+        Get familiar with the tools. Most work is done with an editor, the command-line and a browser
+        developer tool, so get to know each. We suggest
+        <a href="https://atom.io/" , target: :blank> Atom </a>,
+        <a href="https://www.iterm2.com/" , target: :blank> Iterm </a>
+        and either safari or chrome developer tool. Fiddle around, get familiar, do some tutorials,
+        read up.
+        <br/>
+        Whatever editor you choose, practice keyboard shortcuts. Most of the work is typing,
+        getting better at that will speed you up, once here.
+        <br/>
+        Do some programming tutorials online to prepare. We recommend
+        <a href="http://tryruby.org/" , target: :blank> Try Ruby</a>
+        <a href=https://www.codeschool.com/learn/ruby" , target: :blank>CodeSchool</a>
+        and
+        <a href=https://www.khanacademy.org/computing/computer-programming/html-css" , target: :blank>Khan Academy</a>
+    three:
+      q:  How long in advance do I need to apply for the program?
+      a:  >
+        You should finish your application at least 4 weeks before your first starting date (see below).
+        <br/>
+        You can take as much time as you need to fill out your personal information,
+        and when you finish the application you can specify up to three starting dates.
+        <br/>
+        Once we have your application, we will review it and possibly ask you for more information
+        or clarification. Then we will schedule a Skype interview, and once that is done, there is
+        typically a one to two week waiting period before we make a final decision about your application.
+        <br/>
+        Upon receiving an invitation to join, you will have two weeks to transfer initial funds,
+        unless you have chosen the super-flex plan.
+        <br/>
+        With good preparation and the super-flex plan, you can complete the process within one month,
+        though we encourage two or more months to plan successfully.
+
+    four:
+      q:  I already know how to program XXX, but don't know web technologies, can I still join?
+      a:  >
+        Ultimately, it is your choice, of course, and the decision depends a lot on you and your motivation.
+        <br/>
+        If, for example, you have coded c for less than 2 years and have never done any web, then
+        yes, it will be a very good idea to join. The head-start you have is quite small and will only
+        mean that you have more time to deepen your knowledge of Web technologies.
+        <br/>
+        Say you have taught yourself JavaScript and done several web sites for friends. You know
+        about HTML, the DOM maybe even node.js. In that case it is better to aim for an internship
+        directly and read a few of the books we recommend.
+    five:
+      q:  What are you testing for in the interview?
+      a:  >
+        The best thing to do is familiarize yourself with the course and be very clear on your
+        motivation.
+        <br/>
+        We do not test programming skill at all, rather we try to evaluate your analytical thinking.
+        <br/>
+        Also we are very interested in your motivation, what has lead you to apply, what you think
+        you will do after, how do you justify the spending to yourself, how indeed you will fund
+        yourself.
+        <br/>
+        Lastly we try to evaluate your communication and emotional skills to see how you will deal
+        with the inescapability of co-living while doing intense work.
+  career:
+    one:
+      q:  Will I get a job after this course?
+      a:  >
+        This course provides you all the fundamentals that you would need to succeed in the web
+        development world. A lot is dependent on your abilities and strengths as a coder.
+        <br/>
+        We have a network of companies we know and can help you get a suitable placement.
+        <br/>
+        We also review the work you did during the course and help you find the right kind of job.
+        <br/>
+        You can also stay on at the school, either if you want to or feel you have to, see below.
+        <br/>
+    two:
+      q:  What kind of job can I get after finishing this course?
+      a:  >
+        This depends a lot on your previous experience and what parts of the course suits you best.
+        Broadly speaking:
+        <br/>
+        If you are very analytical, you could become a backend programmer. If you are more visually
+        inclined, you could become front end designer. Also, if you like the front end you may become
+        a front end application programmer. Or you may even train yourself to become a mobile platform
+        developer.
+        <br/>
+        If you have strong people skills you may also go straight into management.
+        Larger teams have dedicated technical project managers who really need to know what is being
+        done.
+        <br/>
+        Also, support and testing roles typically have very similar requirements. What job you get is
+        really dependent on which ways you excel, which is usually linked to the areas that you enjoy.
+        <br/>
+    three:
+      q:  Can I be a tutor after the course?
+      a:  >
+        If you feel you want to spend some more time learning, teaching is a good way to do that.
+        <br/>
+        We accept tutors for two or four weeks, but you must apply at least two weeks before the
+        end of your course.
+        <br/>
+        Junior tutors get free board, but no money. For the second two weeks, or any stay beyond,
+        compensation is negotiable.
+        <br/>
+        Tutors are expected to work for 6 hours, 6 days a week and may receive help with their own
+        project beyond that, time permitting.
+    four:
+      q:  Can I do an internship at Web Dev Camp?
+      a:  >
+        We typically have a number of open source projects that we maintain or augment.
+        These require work in many areas and if we find a match between your skills and
+        our projects, then yes.
+        <br/>
+        Internships are expected to work for 6 hours, 6 days a week, and in exceptional cases
+        act as tutors during that time.
+        <br/>
+        Compensation is the same as for tutors, i.e two to 4 week increments, where we provide room
+        and board. All else is negotiable.
+    five:
+      q:  Should I take an internship if I can't find a job?
+      a:  >
+        We suggest you look for a paying job for one or two months first. If you start with the
+        application process early and have grasped the content, you should be able to get at least a
+        junior development position. Or at the minimum a (short) trial period with a guarantee of a
+        job if you prove competent.
+        <br/>
+        But, in case you don't find a job soon, then yes, we do recommend taking internships.
+        An internship will give you experience of real world job situations, teach you new tools,
+        languages, and allow you to add a relevant entry to your CV.
+
+  course:
+    one:
+      q:  Why do you use Ruby as the main language?
+      a:  >
+        Ruby is fun, easy to understand, well structured and has a strong community.
+        <br/>
+        Ruby has very good tools, especially for web application development. Ruby on Rails
+        is over 10 years old.  Rails invented and further developed application standards that have
+        been copied into many other languages.
+        <br/>
+        Learning Ruby as a first language removes much of the difficulties found in other
+        languages and gives you a solid understanding of programming. Other languages will
+        be easy to pick up after having learned good practices in Ruby.
+    two:
+      q:  Do you teach languages other than Ruby, like JavaScript?
+      a:  >
+        The assumption is that what we teach will be your first (serious) programming
+        language. Ruby is easy to understand, well structured, clean, very object-oriented
+        and has a very strong web community. In short it is a very good first language to learn.
+        <br/>/
+        We also teach front-end application development and some JavaScript. You will be able
+        to become proficient in JavaScript very easily after this course, but we focus on
+        its abilities and cross compilation (CofeeScript and Opal.rb).
+        <br/>/
+        You will also be able to focus on one other language if you choose, eg. Go, Python,
+        Erlang or C.
+    three:
+      q:  How many hours do you teach?
+      a:  >
+        The official part of the course is 9 hours a day.
+        <br/>
+        This means that for those nine hours you will either have lectures, be involved in group work
+        or work on your assignments. During these hours you can always ask and someone will be
+        present to answer your question.
+        <br/>
+        But the course is short, and you may choose to work after hours. If you don't you are free to
+        do with your time as you please, as long as you don't disturb others.
+    four:
+      q:  Can I just come and learn JavaScript?
+      a:  >
+        In short no.
+        <br/>
+        We try to give our students a broad view of software development, from server programming,
+        testing, application deployment to client technologies like HTML, CSS and JavaScript.
+        <br/>
+        Just learning JavaScript tends to leave people with not enough background skills, leading
+        to low quality code and an enthusiasm to repeat known mistakes and reinvent the wheel as
+        square.
+        <br/>
+        We are by no means of the opinion that JavaScript is bad, its uniqueness is a great
+        opportunity and many good things are being done in js. It is just not a good
+        %b first
+        language and maybe best seen as a platform.
+    five:
+      q:  What computer should i bring?
+      a:  >
+        A unix based, Mac or any Linux distribution.
+        <br/>
+        We recommend a Mac, for it's ease of use. It is also the platform of choice for most
+        developers nowadays and has excellent support because of that.
+        <br/>
+        For more experienced users, a Linux system will probably work just as well. Just when
+        something that should work doesn't , you are more on your own.
+        <br/>
+        While ruby and rails itself will work on a windows machine, many ruby packages (especially
+        javascript related ones) are known to have strange problems. We strongly advise against
+        using windows.
+        <br/>
+
+  payment:
+    one:
+      q:  Do I need to pay the whole fee before the course starts?
+      a:  >
+        That depends. For the basic fee, yes. We require at least 2100€ after your acceptance
+        to the course, to be transferred at least 2 weeks prior to starting.
+        <br/>
+        The full fee of €8400 needs to be transferred before you start the course. The basic fee
+        is not refundable if you change your mind, but if you have proven medical issues you can get
+        full unused weeks returned.
+        <br/>
+        Like with plane tickets you can acquire more flexibility for a comparatively small extra cost.
+        In short, the flex fee (1200€ extra) lets you stop the course at any full week, while still
+        paying the full price up front.
+        <br/>
+        With the super flex fee you only have to pay for the next 2 weeks ahead, and you can stop
+        any time you like. Super flex costs 2900€ for every 2 week module.
+        <br/>
+        See full details in our <a href="/payments">Payment page</a>
+    two:
+      q:  Where can I get a loan if I don't have the money?
+      a:  >
+        You can get a loan from many places: your parents or other relatives would be our first
+        suggestion. If they hear you are investing in your own future and should be able to
+        pay back within a year they may be glad to help.
+        <br/>
+        Depending on your country banks are geared towards student loans. If you explain the situation
+        they could easily help.
+        <br/>
+        Unfortunately we can not help directly as the legal implications are just too complicated for
+        a small company like us. We do offer ways for you to earn some of the money back if you don't
+        find a job immediately, see below.
+    three:
+      q:  Can I do work for my course fee?
+      a:  >
+        Unfortunately this is a chicken and egg problem. Before the course, you will not have the
+        skills we need.
+        <br/>
+        After the course we offer tutor positions or internship, see the career section.
+        Both of which will not help in a major way though, and you will still need the money
+        beforehand.
+        <br/>
+    four:
+      q:  Can I pay after I obtain a job?
+      a:  >
+        We are looking into this possibility, as we would like everyone to be able to participate,
+        regardless of financial status.
+        But at the moment, we must insist on the pre-payment.
+        <br/>
+  stay:
+    one:
+      q:  How do I get there?
+      a:  >
+        Most likely the first step is a plane. Europe flights are very cheap nowadays, and even
+        flying in from America makes sense, as you only have to do it once.
+        <br/>
+        Pickup from the airport is included on the day before the course starts, though you may have
+        to wait a little for others. Otherwise you can take public transport, which sometimes stops
+        right in front of the house, or we pick you up from 5 minutes away.
+        <br/>
+        Another option is a shared taxi, or a private bus, both of which we'll organize if need be.
+        In any case, we will either pick you up, or organize transport with you.
+    two:
+      q:  I see your place is remote, what about transport during the course?
+      a:  >
+        We arrange all transport that is needed for the course.
+        <br/>
+        Otherwise there are buses, cars or taxis. We have a bus stop right in front of our house,
+        though buses are infrequent. Our day off is Friday partly for the reason that buses run.
+        <br/>
+        Some people may come with their car and you may be able to share. Also ride sharing is quite
+        common here and many people come and go, so you can easily get a ride.
+        <br/>
+        If you share a taxi it is actually fairly priced. If you do not choose that option,
+        the bus will get you to Karjaa, from where the trains leave to Helsinki or Turku,
+        a 1 hour trip either way.
+        <br/>
+        Last, but not least, you can ask us to organize transport.
+        We are happy to help, particularly for group activities.
+    three:
+      q:  I have food allergies / restrictions ,  can I still participate?
+      a:  >
+        Please note your allergies early on in the application process.
+        <br/>
+        Certainly vegetarian and even vegan food is no problem. Gluten-free can be arranged on request.
+        <br/>
+        For other allergies you may have to give us very specific instructions, or do self-catering.
+        See next question.
+        <br/>
+    four:
+      q:  Can I opt out of the food?
+      a:  >
+        Yes, though we do not encourage it. Shared meals, like shared accommodation, provide valuable
+        bonding that you will need. The course is intense and it certainly helps to get to know
+        your co-students outside the technical frame you interact in during the course.
+        <br/>
+        So if you have good reason, you can opt out of the lunches for 10€ a day and breakfast and
+        evening meal for another 10€ a day.
+    five:
+      q:  Can I opt out of accommodation?
+      a:  >
+        If you really want to, yes. It will change your experience of the course quite a lot, and we
+        don't think necessarily for the better.
+        <br/>
+        You will need a car to make this work as it is almost impossible to find accommodation among
+        the 40 houses of this village.
+        <br/>
+        We refund 15€ per day.
+    six:
+      q:  How big are the shared rooms, can I have my own room?
+      a:  >
+        Our rooms are between 15 and 40 square meter big and you will be sharing with one to three
+        others of your same gender.
+        <br/>
+        We have normal single beds, no bunk beds or double beds. Two rooms share a toilet, the other
+        five have their own. We have a total of five showers.
+        <br/>
+        There are no single rooms and there is no way to "upgrade".
+        You can choose to live off site, though it is discouraged.
+    seven:
+      q:  What can I do in my free time?
+      a:  >
+        We encourage you to do something relaxing, possibly physical, to relieve the mental
+        concentration that occurs.
+        <br/>
+        Off course you can read, rest, go hiking swimming or cycling. We also have a weekly
+        traditional Finnish sauna. There are also nice local restaurants and bars.
