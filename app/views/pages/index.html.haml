@@ -1,87 +1,20 @@
 - title! "Web Development Bootcamp"
 - description!  "Web dev camp is a web development bootcamp. Students learn web programming in an 8 week course, and live in the school. Board included."
 
-.section#swiper
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        =image_tag("slider/koulu.jpg")
-        .swiper-overlay
-          .row
-            .line.left
-              %span.green learn the code!
-          .row
-            .line.right
-              %span.green Live-in bootcamp
-          .row
-            .line.left.pad_ls
-              %span.green 8 weeks
-          .row
-            .line.empty
-              &nbsp;
-          .row
-            .line.right.pad_rm
-              %span.green be creative - enjoy coding
-      .swiper-slide
-        =image_tag("slider/lunch.jpg")
-        .swiper-overlay
-          .row
-            .line.left
-              %span.inv Food &
-          .row
-            .line.left
-              %span.inv Accommodation
-          .row
-            .line.left
-              %span.inv  included
-          .row
-            .line.left.empty
-              %span
-          .row
-            .line.right.delay-1000.pad_lm
-              %span.inv Relax in beautiful nature
-      .swiper-slide
-        =image_tag("slider/group_study.jpg")
-        .swiper-overlay
-          .row
-            .line.left.slideL.pad_lm
-              %span.green Small groups
-          .row
-            .line.right.slideR.delay-2000
-              %span.green HTML / CSS / Programming
-          .row
-            .line.empty
-              %span
-                &nbsp;
-          .row
-            .line.left.slideL.delay-1000
-              %span.green intensive learning
-          .row
-            .line.right.slideR.delay-3000.pad_rm
-              %span.green Learn to code
-      .swiper-slide
-        =image_tag("slider/student.jpg")
-        .swiper-overlay
-          .row
-            .line.empty
-              %span  &nbsp;
-          .row
-            .line.left.pad_lm.slideR
-              %span.inv Book a flight
-          .row
-            .line.left.slideR.delay-1000.pad_ls
-              %span.inv Bring a laptop, and
-          .row
-            .line
-              %span &nbsp;
-          .row
-            .line.right.rotR.delay-2000.pad_rm
-              %span.bold.inv BECOME a DEVELOPER
-    .swiper-pagination
-    .swiper-button-next
-    .swiper-button-prev
-  :javascript
-    var swiper_options = { }
+.section.fullheight.parallax{:style => "background-image: url('#{image_url("slider/koulu.jpg")}'); background-position: 50% 0px;"}
+  .container
+    .spacer-big
+    .big_heading.white
+      Live-in bootcamp
+    .medium_heading
+      learn the code!
+    .medium_heading
+      %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+      %br
+      %span.green 8 weeks
+      %br
+      %span.green be creative - enjoy coding
+
 .section
   .container
     .row.clearfix.bordered-grid
@@ -117,6 +50,23 @@
                 %b change jobs
               or as an
               %b alternative to university.
+
+
+.section.fullheight.parallax{:style => "background-image: url('#{image_url("slider/lunch.jpg")}'); background-position: 50% 0px;"}
+  .container
+    .spacer-big
+    .big_heading.white
+      %span.inv
+        Food & Accommodation included
+    .medium_heading
+      Relax in beautiful nature
+    .medium_heading
+      %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+
+
+.section
+  .container
+    .row.clearfix.bordered-grid
       .col-md-4.bordered-item
         .row
           .col-xs-3
@@ -134,9 +84,9 @@
           .col-xs-9
             %p
               Courses start every two months, next on
-              %b 26.9.16
-              and
               %b 16.1.17
+              and
+              %b 13.2.17
               The course is 6 days a week, at least 9 hours a day.
       .col-md-4.bordered-item
         .row
@@ -151,16 +101,32 @@
               %b real applications
               and build your portfolio.
 
-    .divider.margin-top-30.margin-bottom-80
-    .row
-      .col-md-12.centered
-        Web Dev Camp's teacher's have
-        %b decades of experience
-        and started the camp
-        in an endeavor to increase
-        %b
-          diversity in tech.
-    .divider.margin-top-80.margin-bottom-30
+
+.section.fullheight.parallax{:style => "background-image: url('#{image_url("slider/group_study.jpg")}'); background-position: 50% 0px;"}
+  .container
+    .spacer-big
+    .big_heading.white
+      Small groups == intensive learning
+    .medium_heading
+      Live and Learn
+    .medium_heading
+      HTML / CSS / Programming
+    .medium_heading
+      %a.btn.btn-primary.btn-lg.wow.fadeInUp Apply
+
+
+.section
+  .spacer-big
+  .divider.margin-top-30.margin-bottom-80
+  .row
+    .col-md-12.centered
+      Web Dev Camp's teacher's have
+      %b decades of experience
+      and started the camp
+      in an endeavor to increase
+      %b
+        diversity in tech.
+  .divider.margin-top-80.margin-bottom-30
 
 .section.dark
   .container
