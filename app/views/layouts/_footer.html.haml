@@ -6,29 +6,48 @@
         / Footer Logo
         = image_tag "web_logo_mobile.png" , :class => "footer-logo"
         / Small Description
-        %p Live in bootcamp, learn the code
-        %ul.pull-right.nomargin.list-inline.mobile-block
-          %li.list-inline-item
-            =link_to "Terms & Conditions" , page_path(:terms)
-          %li.list-inline-item •
-          %li.list-inline-item
-            =link_to "Privacy" , page_path(:privacy)
+        %p.slogan Live in bootcamp, learn the code
+        %address
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.icon-location
+                  %br/
+                  %br/
+                  %br/
+                %td
+                  Fiskarsintie 513
+                  %br/
+                  10480 Antskog
+                  %br/
+                  Finland
+              %tr
+                %td
+                  %i.fa.icon-phone
+                %td Phone: +358-40 7308052
+              %tr
+                %td
+                  %i.fa.icon-mail
+                %td
+                  %a{:href => "mailto:info@webdev.camp"} info@webdev.camp
+
 
       .col-md-1
       .col-md-2
-        %h5.letter-spacing-1 Resources
+        %h6.letter-spacing-1 RESOURCES
         %ul.footer-links.list-unstyled
-          %li= link_to "Teachers" , page_path(:course , anchor: :teachers)
+          %li.icon-angle-right= link_to "Teachers" , page_path(:course , anchor: :teachers)
           %li= link_to "Payment Plans" , page_path(:payment)
 
-      .col-md-1
       .col-md-2
-        %h5.letter-spacing-1 Oppertunities
+        %h6.letter-spacing-1 OPPORTUNITIES
         %ul.footer-links.list-unstyled
           %li= link_to "Sponsoring" , page_path(:sponsoring)
           %li= link_to "Teaching" , page_path(:teaching)
+
       .col-md-1
-      .col-md-2.footer-sign
+      .col-md-3.footer-sign
         %h5.letter-spacing-1 Account
         %ul.footer-links.list-unstyled
           -if user_signed_in?
@@ -39,11 +58,17 @@
             %li
               = simple_form_for(:user, :url => session_url(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
                 .input-group
+                  %span.input-group-addon
+                    %i.fa.icon-mail
                   = f.email_field :email, class: 'form-control' , placeholder: :email
                 .input-group
+                  %span.input-group-addon
+                    %i.fa.icon-lock
                   = f.password_field :password, class: 'form-control' , placeholder: :password
                 .input-group-btn
-                  = f.submit "Sign in" , class: "btn btn-success"
+                  = f.submit "Sign in" , class: "btn btn-success btn-block"
+
+
         .margin-top-20
           %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "https://www.facebook.com/webdev.camp", :title => "Facebook" , target: :blank }
             %i.icon-facebook
@@ -51,23 +76,18 @@
             %i.icon-twitter
           %a.social-icon.social-icon-border.social-instagram.pull-left{"data-placement" => "top",  :href => "https://www.instagram.com/webdev.camp/", :title => "Instagram" , target: :blank }
             %i.icon-instagram
-  .copyright
-    .container
-      %address.row
-        .col-md-4
-          %i.fa.icon-location
-            Fiskarsintie 513
-            %br/
-            10480 Antskog
-            %br/
-            Finland
-        .col-md-4
-          %i.fa.icon-phone
-            Phone: +358-40 7308052
-        .col-md-4
-          %i.fa.icon-mail
-            %a{:href => "mailto:info@webdev.camp"} info@webdev.camp
-      © All Rights Reserved, Web Dev Camp, a subsidiary of Lightning Raisa & Torsten Oy
+  .container-fluid
+    .row.copyright
+      .col-md-9
+        © All Rights Reserved, Web Dev Camp, a subsidiary of Lightning Raisa & Torsten Oy
+      .col-md-3.text-right
+        %ul.nomargin.list-inline.mobile-block
+          %li.list-inline-item
+            =link_to "Terms & Conditions" , page_path(:terms)
+          %li.list-inline-item •
+          %li.list-inline-item
+            =link_to "Privacy" , page_path(:privacy)
+
 :javascript
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

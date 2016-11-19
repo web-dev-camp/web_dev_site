@@ -4,7 +4,7 @@
   .container
 
     .spacer-big
-    
+
     %ul.nav.nav-tabs{:role => "tablist"}
       -faq_sections.each do |section|
         %li.nav-item
@@ -14,7 +14,7 @@
       -faq_sections.each do |section|
         .tab-pane{:role => "tabpanel" , id: "t#{section}" , :class => ("active" if "course" == section)}
           -t(section).keys.each do |qa|
-            #faq_toggle.toggle
+            #faq_toggle.toggle.toggle-transparent.toggle-bordered-simple
               %label
                 = t("#{section}.#{qa}.q")
               .toggle-content
