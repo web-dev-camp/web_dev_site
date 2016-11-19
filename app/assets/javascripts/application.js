@@ -14,8 +14,6 @@
 //= require jquery_ujs
 //= require best_in_place
 //= require tether
-//= require bootstrap
-//= require swiper.jquery
-//= require morphext
-//= require web_js
 //= require tooltipster.bundle
+//= require bootstrap
+//= require web_js
