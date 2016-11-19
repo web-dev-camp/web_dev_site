@@ -2,14 +2,12 @@
 - description!  "Web dev camp is a web development bootcamp. Students learn web programming in an 8 week course, and live in the school. Board included."
 
 .section.parallax{:style => "background-image: url('#{image_url("coding.jpg")}');"}
-  .container
-    .spacer-big
-    .big_heading.white
-      Become a web-developer in 8 weeks
-    .medium_heading.white
-      %span enjoy coding and get paid
-    .medium_heading
-      %a.btn.btn-primary.btn-lg Apply
+  %h1
+    Become a web-developer in 8 weeks
+  %h3
+    enjoy coding and get paid
+  .action
+    %a.btn.btn-primary.btn-lg Apply
 
 .section
   .container
@@ -47,15 +45,13 @@
               or as an
               %b alternative to university.
 
-.section.height-500{:style => "background-image: url('#{image_url("small_group.jpg")}');"}
-  .container
-    .spacer-big
-    .big_heading.white
-      Small groups and relaxed atmosphere
-    .medium_heading.white
-      optimal learning conditions
-    .medium_heading
-      %a.btn.btn-primary.btn-lg Apply
+.section.heading{:style => "background-image: url('#{image_url("small_group.jpg")}');"}
+  %h1
+    Small groups, relaxed atmosphere
+  %h3
+    optimal learning conditions
+  .action
+    %a.btn.btn-primary.btn-lg Apply
 
 .section
   .container
@@ -97,12 +93,12 @@
 .section.parallax{:style => "background-image: url('#{image_url("relax.jpg")}');"}
   .container
     .spacer-big
-    .big_heading.white
+    %h1
       %span.inv
         Relax in the nature
-    .medium_heading.white
+    %h3
       and be recharged
-    .medium_heading
+    .action
       %a.btn.btn-primary.btn-lg Apply
 
 .section
@@ -118,20 +114,19 @@
         diversity in tech.
   .divider.margin-top-80.margin-bottom-30
 
-.section{:style => "background-image: url('#{image_url("slider/lunch.jpg")}');height: 400px;"}
+.section.heading{:style => "background-image: url('#{image_url("slider/lunch.jpg")}');"}
   .container
     .spacer-big
-    .big_heading.white
-      %span.inv
-        Food & Accommodation included
-    .medium_heading.white
+    %h1
+      Food & Accommodation included
+    %h3
       Remove all distraction
-    .medium_heading
+    .action
       %a.btn.btn-primary.btn-lg Apply
 
-.section.dark
-  .container
-    .row.text-white
+.section
+  .container.space-30
+    .row
       .col-md-6
         %h1.centered Need Convincing
         %p.lead.centered

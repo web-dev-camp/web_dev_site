@@ -1,8 +1,6 @@
 @import "bootstrap/mixins"
 
 
-$marign: 60px
-
 .nav
   a
     font-size: 1.3em !important
@@ -18,18 +16,36 @@ $marign: 60px
 .white
   color: white
 
-.section
-  .container
-    margin-top: $marign
-    margin-bottom: $marign
+.heading , .parallax
+  height: 500px
+  color: white
+  text-align: center
+  h1
+    margin-top: 60px
+    margin-bottom: 60px
+    font-weight: 500
+    font-size: 4rem
+  h3
+    margin-top: 30px
+    margin-bottom: 30px
+    font-size: 2.5rem
+    font-weight: 400
+  .action
+    padding-top: 30px
+  @media only screen and (max-width: 640px)
     h1
-      margin-bottom: $marign
+      margin-top: 40px
+      margin-bottom: 40px
+  @media only screen and (max-width: 480px)
+    h1
+      margin-top: 20px
+      margin-bottom: 20px
+      font-size: 3.2rem
 
-  .spacer-big
-    clear: both
-    margin-top: 80px
-    &::before
-      content: "\00a0"
+.section
+  margin-top: 60px
+  &::before
+    content: "\00a0"
 
   .space-30
     margin-bottom: 30px
@@ -52,7 +68,6 @@ h4 , h5 , h6
 
 .parallax
   margin-top: 0px
-  height: 500px
   background-attachment: fixed
   background-position: center
   background-repeat: no-repeat
@@ -61,20 +76,6 @@ h4 , h5 , h6
 
 .height-500
   height: 500px
-
-.big_heading
-  text-align: center
-  margin-top: $marign
-  margin-bottom: $marign
-  font-size: 4em
-  font-weight: 500
-
-.medium_heading
-  text-align: center
-  margin-top: $marign / 2
-  margin-bottom: $marign / 2
-  font-size: 3em
-  font-weight: 300
 
 
 /**	Proxima nova
@@ -129,186 +130,6 @@ h4 , h5 , h6
 .red
   color: red
 
-#slidetop
-  color: black
-  a
-    color: black
-  h3, h4, h5, h6
-    color: black
-    font-size: initial
-  form
-    margin-bottom: 10px
-  .container
-    padding: 20px
-    padding-bottom: 0px
-  .form-control
-    background-color: rgb(0,0,0)
-    background: transparent\9
-    background-color: rgba(0,0,0,0.4)
-  form
-    margin-top: 30px
-    margin-left: 70px
-
-/* Swiper custumisations
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next
-  background-image: url("data:image/svg+xmlcharset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%238ab933'%2F%3E%3C%2Fsvg%3E")
-
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev
-  background-image: url("data:image/svg+xmlcharset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%238ab933'%2F%3E%3C%2Fsvg%3E")
-
-.swiper-pagination-bullet-active
-  background: #8ab933
-
-.swiper-pagination-progress .swiper-pagination-progressbar
-  background: #8ab933
-
-#swiper
-  padding: 0px
-  margin-left: 0px
-  margin-right: 0px
-  text-align: center
-
-.swiper-container
-  max-width: 1280px
-
-.swiper-overlay
-  max-width: 1280px
-  font-family: 'AdamPro'
-  color: black
-  position: absolute
-  top: 0px
-  left: 0px
-  margin: 0
-  padding: 0px
-  width: 100%
-  height: 100%
-  .green
-    background-color: #8ab933
-  .inv
-    background-color: rgba(66,226,255,0.65)
-    color: black
-  .bold
-    font-weight: bolder
-  .right
-    text-align: right
-    margin-right: 40px
-  .left
-    text-align: left
-    margin-left: 40px
-  .pad_ls
-    padding-left: 40px
-  .pad_lm
-    padding-left: 80px
-  .pad_rs
-    padding-right: 40px
-  .pad_rm
-    padding-right: 80px
-  .row
-    margin-top: 32px
-    margin-bottom: 32px
-    margin-left: 0px
-    margin-right: 0px
-    .vt
-      font-size: 54px
-      line-height: 54px
-    .line
-      margin-bottom: 0px
-      font-size: 36px
-      line-height: 36px
-      span
-        border-radius: 5px
-        -moz-border-radius: 5px
-        -webkit-border-radius: 5px
-        padding:  5px 5px 0px 5px
-
-@media only screen and (max-width: 1060px)
-  .swiper-overlay
-    .row
-      .empty
-        line-height: 10px
-
-@media only screen and (max-width: 992px)
-  .swiper-overlay
-    .right
-      margin-right: 30px
-    .left
-      margin-left: 30px
-    .pad_ls
-      padding-left: 30px
-    .pad_lm
-      padding-left: 60px
-    .pad_rs
-      padding-right: 30px
-    .pad_rm
-      padding-right: 60px
-    .row
-      margin-top: 24px
-      margin-bottom: 24px
-      .vt
-        font-size: 42px
-        line-height: 42px
-      .line
-        font-size: 28px
-        line-height: 28px
-  #slidetop
-    form
-      margin-top: 10px
-      margin-left: 0px
-
-@media only screen and (max-width: 820px)
-  .swiper-overlay
-    .row
-      .empty
-        line-height: 10px
-
-@media only screen and (max-width: 768px)
-  .swiper-overlay
-    .right
-      margin-right: 20px
-    .left
-      margin-left: 20px
-    .pad_ls
-      padding-left: 20px
-    .pad_lm
-      padding-left: 40px
-    .pad_rs
-      padding-right: 20px
-    .pad_rm
-      padding-right: 40px
-    .row
-      margin-top: 12px
-      margin-bottom: 12px
-      .line
-        font-size: 18px
-        line-height: 18px
-      .vt
-        font-size: 27px
-        line-height: 27px
-
-@media only screen and (max-width: 480px)
-  .swiper-overlay
-    .right
-      margin-right: 10px
-    .left
-      margin-left: 10px
-    .pad_ls
-      padding-left: 10px
-    .pad_lm
-      padding-left: 20px
-    .pad_rs
-      padding-right: 10px
-    .pad_rm
-      padding-right: 20px
-    .row
-      margin-top: 5px
-      margin-bottom: 5px
-      .line
-        font-size: 15px
-        line-height: 15px
-      .vt
-        font-size: 22px
-        line-height: 22px
-
 @import 'animate'
 @import 'animate/slideInLeft'
 @import 'animate/slideInRight'
@@ -316,51 +137,6 @@ h4 , h5 , h6
 @import 'animate/rotateInDownLeft'
 @import 'animate/fadeIn'
 
-.swiper-slide-active .swiper-overlay
-  .slideL
-    @include animate(slideInLeft, 2s)
-  .slideR
-    @include animate(slideInRight, 2s)
-  .rotL
-    @include animate(rotateInUpLeft, 2s)
-  .rotR
-    @include animate(rotateInDownLeft, 2s)
-
-.swiper-slide-next .swiper-overlay
-  visibility: none
-
-=delay($delay)
-  -webkit-animation-duration: $delay
-  -moz-animation-duration: $delay
-  -o-animation-duration: $delay
-  animation-delay: $delay
-
-.delay-500
-  +delay(500ms)
-.delay-1000
-  +delay(1000ms)
-.delay-1500
-  +delay(1500ms)
-.delay-2000
-  +delay(2000ms)
-.delay-2500
-  +delay(2500ms)
-.delay-3000
-  +delay(3000ms)
-.delay-3500
-  +delay(3500ms)
-.delay-4000
-  +delay(4000ms)
-.delay-4500
-  +delay(4500ms)
-.delay-5000
-  +delay(5000ms)
-.delay-5500
-  +delay(5500ms)
-.delay-6000
-  +delay(6000ms)
-.delay-6500
-  +delay(6500ms)
 
 
 /* entire container, keeps perspective
