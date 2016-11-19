@@ -7,7 +7,7 @@
   %h3
     enjoy coding and get paid
   .action
-    %a.btn.btn-primary.btn-lg Apply
+    =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
 
 .section
   .container
@@ -51,7 +51,7 @@
   %h3
     optimal learning conditions
   .action
-    %a.btn.btn-primary.btn-lg Apply
+    =link_to "Course details", page_path(:course) , class: "btn btn-success btn-lg"
 
 .section
   .container
@@ -99,20 +99,48 @@
     %h3
       and be recharged
     .action
-      %a.btn.btn-primary.btn-lg Apply
+      =link_to "Camp details", page_path(:camp) , class: "btn btn-success btn-lg"
 
 .section
-  .spacer-big
-  .divider.margin-top-30.margin-bottom-80
-  .row
-    .col-md-12.centered
-      Web Dev Camp's teacher's have
-      %b decades of experience
-      and started the camp
-      in an endeavor to increase
-      %b
-        diversity in tech.
-  .divider.margin-top-80.margin-bottom-30
+  .container
+    .row
+      .col-md-12.centered
+        %p
+          Web Dev Camp's teacher's have
+          %b decades of experience
+          and started the camp
+          in an endeavor to increase
+          %b
+            diversity in tech.
+    .row.clearfix.bordered-grid
+      .col-md-4.bordered-item
+        .row
+          .col-xs-4
+            = image_tag "torsten.png"
+          .col-xs-8
+            %h3 Torsten Ruger
+            %span Course Director
+            %br
+            %small 20 years of web development
+      .col-md-4.bordered-item
+        .row
+          .col-xs-4
+            =image_tag "sherif.png"
+          .col-xs-8
+            %h3 Sherif Abushadi
+            %span Teacher
+            %br
+            %small 20 years of teaching
+      .col-md-4.bordered-item
+        .row
+          .col-xs-4
+            =image_tag "raisa.jpg"
+          .col-xs-8
+            %h3 Raisa Kaipainen
+            %span Camp director
+            %br
+            %small 20 years of running courses
+
 
 .section.heading{:style => "background-image: url('#{image_url("slider/lunch.jpg")}');"}
   .container
@@ -122,15 +150,17 @@
     %h3
       Remove all distraction
     .action
-      %a.btn.btn-primary.btn-lg Apply
+      =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
 
 .section
   .container.space-30
     .row
       .col-md-6
-        %h1.centered Need Convincing
-        %p.lead.centered
+        %h1.centered Not Convinced?
+        %p.lead.centered.space-30
           Watch our marketing guy :-) talk about bootcamps
+        .action.centered
+          =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
       .col-md-6
         .embed-container
           %iframe{:allowfullscreen => "", :frameborder => "0",  :src => "https://www.youtube.com/embed/wGFsNA5Hw2s"}
