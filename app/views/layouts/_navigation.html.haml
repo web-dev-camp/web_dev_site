@@ -10,7 +10,7 @@
       %li.nav-item= link_to "Camp" ,   page_path(:camp) , class: "nav-link"
       %li.nav-item= link_to "Apply" ,  new_user_registration_path , class: "nav-link"
       %li.nav-item= link_to "Q & A" ,  page_path(:answers) , class: "nav-link"
-      %li.nav-item= link_to "|" ,  page_path() , class: "nav-link"
+      %li.nav-item= link_to "|" ,  page_path(:answers) , class: "nav-link"
       -if user_signed_in?
         %li.nav-item.nav-small= sign_out_link  class: "nav-link"
         %li.nav-item.nav-small= link_to "Account" ,  edit_user_registration_path , class: "nav-link"
