@@ -21,14 +21,14 @@ en:
         developer tool, so get to know each. We suggest
         <a href="https://atom.io/" , target: :blank> Atom </a>,
         <a href="https://www.iterm2.com/" , target: :blank> Iterm </a>
-        and either safari or chrome developer tool. Fiddle around, get familiar, do some tutorials,
+        and either Safari or Chrome developer tool. Fiddle around, get familiar, do some tutorials,
         read up.
         <br/>
         Whatever editor you choose, practice keyboard shortcuts. Most of the work is typing,
         getting better at that will speed you up, once here.
         <br/>
         Do some programming tutorials online to prepare. We recommend
-        <a href="http://tryruby.org/" , target: :blank> Try Ruby</a>
+        <a href="http://tryruby.org/" , target: :blank> Try Ruby</a>,
         <a href=https://www.codeschool.com/learn/ruby" , target: :blank>CodeSchool</a>
         and
         <a href=https://www.khanacademy.org/computing/computer-programming/html-css" , target: :blank>Khan Academy</a>
@@ -45,9 +45,9 @@ en:
         typically a one to two week waiting period before we make a final decision about your application.
         <br/>
         Upon receiving an invitation to join, you will have two weeks to transfer initial funds,
-        unless you have chosen the super-flex plan.
+        unless you have chosen the Super-flex plan.
         <br/>
-        With good preparation and the super-flex plan, you can complete the process within one month,
+        With good preparation and the Super-flex plan, you can complete the process within one month,
         though we encourage two or more months to plan successfully.
 
     four:
@@ -163,11 +163,11 @@ en:
         The assumption is that what we teach will be your first (serious) programming
         language. Ruby is easy to understand, well structured, clean, very object-oriented
         and has a very strong web community. In short it is a very good first language to learn.
-        <br/>/
+        <br/>
         We also teach front-end application development and some JavaScript. You will be able
         to become proficient in JavaScript very easily after this course, but we focus on
         its abilities and cross compilation (CofeeScript and Opal.rb).
-        <br/>/
+        <br/>
         You will also be able to focus on one other language if you choose, eg. Go, Python,
         Erlang or C.
     three:
@@ -198,7 +198,7 @@ en:
         %b first
         language and maybe best seen as a platform.
     five:
-      q:  What computer should i bring?
+      q:  What computer should I bring?
       a:  >
         A unix based, Mac or any Linux distribution.
         <br/>
@@ -225,13 +225,13 @@ en:
         full unused weeks returned.
         <br/>
         Like with plane tickets you can acquire more flexibility for a comparatively small extra cost.
-        In short, the flex fee (1200€ extra) lets you stop the course at any full week, while still
+        In short, the Flex fee (1200€ extra) lets you stop the course at any full week, while still
         paying the full price up front.
         <br/>
-        With the super flex fee you only have to pay for the next 2 weeks ahead, and you can stop
+        With the Super flex fee you only have to pay for the next 2 weeks ahead, and you can stop
         any time you like. Super flex costs 2900€ for every 2 week module.
         <br/>
-        See full details in our <a href="/payments">Payment page</a>
+        See full details in our <a href="/payments">Payment page</a>.
     two:
       q:  Where can I get a loan if I don't have the money?
       a:  >
@@ -293,7 +293,7 @@ en:
         Last, but not least, you can ask us to organize transport.
         We are happy to help, particularly for group activities.
     three:
-      q:  I have food allergies / restrictions ,  can I still participate?
+      q:  I have food allergies / restrictions, can I still participate?
       a:  >
         Please note your allergies early on in the application process.
         <br/>
@@ -324,7 +324,7 @@ en:
     six:
       q:  How big are the shared rooms, can I have my own room?
       a:  >
-        Our rooms are between 15 and 40 square meter big and you will be sharing with one to three
+        Our rooms are between 15 and 40 square meters big and you will be sharing with one to three
         others of your same gender.
         <br/>
         We have normal single beds, no bunk beds or double beds. Two rooms share a toilet, the other
@@ -338,5 +338,5 @@ en:
         We encourage you to do something relaxing, possibly physical, to relieve the mental
         concentration that occurs.
         <br/>
-        Off course you can read, rest, go hiking swimming or cycling. We also have a weekly
+        Off course you can read, rest, go hiking, swimming or cycling. We also have a weekly
         traditional Finnish sauna. There are also nice local restaurants and bars.
