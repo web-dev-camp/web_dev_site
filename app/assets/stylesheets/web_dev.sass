@@ -1,4 +1,4 @@
-@import "bootstrap/mixins"
+@import "bootstrap"
 
 
 .nav
@@ -171,16 +171,10 @@ h4 , h5 , h6
   position: absolute
   top: 0
   left: 0
-
-.frontt, .backk
   border-radius: 5px
-  -moz-border-radius: 5px
-  -webkit-border-radius: 5px
 
   img
-    border-radius: 3px
-    -moz-border-radius: 3px
-    -webkit-border-radius: 3px
+    border-radius: 10px
 
   padding: 20px
   height: 520px
@@ -189,6 +183,8 @@ h4 , h5 , h6
 
 .frontt
   z-index: 2
+  h2
+    margin-top: 10px
 
   /* for firefox 31
   transform: rotateY(0deg)
@@ -310,3 +306,29 @@ h4 , h5 , h6
 
 .dark_section
   background-color: rgba(0, 0, 0, 0.5)
+
+/**	43. Testimonials
+ ***************************************************************** *
+
+.testimonial
+  margin-bottom: 30px
+  p
+    margin-top: 0
+  .figure
+
+    img
+      border-radius: 3px
+
+  .testimonial-content
+
+  cite
+    font-weight: bold
+    text-shadow: none
+    span
+      display: block
+      color: #888
+      font-size: 12px
+      font-weight: 300
+
+section.parallax .testimonial cite span
+  color: #ddd

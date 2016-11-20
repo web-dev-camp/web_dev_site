@@ -1,5 +1,5 @@
-- title! "Web Development Bootcamp"
-- description!  "Web dev camp is a web development bootcamp. Students learn web programming in an 8 week course, and live in the school. Board included."
+- title!( "Web Development Bootcamp")
+- description!("Web dev camp is a web development bootcamp. Students learn web programming in an 8 week course, and live in the school. Board included.")
 
 .section.parallax{:style => "background-image: url('#{image_url("coding.jpg")}');"}
   %h1
@@ -11,39 +11,31 @@
 
 .section
   .container
-    .row.clearfix.bordered-grid
-      .col-md-4
-        .row.bordered-item
-          .col-xs-3
-            =image_tag("quest/what.jpg" , class: :rounded)
-          .col-xs-9
+    .row
+      .col-md-6
+        .testimonial
+          .figure.col-md-5.col-lg-3
+            =image_tag "ioana.jpg" , class: :rounded
+          .testimonial-content.nopadding.col-md-7.col-lg-9
             %p
-              Web Dev Camp is a
-              %b web development bootcamp.
-              Become a web developer in
-              8 very intensive weeks of on-site learning!
-      .col-md-4.bordered-item
-        .row
-          .col-xs-3
-            =image_tag("quest/why.jpg" , class: :rounded)
-          .col-xs-9
+              Before I started the Web Dev Camp course, a junior developer title seemed
+              like something unapproachable. Now, after graduation I know that I am one already!
+            %cite
+              Ioana Rosu
+              %span former Legal adviser
+      .col-md-6
+        .testimonial
+          .figure.col-md-5.col-lg-3
+            =image_tag "alice.jpg" , class: :rounded
+          .testimonial-content.nopadding.col-md-7.col-lg-9
             %p
-              Programming is very
-              %b creative
-              and the increasing use of web technologies almost
-              guarantees
-              %b employment.
-      .col-md-4.bordered-item
-        .row
-          .col-xs-3
-            =image_tag("quest/who.jpg" , class: :rounded)
-          .col-xs-9
-            %p
-              The bootcamp is designed for people who want to
-              = succeed "," do
-                %b change jobs
-              or as an
-              %b alternative to university.
+              When I started to teach myself code, the journey to becoming a junior developer
+              seemed impossibly long and hard. Graduating from Web Dev Camp, I feel as though
+              I have the tools and understanding I need to go on to achieve this goal
+              and I am amazed at how far I have come.
+            %cite
+              Alice Dee
+              %span Software Engineer
 
 .section.heading{:style => "background-image: url('#{image_url("small_group.jpg")}');"}
   %h1
@@ -140,7 +132,7 @@
             %small 20 years of running courses
 
 
-.section.heading{:style => "background-image: url('#{image_url("slider/lunch.jpg")}');"}
+.section.heading{:style => "background-image: url('#{image_url("lunch.jpg")}');"}
   %h1
     Food & Accommodation included
   %h3
