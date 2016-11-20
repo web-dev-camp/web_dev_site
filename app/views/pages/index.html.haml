@@ -91,15 +91,13 @@
               and build your portfolio.
 
 .section.parallax{:style => "background-image: url('#{image_url("relax.jpg")}');"}
-  .container
-    .spacer-big
-    %h1
-      %span.inv
-        Relax in the nature
-    %h3
-      and be recharged
-    .action
-      =link_to "Camp details", page_path(:camp) , class: "btn btn-success btn-lg"
+  %h1
+    %span.inv
+      Relax in the nature
+  %h3
+    and be recharged
+  .action
+    =link_to "Camp details", page_path(:camp) , class: "btn btn-success btn-lg"
 
 .section
   .container
@@ -143,24 +141,54 @@
 
 
 .section.heading{:style => "background-image: url('#{image_url("slider/lunch.jpg")}');"}
-  .container
-    .spacer-big
-    %h1
-      Food & Accommodation included
-    %h3
-      Remove all distraction
-    .action
-      =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
+  %h1
+    Food & Accommodation included
+  %h3
+    Remove all distraction
+  .action
+    =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
 
 .section
   .container.space-30
     .row
       .col-md-6
-        %h1.centered Not Convinced?
-        %p.lead.centered.space-30
-          Watch our marketing guy :-) talk about bootcamps
-        .action.centered
-          =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
+        .row
+          .col-md-12
+            %h1.centered Not Convinced?
+            %p.lead.centered.space-30
+              Watch our marketing guy :-) talk about bootcamps
+          .col-md-12
+            .embed-container
+              %iframe{:allowfullscreen => "", :frameborder => "0",  :src => "https://www.youtube.com/embed/wGFsNA5Hw2s"}
       .col-md-6
-        .embed-container
-          %iframe{:allowfullscreen => "", :frameborder => "0",  :src => "https://www.youtube.com/embed/wGFsNA5Hw2s"}
+        .row.school_reviews
+          .col-md-12
+            %h1.centered Reviews
+            %p.lead.centered.space-30
+              Read what alumni say
+          .col-md-6.course_report
+            =link_to "https://www.coursereport.com/schools/web-dev-camp/" , class: :course_report_link ,target: :blank do
+              =image_tag "course_report.png"
+            %p.ratings
+              %span.icon-star
+              %span.icon-star
+              %span.icon-star
+              %span.icon-star
+              %span.icon-star
+            %p.rating-number
+              Avg Rating: 5.0
+          .col-md-6.centered
+            =link_to "https://www.switchup.org/bootcamps/web-dev-camp" , class: :switch_up ,target: :blank do
+              =image_tag "switch_up.png"
+              switchup
+            %p.ratings
+              %span.icon-star
+              %span.icon-star
+              %span.icon-star
+              %span.icon-star
+              %span.icon-star
+            %p.rating-number
+              5.0 stars
+          .col-md-12
+            .action.centered
+              =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
