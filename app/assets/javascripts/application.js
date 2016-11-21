@@ -14,5 +14,10 @@
 //= require best_in_place
 //= require tether
 //= require tooltipster.bundle
-//= require bootstrap
+//= require bootstrap/util
+//= require bootstrap/alert
+//= require bootstrap/carousel
+//= require bootstrap/collapse
+//= require bootstrap/tab
+//= require bootstrap/tooltip
 //= require web_js
