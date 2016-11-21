@@ -1,26 +1,4 @@
 
-jQuery(document).ready ->
-  if jQuery('.swiper-container').length > 0
-    default_options = {
-      pagination: '.swiper-pagination' ,
-      paginationClickable: true ,
-      nextButton: '.swiper-button-next' ,
-      prevButton: '.swiper-button-prev' ,
-      centeredSlides: true,
-      autoplay: 6500,
-      autoplayDisableOnInteraction: false,
-      keyboardControl: true,
-      speed: 800,
-      preloadImages: false,
-      lazyLoading: true,
-      loop: true,
-      lazyLoadingInPrevNext: true,
-      lazyLoadingOnTransitionStart: true,
-      spaceBetween: 30
-    }
-    new Swiper('.swiper-container', $.extend({}, default_options, swiper_options) )
-  return
-
 $(document).ready ->
   ### Activating Best In Place ###
   jQuery('.best_in_place').best_in_place()
@@ -45,9 +23,9 @@ $(document).ready ->
   return
 
 $(document).ready ->
+  content = -> $(this).find('.content')
   $('.tipster').each ->
-    content = $(this).find('.content').detach().show()
-    $(this).tooltipster content: content , maxWidth: 300 ,  theme: 'tooltipster-shadow'
+    $(this).tooltip( title: content)
   return
 
 $(document).ready ->

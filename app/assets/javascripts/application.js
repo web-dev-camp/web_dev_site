@@ -13,7 +13,6 @@
 //= require jquery2
 //= require best_in_place
 //= require tether
-//= require tooltipster.bundle
 //= require bootstrap/util
 //= require bootstrap/alert
 //= require bootstrap/carousel
