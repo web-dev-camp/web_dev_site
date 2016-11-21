@@ -1,7 +1,7 @@
 .section
   .container
     .spacer-big
-    .authform
+    .authform.margin-bottom-30
       = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f|
         %h3 Sign in
         = devise_error_messages!

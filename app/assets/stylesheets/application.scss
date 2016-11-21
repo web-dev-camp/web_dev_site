@@ -12,11 +12,11 @@
  *
  *= require_self
  *= require fontello
- *= require web_dev
  *= require tooltipster.bundle
  *= require tether
  *= require toggle
  */
 
 @import 'bootstrap';
+@import "web_dev";
 @import "new_dev";
