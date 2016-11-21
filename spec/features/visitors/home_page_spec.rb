@@ -10,9 +10,9 @@ feature 'Home page' do
   #   Then I see "Welcome"
   scenario 'visit the home page' do
     visit root_path
-    expect(page).to have_content 'Become a web developer'
-    expect(page).to have_content 'increasing use of web'
-    expect(page).to have_content 'You create real'
+    expect(page).to have_content 'Become a web-developer'
+    expect(page).to have_content 'Small groups, relaxed'
+    expect(page).to have_content 'Relax in the nature'
   end
 
 end

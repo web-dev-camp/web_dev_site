@@ -4,18 +4,18 @@
     .authform.margin-bottom-30
       %h1 Create your application
 
-      = simple_form_for(@apply , url: application_path ) do |f|
+      = simple_form_for(@apply , url: application_path , html: { class: 'form-horizontal' }) do |f|
         = f.error_notification
 
         .form-input
           = f.label "Primary choice to start"
-          = f.select :primary_choice_course_id , course_select
+          = f.select :primary_choice_course_id , course_select , {} , class: "custom-select"
         .form-input
           = f.label "Optional secondary choice to start"
-          = f.select :secondary_choice_course_id , course_select , :prompt => "Optionally select second"
+          = f.select :secondary_choice_course_id , course_select , {:prompt => "Optionally select second"} , class: "custom-select"
         .form-input
           = f.label "Payment plan (prices for 2 week modules, course has 4 modules)"
-          = f.select :plan , plan_select.invert
+          = f.select :plan , plan_select.invert , {} , class: "custom-select"
         .form-input
           = f.input :discount_code , label: "Optional code determines prearranged discount"
         .form-input
