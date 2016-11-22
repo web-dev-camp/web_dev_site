@@ -15,18 +15,7 @@
       .col-md-6
         .testimonial
           .figure.col-md-5.col-lg-3
-            =image_tag "ioana.jpg" , class: :rounded
-          .testimonial-content.nopadding.col-md-7.col-lg-9
-            %p
-              Before I started the Web Dev Camp course, a junior developer title seemed
-              like something unapproachable. Now, after graduation I know that I am one already!
-            %cite
-              Ioana Rosu
-              %span former Legal adviser
-      .col-md-6
-        .testimonial
-          .figure.col-md-5.col-lg-3
-            =image_tag "alice.jpg" , class: :rounded
+            =image_tag "people/alice.jpg" , class: :rounded
           .testimonial-content.nopadding.col-md-7.col-lg-9
             %p
               When I started to teach myself code, the journey to becoming a junior developer
@@ -35,7 +24,20 @@
               and I am amazed at how far I have come.
             %cite
               Alice Dee
-              %span Software Engineer
+              %span former Engineer
+      .col-md-6
+        .testimonial
+          .figure.col-md-5.col-lg-3
+            =image_tag "people/patricia.jpg" , class: :rounded
+          .testimonial-content.nopadding.col-md-7.col-lg-9
+            %p
+              WebDev Camp is obviously very different from university teaching methods.
+              Firstly, we worked straight away on a 'real' solution. There was no 'faffing about'.
+              Secondly, the feedback loop is much quicker as Torsten is always present to
+              answer question when we are too stuck.
+            %cite
+              Patricia Buchner Santos
+              %span Computer Science graduate
 
 .section.heading{:style => "background-image: url('#{image_url("small_group.jpg")}');"}
   %h1
@@ -46,41 +48,32 @@
     =link_to "Course details", page_path(:course) , class: "btn btn-success btn-lg"
 
 .section
-  .container
-    .row.clearfix.bordered-grid
-      .col-md-4.bordered-item
-        .row
-          .col-xs-3
-            =image_tag("quest/where.jpg" , class: :rounded)
-          .col-xs-9
+  .container.margin-bottom-80
+    .row
+      .col-md-6
+        .testimonial
+          .figure.col-md-5.col-lg-3
+            =image_tag "people/zita.jpg" , class: :rounded
+          .testimonial-content.nopadding.col-md-7.col-lg-9
             %p
-              During the course you
-              %b live in
-              an old village school, in the middle of beautiful Finnish
-              nature, one hour from Helsinki.
-      .col-md-4.bordered-item
-        .row
-          .col-xs-3
-            =image_tag("quest/when.jpg" , class: :rounded)
-          .col-xs-9
+              The whole experience of Webdev.camp has been an intensive and empowering
+              learning journey for me, and not just with regard to my new skills.
+              Yes, I now think of myself as a developer,  and the dream is a reality
+              because I now know I CAN code.
+            %cite
+              Zita Székely
+              %span former Tester
+      .col-md-6
+        .testimonial
+          .figure.col-md-5.col-lg-3
+            =image_tag "people/ioana.jpg" , class: :rounded
+          .testimonial-content.nopadding.col-md-7.col-lg-9
             %p
-              Courses start every two months, next on
-              %b 16.1.17
-              and
-              %b 13.2.17
-              The course is 6 days a week, at least 9 hours a day.
-      .col-md-4.bordered-item
-        .row
-          .col-xs-3
-            =image_tag("quest/how.jpg" , class: :rounded)
-          .col-xs-9
-            %p
-              We teach in
-              %b small groups
-              using modern techniques.
-              You create
-              %b real applications
-              and build your portfolio.
+              Before I started the Web Dev Camp course, a junior developer title seemed
+              like something unapproachable. Now, after graduation I know that I am one already!
+            %cite
+              Ioana Rosu
+              %span former Legal adviser
 
 .section.parallax{:style => "background-image: url('#{image_url("relax.jpg")}');"}
   %h1
@@ -106,7 +99,7 @@
       .col-md-4.bordered-item
         .row
           .col-xs-4
-            = image_tag "torsten.png"
+            = image_tag "people/torsten.png"
           .col-xs-8
             %h3 Torsten Ruger
             %span Course Director
@@ -115,7 +108,7 @@
       .col-md-4.bordered-item
         .row
           .col-xs-4
-            =image_tag "sherif.png"
+            =image_tag "people/sherif.png"
           .col-xs-8
             %h3 Sherif Abushadi
             %span Teacher
@@ -124,7 +117,7 @@
       .col-md-4.bordered-item
         .row
           .col-xs-4
-            =image_tag "raisa.jpg"
+            =image_tag "people/raisa.jpg"
           .col-xs-8
             %h3 Raisa Kaipainen
             %span Camp director
@@ -160,7 +153,7 @@
               Read what alumni say
           .col-md-6.course_report
             =link_to "https://www.coursereport.com/schools/web-dev-camp/" , class: :course_report_link ,target: :blank do
-              =image_tag "course_report.png"
+              =image_tag "logos/course_report.png"
             %p.ratings
               %span.icon-star
               %span.icon-star
@@ -171,7 +164,7 @@
               Avg Rating: 5.0
           .col-md-6.centered
             =link_to "https://www.switchup.org/bootcamps/web-dev-camp" , class: :switch_up ,target: :blank do
-              =image_tag "switch_up.png"
+              =image_tag "logos/switch_up.png"
               switchup
             %p.ratings
               %span.icon-star
