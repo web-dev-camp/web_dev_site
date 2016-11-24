@@ -75,15 +75,19 @@
             %i.icon-instagram
   .container-fluid
     .row.copyright
-      .col-md-9
+      .col-md-7
         © All Rights Reserved, Web Dev Camp, a subsidiary of Lightning Raisa & Torsten Oy
-      .col-md-3.text-right
+      .col-md-5.text-sm-right
         %ul.nomargin.list-inline.mobile-block
           %li.list-inline-item
             =link_to "Terms & Conditions" , page_path(:terms)
           %li.list-inline-item •
           %li.list-inline-item
             =link_to "Privacy" , page_path(:privacy)
+          -if user_signed_in?
+            %li.list-inline-item •
+            %li.list-inline-item
+              =link_to "House Rules" , page_path(:rules)
 
 :javascript
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
