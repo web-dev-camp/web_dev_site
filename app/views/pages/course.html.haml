@@ -1,52 +1,93 @@
 - title! "Web Development teaching method"
 - description! "Web Dev Camp has 4 modules of 2 weeks. introduction, communication, presentation to mastery"
 
-.section
-  .row.jumbotron
-    .col-md-3
+.section.minitron
+  .row
+    %h1 Web Application Development
+    %p.lead.centered Learn much more than just programming
+
+.section.minitron
+  .row
+    .col-md-5
       =image_tag "coder.jpg"
-    .col-md-9
-      %h1.display-3.centered Web Application Development
-      %p.lead.centered And all that entails
+    .col-md-6.offset-md-1
+      %h2 Programming
+      %p.lead Technical skill is the start
       %hr.my-2/
       .col-md-4
-        %h3 Programming
-        %ul
-          %li Laguages
-          %li Web technologies
-          %li Frameworks
+        Languages
+        %ul.list-unstyled
+          %li.icon-angle-right Ruby, Javascript
+          %li.icon-angle-right Html, Haml
+          %li.icon-angle-right Css, Sass
       .col-md-4
-        %h3 Teamwork
-        %ul
-          %li Roles
-          %li distributed Workflow
-          %li Frameworks
+        Web technologies
+        %ul.list-unstyled
+          %li.icon-angle-right Client/Server
+          %li.icon-angle-right cloud services
+          %li.icon-angle-right Ip/dns/http
 
       .col-md-4
-        %h3 Excecution
+        Frameworks
+        %ul.list-unstyled
+          %li.icon-angle-right Rails
+          %li.icon-angle-right Bootstrap
+          %li.icon-angle-right Rspec
 
-.section.dark_section
-  .container
-    .row.white.margin-bottom-50.margin-top-30
-      %h1.centered Web Development Course
-    .row.margin-bottom-80
-      .col-md-4.centered
-        %h2 8 week
-        .muub 6 days/week
-        .muub 10 hours / day
-        .muub always tutored
+.section.minitron
+  .row
+    .col-md-7
+      %h2 Teamwork
+      %p.lead Together we get things done
+      %hr.my-2/
+      .col-md-4
+        Roles
+        %ul.list-unstyled
+          %li.icon-angle-right Frontend
+          %li.icon-angle-right Backend
+          %li.icon-angle-right Designer etc
+      .col-md-4
+        Source Control
+        %ul.list-unstyled
+          %li.icon-angle-right Git basics
+          %li.icon-angle-right Github
+          %li.icon-angle-right Branches
 
-      .col-md-4.centered
-        %h2 live in
-        .muub In person
-        .muub in nature
-        .muub full board
+      .col-md-4
+        Workflow
+        %ul.list-unstyled
+          %li.icon-angle-right Distributed flow
+          %li.icon-angle-right Test Driven
+          %li.icon-angle-right Continuous Deployment
+    .col-md-5
+      =image_tag "together.jpg"
+.section.minitron
+  .row
+    .col-md-5
+      =image_tag "application.png"
+    .col-md-6.offset-md-1
+      %h2 Excecution
+      %p.lead Putting it all together in real applications
+      %hr.my-2/
+      .col-md-4
+        Planning
+        %ul.list-unstyled
+          %li.icon-angle-right UML
+          %li.icon-angle-right Brainstorming
+          %li.icon-angle-right UI Design
+      .col-md-4
+        Development
+        %ul.list-unstyled
+          %li.icon-angle-right TDD frameworks
+          %li.icon-angle-right fast cycles
+          %li.icon-angle-right CI testing
 
-      .col-md-4.centered
-        %h2 bootcamp
-        .muub Full Stack
-        .muub real projects
-        .muub small groups
+      .col-md-4
+        Deployment
+        %ul.list-unstyled
+          %li.icon-angle-right Distributed flow
+          %li.icon-angle-right Test Driven
+          %li.icon-angle-right Continuous
 
 .section
   .container
