@@ -15,20 +15,20 @@
     %hr.my-2/
   .topics
     .topic
-      Languages
+      %h3 Languages
       %ul.list-unstyled
         %li.icon-angle-right Ruby, Javascript
         %li.icon-angle-right Html, Haml
         %li.icon-angle-right Css, Sass
     .topic
-      Web technologies
+      %h3 Web technologies
       %ul.list-unstyled
         %li.icon-angle-right Client/Server
         %li.icon-angle-right cloud services
         %li.icon-angle-right Ip/dns/http
 
     .topic
-      Frameworks
+      %h3 Frameworks
       %ul.list-unstyled
         %li.icon-angle-right Rails
         %li.icon-angle-right Bootstrap
@@ -41,20 +41,20 @@
     %hr.my-2/
   .topics
     .topic
-      Roles
+      %h3 Roles
       %ul.list-unstyled
         %li.icon-angle-right Frontend
         %li.icon-angle-right Backend
         %li.icon-angle-right Designer etc
     .topic
-      Source Control
+      %h3 Source Control
       %ul.list-unstyled
         %li.icon-angle-right Git basics
         %li.icon-angle-right Github
         %li.icon-angle-right Branches
 
     .topic
-      Workflow
+      %h3 Workflow
       %ul.list-unstyled
         %li.icon-angle-right Distributed flow
         %li.icon-angle-right Test Driven
@@ -70,24 +70,66 @@
     %hr.my-2/
   .topics
     .topic
-      Planning
+      %h3 Planning
       %ul.list-unstyled
         %li.icon-angle-right UML
         %li.icon-angle-right Brainstorming
         %li.icon-angle-right UI Design
     .topic
-      Development
+      %h3 Development
       %ul.list-unstyled
         %li.icon-angle-right TDD frameworks
-        %li.icon-angle-right fast cycles
+        %li.icon-angle-right Test cycles
         %li.icon-angle-right CI testing
 
     .topic
-      Deployment
+      %h3 Deployment
       %ul.list-unstyled
         %li.icon-angle-right Distributed flow
         %li.icon-angle-right Test Driven
         %li.icon-angle-right Continuous
+
+.section.schedule-container
+  .schedule
+    %ul
+      %li
+        .empty &nbsp;
+        .task
+          %h1 Daily Schedule
+        .full-time Lesson
+        .free Break
+      %li
+        .hour 1.5
+        .task Theory Lesson
+        .full-time 9:00 - 10:30
+        .free 30
+      %li
+        .hour 1.5
+        .task Student Presentations
+        .full-time 11:00 - 12:30
+        .free 75
+      %li
+        .hour 1.0
+        .task Work assignments, tutored
+        .full-time 13:45 - 14:45
+        .free 15
+      %li
+        .hour 1.0
+        .task Group work, explanations
+        .full-time 15:00 - 16:00
+        .free 30
+      %li
+        .hour 1.0
+        .task Work assignments, tutored
+        .full-time 16:30 - 17:30
+        .free 60
+      %li
+        .hour 1.0
+        .task Independent work
+        .full-time evening
+        .free &nbsp;
+  .pic
+    =image_tag "schedule.jpg"
 
 .section
   .modules
@@ -104,7 +146,7 @@
         =pie(25)
         %h2 Introduction
       %p
-        Initial teaching happens in small groups where you will be able to ask questions immediately.
+        Initial theory lessons happen in small groups where you will be able to ask questions immediately.
         You will be building useful apps for real people throughout the course.
       %p
         %span.tipster
@@ -151,7 +193,7 @@
           %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
           Roles
           %span.content
-            Software development is all about teamwork. Even tools have got much better, so have timetables
+            Software Development is all about teamwork. Even tools have got much better, so have timetables
             shrunk. In any meaningful project we rely on other people's strengths to achieve a goal.
             We will talk about the different roles and skills people have, not just to see
             what a software developer is, but also to open the scope of possibilities for your
@@ -371,7 +413,7 @@
           Mobile first, breakpoints
           %span.content
             While learning about Bootstrap, we touched on the multi-device concept and now go
-            deeper into mobile first development. You'll learn what
+            deeper into mobile first Development. You'll learn what
             =link_to  "Breakpoints" , "http://breakpoint-sass.com/" , target: :blank
             are and how to implement one design that can be viewed on multiple devices.
         %br

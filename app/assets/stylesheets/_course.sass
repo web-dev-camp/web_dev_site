@@ -1,3 +1,64 @@
+.schedule-container
+  @include container(90%)
+  .pic
+    @include span(40%)
+    img
+      border-radius: 10px
+  .schedule
+    @include span(55%)
+    margin-right: 5%
+    border-radius: 4px
+    border-bottom: 3px solid darken(#2D3134, 15%)
+    padding-top: 3px
+    h1
+      padding: 20px
+    ul
+      padding: 0px 0px 0px 20px
+      list-style-type: none
+      li
+        &:first
+          border-bottom: 2px solid #2D3134
+        padding: 0px 0px 10px 0px
+        display: table
+        width: 100%
+        .hour, .task, .full-time , .free , .empty
+          display: table-cell
+        .empty
+          width: 22px
+        .hour
+          border: 2px solid black
+          border-radius: 50%
+          font-size: 20px
+          font-weight: bold
+          height: 22px
+          padding: 8px
+          text-align: right
+          width: 22px
+        @media(max-width: 480px)
+          .hour
+            display: none
+            width: 0px
+        .free
+          width: 50px
+          color: limegreen
+          text-align: right
+        @media(max-width: 600px)
+          .free
+            display: none
+            width: 0px
+        .task
+          font-size: 18px
+          padding: 0px 10px 0px 10px
+          text-align: left
+        .full-time
+          padding: 0px 20px 0px 10px
+          text-align: right
+  @media(max-width: 1000px)
+    .pic
+      display: none
+    .schedule
+      @include span(100%)
+
 svg.pie
   width: 100px
   height: 100px
@@ -46,6 +107,9 @@ svg.pie
   h2
     font-size: 3.5rem
     font-weight: 400
+  h3
+    font-size: 1.2rem
+    color: lighten(black, 40%)
   img
     border-radius: 20px
   @media(max-width: 920px)
