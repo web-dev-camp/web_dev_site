@@ -1,9 +1,0 @@
-#user-menu.page-menu-color
-  %nav.navbar.navbar-light.bg-faded
-    %button.navbar-toggler.hidden-lg-up{"aria-controls" => "navbarUser", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarUser", "data-toggle" => "collapse", :type => "button"}
-    #navbarUser.collapse.navbar-toggleable-md
-      %ul.nav.navbar-nav.float-md-right
-        - { "Profile" => edit_user_registration_path , "Resume" => resume_path  ,
-          "Application" => application_path }.each do | menu, slug|
-          %li.nav-item{class: (request.path == slug) && "active" }
-            =link_to menu , slug ,class: "nav-link"
