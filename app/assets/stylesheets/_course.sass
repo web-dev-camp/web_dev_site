@@ -1,0 +1,56 @@
+.minitron
+  @include container(90%)
+  .pic
+    @include span(39%)
+    margin-right: 5%
+    img
+      vertical-align: top
+  .content
+    @include span(55%)
+  .topics
+    @include span(55%)
+    .topic
+      @include gallery(4 of 12)
+  h1
+    text-align: center
+    font-size: 4.5rem
+    font-weight: 400
+  h2
+    font-size: 3.5rem
+    font-weight: 400
+  img
+    border-radius: 20px
+  @media(max-width: 920px)
+    .pic
+      @include span(30%)
+      margin-right: 5%
+    .content
+      @include span(65%)
+    .topics
+      @include span(100%)
+    img
+      border-radius: 15px
+  @media(max-width: 600px)
+    .pic
+      @include span(80%)
+      margin-left: 10%
+      margin-right: 10%
+    .content
+      @include span(100%)
+    h1
+      text-align: center
+      font-size: 3.5rem
+      font-weight: 400
+
+    h2
+      text-align: center
+      margin-top: 1rem
+      font-size: 3rem
+      font-weight: 400
+    p
+      text-align: center
+
+    img
+      border-radius: 10px
+    li
+      font-size: smaller

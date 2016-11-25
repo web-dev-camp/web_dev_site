@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem "therubyracer"
 gem 'administrate'
 gem 'bootstrap'
+gem "susy"
 gem 'tether-rails'
 gem 'devise'
 gem 'devise_invitable'

@@ -22,6 +22,8 @@ module WebDevSite
 
     config.middleware.use Rack::Attack
 
+    config.assets.paths << Gem.loaded_specs['susy'].full_gem_path+'/sass'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
