@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_resume, only: [:show, :edit, :update , :progress ]
+  before_action :set_resume, only: [:show, :update , :progress ]
 
   def show
   end
@@ -9,7 +9,6 @@ class ResumesController < ApplicationController
     render layout: false
   end
 
-  # PATCH/PUT /resumes/1.json
   def update
     respond_to do |format|
       if @resume.update(resume_params)
@@ -30,7 +29,7 @@ class ResumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resume_params
-      params.require(:resume).permit(:street, :city, :country, :user_id ,
+      params.require(:resume).permit(:street, :city, :country, :user_id , :finance ,
                                      :school, :uni, :internship, :work, :tech_skills,
                                      :soft_skills, :projects, :other, :interests, :motivation)
     end

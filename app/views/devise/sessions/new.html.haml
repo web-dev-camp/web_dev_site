@@ -1,23 +1,21 @@
-.section
-  .container
-    .spacer-big
-    .authform.margin-bottom-30
-      = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f|
-        %h3 Sign in
-        = devise_error_messages!
-        .form-group
-          = f.label :email
-          - if devise_mapping.registerable?
-            (
-            = link_to 'Sign up', new_registration_path(resource_name), class: 'right'
-            if you haven't yet )
-          = f.email_field :email, :autofocus => true, class: 'form-control'
-        .form-group
-          = f.label :password
-          - if devise_mapping.recoverable?
-            (
-            = link_to "Forgot password?", new_password_path(resource_name), class: 'right'
-            )
-          = f.password_field :password, class: 'form-control'
-        = f.submit 'Sign in', :class => 'btn btn-success'
-        = link_to 'Resend confirmation', new_user_confirmation_path
+.container
+  .authform.margin-bottom-30
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f|
+      %h3 Sign in
+      = devise_error_messages!
+      .form-group
+        = f.label :email
+        - if devise_mapping.registerable?
+          (
+          = link_to 'Sign up', new_registration_path(resource_name), class: 'right'
+          if you haven't yet )
+        = f.email_field :email, :autofocus => true, class: 'form-control'
+      .form-group
+        = f.label :password
+        - if devise_mapping.recoverable?
+          (
+          = link_to "Forgot password?", new_password_path(resource_name), class: 'right'
+          )
+        = f.password_field :password, class: 'form-control'
+      = f.submit 'Sign in', :class => 'btn btn-success'
+      = link_to 'Resend confirmation', new_user_confirmation_path

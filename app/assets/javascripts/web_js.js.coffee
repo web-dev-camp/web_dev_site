@@ -18,7 +18,6 @@ $(document).ready ->
     return
 
 $(document).ready ->
-  ### fading alerts ###
   jQuery('.flash').delay(5000).fadeOut 'slow'
   return
 
@@ -26,12 +25,6 @@ $(document).ready ->
   content = -> $(this).find('.content')
   $('.tipster').each ->
     $(this).tooltip( title: content)
-  return
-
-$(document).ready ->
-  _headerHeight = jQuery("#header").outerHeight()
-  _screenHeight = jQuery(window).height() - _headerHeight
-  jQuery('.fullheight').height _screenHeight
   return
 
 $(document).ready ->

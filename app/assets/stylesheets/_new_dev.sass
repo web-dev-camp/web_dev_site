@@ -1,27 +1,40 @@
-@import "susy"
-// NAVIGATION & answers
 
-.nav-small
-  font-size: .7em
-  font-weight: 600
-  line-height: 320%
+.navbar
+  background-color: rgb(247, 247, 249)
+  .nav-small
+    font-size: .7em
+    font-weight: 600
+    line-height: 320%
 
-a.nav-link
-  color: #55595c
+  a.nav-link
+    color: #55595c
 
-a.active.nav-link, a.nav-link hover
-  font-weight: bold
+  a.active.nav-link, a.nav-link hover
+    font-weight: bold
 
-a.nav-link hover
-  font-weight: bold
+  a.nav-link hover
+    font-weight: bold
 
-// BODY
+  .nav
+    a
+      font-size: 1.3em !important
+    li
+      padding-top: 11px
+      padding-right: 11px
+
 body
   font-family: "ProximaNova", Arial, Helvetica, sans-serif
   -webkit-font-smoothing: antialiased
   font-size: 16px
   overflow-x: hidden
   width: 100vw
+  padding-top: 80px
+
+.main
+  padding-bottom: 60px
+  
+.alert
+  margin-bottom: 0px
 
 sup
   top: -0.2em
@@ -41,6 +54,16 @@ sup
 .toggle
   active label
     font-weight: bold
+
+.faq
+  .nav-item
+    font-size: 1.2rem
+    font-weight: bolder
+
+    .nav-link
+      color: #727577
+    .nav-link.active
+      color: #0275d8 !important
 
 
 // FOOTER

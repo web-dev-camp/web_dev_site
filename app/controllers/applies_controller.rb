@@ -2,8 +2,6 @@ class AppliesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_apply, only: [:show , :create , :cancel ]
 
-  # GET /applies/1
-  # GET /applies/1.json
   def show
     render @apply.new_record? ? :edit :  :show
   end
@@ -24,7 +22,7 @@ class AppliesController < ApplicationController
   def cancel
     ApplyMailer.cancel( @apply , params[:reason]).deliver_later
     @apply.delete
-    path = params[:reason].blank? ? edit_user_registration_path : resume_path
+    path = params[:reason].blank? ? edit_user_registration_path : application_path
     redirect_to path , alert: 'Application was canceled.'
   end
 
