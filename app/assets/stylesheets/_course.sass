@@ -10,6 +10,16 @@ svg.pie
     stroke-width: 32
     stroke-dasharray: 25 100
 
+.modules
+  @include container(90%)
+  .head
+    @include span(100%)
+    .pie
+      width: 16px
+      height: 16px
+  .module
+    @include span(3 of 12)
+
 .minitron
   @include container(90%)
   .pic

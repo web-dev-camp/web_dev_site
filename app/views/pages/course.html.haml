@@ -90,362 +90,338 @@
         %li.icon-angle-right Continuous
 
 .section
-  .container
-    .row
-      %h1#modules.centered
+  .modules
+    .head
+      %h1.centered
         Modules
       %p.tipster.centered.margin-bottom-30
         Every two weeks we cover the fundamental topics, while going deeper with each iteration.
-        = image_tag "pie/green-info.jpg" , width: "15px"
+        = pie 75
         %span.content
           Use hover or click on the topics to get more info
-    .row
-      .col-md-3
-        .row
-          .col-md-4
-          .col-md-4
-            =pie(25)
-        .row
-          .col-md-12
-            %h2.centered Introduction
-        .row.block-md
-          .col-md-12
-            %p
-              Initial teaching happens in small groups where you will be able to ask questions immediately.
-              You will be building useful apps for real people throughout the course.
-            %p
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
-                Basic box model
-                %span.content
-                  Boxes in boxes is a simple way to think about html. You'll learn a little about it's
-                  initial shortcomings and current standards.
-                  %br
-                  We introduce
-                  = link_to "Haml" , "http://haml.info/" , target: :blank
-                  as a shorter, more concise and error free way of writing correct html.
-                  %br
-                  Also you'll learn about the type of boxes and how they can be arranged, in other
-                  words the connection to css.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
-                Style basics
-                %span.content
-                  If we think of html elements as boxes, then we can think of css as labels on these
-                  boxes. The label describes the box and importantly there is a finite number of
-                  labels.
-                  %br
-                  This is the basic distinction between content and style. Over the course you will
-                  learn more and more about the myriad of ways css can be used. Similar to Haml,
-                  =link_to "Sass" , "http://sass-lang.com/" , target: :blank
-                  is a shorthand and more semantic (but equivalent) way of writing css.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
-                Object model
-                %span.content
-                  We are physical beings, and are well trained to think in terms of innate "things"
-                  having given properties. In one of the easiest to understand ways of programming
-                  we call the things object and their properties attributes.
-                  %br
-                  You will learn basic concepts of object oriented programming in Ruby, which is very
-                  thorough in it's approach to treating everything as an object, and the concept of
-                  class. We will see how procedural code (think cooking recipes) slot nicely into
-                  this model as methods.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
-                Roles
-                %span.content
-                  Software development is all about teamwork. Even tools have got much better, so have timetables
-                  shrunk. In any meaningful project we rely on other people's strengths to achieve a goal.
-                  We will talk about the different roles and skills people have, not just to see
-                  what a software developer is, but also to open the scope of possibilities for your
-                  future career. People are best at what they enjoy and a large part of the course is
-                  finding out what you are good at.
-                  %br
-                  Also projects are heavily dependent on often open source libraries, tools and
-                  frameworks. The first of which are your os, editor, command-line and browser.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
-                Object table model
-                %span.content
-                  SQL databases are a ubiquitous, well understood and efficient way to store data. The
-                  standard way of storing objects, maps classes to a tables and rows to objects.
-                  %br
-                  You will learn how this object table model is implemented in rails, or rather active
-                  record and try out the tools that come with it. We also talk a little bit about
-                  alternatives.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
-                Testing as assurance
-                %span.content
-                  Testing has been more of a nice idea in software engineering for a long time, before
-                  finally, and especially in the ruby community, becoming a reality.
-                  %br
-                  There really is no other way to know that the software we write does what we intend
-                  it to do, as you will be able to experience yourself very quickly.
-                  %br
-                  You will learn different types of testing and we will touch on frameworks and test
-                  integration.
+    .module
+      .centered
+        =pie(25)
+        %h2 Introduction
+      %p
+        Initial teaching happens in small groups where you will be able to ask questions immediately.
+        You will be building useful apps for real people throughout the course.
+      %p
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+          Basic box model
+          %span.content
+            Boxes in boxes is a simple way to think about html. You'll learn a little about it's
+            initial shortcomings and current standards.
+            %br
+            We introduce
+            = link_to "Haml" , "http://haml.info/" , target: :blank
+            as a shorter, more concise and error free way of writing correct html.
+            %br
+            Also you'll learn about the type of boxes and how they can be arranged, in other
+            words the connection to css.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+          Style basics
+          %span.content
+            If we think of html elements as boxes, then we can think of css as labels on these
+            boxes. The label describes the box and importantly there is a finite number of
+            labels.
+            %br
+            This is the basic distinction between content and style. Over the course you will
+            learn more and more about the myriad of ways css can be used. Similar to Haml,
+            =link_to "Sass" , "http://sass-lang.com/" , target: :blank
+            is a shorthand and more semantic (but equivalent) way of writing css.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+          Object model
+          %span.content
+            We are physical beings, and are well trained to think in terms of innate "things"
+            having given properties. In one of the easiest to understand ways of programming
+            we call the things object and their properties attributes.
+            %br
+            You will learn basic concepts of object oriented programming in Ruby, which is very
+            thorough in it's approach to treating everything as an object, and the concept of
+            class. We will see how procedural code (think cooking recipes) slot nicely into
+            this model as methods.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+          Roles
+          %span.content
+            Software development is all about teamwork. Even tools have got much better, so have timetables
+            shrunk. In any meaningful project we rely on other people's strengths to achieve a goal.
+            We will talk about the different roles and skills people have, not just to see
+            what a software developer is, but also to open the scope of possibilities for your
+            future career. People are best at what they enjoy and a large part of the course is
+            finding out what you are good at.
+            %br
+            Also projects are heavily dependent on often open source libraries, tools and
+            frameworks. The first of which are your os, editor, command-line and browser.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+          Object table model
+          %span.content
+            SQL databases are a ubiquitous, well understood and efficient way to store data. The
+            standard way of storing objects, maps classes to a tables and rows to objects.
+            %br
+            You will learn how this object table model is implemented in rails, or rather active
+            record and try out the tools that come with it. We also talk a little bit about
+            alternatives.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+          Testing as assurance
+          %span.content
+            Testing has been more of a nice idea in software engineering for a long time, before
+            finally, and especially in the ruby community, becoming a reality.
+            %br
+            There really is no other way to know that the software we write does what we intend
+            it to do, as you will be able to experience yourself very quickly.
+            %br
+            You will learn different types of testing and we will touch on frameworks and test
+            integration.
 
-      .col-md-3
-        .row
-          .col-md-4
-          .col-md-4
-            =pie(50)
-        .row
-          .col-md-12
-            %h2.centered Communication
-        .row.block-md
-          .col-md-12
-            %p
-              You will be assigned a younger student to whom you’ll explain the topic.
-              You will notice that  to achieve the clarity needed to express yourself,
-              you will need to study yourself.
-            %p
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
-                Dynamic html generation
-                %span.content
-                  Here you learn a little more about the DOM and and how it can be used to create
-                  simple dynamic pages, eg endless scrolling.
-                  %br
-                  We use existing tools and server side responses to generate html on the client.
+    .module
+      .centered
+        =pie(50)
+        %h2 Communication
+      %p
+        You will be assigned a younger student to whom you’ll explain the topic.
+        You will notice that  to achieve the clarity needed to express yourself,
+        you will need to study yourself.
+      %p
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+          Dynamic html generation
+          %span.content
+            Here you learn a little more about the DOM and and how it can be used to create
+            simple dynamic pages, eg endless scrolling.
+            %br
+            We use existing tools and server side responses to generate html on the client.
 
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
-                Semantic css / susy
-                %span.content
-                  Reviewing bootstrap html code we will see that it does not adhere to the content/style
-                  separation we learned. To do it right, we introduce the concept of semantic css. This
-                  gives meaningful names to our styles and lets them build ourselves.
-                  %br
-                  You'll earn
-                  =link_to  "Susy" , "http://susy.oddbird.net/" , target: :blank
-                  and how to build your own grid system.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
-                Concurrency and closures
-                %span.content
-                  Concurrency, several or even many things happening at the same time, has been a
-                  difficult topic up to quite recently. You will learn better concurrency models like
-                  the actor model and channels. Especially actors are easy to understand and reason
-                  about since they just extend the object model to "active" objects.
-                  %br
-                  When a piece of code is passed of to another part of the program to be executed later,
-                  one talk of closures, and we will see the somewhat different light this shed on
-                  variable lifetime.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
-                Advanced git
-                %span.content
-                  After having gained some hands on experience, you will understand the problems better
-                  and so we will go into more advanced usage of git.
-                  %br
-                  This will give you a glimpse into how large project are run, both in the open source
-                  world and in companies. After the theory you may choose to deepen this part or not,
-                  since in larger projects this is usually a separate role.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
-                Searching
-                %span.content
-                  Going deeper into how to find objects in the database we learn about scopes, some
-                  simple sql clauses and how to actually use sql in queries.
-                  %br
-                  You will learn the tools to build complex search interfaces and use pagination
-                  on the results.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
-                Continuous testing
-                %span.content
-                  The next step will be to integrate our test fully into our workflow. This simply means
-                  that no work should be accepted before adequate test are written and fixing bugs
-                  should always start by writing test.
-                  %br
-                  To make the should a reality we make testing automatic both for the developer, and
-                  for the current state of the committed source (in git). We will see the tools needed
-                  to alert us directly of any shortcomings.
-      .col-md-3
-        .row
-          .col-md-4
-          .col-md-4
-            = pie(75)
-        .row
-          .col-md-12
-            %h2.centered Presentation
-        .row.block-md
-          .col-md-12
-            %p
-              You will give 2 presentations on your chosen topics (group and solo).
-            %p
-              Presentations are a practical demonstration of the work you will have completed,
-              and will provide you further insight for future learning.
-            %p
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
-                Dom, the api for Html
-                %span.content
-                  The Document Object Model (
-                  =link_to "DOM", "http://www.w3schools.com/js/js_htmldom.asp" , target: :blank
-                  ) gives us a programmatic interface to the rendered
-                  content. While html describes the static structure and a transport mechanism, the dom
-                  gives us a way to programmatically create, update and delete arbitrary nodes.
-                  %br
-                  This is the foundation for the modern web and client side applications.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
-                Bootstrap / Frameworks
-                %span.content
-                  As in other language, css has libraries and frameworks that we can reuse. A modern
-                  framework like Bootstrap or Foundation will not only make the basic html "look good".
-                  %br
-                  You will also learn about standard elements, eg modern navigation, menus, dropdowns,
-                  callouts, buttons and many more. you'll see how a grid system works and how eg
-                  bootstrap solves the multi-device issue.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
-                Associations and structures
-                %span.content
-                  Objects are great at modeling single entities, but in programs we need to model large
-                  system, invariably containing many objects.
-                  %br
-                  You will learn about different data structures and their different properties. Like
-                  how they are accessed, how they store data and which are good for what purpose.
-                  %br
-                  We will theoretically brush on O(n) and practically experiment with access and
-                  iteration.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
-                Git basics
-                %span.content
-                  The sharing of code has always been very important but never as easy and efficient as
-                  today, with git. Even more, online sharing sites like
-                  =link_to "github.com", "https://github.com" , target: :blank
-                  fuel open source community by sharing publicly and across projects.
-                  %br
-                  You'll learn the basic workflow and will practice this in your own projects.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
-                Associations
-                %span.content
-                  In the same way we need structures for programming, we need associations in databases.
-                  You'll learn how associations are implemented and how they relate to the structures
-                  we have learned in the programming sessions.
-                  %br
-                  We see how associations are implemented as in rails by using metaprogramming
-                  techniques to create a very intuitive api.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
-                Rspec framework
-                %span.content
-                  In the second module we will concentrate on exploring and using RSpec, a commonly
-                  used testing framework. We will be writing different tests and use supporting tools
-                  for creating mock object, managing database "cleanliness" and interacting with the
-                  application as if our test were a user.
-      .col-md-3
-        .row
-          .col-md-4
-          .col-md-4
-            = pie 101
-        .row
-          .col-md-12
-            %h2.centered Mastery
-        .row.block-md
-          .col-md-12
-            %p
-              You can choose your final assignment according to your interests and previous work.
-            %p
-              ​You will work in a group on a final project to show mastery of the topic.
-            %p
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
-                Client side applications
-                %span.content
-                  Going further into client side api's and cross compilation we examine languages
-                  that can be used instead of using JavaScript directly, specifically
-                  =link_to "coffee script" , "http://coffeescript.org/" , target: :blank
-                  and
-                  =link_to "opal" , "http://opalrb.org/" , target: :blank
-                  %br
-                  We will look at evolving tools to write client side applications, like
-                  =link_to "volt" , "http://voltframework.com" , target: :blank
-                  ,
-                  =link_to "clearwater" , "https://github.com/clearwater-rb/clearwater" , target: :blank
-                  and
-                  =link_to "webix" , "http://opalphaser.com/" , target: :blank
-                  You will also have an opportunity to look at pure JavaScript frameworks like
-                  Angular, Ember, and Backbone.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
-                Mobile first, breakpoints
-                %span.content
-                  While learning about Bootstrap, we touched on the multi-device concept and now go
-                  deeper into mobile first development. You'll learn what
-                  =link_to  "Breakpoints" , "http://breakpoint-sass.com/" , target: :blank
-                  are and how to implement one design that can be viewed on multiple devices.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
-                Other languages
-                %span.content
-                  Ruby is off course just one of many languages and since by the seventh week you will
-                  have learned enough about it, we can start comparing it to other languages. Some of
-                  which are similar, some strange, some very different.
-                  %br
-                  Off course we will also cover JavaScript basics and ways to avoid some of JavaScripts
-                  strangeness by using languages that compile to JavaScript.
-                  %br
-                  You may also choose to learn a completely different language at this point, eg
-                  = link_to  "Go" , "https://golang.org/" , target: :blank
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
-                Communication skills
-                %span.content
-                  Off course code is by far not the only way developers communicate and so we will
-                  go into the importance of both communicating precisely both in documentation
-                  and presentation.
-                  %br
-                  We will practice both areas and learn some modeling visualization on the way.
-                  %br
-                  Also we debunk the common misconception that open source means that ownership is
-                  not important. This is especially important when wanting to collaborate in open
-                  source projects, which you have a chance to.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
-                Performance, NoSql
-                %span.content
-                  We briefly look at database and application performance. The ways to scale, optimize
-                  and benchmark. This is an advanced topic, but you will learn to understand the issues.
-                  %br
-                  Finally we will explore the alternatives a little, so called NoSql, the concept of
-                  graph, object or document databases and possible uses.
-              %br
-              %span.tipster
-                %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
-                Client side testing
-                %span.content
-                  Client side testing, like client side applications, is still quite young. But progress
-                  has been made and especially with the ruby tools we will see how.
-                  %br
-                  At the same time we will go into more depth on testing JavaScript enhanced web sites
-                  like the ones we will be building in this last module of the course.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+          Semantic css / susy
+          %span.content
+            Reviewing bootstrap html code we will see that it does not adhere to the content/style
+            separation we learned. To do it right, we introduce the concept of semantic css. This
+            gives meaningful names to our styles and lets them build ourselves.
+            %br
+            You'll earn
+            =link_to  "Susy" , "http://susy.oddbird.net/" , target: :blank
+            and how to build your own grid system.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+          Concurrency and closures
+          %span.content
+            Concurrency, several or even many things happening at the same time, has been a
+            difficult topic up to quite recently. You will learn better concurrency models like
+            the actor model and channels. Especially actors are easy to understand and reason
+            about since they just extend the object model to "active" objects.
+            %br
+            When a piece of code is passed of to another part of the program to be executed later,
+            one talk of closures, and we will see the somewhat different light this shed on
+            variable lifetime.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+          Advanced git
+          %span.content
+            After having gained some hands on experience, you will understand the problems better
+            and so we will go into more advanced usage of git.
+            %br
+            This will give you a glimpse into how large project are run, both in the open source
+            world and in companies. After the theory you may choose to deepen this part or not,
+            since in larger projects this is usually a separate role.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+          Searching
+          %span.content
+            Going deeper into how to find objects in the database we learn about scopes, some
+            simple sql clauses and how to actually use sql in queries.
+            %br
+            You will learn the tools to build complex search interfaces and use pagination
+            on the results.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+          Continuous testing
+          %span.content
+            The next step will be to integrate our test fully into our workflow. This simply means
+            that no work should be accepted before adequate test are written and fixing bugs
+            should always start by writing test.
+            %br
+            To make the should a reality we make testing automatic both for the developer, and
+            for the current state of the committed source (in git). We will see the tools needed
+            to alert us directly of any shortcomings.
+
+    .module
+      .centered
+        = pie(75)
+        %h2 Presentation
+      %p
+        You will give 2 presentations on your chosen topics (group and solo).
+
+        Presentations are a practical demonstration of the work you will have completed,
+        and will provide you further insight for future learning.
+      %p
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+          Dom, the api for Html
+          %span.content
+            The Document Object Model (
+            =link_to "DOM", "http://www.w3schools.com/js/js_htmldom.asp" , target: :blank
+            ) gives us a programmatic interface to the rendered
+            content. While html describes the static structure and a transport mechanism, the dom
+            gives us a way to programmatically create, update and delete arbitrary nodes.
+            %br
+            This is the foundation for the modern web and client side applications.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+          Bootstrap / Frameworks
+          %span.content
+            As in other language, css has libraries and frameworks that we can reuse. A modern
+            framework like Bootstrap or Foundation will not only make the basic html "look good".
+            %br
+            You will also learn about standard elements, eg modern navigation, menus, dropdowns,
+            callouts, buttons and many more. you'll see how a grid system works and how eg
+            bootstrap solves the multi-device issue.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+          Associations and structures
+          %span.content
+            Objects are great at modeling single entities, but in programs we need to model large
+            system, invariably containing many objects.
+            %br
+            You will learn about different data structures and their different properties. Like
+            how they are accessed, how they store data and which are good for what purpose.
+            %br
+            We will theoretically brush on O(n) and practically experiment with access and
+            iteration.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+          Git basics
+          %span.content
+            The sharing of code has always been very important but never as easy and efficient as
+            today, with git. Even more, online sharing sites like
+            =link_to "github.com", "https://github.com" , target: :blank
+            fuel open source community by sharing publicly and across projects.
+            %br
+            You'll learn the basic workflow and will practice this in your own projects.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+          Associations
+          %span.content
+            In the same way we need structures for programming, we need associations in databases.
+            You'll learn how associations are implemented and how they relate to the structures
+            we have learned in the programming sessions.
+            %br
+            We see how associations are implemented as in rails by using metaprogramming
+            techniques to create a very intuitive api.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+          Rspec framework
+          %span.content
+            In the second module we will concentrate on exploring and using RSpec, a commonly
+            used testing framework. We will be writing different tests and use supporting tools
+            for creating mock object, managing database "cleanliness" and interacting with the
+            application as if our test were a user.
+
+    .module
+      .centered
+        = pie 101
+        %h2 Mastery
+      %p
+        You can choose your final assignment according to your interests and previous work.
+        ​You will work in a group on a final project to show mastery of the topic.
+      %p
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-html5
+          Client side applications
+          %span.content
+            Going further into client side api's and cross compilation we examine languages
+            that can be used instead of using JavaScript directly, specifically
+            =link_to "coffee script" , "http://coffeescript.org/" , target: :blank
+            and
+            =link_to "opal" , "http://opalrb.org/" , target: :blank
+            %br
+            We will look at evolving tools to write client side applications, like
+            =link_to "volt" , "http://voltframework.com" , target: :blank
+            ,
+            =link_to "clearwater" , "https://github.com/clearwater-rb/clearwater" , target: :blank
+            and
+            =link_to "webix" , "http://opalphaser.com/" , target: :blank
+            You will also have an opportunity to look at pure JavaScript frameworks like
+            Angular, Ember, and Backbone.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-css3
+          Mobile first, breakpoints
+          %span.content
+            While learning about Bootstrap, we touched on the multi-device concept and now go
+            deeper into mobile first development. You'll learn what
+            =link_to  "Breakpoints" , "http://breakpoint-sass.com/" , target: :blank
+            are and how to implement one design that can be viewed on multiple devices.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-file-code
+          Other languages
+          %span.content
+            Ruby is off course just one of many languages and since by the seventh week you will
+            have learned enough about it, we can start comparing it to other languages. Some of
+            which are similar, some strange, some very different.
+            %br
+            Off course we will also cover JavaScript basics and ways to avoid some of JavaScripts
+            strangeness by using languages that compile to JavaScript.
+            %br
+            You may also choose to learn a completely different language at this point, eg
+            = link_to  "Go" , "https://golang.org/" , target: :blank
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
+          Communication skills
+          %span.content
+            Off course code is by far not the only way developers communicate and so we will
+            go into the importance of both communicating precisely both in documentation
+            and presentation.
+            %br
+            We will practice both areas and learn some modeling visualization on the way.
+            %br
+            Also we debunk the common misconception that open source means that ownership is
+            not important. This is especially important when wanting to collaborate in open
+            source projects, which you have a chance to.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-database
+          Performance, NoSql
+          %span.content
+            We briefly look at database and application performance. The ways to scale, optimize
+            and benchmark. This is an advanced topic, but you will learn to understand the issues.
+            %br
+            Finally we will explore the alternatives a little, so called NoSql, the concept of
+            graph, object or document databases and possible uses.
+        %br
+        %span.tipster
+          %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-ok
+          Client side testing
+          %span.content
+            Client side testing, like client side applications, is still quite young. But progress
+            has been made and especially with the ruby tools we will see how.
+            %br
+            At the same time we will go into more depth on testing JavaScript enhanced web sites
+            like the ones we will be building in this last module of the course.
 
 .section
   .container
