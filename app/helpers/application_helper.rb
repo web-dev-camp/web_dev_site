@@ -27,4 +27,10 @@ module ApplicationHelper
   def faq_sections
     ["course","application","payment","stay","career"]
   end
+
+  def pie percent
+    "<svg viewBox='0 0 32 32' class='pie'>
+      <circle r='16' cx='16' cy='16' style= 'stroke-dasharray: #{percent} 100;'/>
+    </svg>".html_safe
+  end
 end
