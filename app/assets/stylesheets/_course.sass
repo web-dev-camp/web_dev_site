@@ -19,6 +19,12 @@ svg.pie
       height: 16px
   .module
     @include span(3 of 12)
+  @media(max-width: 1000px)
+    .module
+      @include span(6 of 12)
+  @media(max-width: 480px)
+    .module
+      @include span(12 of 12)
 
 .minitron
   @include container(90%)
