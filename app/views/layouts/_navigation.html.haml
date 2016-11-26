@@ -1,11 +1,11 @@
 
-%nav.navbar.navbar-fixed-top
-  %button.navbar-toggler.hidden-lg-up{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
-  #navbarResponsive.collapse.navbar-toggleable-md
+%nav.navbar.navbar-fixed-top.navbar-light
+  %button.navbar-toggler.hidden-md-up{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
+  #navbarResponsive.collapse.navbar-toggleable-sm
     %a.navbar-brand{:href => page_path(:index) }
       = image_tag "logos/web_logo.png" , width: "250px"
       = #image_tag "logos/web_logo_mobile.png" , class: :mobile
-    %ul.nav.navbar-nav.float-md-right
+    %ul.nav.navbar-nav.float-sm-right
       %li.nav-item= link_to "Course" , page_path(:course) , class: "nav-link"
       %li.nav-item= link_to "Camp" ,   page_path(:camp) , class: "nav-link"
       %li.nav-item= link_to "Q & A" ,  page_path(:answers) , class: "nav-link"
