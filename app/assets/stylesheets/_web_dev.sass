@@ -124,7 +124,7 @@ h4 , h5 , h6
   letter-spacing: 0.1em !important
 
 .bg-finland
-  background-image: image-url("europe_finland.png")
+  background-image: image-url("logos/europe_finland.png")
   background-size: cover
 
 .red
@@ -328,3 +328,84 @@ section.parallax .testimonial cite span
 .tipster
   .content
     display: none
+
+@mixin double-circle($circle)
+  $border: $circle / 8
+  .col
+    min-height: $circle +  $border
+    margin-top: $border
+    margin-bottom: $border
+  .circle-container
+    width: $circle
+    height: $circle
+    margin-top: $border / 2
+    margin-bottom: $border / 2
+    .outer-outer-ring
+      top: -$border
+      left: -$border
+      width: $circle + 2 * $border
+      height: $circle + 2 * $border
+      box-shadow: 0px 0px $border rgba(0, 0, 0, 0.4)
+    .circle
+      width: $circle
+      height: $circle
+      .front, .back
+        width: $circle
+        height: $circle
+        box-shadow: 0px 0px $border rgba(0, 0, 0, 0.4)
+      .front
+        p
+          margin-top: $border
+          font-size: 4 * $border
+      .back
+        p
+          margin-top: 2.5 * $border
+          font-size: 2 * $border
+
+.step
+  @include double-circle(140px)
+  .circle-container
+    position: relative
+    perspective: 1000
+    margin-left: auto
+    margin-right: auto
+    &:hover
+      .circle
+        transform: rotate3d(45, 45, 0, 180deg)
+      .outer-ring
+        transform: rotate3d(45, 0, 0, 180deg)
+      .outer-outer-ring
+        transform: rotate3d(0, 45, 0, 180deg)
+    background-color: rgba(0, 0, 0, 0)
+    .outer-outer-ring
+      position: absolute
+      border-radius: 50%
+      border: 2px solid #fff
+      background-color: rgba(255, 255, 255, 0)
+    .circle, .outer-ring, .outer-outer-ring
+      transition: 0.5s
+      transform-style: preserve-3d
+      transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    .circle
+      position: relative
+      .front, .back
+        background-color: rgba(0, 0, 0, 0)
+        border-radius: 50%
+        backface-visibility: hidden
+        position: absolute
+        top: 0
+        left: 0
+        text-align: center
+        color: #c02227
+      .front
+        background-color: #fff
+        z-index: 2
+        p
+          font-family: cabin, sans-serif
+          font-weight: 700
+      .back
+        p
+          font-family: cabin, sans-serif
+          font-weight: 700
+        transform: rotate3d(45, 45, 0, 180deg)
+        background-color: #fff

@@ -1,0 +1,86 @@
+- title! "Application process"
+- description! "Application process for Web Dev Camp"
+
+.section.minitron
+  .pic
+    =image_tag "coder.jpg"
+  .content
+    %h2 Application process
+    %p.lead The steps before the course
+    %hr.my-2/
+  .topics
+    .topic
+      %h3 Application
+      %p
+        Signing up and filling out the form
+    .topic
+      %h3 Interview
+      %p
+        A skype session to clear up questions
+    .topic
+      %h3 Preparation
+      %p
+        Getting ready for the journey
+
+.section
+  .container
+    .row.step
+      .col-md-3.col-sm-4.col
+        .circle-container
+          .outer-outer-ring
+          .circle
+            .front
+              %p 1
+            .back
+              %p Ready
+      .col-md-9.col-sm-8
+        %h2 Application
+        %p
+          After signing up, you must fill out your resume. Add as much relevant detail
+          as you can to increase your chance for acceptance.
+        %p
+          When the resume is filed out, you can submit an application for a specific course.
+          Next dates are:
+          %span=Course.all.limit(5).collect{ |course| course.start_date}.join(", ")
+
+
+    .row.step
+      .col-md-3.col-sm-4.col
+        .circle-container
+          .outer-outer-ring
+          .circle
+            .front
+              %p 2
+            .back
+              %p Steady
+      .col-md-9.col-sm-8
+        %h2 Interview
+        %p
+          We might ask for more information by mail, but usually will ask for a 30-40 minutes
+          skype interview. This should be as important to you as it is to us, because you
+          (like us) ca ask in depth questions.
+        %p
+          The main thing we look for here is motivation or enthusiasm.
+
+    .row.step
+      .col-md-3.col-sm-4.col
+        .circle-container
+          .outer-outer-ring
+          .circle
+            .front
+              %p 3
+            .back
+              %p Go
+      .col-md-9.col-sm-8
+        %h2 Preparation
+        %p
+          Once accepted, you should pay the prepayment as soon as possible to
+          guarantee your place. Final payment is due at least 2 weeks before the course
+          (except flex plan).
+        %p
+          Then you should practise coding as much as you can to build up stamina.
+        %p
+          And last but not least,
+          =link_to "get a flight" , "http://www.momondo.com/" , target: :blank
+          , and
+          =link_to "check the weather." , "http://www.accuweather.com/en/fi/antskog/1121899/weather-forecast/1121899", target: :blank
