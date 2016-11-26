@@ -3,7 +3,7 @@
 
 .section.minitron
   .pic
-    =image_tag "coder.jpg"
+    =image_tag "apply.jpg"
   .content
     %h2 Application process
     %p.lead The steps before the course
@@ -12,7 +12,8 @@
     .topic
       %h3 Application
       %p
-        Signing up and filling out the form
+        = link_to "Signing up" ,  new_user_registration_path
+        and filling out the form
     .topic
       %h3 Interview
       %p
@@ -26,7 +27,7 @@
   .container
     .row.step
       .col-md-3.col-sm-4.col
-        .circle-container
+        .circle-container.red
           .outer-outer-ring
           .circle
             .front
@@ -36,7 +37,9 @@
       .col-md-9.col-sm-8
         %h2 Application
         %p
-          After signing up, you must fill out your resume. Add as much relevant detail
+          After
+          = link_to "signing up" ,  new_user_registration_path
+          , you must fill out your resume. Add as much relevant detail
           as you can to increase your chance for acceptance.
         %p
           When the resume is filed out, you can submit an application for a specific course.
@@ -46,7 +49,7 @@
 
     .row.step
       .col-md-3.col-sm-4.col
-        .circle-container
+        .circle-container.yellow
           .outer-outer-ring
           .circle
             .front
@@ -58,13 +61,13 @@
         %p
           We might ask for more information by mail, but usually will ask for a 30-40 minutes
           skype interview. This should be as important to you as it is to us, because you
-          (like us) ca ask in depth questions.
+          (like us) can ask in depth questions.
         %p
           The main thing we look for here is motivation or enthusiasm.
 
     .row.step
       .col-md-3.col-sm-4.col
-        .circle-container
+        .circle-container.green
           .outer-outer-ring
           .circle
             .front

@@ -21,6 +21,11 @@
           = f.input :comment
 
         .form-actions
-          = f.label "By pressing submit you acknowledge the terms & conditions and payment policy"
-          = f.label "If accepted the first 2 week installment must be paid within 2 weeks"
+          %p
+            By pressing submit you acknowledge the
+            = link_to "Terms & Conditions," , page_path(:terms) , target: :blank
+            the
+            = link_to "Payment Policy" , page_path(:payment) , target: :blank
+            and the
+            = link_to "House Rules" , page_path(:rules) , target: :blank
           = f.button :submit , "Create Application" , class: "btn btn-primary"
