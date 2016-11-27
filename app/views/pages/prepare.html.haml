@@ -1,0 +1,87 @@
+- title! "Preparation"
+- description! "Prepare for the course to get the most out of it"
+
+.section.minitron
+  .contain
+    %h1 Tools of the trade
+    %p.lead.centered
+      Training basics will make you faster and
+      save you time on the course
+
+.section.minitron
+  .pic
+    =image_tag "prepare/iterm.png"
+  .content
+    %h2 Terminal
+    %p.lead
+      We suggest iterm2, because it can be configured, has tabs, split panes,
+      and clickable filenames.
+  .topics
+    %p
+      Practise basic unix tools, pwd, cd , ls, rm, mkdir, cp, mv, possibly find, grep and
+      more, but most importantly autocomplete (tab).
+    %p Understand environment variables, the PATH and aliases.
+    %p Also learn about basic ruby related tools like ruby, rbenv, gem and bundle.
+
+.section.minitron
+  .content
+    %h2 Editor
+    %p.lead
+      We suggest atom for it's strong community and support, and off course because it's built
+      with web technologies
+  .topics
+    %p
+      After playing around with configuration option you should learn to open files from the
+      command line.
+    %p
+      Learn basic keyboard shortcuts for cut/copy/paste, selecting the next word or deleting a
+      line and indenting (in/out).
+    %p
+      Lastly practise typing ruby, possibly haml and sass. Just copy code and type type type.
+
+  .pic{style: "margin-left: 5%; margin-right: 0px;"}
+    =image_tag "prepare/atom.png"
+.section.minitron
+  .pic
+    =image_tag "prepare/devtools.png"
+  .content
+    %h2 Devtools
+    %p.lead
+      =link_to "Devtools" , "https://developer.chrome.com/devtools" , target: :blank
+      (eg in chrome) is the developers way of looking at the applications output.
+  .topics
+    %p Learn to inspect an element on the page (left), and read the code on the right.
+    %p Know how to read the styles (right bottom left) and understand where they are defined.
+    %p Look at the box model and the applied styles (bottom right)
+
+.section.minitron
+  .contain
+    %h1 Languages and source control
+    %p.lead.centered
+      Learning once on your own will give you both a faster and deeper understanding on the course.
+  .row
+    .col-sm-4
+      %h3 Ruby
+      %p
+        You can work through
+        =link_to "try ruby" , "http://tryruby.org/" , target: :blank
+        or do an online introduction like
+        =link_to "ruby basics." , "https://www.codecademy.com/learn/ruby" , target: :blank
+        You should understand (to a degree) basic types, object encapsulation, method sending
+        and collection types like array and hash.
+    .col-sm-4
+      %h3 HTML & CSS
+      %p
+        Any basic course will do, eg
+        =link_to "khanacademy's" , "https://www.khanacademy.org/computing/computer-programming/html-css" , target: :blank
+        is good. If you want you can skim
+        =link_to "haml" , "http://haml.info/" , target: :blank
+        and
+        =link_to "sass" , "http://sass-lang.com/" , target: :blank
+        both of which we will be using instead of their plainer counterparts.
+    .col-sm-4
+      %h3 Source control
+      %p
+        The problem: How to work together without trampling on each others feet. Current
+        solution: git . A nice visual tutorial is
+        =link_to "here" , "http://learngitbranching.js.org/" , target: :blank
