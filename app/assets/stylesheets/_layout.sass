@@ -68,35 +68,24 @@ sup
   font-style: normal
 
 // FOOTER
-footer
-  &.dark
-    border-bottom: 0px
-    margin-top: 0px
-    color: rgba(255, 255, 255, 0.2)
-    background: #313131
-    background: -moz-linear-gradient(top, #555555 0%, #313131 100%)
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1d2b), color-stop(100%, #313131))
-    background: -webkit-linear-gradient(top, #555555 0%, #313131 100%)
-    background: -o-linear-gradient(top, #555555 0%, #313131 100%)
-    background: -ms-linear-gradient(top, #555555 0%, #313131 100%)
-    background: linear-gradient(to bottom, #555555 0%, #313131 100%)
-    h1 , h2 , h3 , h4 , h5 , h6 , p , table
-      color: rgba(white, 0.8)
-      font-weight: 600
-    p , table
-      color: rgba(white, 0.8)
-    a
-      color: rgba(white, 0.6)
-    .container
-      padding-top: 50px
-      padding-bottom: 40px
-    .muub
-      padding-bottom: 10px
-      color: white
-
-  .slogan
-    font-weight: bolder
-    color: rgba(255, 255, 255, 0.8)
+.dark_footer
+  border-bottom: 0px
+  margin-top: 0px
+  color: rgba(255, 255, 255, 0.2)
+  background: #313131
+  background: -moz-linear-gradient(top, #555555 0%, #313131 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1d2b), color-stop(100%, #313131))
+  background: -webkit-linear-gradient(top, #555555 0%, #313131 100%)
+  background: -o-linear-gradient(top, #555555 0%, #313131 100%)
+  background: -ms-linear-gradient(top, #555555 0%, #313131 100%)
+  background: linear-gradient(to bottom, #555555 0%, #313131 100%)
+  h1 , h2 , h3 , h4 , h5 , h6 , p , table
+    color: rgba(white, 0.8)
+    font-weight: 600
+  p , table
+    color: rgba(white, 0.8)
+  a
+    color: rgba(white, 0.6)
 
   .copyright
     background-color: rgba(0,0,0,0.2)
@@ -105,31 +94,61 @@ footer
     font-size: 13px
     display: block
 
-  form
-    .form-control, .btn-success
-      color: #999
-      background-color: rgba(0,0,0,0.2)
-      border-color: rgba(0,0,0,0.25)
-      border-width: 2px
-    .input-group
-      margin: 2px
-    .input-group-addon
-      color: #999
-      background-color: rgba(0,0,0,0.4)
-      border-color: rgba(0,0,0,0.25)
-    input:-webkit-autofill
-      color: #999
-      background-color: rgba(0,0,0,0.2) !important
-    .btn-success
-    .input-group-btn:not(:first-child) > .btn
-      border-bottom-left-radius: 4px
-      border-top-left-radius: 4px
-      margin: 2px
+  .footer_container
+    @include container(90%)
+    padding-top: 50px
+    padding-bottom: 40px
+    .slogan
+      font-weight: bolder
+      color: rgba(255, 255, 255, 0.8)
 
+    form
+      .form-control, .btn-success
+        color: #999
+        background-color: rgba(0,0,0,0.2)
+        border-color: rgba(0,0,0,0.25)
+        border-width: 2px
+      .input-group
+        margin: 2px
+      .input-group-addon
+        color: #999
+        background-color: rgba(0,0,0,0.4)
+        border-color: rgba(0,0,0,0.25)
+      input:-webkit-autofill
+        color: #999
+        background-color: rgba(0,0,0,0.2) !important
+      .btn-success
+      .input-group-btn:not(:first-child) > .btn
+        border-bottom-left-radius: 4px
+        border-top-left-radius: 4px
+        margin: 2px
 
-  .icon-angle-right:before
-    padding-right: 6px
-    color: rgba(white, 0.6)
+    .icon-angle-right:before
+      padding-right: 6px
+      color: rgba(white, 0.6)
+
+    .address_col , .footer-sign
+      @include span(25%)
+    .links_l
+      margin-left: 5%
+      @include span(20%)
+    .links_r
+      @include span(20%)
+      margin-right: 5%
+    @media only screen and (max-width: 805px)
+      .address_col , .footer-sign
+        clear: both
+        @include span(50%)
+      .links_l, .links_r
+        @include span(50%)
+        margin-right: 0%
+        margin-left: 0%
+    @media only screen and (max-width: 480px)
+      .address_col , .footer-sign , .links_l, .links_r
+        @include span(80%)
+        margin-right: 10%
+        margin-left: 10%
+
 
 a.social-icon.social-icon-border
   border: #999 1px solid

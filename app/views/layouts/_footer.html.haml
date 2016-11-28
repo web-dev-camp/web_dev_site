@@ -1,80 +1,76 @@
-%footer.dark
-  .container
-    .row
-      .col-md-3
-        = image_tag "logos/web_logo_mobile.png" , :class => "footer-logo"
-        %p.slogan Live in bootcamp, learn the code
-        %address
-          %table
-            %tbody
-              %tr
-                %td
-                  %i.fa.icon-location
-                  %br/
-                  %br/
-                  %br/
-                %td
-                  Fiskarsintie 513
-                  %br/
-                  10480 Antskog
-                  %br/
-                  Finland
-              %tr
-                %td
-                  %i.fa.icon-phone
-                %td Phone: +358-40 7308052
-              %tr
-                %td
+.dark_footer
+  .footer_container
+    .address_col
+      = image_tag "logos/web_logo_mobile.png" , :class => "footer-logo"
+      %p.slogan Live in bootcamp, learn the code
+      %address
+        %table
+          %tbody
+            %tr
+              %td
+                %i.fa.icon-location
+                %br/
+                %br/
+                %br/
+              %td
+                Fiskarsintie 513
+                %br/
+                10480 Antskog
+                %br/
+                Finland
+            %tr
+              %td
+                %i.fa.icon-phone
+              %td Phone: +358-40 7308052
+            %tr
+              %td
+                %i.fa.icon-mail
+              %td
+                %a{:href => "mailto:info@webdev.camp"} info@webdev.camp
+    .links_l
+      %h6.letter-spacing-1 RESOURCES
+      %ul.footer-links.list-unstyled
+        %li.icon-angle-right= link_to "Teachers" , page_path(:course , anchor: :teachers)
+        %li.icon-angle-right= link_to "Payment Plans" , page_path(:payment)
+        %li.icon-angle-right= link_to "Application Process", page_path(:apply)
+        %li.icon-angle-right= link_to "Prepare yourself", page_path(:prepare)
+
+    .links_r
+      %h6.letter-spacing-1 OPPORTUNITIES
+      %ul.footer-links.list-unstyled
+        %li.icon-angle-right= link_to "Sponsoring" , page_path(:sponsoring)
+        %li.icon-angle-right= link_to "Teaching" , page_path(:teaching)
+
+    .footer-sign
+      %h5.letter-spacing-1 Account
+      %ul.footer-links.list-unstyled
+        -if user_signed_in?
+          %li= sign_out_link
+          %li= link_to "Account" ,  edit_user_registration_path
+          %li= link_to "Resume" ,   resume_path
+        -else
+          %li
+            = simple_form_for(:user, :url => session_url(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
+              .input-group
+                %span.input-group-addon
                   %i.fa.icon-mail
-                %td
-                  %a{:href => "mailto:info@webdev.camp"} info@webdev.camp
+                = f.email_field :email, class: 'form-control' , placeholder: :email
+              .input-group
+                %span.input-group-addon
+                  %i.fa.icon-lock
+                = f.password_field :password, class: 'form-control' , placeholder: :password
+              .input-group-btn
+                = f.submit "Sign in" , class: "btn btn-success btn-block"
 
 
-      .col-md-1
-      .col-md-2
-        %h6.letter-spacing-1 RESOURCES
-        %ul.footer-links.list-unstyled
-          %li.icon-angle-right= link_to "Teachers" , page_path(:course , anchor: :teachers)
-          %li.icon-angle-right= link_to "Payment Plans" , page_path(:payment)
-          %li.icon-angle-right= link_to "Application Process", page_path(:apply)
-          %li.icon-angle-right= link_to "Prepare yourself", page_path(:prepare)
+      .margin-top-20
+        %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "https://www.facebook.com/webdev.camp", :title => "Facebook" , target: :blank }
+          %i.icon-facebook
+        %a.social-icon.social-icon-border.social-twitter.pull-left{"data-placement" => "top",  :href => "https://twitter.com/webdev_camp", :title => "Twitter" , target: :blank }
+          %i.icon-twitter
+        %a.social-icon.social-icon-border.social-instagram.pull-left{"data-placement" => "top",  :href => "https://www.instagram.com/webdev.camp/", :title => "Instagram" , target: :blank }
+          %i.icon-instagram
 
-      .col-md-2
-        %h6.letter-spacing-1 OPPORTUNITIES
-        %ul.footer-links.list-unstyled
-          %li.icon-angle-right= link_to "Sponsoring" , page_path(:sponsoring)
-          %li.icon-angle-right= link_to "Teaching" , page_path(:teaching)
-
-      .col-md-1
-      .col-md-3.footer-sign
-        %h5.letter-spacing-1 Account
-        %ul.footer-links.list-unstyled
-          -if user_signed_in?
-            %li= sign_out_link
-            %li= link_to "Account" ,  edit_user_registration_path
-            %li= link_to "Resume" ,   resume_path
-          -else
-            %li
-              = simple_form_for(:user, :url => session_url(:user), :html => { :role => 'form' , class: "form-horizontal"}) do |f|
-                .input-group
-                  %span.input-group-addon
-                    %i.fa.icon-mail
-                  = f.email_field :email, class: 'form-control' , placeholder: :email
-                .input-group
-                  %span.input-group-addon
-                    %i.fa.icon-lock
-                  = f.password_field :password, class: 'form-control' , placeholder: :password
-                .input-group-btn
-                  = f.submit "Sign in" , class: "btn btn-success btn-block"
-
-
-        .margin-top-20
-          %a.social-icon.social-icon-border.social-facebook.pull-left{"data-placement" => "top",  :href => "https://www.facebook.com/webdev.camp", :title => "Facebook" , target: :blank }
-            %i.icon-facebook
-          %a.social-icon.social-icon-border.social-twitter.pull-left{"data-placement" => "top",  :href => "https://twitter.com/webdev_camp", :title => "Twitter" , target: :blank }
-            %i.icon-twitter
-          %a.social-icon.social-icon-border.social-instagram.pull-left{"data-placement" => "top",  :href => "https://www.instagram.com/webdev.camp/", :title => "Instagram" , target: :blank }
-            %i.icon-instagram
   .container-fluid
     .row.copyright
       .col-md-7
