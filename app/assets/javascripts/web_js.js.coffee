@@ -25,6 +25,8 @@ $(document).ready ->
   content = -> $(this).find('.content')
   $('.tipster').each ->
     $(this).tooltip( title: content)
+  $('.tipit').each ->
+    $(this).tooltip( )
   return
 
 $(document).ready ->

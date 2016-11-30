@@ -23,9 +23,9 @@
         .form-actions
           %p
             By pressing submit you acknowledge the
-            = link_to "Terms & Conditions," , page_path(:terms) , target: :blank
+            = ext_link "Terms & Conditions," , page_path(:terms)
             the
-            = link_to "Payment Policy" , page_path(:payment) , target: :blank
+            = ext_link "Payment Policy" , page_path(:payment)
             and the
-            = link_to "House Rules" , page_path(:rules) , target: :blank
+            = ext_link "House Rules" , page_path(:rules) 
           = f.button :submit , "Create Application" , class: "btn btn-primary"

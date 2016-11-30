@@ -12,6 +12,6 @@
   = f.password_field :password_confirmation, class: 'form-control'
 .accept
   By pressing 'Start' i agree to the
-  =link_to "privacy policy" , page_path(:privacy) , target: :blank
+  = ext_link "privacy policy" , page_path(:privacy)
   and accept the processing of my personal data accordingly
   = f.submit 'Start', :class => 'btn btn-success'

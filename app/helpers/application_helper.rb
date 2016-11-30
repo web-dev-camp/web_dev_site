@@ -20,8 +20,22 @@ module ApplicationHelper
     registration_url(:user , ssl_hash )
   end
 
-  def social_link href , kind , &block
-    link_to(href , {class: "social-icon social-icon-sm social-#{kind}" , target: :blank } , &block)
+  def social_link kind , href ,  &block
+    classes = "social-icon social-icon-border social-#{kind} pull-left tipit"
+    options = {class:  classes , :title => kind.capitalize , target: :blank }
+    link_to(href , options , &block)
+  end
+
+  def ext_link(name = nil, options = nil, html_options = nil, &block)
+    target_blank = {target: "_blank"}
+    if block_given?
+      options ||= {}
+      options = options.merge(target_blank)
+    else
+      html_options ||= {}
+      html_options = html_options.merge(target_blank)
+    end
+    link_to(name, options, html_options, &block)
   end
 
   def faq_sections
