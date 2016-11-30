@@ -20,7 +20,7 @@ module ApplicationHelper
     registration_url(:user , ssl_hash )
   end
 
-  def social_link kind , href ,  &block
+  def social_link(href , kind , &block)
     classes = "social-icon social-icon-border social-#{kind} pull-left tipit"
     options = {class:  classes , :title => kind.capitalize , target: :blank }
     link_to(href , options , &block)
