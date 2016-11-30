@@ -3,25 +3,25 @@ describe "Site integrity"  do
     @pages = {}
   end
 
-  def walks url
+  def walk url , from = nil
     return if url.include? "http"
     return if url.include? "mailto"
     begin
       visit url
-    rescue
-      puts "Failed #{url}"
+    rescue  => e
+      puts "Failed #{url} , from #{from}"
+      raise e
     end
     page.all("a").each do |p|
-      ref = p[:href]
+      next unless ref = p[:href]
       next if @pages.has_key? ref
-      next unless ref
-      @pages[ref] = false
-      walks ref
+      @pages[ref] = true
+      walk ref , url
     end
   end
 
   it "renders ok" do
-    walks "/"
+    expect{ walk "/" }.not_to raise_exception
   end
 
 end
