@@ -4,11 +4,15 @@
 .container
   .authform.margin-bottom-30
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f|
-      %h3 Start by signing up
+      %h2 Start by signing up
       %p
         You can read about the
         =link_to "application process", page_path(:apply)
         before or after.
+      %h5
+        Next courses
+        = course_select.collect { |course , id| course}.join(" / ")
+
       = devise_error_messages!
       .form-group
         = f.label :name

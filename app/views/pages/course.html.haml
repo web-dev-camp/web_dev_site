@@ -429,7 +429,7 @@
             strangeness by using languages that compile to JavaScript.
             %br
             You may also choose to learn a completely different language at this point, eg
-            = ext_link  "Go" , "https://golang.org/" 
+            = ext_link  "Go" , "https://golang.org/"
         %br
         %span.tipster
           %i.ico-color.ico-xxs.ico-rounded.ico-hover.fa.icon-github
@@ -555,5 +555,8 @@
               %i.fa.icon-soundcloud
     .row
       .col-md-12.centered
-        %p
-          Active professionals also participate in the teaching on a part time basis
+        %h4
+          Next courses
+          = course_select.collect { |course , id| course}.join(" / ")
+        .action
+          =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
