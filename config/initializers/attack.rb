@@ -4,7 +4,7 @@ Rack::Attack.blacklist('block admin probes') do |req|
   reject = false
   ["php" , "jsp" , "cgi", "asp", "cfm," "proxy.txt", "soapCaller", "Win32" , "HNAP1" , "w00tw00t",
     "pma" , "mysql" ,"msd" , "MySQL" , "jmx-console" , "ervlet" , "xml" ,"install",
-    "webdav" , "apple-" , ].each do |no|
+    "webdav" , "apple-" , "administrator" , "wp-admin" , ".well-known"].each do |no|
     if req.path.include?(no)
       reject = true
       break
