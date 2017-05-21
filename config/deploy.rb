@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.1'
+lock '3.8.1'
 
 set :application, 'webdev'
 set :repo_url, 'git@github.com:webdev-camp/webdev.camp.git'
@@ -15,8 +15,6 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-set :use_sudo, false
 
 namespace :deploy do
 
