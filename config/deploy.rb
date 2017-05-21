@@ -2,7 +2,7 @@
 lock '3.8.1'
 
 set :application, 'webdev'
-set :repo_url, 'git@github.com:webdev-camp/webdev.camp.git'
+set :repo_url, 'https://github.com/webdev-camp/webdev.camp'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/vhosts/webdev.camp'
@@ -15,6 +15,8 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+set :passenger_restart_command, 'passenger-config restart-app'
 
 namespace :deploy do
 
