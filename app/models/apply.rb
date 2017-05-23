@@ -9,6 +9,8 @@ class Apply < ActiveRecord::Base
 
   validates_presence_of :primary_choice_course_id
 
+  default_scope {order('created_at DESC') }
+
   def plan_name
     PLANS[self.plan.to_sym]
   end

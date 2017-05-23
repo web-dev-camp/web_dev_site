@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
   after_initialize :set_default_role, :if => :new_record?
 
+  default_scope {order('created_at DESC') }
+
   def set_default_role
     self.role ||= :user
   end
