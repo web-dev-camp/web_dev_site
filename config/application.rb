@@ -20,6 +20,8 @@ module WebDevSite
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
 
+    config.assets.quiet = true
+
     config.middleware.use Rack::Attack
 
     config.assets.paths << Gem.loaded_specs['susy'].full_gem_path+'/sass'

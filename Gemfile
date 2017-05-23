@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.6'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'rails', '5.0.3'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
+
 gem "therubyracer"
 gem 'administrate'
-gem 'bootstrap'
+gem 'bootstrap' , "4.0.0.alpha5"
 gem "susy"
 gem 'tether-rails'
-gem 'devise'
+gem 'devise'  ,">= 4.0"
 gem 'devise_invitable'
 gem 'haml-rails'
 gem 'high_voltage'
@@ -23,7 +23,6 @@ gem 'rack-attack'
 
 #asynchronous sending
 gem 'sucker_punch'
-gem 'devise-async'
 
 gem "skylight"
 gem 'rollbar'
@@ -42,7 +41,6 @@ group :development do
   gem 'guard-rspec'
   gem 'html2haml'
   gem 'hub', :require=>nil
-  gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
