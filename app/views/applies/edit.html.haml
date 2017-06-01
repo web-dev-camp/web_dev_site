@@ -13,7 +13,7 @@
           = f.label "Secondary choice (optional)"
           = f.select :secondary_choice_course_id , course_select , {:prompt => "Optionally select second"} , class: "custom-select"
         .form-input
-          = f.label "Payment plan (prices for 2 week modules, course has 4 modules)"
+          = f.label "Payment plan (total price)"
           = f.select :plan , plan_select.invert , {} , class: "custom-select"
         .form-input
           = f.input :discount_code , label: "Optional code determines prearranged discount"

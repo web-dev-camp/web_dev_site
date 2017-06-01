@@ -1,7 +1,7 @@
 class Apply < ActiveRecord::Base
-  PLANS =     { standard: "2100¢ - 8 week prepayment, no cancellation" ,
-                flex: "2400¢ - 8 week prepayment, 2 week cancellation" ,
-                super_flex: "2900¢ - 2 week prepayment, stop anytime" }
+  PLANS =     { standard: "9000¢ - 9 week prepayment, no cancellation" ,
+                flex: "10200 - 9 week prepayment, 3 week cancellation" ,
+                super_flex: "11200¢ - 3 week prepayment, stop anytime" }
 
   belongs_to :user
   belongs_to :primary_choice_course , class_name: :Course
