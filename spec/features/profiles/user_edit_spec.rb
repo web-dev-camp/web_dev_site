@@ -9,10 +9,6 @@ feature 'User edit', :devise do
     Warden.test_reset!
   end
 
-  # Scenario: User changes email address
-  #   Given I am signed in
-  #   When I change my email address
-  #   Then I see an account updated message
   scenario 'user changes email address' do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
@@ -24,10 +20,18 @@ feature 'User edit', :devise do
     expect(page).to have_content(/.*#{txts[0]}.*|.*#{txts[1]}.*/)
   end
 
-  # Scenario: User cannot edit another user's profile
-  #   Given I am signed in
-  #   When I try to edit another user's profile
-  #   Then I see my own 'edit profile' page
+  ["Street","City","Country"].each do |target|
+    scenario "user changes #{target}" do
+      user = FactoryGirl.create(:user)
+      login_as(user, :scope => :user)
+      visit edit_user_registration_path(user)
+      fill_in target, :with => "New#{target}"
+      fill_in 'Current password', :with => user.password
+      click_button 'Update'
+      expect(user.reload.send(target.downcase)).to eq("New#{target}")
+    end
+  end
+
   scenario "user cannot cannot edit another user's profile", :me do
     me = FactoryGirl.create(:user)
     other = FactoryGirl.create(:user, email: 'other@example.com')

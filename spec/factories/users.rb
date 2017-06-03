@@ -5,6 +5,10 @@ FactoryGirl.define do
     email "test@example.com"
     password "please123"
 
+    street "WhereIlive 111"
+    city "CityOfTesters"
+    country "WhereIam"
+    
     trait :admin do
       role 'admin'
     end

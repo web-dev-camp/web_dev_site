@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   validates :name, presence: true
+  validates_presence_of :street
+  validates_presence_of :city
+  validates_presence_of :country
 
   enum role: [:user, :teacher, :admin]
 
