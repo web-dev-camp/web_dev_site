@@ -9,9 +9,20 @@ module Admin
     before_filter :authenticate_admin
 
     def authenticate_admin
-      ok = current_user != nil
-      ok = current_user.email == "torsten@villataika.fi" if ok
-      redirect_to "/" unless ok
+      user = current_user
+      if(user)
+        redirect_to "/" unless user.admin?
+      end
+    end
+  end
+  class AdminController < ApplicationController
+    before_filter :authenticate_admin
+
+    def authenticate_admin
+      user = current_user
+      if(user)
+        redirect_to "/" unless user.admin?
+      end
     end
   end
 end
