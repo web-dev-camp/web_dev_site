@@ -1,4 +1,4 @@
-describe User  do
+describe "Admin User"  do
   before(:each) do
     sign_admin_in
   end

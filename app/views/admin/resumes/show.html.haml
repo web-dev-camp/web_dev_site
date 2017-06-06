@@ -1,20 +1,9 @@
-%body
-  - content_for(:title) { "#{t("administrate.actions.show")} #{page.page_title}" }
-  %header.main-content__header{:role => "banner"}
-    %h1.main-content__page-title
-      = content_for(:title)
-    %div
-      = link_to(                                                  |
-          "#{t("administrate.actions.edit")} #{page.page_title}", |
-          [:edit, namespace, page.resource],                      |
-          class: "button",                                        |
-        ) if valid_action? :edit                                  |
-  %section.main-content__body
-    %dl
-      - page.attributes.each do |attribute|
-        %dt.attribute-label
-          = t(                                                    |
-              "helpers.label.#{resource_name}.#{attribute.name}", |
-              default: attribute.name.titleize,                   |
-            )                                                     |
-        %dd{:class => "attribute-data attribute-data--#{attribute.html_class}"}= render_field attribute
+%h2.resumes_show_start
+  = "Resume : #{@resume.id}"
+
+- @resume.attributes.each do |name , value|
+  %p
+    %b= "#{name} : " + value.to_s
+
+= link_to "Back", admin_resumes_path, :class => "btn btn-warning"
+.resumes_show_end
