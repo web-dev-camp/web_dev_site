@@ -26,7 +26,7 @@
               %td=user.street
               %td=user.city
               %td=user.country
-              %td= link_to "Show" , admin_user_path(user), :title => t(:show)
+              %td= link_to "Show" , admin_user_path(user), :title => "Show"
     =will_paginate @users
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|

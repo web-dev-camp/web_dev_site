@@ -19,7 +19,7 @@
             %th Start
             %th{:colspan => "2"}
               %label.checkbox
-                = @course_scope.length.to_s + " " + t(:courses)
+                = @course_scope.length.to_s + " Courses"
         %tbody
           - @courses.each do |course|
             %tr{:class => "line-#{cycle("1","2")}"}

@@ -20,7 +20,7 @@
           - @applies.each do |apply|
             %tr{:class => "line-#{cycle("1","2")}"}
               %td=apply.id.to_s
-              %td= link_to "Show" , admin_apply_path(apply), :title => t(:show)
+              %td= link_to "Show" , admin_apply_path(apply), :title => "Show"
     =will_paginate @applies
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
