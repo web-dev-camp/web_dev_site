@@ -1,0 +1,11 @@
+%nav.navbar.navbar-fixed-top.navbar-light
+  %button.navbar-toggler.hidden-md-up{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
+  #navbarResponsive.collapse.navbar-toggleable-sm
+    %a.navbar-brand{:href => page_path(:index) }
+      = #image_tag "logos/web_logo.png" , class: :desktop
+    %ul.nav.navbar-nav.float-sm-right
+      - { "Users" => admin_users_path , "Resumes" => admin_resumes_path  ,
+        "Applies" => admin_applies_path , "Courses" => admin_courses_path }.each do | menu, slug|
+        %li.nav-item{class: (request.path == slug) && "active" }
+          =link_to menu , slug ,class: "nav-link"
+      %li.nav-item.nav-small= sign_out_link  class: "nav-link"

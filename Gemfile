@@ -20,6 +20,9 @@ gem 'simple_form'
 gem 'animate-scss' , :github => "ejholmes/animate.scss"
 gem "best_in_place"
 gem 'rack-attack'
+gem "ransack"
+gem "will_paginate"
+gem 'jquery-ui-rails'
 
 #asynchronous sending
 gem 'sucker_punch'
@@ -28,9 +31,8 @@ gem "skylight"
 gem 'rollbar'
 
 group :development do
-  gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'better_errors'
+#  gem 'better_errors'
   gem 'capistrano', "3.8.1"
   gem 'capistrano-bundler'
   gem 'capistrano-rails'

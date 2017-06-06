@@ -1,0 +1,18 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title= content_for?(:title) ? content_for(:title) :  "Admin"
+    = stylesheet_link_tag "admin" ,  :media => :all
+    = #javascript_include_tag "admin"
+    = csrf_meta_tags
+  %body{:style => ""}
+    .container-fluid
+      = render "layouts/admin/admin_menu"
+      = render "layouts/admin/messages"
+
+      = yield
+
+      .row
+        .col-md-12
+          %br
