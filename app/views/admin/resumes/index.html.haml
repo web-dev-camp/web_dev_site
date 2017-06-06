@@ -3,7 +3,7 @@
     .row
       .col-md-10
         %h2 Resumes
-        = paginate @resumes
+        =will_paginate @resumes
   .col-md-3
     = #image_tag "resumes.jpg" , :class => "img-responsive"
 .row
@@ -21,7 +21,7 @@
             %tr{:class => "line-#{cycle("1","2")}"}
               %td=resume.id.to_s
               %td= link_to "Show" , admin_resume_path(resume), :title => t(:show)
-    = paginate @resumes
+    =will_paginate @resumes
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group

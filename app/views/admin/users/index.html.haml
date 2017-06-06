@@ -3,7 +3,7 @@
     .row
       .col-md-10
         %h2 Users
-        = paginate @users
+        =will_paginate @users
   .col-md-3
     = #image_tag "users.jpg" , :class => "img-responsive"
 .row
@@ -27,7 +27,7 @@
               %td=user.city
               %td=user.country
               %td= link_to "Show" , admin_user_path(user), :title => t(:show)
-    = paginate @users
+    =will_paginate @users
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group

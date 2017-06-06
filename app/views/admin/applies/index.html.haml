@@ -3,7 +3,7 @@
     .row
       .col-md-10
         %h2 Applies
-        = paginate @applies
+        =will_paginate @applies
   .col-md-3
     = #image_tag "applies.jpg" , :class => "img-responsive"
 .row
@@ -21,7 +21,7 @@
             %tr{:class => "line-#{cycle("1","2")}"}
               %td=apply.id.to_s
               %td= link_to "Show" , admin_apply_path(apply), :title => t(:show)
-    = paginate @applies
+    =will_paginate @applies
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group

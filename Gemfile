@@ -7,7 +7,6 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 
 gem "therubyracer"
-gem 'administrate'
 gem 'bootstrap' , "4.0.0.alpha5"
 gem "susy"
 gem 'tether-rails'
@@ -21,7 +20,7 @@ gem 'animate-scss' , :github => "ejholmes/animate.scss"
 gem "best_in_place"
 gem 'rack-attack'
 gem "ransack"
-gem "will_paginate"
+gem "bootstrap-will_paginate"
 gem 'jquery-ui-rails'
 
 #asynchronous sending
