@@ -1,19 +1,13 @@
 module Admin
-  class AppliesController < Admin::ApplicationController
-    # To customize the behavior of this controller,
-    # simply overwrite any of the RESTful actions. For example:
-    #
-    # def index
-    #   super
-    #   @resources = Apply.all.paginate(10, params[:page])
-    # end
+  class AppliesController < AdminController
+    def index
+      @q = Apply.search params[:q]
+      @apply_scope = @q.result(:distinct => true)
+      @applies = @apply_scope.paginate( :page => params[:page],:per_page => 20)
+    end
 
-    # Define a custom finder by overriding the `find_resource` method:
-    # def find_resource(param)
-    #   Apply.find_by!(slug: param)
-    # end
-
-    # See https://administrate-docs.herokuapp.com/customizing_controller_actions
-    # for more information
+    def show
+      @apply = Apply.find(params[:id])
+    end
   end
 end
