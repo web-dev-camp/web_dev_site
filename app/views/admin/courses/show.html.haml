@@ -1,20 +1,19 @@
-%body
-  - content_for(:title) { "#{t("administrate.actions.show")} #{page.page_title}" }
-  %header.main-content__header{:role => "banner"}
-    %h1.main-content__page-title
-      = content_for(:title)
-    %div
-      = link_to(                                                  |
-          "#{t("administrate.actions.edit")} #{page.page_title}", |
-          [:edit, namespace, page.resource],                      |
-          class: "button",                                        |
-        ) if valid_action? :edit                                  |
-  %section.main-content__body
-    %dl
-      - page.attributes.each do |attribute|
-        %dt.attribute-label
-          = t(                                                    |
-              "helpers.label.#{resource_name}.#{attribute.name}", |
-              default: attribute.name.titleize,                   |
-            )                                                     |
-        %dd{:class => "attribute-data attribute-data--#{attribute.html_class}"}= render_field attribute
+%h2.courses_show_start
+  Course :
+  =  @course.name
+
+.col-md-12
+  %p
+    %b
+      = "Name: " +  @course.name.to_s
+  %p
+    %b
+      = "Extra : " +  @course.extra.to_s
+  %p
+    %b
+      = "Start : " + @course.start.to_s
+
+= link_to "Edit", edit_admin_course_path(@course), :class => "btn btn-success"
+= link_to "Back", admin_courses_path, :class => "btn btn-warning"
+
+.courses_show_end

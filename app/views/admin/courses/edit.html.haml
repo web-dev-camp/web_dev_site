@@ -1,13 +1,10 @@
-%body
-  - content_for(:title) { "#{t("administrate.actions.edit")} #{page.page_title}" }
-  %header.main-content__header{:role => "banner"}
-    %h1.main-content__page-title
-      = content_for(:title)
-    %div
-      = link_to(                                                  |
-          "#{t("administrate.actions.show")} #{page.page_title}", |
-          [namespace, page.resource],                             |
-          class: "button",                                        |
-        ) if valid_action? :show                                  |
-  %section.main-content__body
-    = render "form", page: page
+%h2.courses_edit_start
+  = t params["action"]
+  = t(:course)
+= bootstrap_form_for([:admin , @course]) do |f|
+  .row
+    = f.text_field :name
+  .form-actions
+    = f.submit :class => "btn btn-success"
+    = link_to t(:back), courses_path, :class => "btn btn-warning"
+.courses_edit_end
