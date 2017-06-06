@@ -3,6 +3,7 @@ describe "Admin Resume"  do
     sign_admin_in
   end
   it "lists resumes" do
+    create_list(:resume,3)
     visit_path admin_resumes_path
   end
   it "shows a resume" do

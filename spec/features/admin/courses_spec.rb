@@ -3,7 +3,7 @@ describe "Admin Course"  do
     sign_admin_in
   end
   it "lists courses" do
-    #create(:course)
+    create_list(:course , 3)
     visit_path admin_courses_path
   end
 

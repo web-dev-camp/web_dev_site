@@ -3,6 +3,7 @@ describe "Admin Apply"  do
     sign_admin_in
   end
   it "lists applies" do
+    create_list(:apply , 3)
     visit_path admin_applies_path
   end
   it "shows a apply" do
