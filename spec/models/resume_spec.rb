@@ -2,9 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Resume, type: :model do
 
-  it "has a working factory" do
-    resume = build :resume
-    expect(resume.save).to eq true
+  describe "factory" do
+    it "build saves" do
+      resume = build :resume
+      expect(resume.save).to eq true
+    end
+    it 'has user assoc' do
+      resume = create :resume
+      expect(resume.user).not_to be_nil
+    end
   end
 
   it "has zero percent when nothing is filled" do

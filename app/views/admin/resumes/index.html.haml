@@ -2,32 +2,29 @@
   .col-md-9.resumes
     .row
       .col-md-10
-        %h2 Resumes
+        %h2= @resume_scope.length.to_s + " Resumes"
         =will_paginate @resumes
   .col-md-3
-    = #image_tag "resumes.jpg" , :class => "img-responsive"
 .row
   .col-md-9
     %div
       %table.table.table-striped.table-bordered.table-condensed
         %thead
           %tr
-            %th=sort_link [:office,@q], :id
-            %th{:colspan => "2"}
-              %label.checkbox
-                = @resume_scope.length.to_s + " Resumes"
+            %th=sort_link [:admin,@q], :user_name
+            %th Percent
+            %th=sort_link [:admin,@q], :updated_at
         %tbody
           - @resumes.each do |resume|
             %tr{:class => "line-#{cycle("1","2")}"}
-              %td=resume.id.to_s
-              %td= link_to "Show" , admin_resume_path(resume), :title => "Show"
+              %td= link_to resume.user.name , admin_user_path(resume.user)
+              %td= link_to "#{resume.percent} %"  , admin_resume_path(resume), :title => "Show"
+              %td= resume.updated_at.to_date
     =will_paginate @resumes
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group
-        = f.text_field :id_cont , :class => "form-control" , :placeholder =>  "Id"
-      .form-group
-        = f.text_field :street_cont ,:class => "form-control" , :placeholder =>  "Street"
+        = f.text_field :user_name_cont , :class => "form-control" , :placeholder =>  "User"
       = f.submit "Filter",  :id => :filter , :class => "btn btn-success"
       = link_to  "Cancel", admin_resumes_path, :class => "btn btn-warning"
 .resumes_index_end
