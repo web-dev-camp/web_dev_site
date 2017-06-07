@@ -12,7 +12,16 @@ feature 'Applies' do
   scenario 'Send Application' do
     within "#apply_primary_choice_course_id" do
       courses = page.find_all("option")
-      expect(courses.length).to be 2
+      expect(courses.length).to be Course.count
+    end
+  end
+
+  scenario 'Past courses not shown' do
+    create :past_course
+    all = Course.count
+    within "#apply_primary_choice_course_id" do
+      courses = page.find_all("option")
+      expect(courses.length).to be all - 1
     end
   end
 
