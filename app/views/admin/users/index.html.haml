@@ -2,7 +2,8 @@
   .col-md-9.users
     .row
       .col-md-10
-        %h2 Users
+        %h2= @user_scope.length.to_s + " Users"
+
         =will_paginate @users
   .col-md-3
     = #image_tag "users.jpg" , :class => "img-responsive"
@@ -13,20 +14,14 @@
         %thead
           %tr
             %th=sort_link [:office,@q], :email
-            %th Street
-            %th City
-            %th Country
-            %th{:colspan => "2"}
-              %label.checkbox
-                = @user_scope.length.to_s + " Users"
+            %th Resume
+            %th Application
         %tbody
           - @users.each do |user|
             %tr{:class => "line-#{cycle("1","2")}"}
-              %td=user.email
-              %td=user.street
-              %td=user.city
-              %td=user.country
-              %td= link_to "Show" , admin_user_path(user), :title => "Show"
+              %td= link_to user.email , admin_user_path(user), :title => "#{user.street}\n#{user.city}\n#{user.country}"
+              %td= link_to "#{user.resume.percent} %" , admin_resume_path(user.resume)
+              %td= link_to user.application.primary_choice_course.start_date , admin_apply_path(user.application) if user.application
     =will_paginate @users
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|

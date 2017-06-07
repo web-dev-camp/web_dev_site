@@ -1,18 +1,24 @@
 FactoryGirl.define do
   factory :resume do
-    school "MyString"
-    uni "MyString"
-    internship "MyString"
-    work "MyString"
-    tech_skills "MyString"
-    soft_skills "MyString"
-    projects "MyString"
-    other "MyString"
-    interests "MyString"
-    motivation "MyString"
-    street "MyString"
-    city "MyString"
-    country "MyString"
-    user_id 1
+    user
+    factory :filled_resume do
+      school "Yes"
+      uni "Started, didnt finish"
+      internship "Some really weird stuff"
+      work "Nothing related, but a lot of it"
+      projects "Small and big in the past"
+      soft_skills "Taliking, yes, and not talking also"
+      tech_skills "All kinds of hardware"
+      interests "Bit of drumming"
+      motivation "I really want to go"
+      finance "I got money"
+      other "Some final words"
+
+      street "WhereIlive 111"
+      city "CityOfTesters"
+      country "WhereIam"
+
+      user
+    end
   end
 end
