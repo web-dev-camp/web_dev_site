@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   validates_presence_of :city
   validates_presence_of :country
 
+  has_one :application , class_name: :Apply
+  has_one :resume
+
   enum role: [:user, :teacher, :admin]
 
   after_initialize :set_default_role, :if => :new_record?
@@ -18,9 +21,6 @@ class User < ActiveRecord::Base
     Resume.find_or_create_by( :user_id => self.id)
   end
 
-  def application
-    Apply.where(user_id: self.id ).first
-  end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,

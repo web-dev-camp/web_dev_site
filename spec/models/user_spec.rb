@@ -12,8 +12,18 @@ describe User do
     end
   end
 
-  it "factory works" do
-    user = build :user
-    expect(user).to be_valid
+  describe "factory" do
+    it "basic build" do
+      user = build :user
+      expect(user).to be_valid
+    end
+    it "application assoc" do
+      user = create :user
+      expect(user.application).to be_nil
+    end
+    it "resume assoc" do
+      user = create :user
+      expect(user.resume).not_to be_nil
+    end
   end
 end
