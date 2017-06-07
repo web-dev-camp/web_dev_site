@@ -9,8 +9,8 @@
       %li.nav-item= link_to "Camp" ,   page_path(:camp) , class: "nav-link"
       %li.nav-item= link_to "Q & A" ,  page_path(:answers) , class: "nav-link"
       -unless user_signed_in?
-        %li.nav-item= link_to "Apply" ,  new_user_registration_path , class: "nav-link"
-        %li.nav-item= link_to "|" ,  new_user_registration_path , class: "nav-link"
+        %li.nav-item= link_to "Apply" ,  page_path(:apply) , class: "nav-link"
+        %li.nav-item= link_to "|" ,  page_path(:apply) , class: "nav-link"
       -if user_signed_in?
         %li.nav-item= link_to "|" ,  edit_user_registration_path , class: "nav-link"
         - { "Profile" => edit_user_registration_path , "Resume" => resume_path  ,
