@@ -15,7 +15,7 @@ feature 'Static pages' do
 
   scenario 'visit the home page' do
     visit root_path
-    expect(page).to have_content 'Become a web-developer'
+    expect(page).to have_content 'Become a professional web-developer'
     expect(page).to have_content 'Small groups, relaxed'
     expect(page).to have_content 'Relax in the nature'
   end
