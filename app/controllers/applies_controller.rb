@@ -11,7 +11,7 @@ class AppliesController < ApplicationController
     @apply.user = current_user
 
     if @apply.save
-      redirect_to application_path, notice: 'Application was successfully submitted. Your will receive further instructions from us within a week'
+      redirect_to application_path, notice: 'We will be in touch by email within a week.'
       ApplyMailer.submit( @apply ).deliver_later
     else
       render :edit
@@ -27,7 +27,6 @@ class AppliesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_apply
       @apply = current_user.application || Apply.new
     end
