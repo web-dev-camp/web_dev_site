@@ -7,6 +7,11 @@ RSpec.describe Course, type: :model do
     expect(course.save).to eq true
   end
 
+  it "length is 9 weeks" do
+    course = build :course
+    expect(course.course_length).to eq 9.weeks
+  end
+
   it "names course not the same" do
     course1 = create :course
     course2 = create :course
@@ -19,9 +24,8 @@ RSpec.describe Course, type: :model do
     expect(course1.start).not_to eq course2.start
   end
 
-  it "the second course is in the future" do
-    create :course
-    course2 = create :course
-    expect((course2.start - DateTime.now).to_i).to be < 400
+  it "the course is in the future" do
+    course = create :course
+    expect((course.start - DateTime.now).to_i).to be < 410
   end
 end

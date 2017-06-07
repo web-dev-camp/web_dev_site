@@ -11,7 +11,11 @@ class Course < ActiveRecord::Base
 
   def dates
     I18n.l(self.start.to_date , format: :short) + " - " +
-    I18n.l(self.start.to_date + 8.week  , format: :short)
+    I18n.l(self.start.to_date + course_length  , format: :short)
+  end
+
+  def course_length
+    9.week
   end
 
   def start_date
