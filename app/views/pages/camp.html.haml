@@ -3,18 +3,29 @@
 
 .section.parallax{:style => "background-image: url('#{image_url("camp/camp_vt.jpg")}'); background-position: 50% 0px;"}
   %h1
-    Welcome to Villa Taika
-  %h3
-    Live and Learn
+    Live in nature, learn to code
   .action
     =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
 
 .section
   .container
     .row
+      .col-md-12.centered
+        %p
+        Attending a Bootcamp can move you up from the tech career ladder,
+        but that often means quitting a job, uprooting your life, or moving to a new place.
+        Committing to a full-time, intensive Bootcamp also means that you have no time to work
+        for money while still having to pay for your living fee, which could be stressful since
+        Finland is well-known for its high cost of living. That is the reason we are
+        doing our best to provide you with free food and accommodation to keep
+        the stress away so that you are in your best mental and physical condition to learn.
+
+.section
+  .container
+    .row
       .blog-post-item.col-md-6.col-sm-6.col-xs-12
         %h2
-          Beautiful rooms
+          Beautiful Accommodation
         %figure.margin-bottom-20
           #camp-carousel.carousel.slide{"data-ride" => "carousel"}
             %ol.carousel-indicators
@@ -45,28 +56,26 @@
               %span.sr-only Next
 
         %p
-          Stay on site in our beautifully decorated rooms.
-          %br
-          Enjoy the time you'll have to relax.
-      .blog-post-item.col-md-6.col-sm-6.col-xs-12
+          Our new Bootcamp is a beautiful villa located in the centre of Fiskars - the most
+          beautiful village in Finland. Our rooms are about 15 square meters big and you will
+          be sharing with one or two other students of your same gender. A big kitchen, toilets and showers are shared.
+      .blog-post-item.col-md-6a.col-sm-6.col-xs-12
         %h2
-          Good food
+          Healthy food
         %figure.margin-bottom-20
           = image_tag "food.jpg"
         %p
-          Healthy, local food gives you strength to carry on.
-          %br
-          Breakfast and warm lunch are provided and you are free to time and shape your evening intake
-          yourself.
+          Breakfast and warm lunch are provided with fresh local ingredient and you are free to make your own dinner in
+          our big kitchen. The local supermarket is just 5 minutes walk from the camp which provides a wide range of food
+          options.
 
 .section.parallax{:style => "background-image: url('#{image_url("camp/camp_garden.jpg")}'); background-position: 50% 0px;"}
   %h1
-    Relax
-  %h3
-    Recharge your batteries in between work
+    Surrounded by nature
+  %h2
+    Recharge your energy in between work
   .action
     =link_to "Apply now", new_user_registration_path , class: "btn btn-success btn-lg"
-
 
 .section
   .container
@@ -74,9 +83,18 @@
       .col-md-1
       .col-md-10
         %h2.centered
-          Villa Taika
+          Fiskars Village - Home of Finnish art and design
         %p.centered
-          Just a short flight away, airport pickup included
+          Fiskars is located in the city of Raasepori, the North region, west of Karjaa,
+          less than a hundred kilometers west from Helsinki. The majority of buildings
+          that used to belong to the Fiskars iron works have been beautifully renovated
+          into apartments or studios. Since 1996, Fiskars has become the home of many Finnish
+          designers and artists. With the beautiful landscape that changes from season to
+          season, quality local cafes, restaurnats, and art exhibitions, Fiskars is now a popular travel destination year-round.
+        %p
+          Check Fiskars Village official website
+          =ext_link "here" , "http://www.fiskarsvillage.fi/en/".
+
         .google-maps
           %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2096774.0474461166!2d19.0465851!3d59.1218444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468db1dd24f6fe5b%3A0x9bdbda6312548ef6!2sVilla+Taika!5e0!3m2!1sen!2sfi!4v1461766350016", :style => "border:0"}
       .col-md-1
