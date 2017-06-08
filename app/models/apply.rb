@@ -14,4 +14,15 @@ class Apply < ActiveRecord::Base
   def plan_name
     PLANS[self.plan.to_sym]
   end
+
+  def plan_price
+    plan_name.split(" - ").first
+  end
+
+  def summary
+    sum = "Comment: #{self.comment}\n"
+    sum += "Discount: #{self.discount_code}\n" unless self.discount_code.blank?
+    sum +="Secondary: #{self.secondary_choice_course.name}" if self.secondary_choice_course_id
+    sum + plan_name
+  end
 end

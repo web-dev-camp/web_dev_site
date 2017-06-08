@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170602115219) do
+ActiveRecord::Schema.define(version: 20170608141102) do
 
   create_table "applies", force: :cascade do |t|
     t.integer  "primary_choice_course_id"
@@ -35,9 +35,6 @@ ActiveRecord::Schema.define(version: 20170602115219) do
   end
 
   create_table "resumes", force: :cascade do |t|
-    t.string   "street"
-    t.string   "city"
-    t.string   "country"
     t.text     "school"
     t.text     "uni"
     t.text     "internship"

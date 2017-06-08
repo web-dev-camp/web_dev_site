@@ -14,10 +14,6 @@ FactoryGirl.define do
       finance "I got money"
       other "Some final words"
 
-      street "WhereIlive 111"
-      city "CityOfTesters"
-      country "WhereIam"
-
       user
     end
   end

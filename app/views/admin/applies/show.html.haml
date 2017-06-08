@@ -1,8 +1,18 @@
-%h2.applies_show_start
-  = "Apply : " + @apply.id.to_s
+%h2
+  = "Applicant : " + @apply.user.name
+  = link_to @apply.user.email , admin_user_path(@apply.user)
+%p
+%p
+  %b= "Course : #{@apply.primary_choice_course.full_name}"
+  = "Secondary: #{@apply.secondary_choice_course.full_name}" if @apply.secondary_choice_course
+%p
+  = "Comment: #{@apply.comment}" if @apply.comment
 
 %p
-  %b= "Course : " + @apply.primary_choice_course.to_s
+  = "Discount: #{@apply.discount_code}" unless @apply.discount_code.blank?
+
+%p
+  = "Accepted: #{@apply.accepted}" if @apply.accepted
 
 = link_to "Back", admin_applies_path, :class => "btn btn-warning"
 .applies_show_end
