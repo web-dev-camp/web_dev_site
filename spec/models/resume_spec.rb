@@ -17,10 +17,10 @@ RSpec.describe Resume, type: :model do
     resume = build :resume
     expect(resume.percent).to eq 0
   end
-  it "has 7 percent when one is filled" do
+  it "has 9 percent when one is filled" do
     resume = build :resume
     resume.motivation = "I am motivated"
-    expect(resume.percent).to eq 7
+    expect(resume.percent).to eq 9
   end
   it "has 100 percent when all are filled" do
     resume = build :filled_resume
