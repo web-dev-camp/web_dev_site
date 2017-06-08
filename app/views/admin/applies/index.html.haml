@@ -2,30 +2,36 @@
   .col-md-9.applies
     .row
       .col-md-10
-        %h2 Applies
+        %h2= @apply_scope.length.to_s + " Applies"
         =will_paginate @applies
   .col-md-3
-    = #image_tag "applies.jpg" , :class => "img-responsive"
 .row
   .col-md-9
     %div
       %table.table.table-striped.table-bordered.table-condensed
         %thead
           %tr
-            %th=sort_link [:office,@q], :id
-            %th{:colspan => "2"}
-              %label.checkbox
-                = @apply_scope.length.to_s + " Applies"
+            %th=sort_link [:admin,@q], :user_id , title: "Applicant"
+            %th Course
+            %th Secondary
+            %th Plan
+            %th Comment
+            %th Discount
         %tbody
           - @applies.each do |apply|
             %tr{:class => "line-#{cycle("1","2")}"}
-              %td=apply.id.to_s
-              %td= link_to "Show" , admin_apply_path(apply), :title => "Show"
+              %td= link_to apply.user.name , admin_user_path(apply.user)
+              %td= apply.primary_choice_course.name_id
+              %td= apply.secondary_choice_course.name_id if apply.secondary_choice_course
+              %td= apply.plan
+              %td= apply.comment.to_s
+              %td= apply.discount_code.to_s
+
     =will_paginate @applies
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group
-        = f.text_field :id_cont , :class => "form-control" , :placeholder =>  "ID"
+        = f.text_field :primary_choice_course_id_eq , :class => "form-control" , :placeholder =>  "course id"
       = f.submit "Filter",  :id => :filter , :class => "btn btn-success"
       = link_to  "Cancel", admin_applies_path, :class => "btn btn-warning"
 .applies_index_end

@@ -21,4 +21,8 @@ class Course < ActiveRecord::Base
   def start_date
     I18n.l(self.start.to_date , format: :long)
   end
+
+  def name_id
+    "#{name}(#{id})"
+  end
 end
