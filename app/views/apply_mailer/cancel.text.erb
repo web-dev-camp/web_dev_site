@@ -1,14 +1,16 @@
 Hello <%=@application.user.name%>,
 
-This is to confirm that we have received your application cancellation.
+We have received your application cancellation. This is sad to see you go.
 
 <% if @reason.blank? %>
 Since you have not given a reason for the cancellation, we assume you won't apply again
 and may wish to cancel your account as well.
 <% else %>
-You may apply again if your situation changes.
+If you have any other question, please reply to this email and we're happy to help.
 <% end %>
 
-We wish you best in your career endeavours
+We wish to see you again when your situation changes and wish you best in your career endeavours.
 
-The Web Dev Team
+Sincerely,
+
+WebDev Camp
