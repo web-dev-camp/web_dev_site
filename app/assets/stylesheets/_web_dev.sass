@@ -65,7 +65,7 @@ h4 , h5 , h6
   font-family: "Raleway", "ProximaNova", Arial, Helvetica, sans-serif
   font-weight: 300
 
-.parallax
+@mixin parallax_mixin
   margin-top: 0px
   background:
     attachment: fixed
@@ -73,6 +73,9 @@ h4 , h5 , h6
     size: auto 500px
     position: 50% 0px
 
+.parallax
+  @include parallax_mixin
+    
 .height-500
   height: 500px
 

@@ -1,6 +1,7 @@
 
 .camp_header
   @include fixed_header_sizes
+  @include parallax_mixin
   background:
     image: image-url("camp/camp_fiskars.jpg")
   @media only screen and (max-width: 840px)
@@ -12,5 +13,6 @@
 
 .parallax_garden
   @include fixed_header_sizes
+  @include parallax_mixin
   background:
     image: image-url("camp/camp_garden.jpg")
