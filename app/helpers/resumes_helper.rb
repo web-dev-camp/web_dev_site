@@ -5,8 +5,8 @@ module ResumesHelper
 
   def percent
     fields = [:school, :uni, :internship, :work, :projects, :tech_skills, :soft_skills,
-              :interests, :motivation, :finance, :other, :street, :city, :country]
-    total = fields.length 
+              :interests, :motivation, :finance, :other]
+    total = fields.length
     filled = fields.collect{|f| @resume.send(f).blank? ? 0 : 1 }.sum * 100
     "#{filled/total}%"
   end
