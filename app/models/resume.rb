@@ -9,7 +9,6 @@ class Resume < ActiveRecord::Base
     (non_nil * 100) / attribs.length
   end
 
-  private
   def percent_attributes
     Resume.column_names - ["id" , "user_id" , "created_at", "updated_at"]
   end

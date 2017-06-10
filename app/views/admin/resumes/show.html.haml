@@ -1,9 +1,21 @@
-%h2.resumes_show_start
-  = "Resume : #{@resume.id}"
+%h2
+  = "Resume : "
+  = link_to @resume.user.name , admin_user_path(@resume.user)
+  = "#{@resume.percent} %"
 
-- @resume.attributes.each do |name , value|
+%h4
+  -if app = @resume.user.application
+    = link_to "Applied" , admin_applies_path(app)
+    for
+    = link_to app.primary_choice_course.name , admin_course_path(app.primary_choice_course)
+    on
+    = app.created_at.to_date
+  -else
+    Not applied
+
+- @resume.percent_attributes.each do |name |
   %p
-    %b= "#{name} : " + value.to_s
+    %b= "#{name} : "
+    = @resume.send(name).to_s
 
 = link_to "Back", admin_resumes_path, :class => "btn btn-warning"
-.resumes_show_end

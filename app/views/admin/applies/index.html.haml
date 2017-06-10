@@ -2,7 +2,7 @@
   .col-md-9.applies
     .row
       .col-md-10
-        %h2= @apply_scope.length.to_s + " Applies"
+        %h2= @apply_scope.length.to_s + " Applications"
         =will_paginate @applies
   .col-md-3
 .row
@@ -12,6 +12,7 @@
         %thead
           %tr
             %th=sort_link [:admin,@q], :user_id , title: "Applicant"
+            %th Resume %
             %th Course
             %th Secondary
             %th Plan
@@ -21,8 +22,9 @@
           - @applies.each do |apply|
             %tr{:class => "line-#{cycle("1","2")}"}
               %td= link_to apply.user.name , admin_user_path(apply.user)
-              %td= apply.primary_choice_course.name_id
-              %td= apply.secondary_choice_course.name_id if apply.secondary_choice_course
+              %td= link_to( "#{apply.user.resume.percent} %" , admin_resume_path(apply.user.resume))
+              %td= course_applicants_link apply.primary_choice_course
+              %td= course_applicants_link apply.secondary_choice_course
               %td= apply.plan
               %td= apply.comment.to_s
               %td= apply.discount_code.to_s

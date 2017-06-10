@@ -22,6 +22,9 @@ class Course < ActiveRecord::Base
     I18n.l(self.start.to_date , format: :long)
   end
 
+  def applications
+    Apply.where( primary_choice_course_id: self.id)
+  end
   def name_id
     "#{name}(#{id})"
   end

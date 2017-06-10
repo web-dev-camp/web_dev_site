@@ -16,6 +16,7 @@
         %thead
           %tr
             %th=sort_link [:admin,@q],  :name
+            %th Applications
             %th Extra
             %th Start
             %th{:colspan => "2"}
@@ -25,6 +26,7 @@
           - @courses.each do |course|
             %tr{:class => "line-#{cycle("1","2")}"}
               %td.name=course.name
+              %td=link_to course.applications.count.to_s , admin_course_applicants_path(course)
               %td=course.extra
               %td=course.start
               %td= link_to "Show" , admin_course_path(course), :title => "Show"

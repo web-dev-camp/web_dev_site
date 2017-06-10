@@ -9,6 +9,7 @@ feature 'Resume edit' do
     sign_new
     visit resume_path()
     expect(page).to have_content("Resume")
+    expect(page).to have_content("Resume")
   end
 
 
