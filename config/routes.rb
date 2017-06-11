@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/method',  to: redirect("/course")
   get '/teachers',to: redirect("/course#teachers")
   get '/sponsoring',to: redirect("/sponsor_diversity")
+  get '/marketingjob',   to: redirect("/")
 
   namespace :admin do
     resources :users
