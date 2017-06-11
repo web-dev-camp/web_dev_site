@@ -3,7 +3,7 @@
     .row
       .col-md-10
         %h2= @apply_scope.length.to_s + " Applications"
-        =will_paginate @applies
+        =paginate @applies
   .col-md-3
 .row
   .col-md-9
@@ -29,7 +29,7 @@
               %td= apply.comment.to_s
               %td= apply.discount_code.to_s
 
-    =will_paginate @applies
+    =paginate @applies
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group

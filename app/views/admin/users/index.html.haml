@@ -4,7 +4,7 @@
       .col-md-10
         %h2= @user_scope.length.to_s + " Users"
 
-        =will_paginate @users
+        =paginate @users
   .col-md-3
     = #image_tag "users.jpg" , :class => "img-responsive"
 .row
@@ -22,7 +22,7 @@
               %td= link_to user.email , admin_user_path(user), :title => "#{user.street}\n#{user.city}\n#{user.country}"
               %td= link_to "#{user.resume.percent} %" , admin_resume_path(user.resume)
               %td= application_link(user)
-    =will_paginate @users
+    =paginate @users
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group

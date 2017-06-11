@@ -3,7 +3,7 @@
     .row
       .col-md-10
         %h2= @resume_scope.length.to_s + " Resumes"
-        =will_paginate @resumes
+        =paginate @resumes
   .col-md-3
 .row
   .col-md-9
@@ -20,7 +20,7 @@
               %td= link_to resume.user.name , admin_user_path(resume.user)
               %td= link_to "#{resume.percent} %"  , admin_resume_path(resume), :title => "Show"
               %td= resume.updated_at.to_date
-    =will_paginate @resumes
+    =paginate @resumes
   .col-md-3
     = search_form_for [:admin , @q], :html => { :class => "form-horizontal" }, :method => :get do |f|
       .form-group

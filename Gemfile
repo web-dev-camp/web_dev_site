@@ -20,7 +20,7 @@ gem 'animate-scss' , :github => "ejholmes/animate.scss"
 gem "best_in_place"
 gem 'rack-attack'
 gem "ransack"
-gem "bootstrap-will_paginate"
+gem "kaminari"
 gem 'jquery-ui-rails'
 
 #asynchronous sending
