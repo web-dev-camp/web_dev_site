@@ -12,5 +12,9 @@ feature 'Resume edit' do
     expect(page).to have_content("Resume")
   end
 
+  scenario "progress works" do
+    sign_new
+    visit_url progress_resume_url()
+  end
 
 end
