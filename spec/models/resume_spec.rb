@@ -17,6 +17,13 @@ RSpec.describe Resume, type: :model do
     resume = build :resume
     expect(resume.percent).to eq 0
   end
+  it "has zero percent when nothing is filled with space" do
+    resume = build :resume
+    resume.projects = ""
+    resume.school = ""
+    expect(resume.attributes["school"]).to eq ""
+    expect(resume.percent).to eq 0
+  end
   it "has 9 percent when one is filled" do
     resume = build :resume
     resume.motivation = "I am motivated"

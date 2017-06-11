@@ -5,7 +5,7 @@ class Resume < ActiveRecord::Base
 
   def percent
     attribs = percent_attributes
-    non_nil = attribs.sum{ |name| self.attributes[name] == nil ? 0 : 1}
+    non_nil = attribs.sum{ |name| self.attributes[name].blank? ? 0 : 1}
     (non_nil * 100) / attribs.length
   end
 
