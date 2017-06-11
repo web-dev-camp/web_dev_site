@@ -30,4 +30,18 @@ RSpec.describe Page, type: :model do
     page = Page.new("1993-2-4-title.rb")
     expect(page.title).to eq "title"
   end
+
+  describe "page list" do
+    it "return a list of pages" do
+      pages = Page.pages
+      expect(pages.class).to eq Hash
+      expect(pages.length).to be > 0
+    end
+    it 'returns blog path' do
+      expect(Page.blog_path.ends_with?("spec/blog")).to be true
+    end
+    it "return a list of pages" do
+      expect(Page.pages.values.first.content.length).to be > 10
+    end
+  end
 end
