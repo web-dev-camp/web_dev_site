@@ -4,10 +4,10 @@ describe "Admin User"  do
   end
   it "lists users" do
     create_list(:user,3)
-    visit_path admin_users_path
+    visit_url admin_users_url
   end
   it "shows a user" do
     user = create(:user)
-    visit_path admin_user_path(user)
+    visit_url admin_user_url(user)
   end
 end

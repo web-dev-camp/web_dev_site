@@ -1,12 +1,13 @@
+
 module RequestHelper
-  def ensure_path path
-    expect(page.current_path).to eq path
+  def ensure_url url
+    expect(page.current_url).to eq url
   end
-  def visit_path path
-    visit path
+  def visit_url url
+    visit url
     expect(status_code).to be 200
     expect(page).not_to have_css(".translation_missing")
-    ensure_path path
+    ensure_url url
   end
 
   def ensure_admin

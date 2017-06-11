@@ -4,10 +4,10 @@ describe "Admin Apply"  do
   end
   it "lists applies" do
     create_list(:apply , 3)
-    visit_path admin_applies_path
+    visit_url admin_applies_url
   end
   it "shows a apply" do
     apply = create(:apply)
-    visit_path admin_apply_path(apply)
+    visit_url admin_apply_url(apply)
   end
 end

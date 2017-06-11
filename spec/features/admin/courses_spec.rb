@@ -4,11 +4,11 @@ describe "Admin Course"  do
   end
   it "lists courses" do
     create_list(:course , 3)
-    visit_path admin_courses_path
+    visit_url admin_courses_url
   end
 
   it "shows a course" do
     course = create(:course)
-    visit_path admin_course_path(course)
+    visit_url admin_course_url(course)
   end
 end

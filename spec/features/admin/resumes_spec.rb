@@ -4,10 +4,10 @@ describe "Admin Resume"  do
   end
   it "lists resumes" do
     create_list(:resume,3)
-    visit_path admin_resumes_path
+    visit_url admin_resumes_url
   end
   it "shows a resume" do
     resume = create(:resume)
-    visit_path admin_resume_path(resume)
+    visit_url admin_resume_url(resume)
   end
 end
