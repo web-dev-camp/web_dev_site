@@ -22,6 +22,7 @@ gem 'rack-attack'
 gem "ransack"
 gem "kaminari"
 gem 'jquery-ui-rails'
+gem "jbuilder"
 
 #asynchronous sending
 gem 'sucker_punch'
