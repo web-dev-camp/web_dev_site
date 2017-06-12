@@ -20,28 +20,42 @@ RSpec.describe Page, type: :model do
       expect(@page.title).to eq "title"
     end
     it "returns dates" do
-      expect(@page.year).to eq "1993"
-      expect(@page.month).to eq "2"
-      expect(@page.day).to eq "4"
+      expect(@page.year).to eq 1993
+      expect(@page.month).to eq 2
+      expect(@page.day).to eq 4
     end
   end
 
+  it "must start with a year" do
+    expect{Page.new("no-num-4-title")}.to raise_error RuntimeError
+  end
+  it "returns whole title" do
+    page = Page.new("1993-2-4-Multi-word-title")
+    expect(page.title).to eq "Multi word title"
+  end
+  it "returns slug" do
+    page = Page.new("1993-2-4-Multi-word-title")
+    expect(page.slug).to eq "Multi-word-title"
+  end
   it "returns title without extension if given file name" do
     page = Page.new("1993-2-4-title.rb")
     expect(page.title).to eq "title"
   end
+  it 'returns blog path' do
+    expect(Page.blog_path.ends_with?("spec/blog")).to be true
+  end
+  it "return a list of pages" do
+    expect(Page.pages.values.first.content.length).to be > 10
+  end
 
   describe "page list" do
-    it "return a list of pages" do
-      pages = Page.pages
-      expect(pages.class).to eq Hash
-      expect(pages.length).to be > 0
-    end
-    it 'returns blog path' do
-      expect(Page.blog_path.ends_with?("spec/blog")).to be true
+    before :each do
+      @pages = Page.pages
+      @first = @pages.values.first
     end
     it "return a list of pages" do
-      expect(Page.pages.values.first.content.length).to be > 10
+      expect(@pages.class).to eq Hash
+      expect(@pages.length).to be > 0
     end
   end
 end

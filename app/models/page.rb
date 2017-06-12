@@ -1,25 +1,39 @@
 class Page
   @@pages = nil
 
-  attr_reader :year , :month , :day , :title , :dir , :ext
+  attr_reader :year , :month , :day , :dir , :ext
   def initialize(path)
     @dir = File.dirname(path)
-    @base = File.basename(path)
-    @year , @month , @day , @title = @base.split("-")
-    raise "Invalid path #{path}" unless @title
-    @title , @ext = @title.split(".")
+    base , @ext = File.basename(path).split(".")
+    @words = base.split("-")
+    @year = parse_int(@words.shift , 2100)
+    @month = parse_int(@words.shift , 12)
+    @day = parse_int(@words.shift , 32)
+    raise "Invalid path #{path}" unless @words
   end
 
+  def slug
+    @words.join("-")
+  end
+  def title
+    @words.join(" ")
+  end
+
+  def parse_int( value , max)
+    ret = value.to_i
+    raise "invalid value #{value} > #{max}" if ret > max or ret < 1
+    ret
+  end
   def content
-    File.open(@dir + "/" + @base ).read
+    File.open("#{@dir}/#{year}-#{month}-#{day}-#{slug}.#{ext}" ).read
   end
 
   def self.pages
     return @@pages if @@pages
     @@pages ={}
-    Dir["#{self.blog_path}/*.*"].each do |file|
+    Dir["#{self.blog_path}/2*.haml"].each do |file|
       page = Page.new(file)
-      @@pages[page.title] = page
+      @@pages[page.slug] = page
     end
     @@pages
   end
