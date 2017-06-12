@@ -26,7 +26,7 @@ module WebDevSite
 
     config.assets.paths << Gem.loaded_specs['susy'].full_gem_path+'/sass'
 
-    config.blog_path = Rails.root.to_s + "/app/blog"
+    config.blog_path = Rails.root.to_s + "/app/views/blog"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
