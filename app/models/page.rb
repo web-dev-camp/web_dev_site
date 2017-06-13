@@ -34,7 +34,8 @@ class Page
     File.open("#{@dir}/_#{template_name}.#{ext}" ).read
   end
   def summary
-    content.split("%h2").first.gsub("%p", "")
+    ret = content.split("%h2").first.gsub("%p", "<br/>").html_safe
+    ret[0 .. 400]
   end
   def self.pages
     return @@pages if @@pages

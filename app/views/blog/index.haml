@@ -1,5 +1,9 @@
-%h1 Index
-
-- @pages.each do |title , page|
-  %h3= link_to page.title , blog_page_path(page.slug)
-  %p= page.summary
+.blog
+  - @pages.each do |slug , page|
+    .row
+      .col-md-2
+      .col-md-8
+        %h1= link_to page.title , blog_page_url(page.slug)
+        = page.summary
+        %span.whole= link_to ". . . .Read whole post" , blog_page_url(page.slug)
+      .col-md-2
