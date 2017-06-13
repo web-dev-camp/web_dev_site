@@ -2,13 +2,13 @@
 feature 'Blog index' do
 
   scenario 'index shows' do
-    visit blog_index_url
-    expect(page).to have_content("Index")
+    visit_url blog_index_url
   end
 
   scenario 'index has links' do
     visit blog_index_url
-    expect(page).to have_link(nil, href: /blog/, count: 1)
+    post = page.all(:link, nil, href: /blog/).first
+    expect(post).not_to be_nil
   end
 
   scenario 'index first link works' do

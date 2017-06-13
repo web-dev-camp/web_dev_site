@@ -12,15 +12,14 @@ class Page
     @day = parse_int(@words.shift , 32)
     raise "Invalid path #{path}" unless @words
   end
-
   def slug
-    @words.join("-")
+    @words.join("-").downcase
   end
   def title
     @words.join(" ")
   end
   def template_name
-    "#{date}-#{slug}"
+    "#{date}-#{@words.join("-")}"
   end
   def date
     "#{year}-#{month}-#{day}"
