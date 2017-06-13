@@ -1,3 +1,11 @@
-%h1= @page.title
-
-= render( @page.template_name )
+.blog
+  .row
+    .col-md-2
+    .col-md-8
+      %h1= @page.title
+    .col-md-2
+  .row
+    .col-md-2
+    .col-md-8
+      = render( @page.template_name )
+    .col-md-2
