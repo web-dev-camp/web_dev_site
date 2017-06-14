@@ -5,7 +5,23 @@
       %h1= @page.title
     .col-md-2
   .row
-    .col-md-2
+    .col-md-1
+    .col-md-1
+      .social
+        .social__item
+          %span.fa.fa-facebook{"data-count" => "", "data-social" => "fb"}
+        .social__item
+          %span.fa.fa-twitter{"data-count" => "", "data-social" => "tw"}
+        .social__item
+          %span.fa.fa-linkedin{"data-count" => "", "data-social" => "ln"}
+        .social__item
+          %span.fa.fa-pinterest{"data-count" => "", "data-social" => "pt"}
     .col-md-8
       = render( @page.template_name )
     .col-md-2
+:javascript
+  $(function () {
+      $('[data-social]').socialButtons({
+          url: window.location.href
+      });
+  });

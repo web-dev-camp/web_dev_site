@@ -20,3 +20,4 @@
 //= require bootstrap/tab
 //= require bootstrap/tooltip
 //= require web_js
+//= require share
