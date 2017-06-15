@@ -21,3 +21,6 @@
           url: window.location.href
       });
   });
+%script{"data-dojo-config" => "usePlainJson: true, isDebug: false", :src => "//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js", :type => "text/javascript"}
+:javascript
+  require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"f87ed24d53899ee88e851a0d1","lid":"0ee2009500"}) })
