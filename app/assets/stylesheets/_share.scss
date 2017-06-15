@@ -16,6 +16,30 @@ $colors: (
     google-plus: #dd4b39
 );
 
+.social_box{
+  position: fixed;
+  width: 10%;
+  margin-top: 50px;
+  @media only screen and (max-width: 770px){
+    width: 100%;
+    margin-top: -90px;
+    z-index: 1111;
+    .social {
+      .fa {
+          border-radius: 25px;
+          font-size: 25px;
+          height: 55px;
+          line-height: 55px;
+          width: 55px;
+          &:after {
+              font-size: 10px;
+              line-height: 10px;
+          }
+      }
+    }
+  }
+}
+
 .social {
     text-align: center;
     &__item {
