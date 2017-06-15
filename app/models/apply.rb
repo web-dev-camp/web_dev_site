@@ -23,6 +23,6 @@ class Apply < ActiveRecord::Base
     sum = "Comment: #{self.comment}\n"
     sum += "Discount: #{self.discount_code}\n" unless self.discount_code.blank?
     sum +="Secondary: #{self.secondary_choice_course.name}" if self.secondary_choice_course_id
-    sum + plan_name
+    sum + plan_name.to_s
   end
 end
