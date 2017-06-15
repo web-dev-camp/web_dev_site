@@ -1,5 +1,3 @@
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
-
 /*
   jQuery Social Buttons 0.0.1 https://github.com/Belyash/jquery-social-buttons
   (c) 2015 by Vasiliy Lazarev http://belyash.github.io/
@@ -9,11 +7,10 @@
 
 $colors: (
     facebook: #3b5998,
-    vk: #45668e,
     twitter: #00aced,
     pinterest: #cb2027,
     linkedin: #007bb6,
-    google-plus: #dd4b39
+    gplus: #dd4b39
 );
 
 .social_box{
@@ -73,7 +70,7 @@ $colors: (
         }
     }
     @each $key, $color in $colors {
-        .fa-#{$key}:hover {
+        .icon-#{$key}:hover {
             box-shadow: 0 0 15px rgba($color, 0.5) inset;
             color: $color;
         }

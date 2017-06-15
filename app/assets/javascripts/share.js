@@ -9,25 +9,28 @@
         SocialButtons;
 
     Socials = {
-        fb: {
-            url: "https://graph.facebook.com/?id=",
-            callback: function (data) {
-                if (data && data.shares) {
-                    this.count = data.shares;
-                } else {
-                    this.count = "";
-                }
-            },
-            share: "http://www.facebook.com/sharer/sharer.php?u="
-        },
-        vk: {
-            url: "https://vk.com/share.php?act=count&url=",
-            callback: function () {
-                // VK.com doesn't support callback parametr for JSONP
-                // This callback will never be called
-            },
-            share: "https://vk.com/share.php?url="
-        },
+      fb: {
+          url: "https://graph.facebook.com/?id=",
+          callback: function (data) {
+              if (data && data.shares) {
+                  this.count = data.shares;
+              } else {
+                  this.count = "";
+              }
+          },
+          share: "https://www.facebook.com/sharer/sharer.php?u="
+      },
+      gp: {
+          url: "https://graph.facebook.com/?id=",
+          callback: function (data) {
+              if (data && data.shares) {
+                  this.count = data.shares;
+              } else {
+                  this.count = "";
+              }
+          },
+          share: "https://plus.google.com/share?url"
+      },
         tw: {
             url: "https://cdn.api.twitter.com/1/urls/count.json?url=",
             callback: function (data) {
@@ -51,7 +54,7 @@
             share: "https://www.linkedin.com/cws/share?url="
         },
         pt: {
-            url: "http://api.pinterest.com/v1/urls/count.json?url=",
+            url: "https://api.pinterest.com/v1/urls/count.json?url=",
             callback: function (data) {
                 if (data && data.count) {
                     this.count = data.count;
@@ -73,17 +76,6 @@
 
 
             if (oSocial) {
-                /**
-                * VK.com doesn't support callback parameter for JSONP
-                * VK.com wanna call VK.Share.count()
-                */
-                if (network === "vk") {
-                    window.VK = window.VK || {};
-                    window.VK.Share = VK.Share || {};
-                    window.VK.Share.count = function (index, count) {
-                        Socials["vk"].count = count;
-                    }
-                }
 
                 options = options || {};
 
