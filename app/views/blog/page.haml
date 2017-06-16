@@ -15,8 +15,11 @@
   .center_col
     = render( @page.template_name )
 
+.blog
+  .center_col
     = render "subscribe"
-
+  .center_col
+    = render "disqus"
 
 :javascript
   $(function () {
