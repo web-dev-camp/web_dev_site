@@ -10,4 +10,9 @@ describe "Admin Resume"  do
     resume = create(:resume)
     visit_url admin_resume_url(resume)
   end
+  it "lists resumes after destroying user" do
+    resume = create(:resume)
+    resume.user.destroy
+    visit_url admin_resumes_url
+  end
 end

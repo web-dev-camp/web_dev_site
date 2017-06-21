@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   validates_presence_of :city
   validates_presence_of :country
 
-  has_one :application , class_name: :Apply
-  has_one :resume
+  has_one :application , dependent: :destroy , class_name: :Apply
+  has_one :resume      , dependent: :destroy
 
   enum role: [:user, :teacher, :admin]
 

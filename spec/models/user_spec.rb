@@ -17,13 +17,19 @@ describe User do
       user = build :user
       expect(user).to be_valid
     end
-    it "application assoc" do
+    it "has application assoc" do
       user = create :user
       expect(user.application).to be_nil
     end
-    it "resume assoc" do
+    it "has resume assoc" do
       user = create :user
       expect(user.resume).not_to be_nil
+    end
+    it "deletes resume when deleting user" do
+      user = create :user
+      resume_id = user.resume.id
+      user.destroy
+      expect(Resume.where( id: resume_id)).to be_empty
     end
   end
 end

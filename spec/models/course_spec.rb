@@ -26,6 +26,6 @@ RSpec.describe Course, type: :model do
 
   it "the course is in the future" do
     course = create :course
-    expect((course.start - DateTime.now).to_i).to be < 410
+    expect((course.start - DateTime.now).to_i).to be < 470
   end
 end
