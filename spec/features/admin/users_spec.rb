@@ -10,4 +10,8 @@ describe "Admin User"  do
     user = create(:user)
     visit_url admin_user_url(user)
   end
+  it "shows an unconfirmed user" do
+    user = create(:user , confirmed_at:  nil )
+    visit_url admin_user_url(user)
+  end
 end
