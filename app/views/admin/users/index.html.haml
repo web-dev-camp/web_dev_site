@@ -24,7 +24,7 @@
               %td= link_to user.email , admin_user_path(user), :title => "#{user.street}\n#{user.city}\n#{user.country}"
               %td= link_to "#{user.resume.percent} %" , admin_resume_path(user.resume)
               %td= application_link(user)
-              %td= time_ago_in_words(user.confirmed_at)
+              %td= user.confirmed_at ? time_ago_in_words(user.confirmed_at) : ""
               %td= user.sign_in_count.to_s
     =paginate @users
   .col-md-3
