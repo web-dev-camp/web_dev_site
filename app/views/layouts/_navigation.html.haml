@@ -1,16 +1,25 @@
-%nav.navbar.navbar-fixed-top.navbar-light
-  %button.navbar-toggler.hidden-md-up{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
-  #navbarResponsive.collapse.navbar-toggleable-sm
+%nav.navbar.fixed-top.navbar-toggleable-sm.navbar-light
+  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarNav",
+                                              "aria-expanded" => "false",
+                                              "aria-label" => "Toggle navigation",
+                                              "data-target" => "#navbarResponsive",
+                                              "data-toggle" => "collapse",
+                                              :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarResponsive.collapse.navbar-collapse
     %a.navbar-brand{:href => page_path(:index) }
       = image_tag "logos/web_logo.png" , class: :desktop
       = image_tag "logos/web_logo_mobile.png" , class: :mobile
-    %ul.nav.navbar-nav.float-sm-right
-      %li.nav-item= link_to "Course" , page_path(:course) , class: "nav-link"
-      %li.nav-item= link_to "Camp" ,   page_path(:camp) , class: "nav-link"
-      %li.nav-item= link_to "Q & A" ,  page_path(:answers) , class: "nav-link"
+    %ul.navbar-nav.ml-auto
+      - { "Course" => page_path(:course) , "Camp" => page_path(:camp)  ,
+        "Q & A" => page_path(:answers) }.each do | menu, slug|
+        %li.nav-item{class: (request.path == slug) && "active" }
+          =link_to menu , slug ,class: "nav-link"
       -unless user_signed_in?
-        %li.nav-item= link_to "Apply" ,  page_path(:apply) , class: "nav-link"
-        %li.nav-item= link_to "|" ,  page_path(:apply) , class: "nav-link"
+        %li.nav-item
+          = link_to "Apply" ,  page_path(:apply) , class: "nav-link"
+        %li.nav-item
+          = link_to "|" ,  page_path(:apply) , class: "nav-link"
       -if user_signed_in?
         %li.nav-item= link_to "|" ,  edit_user_registration_path , class: "nav-link"
         - { "Profile" => edit_user_registration_path , "Resume" => resume_path  ,
