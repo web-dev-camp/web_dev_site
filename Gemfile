@@ -7,7 +7,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 
 gem "therubyracer"
-gem 'bootstrap' , "4.0.0.alpha5"
+gem 'bootstrap' , "4.0.0.alpha6"
 gem "susy"
 gem 'tether-rails'
 gem 'devise'  ,">= 4.0"
