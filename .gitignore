@@ -86,3 +86,4 @@ pickle-email-*.html
 
 # tilde files are usually backup files from a text editor
 *~
+app/views/blog/_2017-2-2-The-Distraction-Free-Path-to-Becoming-a-Professional-Programmer.haml
