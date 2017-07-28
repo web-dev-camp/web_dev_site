@@ -39,7 +39,7 @@ class Page
   def self.pages
     return @@pages if @@pages
     @@pages ={}
-    Dir["#{self.blog_path}/_2*.haml"].each do |file|
+    Dir["#{self.blog_path}/_2*.haml"].reverse.each do |file|
       page = Page.new(file)
       @@pages[page.slug] = page
     end
