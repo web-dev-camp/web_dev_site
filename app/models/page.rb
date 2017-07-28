@@ -8,8 +8,8 @@ class Page
     raise "must be partial, statr with _ not:#{base}" unless base[0] == "_"
     @words = base.split("-")
     @year = parse_int(@words.shift[1 .. -1] , 2100)
-    @month = parse_int(@words.shift , 12)
     @day = parse_int(@words.shift , 32)
+    @month = parse_int(@words.shift , 12)
     raise "Invalid path #{path}" unless @words
   end
   def slug
@@ -22,7 +22,7 @@ class Page
     "#{date}-#{@words.join("-")}"
   end
   def date
-    "#{year}-#{month}-#{day}"
+    "#{year}-#{day}-#{month}"
   end
   def parse_int( value , max)
     ret = value.to_i

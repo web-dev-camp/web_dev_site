@@ -27,8 +27,8 @@ RSpec.describe Page, type: :model do
     end
     it "returns dates" do
       expect(@page.year).to eq 1993
-      expect(@page.month).to eq 2
-      expect(@page.day).to eq 4
+      expect(@page.month).to eq 4
+      expect(@page.day).to eq 2
     end
     it "returns date" do
       expect(@page.date).to eq "1993-2-4"
