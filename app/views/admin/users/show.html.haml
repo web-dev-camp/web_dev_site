@@ -19,6 +19,10 @@
     Not applied
 
 %p
+  %b= "Last sign : " + @user.last_sign_in_at.to_s
+%p
+  %b= "Sign in count : " + @user.sign_in_count.to_s
+%p
   %b= "Name : " + @user.name.to_s
 %p
   %b= "Street : " + @user.street.to_s
