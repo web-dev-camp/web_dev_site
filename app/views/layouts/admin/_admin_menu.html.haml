@@ -1,11 +1,15 @@
-%nav.navbar.navbar-fixed-top.navbar-light
-  %button.navbar-toggler.hidden-md-up{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
-  #navbarResponsive.collapse.navbar-toggleable-sm
-    %a.navbar-brand{:href => page_path(:index) }
-      = #image_tag "logos/web_logo.png" , class: :desktop
-    %ul.nav.navbar-nav.float-sm-right
+%nav.navbar.fixed-top.navbar-toggleable-sm.navbar-light
+  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarNav",
+                                              "aria-expanded" => "false",
+                                              "aria-label" => "Toggle navigation",
+                                              "data-target" => "#navbarResponsive",
+                                              "data-toggle" => "collapse",
+                                              :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarResponsive.collapse.navbar-collapse
+    %ul.navbar-nav.ml-auto
       - { "Users" => admin_users_path , "Resumes" => admin_resumes_path  ,
-        "Applies" => admin_applies_path , "Courses" => admin_courses_path }.each do | menu, slug|
+        "Applies" => admin_applies_path , "Courses" => admin_courses_path ,
+        "Home" => page_path(:index)}.each do | menu, slug|
         %li.nav-item{class: (request.path == slug) && "active" }
           =link_to menu , slug ,class: "nav-link"
-      %li.nav-item.nav-small= sign_out_link  class: "nav-link"
