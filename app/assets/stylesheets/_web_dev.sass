@@ -21,6 +21,8 @@
     margin-bottom: 60px
     font-size: 4.5rem
     font-weight: 400
+    .wide
+      margin-top: -40px
   h3
     margin-top: 30px
     margin-bottom: 30px
@@ -28,6 +30,10 @@
     font-weight: 400
   .action
     padding-top: 30px
+  @media only screen and (max-width: 840px)
+    h1
+      .wide
+        font-size: 3.2rem
   @media only screen and (max-width: 640px)
     h1
       margin-top: 40px
@@ -37,6 +43,11 @@
       margin-top: 20px
       margin-bottom: 20px
       font-size: 3.2rem
+      .wide
+        font-size: 2.5rem
+    h3
+      .wide
+        font-size: 2
 
 .heading , .parallax
   @include fixed_header_sizes()
