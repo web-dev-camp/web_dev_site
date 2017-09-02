@@ -11,4 +11,12 @@ describe "Admin Course"  do
     course = create(:course)
     visit_url admin_course_url(course)
   end
+
+  it "creates a course" do
+    visit_url new_admin_course_url
+    fill_in 'course_name', :with => 'kaksi'
+    click_button 'Create Course'
+    expect(page).to have_content("Course created")
+  end
+
 end
