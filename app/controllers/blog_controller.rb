@@ -13,7 +13,7 @@ class BlogController < ApplicationController
 
   def get_page(title)
     page = Page.pages[title]
-    puts "No #{title} in #{Page.pages.keys.join(':')}"
+    #puts "No #{title} in #{Page.pages.keys.join(':')}"
     page
   end
 end
