@@ -23,7 +23,7 @@ module Admin
     def create
       @course = Course.create(params_for_course)
       if @course.save
-        redirect_to course_path(@course), :notice => t(:create_success, :model => :course)
+        redirect_to admin_course_path(@course), :notice => "Course created"
       else
         render :edit
       end
@@ -32,7 +32,7 @@ module Admin
     def update
       @course.update_attributes params_for_course
       if @course.save
-        redirect_to course_path(@course), :notice => t(:update_success, :model => :course)
+        redirect_to admin_course_path(@course), :notice => "Course updated"
       else
         render :action => :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       #    @course.deleted_at = Time.now
-      redirect_to courses_url
+      redirect_to admin_courses_url
     end
 
     private
