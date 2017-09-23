@@ -33,7 +33,7 @@ gem 'rollbar'
 group :development do
   gem 'spring'
 #  gem 'better_errors'
-  gem 'capistrano', "3.8.1"
+  gem 'capistrano', "3.8.2"
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rails-console'
