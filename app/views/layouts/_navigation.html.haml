@@ -17,7 +17,7 @@
           =link_to menu , slug ,class: "nav-link"
       -unless user_signed_in?
         %li.nav-item
-          = link_to "Apply" ,  page_path(:apply) , class: "nav-link"
+          = link_to "Closed" ,  page_path(:apply) , class: "nav-link"
         %li.nav-item
           = link_to "|" ,  page_path(:apply) , class: "nav-link"
       -if user_signed_in?
